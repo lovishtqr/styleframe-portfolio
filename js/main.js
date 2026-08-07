@@ -358,18 +358,42 @@
 
     // success — lock the button (no double submit), remember cooldown
     submitLocked = true;
-    st.textContent = "🎉 Booking confirmed — " + fmt(selDate) + " at " + selSlot + ". Sending to WhatsApp…";
+    st.textContent = "🎉 Booking confirmed — " + fmt(selDate) + " at " + selSlot + ". Sending details…";
     st.style.display = "block"; st.style.color = "#2eaf5d";
     localStorage.setItem(BOOK_KEY, JSON.stringify({ at: Date.now() }));
     localStorage.removeItem(ATTEMPT_KEY);
-    // WhatsApp integration: open wa.me prefilled to the owner's number
+
+    // Build booking message
+    const bookingName = bkName.value.trim();
+    const bookingEmail = bkEmail.value.trim();
+    const bookingPhone = selectedCC.cc + " " + bkPhone.value.trim();
+    const bookingWhen = fmt(selDate) + " at " + selSlot;
     const text = encodeURIComponent(
-      "New Booking — StyleFrame\nName: " + bkName.value.trim() +
-      "\nEmail: " + bkEmail.value.trim() +
-      "\nPhone: " + selectedCC.cc + " " + bkPhone.value.trim() +
-      "\nDate: " + fmt(selDate) + " " + selSlot +
+      "New Booking — StyleFrame\nName: " + bookingName +
+      "\nEmail: " + bookingEmail +
+      "\nPhone: " + bookingPhone +
+      "\nDate: " + bookingWhen +
       "\nService: intro call"
     );
+
+    // AUTO EMAIL notification (free, no account) — every booking emails the owner
+    try {
+      fetch("https://formsubmit.co/ajax/styleframeco@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          _subject: "🎬 New StyleFrame Booking",
+          _template: "table",
+          "Name": bookingName,
+          "Email": bookingEmail,
+          "Phone": bookingPhone,
+          "Date & time": bookingWhen,
+          "Service": "Intro call"
+        })
+      }).catch(function () {});
+    } catch (e) {}
+
+    // WhatsApp: open wa.me prefilled to the owner's number
     try { window.open("https://wa.me/917876620064?text=" + text, "_blank"); } catch (e) {}
     e.target.reset();
     [errName, errEmail, errPhone].forEach((x) => (x.textContent = ""));
