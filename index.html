@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleFrame — Ads for brands</title>
+<meta name="description" content="StyleFrame — video editor making ads for brands. Commercials, product films and social content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#top">Style<span class="accent">frame</span></a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a class="nav-cta" href="#book">Book a call</a>
+    <button class="nav-burger" data-openmenu>MENU</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-m" data-closemenu>✕</button>
+  <a href="#ads">My Ads</a>
+  <a href="#services">Services</a>
+  <a href="#book">Book a call</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <video class="hero-bg" id="heroBg" autoplay muted loop playsinline preload="metadata"></video>
+  <span class="hero-eyebrow">Ads for brands</span>
+  <h1 class="hero-title">I make ads<br>that <span class="accent">sell.</span></h1>
+  <p class="hero-sub">StyleFrame — 9:16 commercials, product films and social ads for brands. Hook in the first half-second, feel premium, hold the thumb.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#ads">Watch my ads →</a>
+    <a class="btn btn-ghost" href="#book">Book a call</a>
+  </div>
+  <div class="hero-meta"><span>◆ Available</span><span>·</span><span>Fast turnaround</span><span>·</span><span>24h reply</span></div>
+</section>
+
+<!-- ADS -->
+<section class="section" id="ads" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Portfolio</span><h2 class="section-title">My <span class="accent">ads</span></h2></div>
+      <p class="section-sub">Hover to preview. Click to watch.</p>
+    </div>
+    <div class="ads-grid" id="adsGrid"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Services</span><h2 class="section-title">What I <span class="accent">do</span></h2></div></div>
+    <div class="svc-list">
+      <div class="svc"><strong>Video Ads</strong></div>
+      <div class="svc"><strong>Product Films</strong></div>
+      <div class="svc"><strong>Website Design</strong></div>
+      <div class="svc"><strong>Portfolio Sites</strong></div>
+      <div class="svc"><strong>Web Page Management</strong></div>
+      <div class="svc"><strong>Ads Management</strong></div>
+      <div class="svc"><strong>Social Content</strong></div>
+      <div class="svc"><strong>Color + Sound</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="book" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Booking</span><h2 class="section-title">Book a <span class="accent">call</span></h2></div>
+      <p class="section-sub">30-minute intro call. Pick a date and time.</p>
+    </div>
+    <div class="booking">
+      <div class="booking-cal">
+        <div class="cal-head">
+          <button id="calPrev" type="button">←</button>
+          <h4 id="calMonth"></h4>
+          <button id="calNext" type="button">→</button>
+        </div>
+        <div class="cal-days" id="calDays"></div>
+        <div class="slots" id="slots"></div>
+      </div>
+      <div class="booking-form-wrap">
+        <form class="book-form" id="bookForm" novalidate>
+          <input type="text" id="bkName" placeholder="Your name" autocomplete="name">
+          <small class="err" id="errName"></small>
+          <input type="email" id="bkEmail" placeholder="Email" autocomplete="email">
+          <small class="err" id="errEmail"></small>
+          <div class="phone-wrap">
+            <div class="cc-select" id="ccSelect">
+              <button class="cc-btn" type="button" id="ccBtn">
+                <span class="cc-flag" id="ccFlag">🇮🇳</span>
+                <span class="cc-code" id="ccCode">+91</span>
+                <span class="cc-caret">▾</span>
+              </button>
+              <div class="cc-drop" id="ccDrop" style="display:none"></div>
+            </div>
+            <input type="tel" id="bkPhone" placeholder="Enter your number" autocomplete="tel">
+          </div>
+          <small class="err" id="errPhone"></small>
+          <p class="book-summary" id="bookSummary">Selected: choose a date &amp; time</p>
+          <button class="book-btn" type="submit">Confirm booking</button>
+          <div class="book-status" id="bookStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="nav-logo" href="#top">Style<span class="accent">frame</span></a>
+      <p>Video editor making ads for brands that want to be remembered.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><h4>Social</h4><a href="#">Instagram</a><a href="#">Vimeo</a><a href="#">YouTube</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="mailto:hello@styleframe.com">Email</a><a href="#book">Book a call</a></div>
+    </div>
+  </div>
+  <div class="footer-base"><span>© 2026 StyleFrame</span><span>Ads for brands</span></div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="videoModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close>✕</button>
+    <video id="modalVideo" controls playsinline preload="metadata"></video>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
