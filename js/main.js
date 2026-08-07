@@ -368,21 +368,14 @@
     const bookingEmail = bkEmail.value.trim();
     const bookingPhone = selectedCC.cc + " " + bkPhone.value.trim();
     const bookingWhen = fmt(selDate) + " at " + selSlot;
-    const text = encodeURIComponent(
-      "New Booking — StyleFrame\nName: " + bookingName +
-      "\nEmail: " + bookingEmail +
-      "\nPhone: " + bookingPhone +
-      "\nDate: " + bookingWhen +
-      "\nService: intro call"
-    );
 
-    // AUTO EMAIL notification (free, no account) — every booking emails the owner
+    // AUTO EMAIL notification (free, no account) — every booking emails the owner instantly
     try {
       fetch("https://formsubmit.co/ajax/styleframeco@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
-          _subject: "🎬 New StyleFrame Booking",
+          _subject: "🎬 New StyleFrame Booking — " + bookingWhen,
           _template: "table",
           "Name": bookingName,
           "Email": bookingEmail,
@@ -393,8 +386,7 @@
       }).catch(function () {});
     } catch (e) {}
 
-    // WhatsApp: open wa.me prefilled to the owner's number
-    try { window.open("https://wa.me/917876620064?text=" + text, "_blank"); } catch (e) {}
+    // NO popup — booking message goes straight to email (above), plus WhatsApp deep-link is NOT opened
     e.target.reset();
     [errName, errEmail, errPhone].forEach((x) => (x.textContent = ""));
     [bkName, bkEmail, bkPhone].forEach((x) => x.classList.remove("bad"));
