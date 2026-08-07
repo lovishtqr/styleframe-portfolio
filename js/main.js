@@ -358,10 +358,19 @@
 
     // success — lock the button (no double submit), remember cooldown
     submitLocked = true;
-    st.textContent = "🎉 Booking confirmed — " + fmt(selDate) + " at " + selSlot + ".";
+    st.textContent = "🎉 Booking confirmed — " + fmt(selDate) + " at " + selSlot + ". Sending to WhatsApp…";
     st.style.display = "block"; st.style.color = "#2eaf5d";
     localStorage.setItem(BOOK_KEY, JSON.stringify({ at: Date.now() }));
     localStorage.removeItem(ATTEMPT_KEY);
+    // WhatsApp integration: open wa.me prefilled to the owner's number
+    const text = encodeURIComponent(
+      "New Booking — StyleFrame\nName: " + bkName.value.trim() +
+      "\nEmail: " + bkEmail.value.trim() +
+      "\nPhone: " + selectedCC.cc + " " + bkPhone.value.trim() +
+      "\nDate: " + fmt(selDate) + " " + selSlot +
+      "\nService: intro call"
+    );
+    try { window.open("https://wa.me/917876620064?text=" + text, "_blank"); } catch (e) {}
     e.target.reset();
     [errName, errEmail, errPhone].forEach((x) => (x.textContent = ""));
     [bkName, bkEmail, bkPhone].forEach((x) => x.classList.remove("bad"));
