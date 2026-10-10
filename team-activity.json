@@ -1,0 +1,12 @@
+{
+  "updated": "2026-10-10T15:50:00Z",
+  "rooms": {
+    "developer": {"active": false, "task": null, "started_at": null},
+    "hacker": {"active": false, "task": null, "started_at": null},
+    "debate": {"active": false, "task": null, "started_at": null},
+    "re": {"active": false, "task": null, "started_at": null},
+    "boss-worker": {"active": false, "task": null, "started_at": null},
+    "mega-team": {"active": false, "task": null, "started_at": null},
+    "gods-eye": {"active": false, "task": null, "started_at": null}
+  }
+}
