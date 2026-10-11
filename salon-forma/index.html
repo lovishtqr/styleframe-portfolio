@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <title>FORMA — Salon Design Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    button:disabled{cursor:not-allowed}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%}
+    :focus-visible{outline:3px solid #eeaa69;outline-offset:4px}
+    [hidden]{display:none!important}
+
+    /* DIRECTORY */
+    .directory{min-height:100vh;background:#141416;color:#f8f4ef}
+    .directory header,.directory main,.directory .controls,.directory .meta{
+      width:min(1440px,90%);margin-inline:auto
+    }
+    .directory header{
+      display:flex;justify-content:space-between;align-items:center;gap:20px;
+      padding:24px 0;border-bottom:1px solid #ffffff24
+    }
+    .mark{font:800 25px "Syne",sans-serif;letter-spacing:-.09em}
+    .mark span{color:#df9c74}
+    .directory header small{color:#bbb2ad}
+    .intro{padding:86px 0 53px;max-width:950px}
+    .kicker{color:#e7a580;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+    .intro h1{margin:16px 0 24px;font:700 clamp(50px,9vw,132px)/.91 "Syne",sans-serif;letter-spacing:-.09em}
+    .intro h1 em{font-style:normal;color:#d8a189}
+    .intro>p:last-child{max-width:690px;line-height:1.8;color:#c3bdb9}
+    .controls{display:grid;grid-template-columns:minmax(220px,390px) minmax(180px,250px);gap:12px}
+    .controls input,.controls select{
+      min-width:0;padding:15px 17px;background:#242427;border:1px solid #565153;
+      color:white;border-radius:8px
+    }
+    .chips{display:flex;gap:8px;overflow:auto;padding:18px 0 24px;scrollbar-width:thin}
+    .chips button{
+      flex:none;border:1px solid #696164;border-radius:50px;background:transparent;
+      color:#eee;padding:10px 14px;font-size:12px
+    }
+    .chips button.active{background:#e7ad89;color:#251813;border-color:#e7ad89;font-weight:800}
+    .meta{color:#bfb6b1;font-size:13px;padding:0 0 17px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-bottom:25px}
+    .concept{
+      min-width:0;padding:7px;border:1px solid #454044;background:#212124;
+      color:#f7f2ef;border-radius:10px;text-align:left;transition:transform .25s,border-color .25s
+    }
+    .concept:hover{transform:translateY(-5px);border-color:#e0a080}
+    .preview{height:275px;overflow:hidden;pointer-events:none}
+    .concept footer{display:flex;justify-content:space-between;gap:8px;padding:13px 7px 5px;font-size:12px}
+    .concept footer span{color:#b9aeab;text-align:right}
+    .load-wrap{text-align:center;padding:15px 0 80px}
+    .load-wrap button{
+      background:transparent;color:white;border:1px solid #b9b0ac;
+      border-radius:5px;padding:14px 27px;font-weight:700
+    }
+    .empty{grid-column:1/-1;padding:55px;text-align:center;color:#c5bdb8}
+
+    /* SHARED DESIGN ENGINE: each direction has a different composition
+       and can independently change typography, spacing and section layout. */
+    .design{
+      --bg:#f1e8df;--surface:#fffaf6;--ink:#26201d;--accent:#87593e;
+      --onaccent:#fff;--font:"Playfair Display",serif;--round:0px;
+      --pad:6%;--align:left;--title-scale:1;
+      color:var(--ink);background:var(--bg);font-family:"DM Sans",sans-serif
+    }
+    .stage{
+      position:relative;isolation:isolate;min-height:640px;overflow:hidden;
+      background:var(--bg);color:var(--ink)
+    }
+    .stage::before,.stage::after{content:"";position:absolute;pointer-events:none}
+    .stage::before{
+      z-index:0;width:45%;aspect-ratio:1;top:8%;right:7%;
+      border:1px solid var(--accent);border-radius:var(--round);
+      transform:rotate(17deg);opacity:.4
+    }
+    .stage::after{
+      z-index:0;width:14%;aspect-ratio:1;bottom:-6%;left:-3%;
+      border-radius:50%;background:var(--accent);opacity:.13
+    }
+    .stage-inner{position:relative;min-height:inherit;width:min(1440px,100%);margin:auto}
+    .stage-image{
+      position:absolute;z-index:1;right:5%;top:9%;width:43%;height:83%;
+      object-fit:cover;object-position:center;border-radius:var(--round)
+    }
+    .stage-copy{
+      position:relative;z-index:2;width:53%;padding:105px 0 85px var(--pad);
+      text-align:var(--align)
+    }
+    .stage-label{
+      display:block;margin-bottom:27px;color:var(--accent);
+      font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase
+    }
+    .stage h1,.stage h2{
+      margin:0;font:600 clamp(56px,6.6vw,106px)/.98 var(--font);
+      letter-spacing:-.067em;overflow-wrap:break-word
+    }
+    .stage p{max-width:430px;margin:28px 0;line-height:1.8;font-size:15px;opacity:.85}
+    .stage-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:var(--align)}
+    .primary,.secondary{
+      min-height:47px;padding:13px 21px;border:1px solid var(--accent);
+      border-radius:calc(var(--round)/8);font-size:12px;font-weight:800
+    }
+    .primary{background:var(--accent);color:var(--onaccent)}
+    .secondary{background:transparent;color:inherit;border-color:currentColor}
+    .stage-stamp{
+      position:absolute;z-index:3;right:2%;bottom:20px;writing-mode:vertical-rl;
+      font-size:10px;letter-spacing:.2em;text-transform:uppercase
+    }
+
+    /* 13 distinct composition systems × alternate-side treatment = 26.
+       Several systems deliberately change hierarchy, not just photo shape. */
+    .m0 .stage-image{border-radius:48% 48% 0 0;width:38%;right:8%}
+    .m1 .stage-image{border-radius:50%;width:37%;height:73%;top:14%;right:8%}
+    .m2 .stage{color:#fff}
+    .m2 .stage-image{inset:0;width:100%;height:100%;border-radius:0;filter:brightness(.36)}
+    .m2 .stage-copy{width:76%;max-width:920px;margin:auto;padding:135px 5%;text-align:center}
+    .m2 .stage p{margin-inline:auto}
+    .m2 .stage-actions{justify-content:center}
+    .m2 .stage-label{color:#fff}
+    .m2 .stage::before,.m2 .stage::after{display:none}
+    .m3 .stage-image{top:0;right:0;height:100%;width:55%;clip-path:polygon(25% 0,100% 0,100% 100%,0 100%);border-radius:0}
+    .m4 .stage-image{right:10%;top:16%;width:34%;height:68%;transform:rotate(7deg);border:16px solid var(--surface);box-shadow:0 25px 45px #0003}
+    .m5 .stage-image{right:8%;top:11%;width:41%;height:78%;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);border-radius:0}
+    .m6 .stage-image{right:8%;top:12%;width:40%;height:75%;border-radius:12px 180px 12px 180px}
+    .m7 .stage-image{right:9%;top:17%;width:37%;height:66%;border:17px solid var(--accent);border-radius:0}
+    .m8 .stage-image{right:10%;top:16%;width:34%;height:70%;border-radius:4px;box-shadow:26px 26px 0 var(--accent)}
+    .m8 .stage::before{border-radius:50%;right:2%}
+    .m9 .stage-copy{width:100%;padding:76px var(--pad) 0;text-align:center}
+    .m9 .stage h1{max-width:1100px;margin:auto}
+    .m9 .stage p{margin:18px auto}
+    .m9 .stage-actions{justify-content:center}
+    .m9 .stage-image{
+      top:auto;bottom:0;left:24%;right:auto;width:52%;height:235px;
+      border-radius:150px 150px 0 0
+    }
+    .m9 .stage{min-height:760px}
+    .m10 .stage{background:var(--ink);color:var(--bg)}
+    .m10 .stage-copy{width:65%}
+    .m10 .stage-image{
+      right:4%;top:13%;width:42%;height:73%;clip-path:circle(47% at 50% 50%)
+    }
+    .m10 .stage::before{border-color:var(--bg)}
+    .m11 .stage-image{
+      width:54%;height:100%;top:0;right:0;border-radius:0;
+      clip-path:polygon(18% 0,100% 0,100% 100%,23% 100%)
+    }
+    .m11 .stage-copy{padding-top:145px;width:48%}
+    .m11 .stage::after{width:28%;left:24%;bottom:8%;border-radius:0}
+    .m12 .stage-image{
+      width:38%;height:68%;top:16%;right:9%;border-radius:45% 5% 45% 5%;
+      box-shadow:-22px 23px 0 var(--accent)
+    }
+    .flip:not(.m2):not(.m9) .stage-image{right:auto;left:5%}
+    .flip:not(.m2):not(.m9) .stage-copy{margin-left:auto;padding-left:2%;padding-right:var(--pad)}
+    .flip.m0 .stage-image,.flip.m1 .stage-image,.flip.m5 .stage-image,
+    .flip.m6 .stage-image,.flip.m7 .stage-image,.flip.m8 .stage-image,
+    .flip.m12 .stage-image{left:8%}
+    .flip.m3 .stage-image,.flip.m11 .stage-image{left:0;transform:scaleX(-1)}
+    .flip.m4 .stage-image{left:10%;transform:rotate(-7deg)}
+    .flip.m10 .stage-image{left:4%}
+    .flip.m9 .stage{background:var(--surface)}
+    .flip.m9 .stage-image{border-radius:0 0 150px 150px;top:0;bottom:auto;height:205px}
+    .flip.m9 .stage-copy{padding-top:240px}
+
+    /* Intentional 3D only for selected directions. */
+    .depth .stage-image{
+      transition:transform .18s ease-out;
+      transform:perspective(900px) rotateX(var(--rx,0deg))
+        rotateY(var(--ry,0deg)) rotate(-3deg);
+      box-shadow:23px 26px 0 var(--accent),0 35px 55px #0004
+    }
+    .depth .stage::after{width:17%;left:auto;right:1%;bottom:1%;opacity:.55;box-shadow:0 20px 35px #0002}
+
+    /* MINIATURES reuse the ACTUAL hero compositions. */
+    .preview .stage{width:100%;height:275px;min-height:275px}
+    .preview .stage-inner{height:275px;min-height:275px}
+    .preview .stage-copy{padding-top:54px;padding-bottom:0}
+    .preview .stage-label{margin-bottom:10px;font-size:7px}
+    .preview .stage h2{font-size:clamp(19px,2.35vw,39px)}
+    .preview .stage p,.preview .stage-actions,.preview .stage-stamp{display:none}
+    .preview .m2 .stage-copy{padding-top:84px}
+    .preview .m9 .stage-copy{padding-top:30px}
+    .preview .m9 .stage-image{height:105px}
+    .preview .flip.m9 .stage-copy{padding-top:125px}
+    .preview .flip.m9 .stage-image{height:107px}
+    .preview .m11 .stage-copy{padding-top:76px}
+    .preview .m10 .stage-copy{padding-top:68px}
+
+    /* FULL WEBSITE */
+    .site{min-height:100vh}
+    .demo-bar{
+      position:relative;z-index:12;background:#171719;color:#fff;
+      padding:9px 5%;display:flex;align-items:center;justify-content:space-between;gap:8px;
+      font-size:11px
+    }
+    .demo-bar button{background:transparent;color:#fff;border:1px solid #8a8585;border-radius:4px;padding:9px 11px}
+    .site-header{
+      position:relative;z-index:11;width:min(1440px,100%);margin:auto;
+      padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px
+    }
+    .site-logo{font:700 clamp(20px,2.3vw,29px) var(--font);letter-spacing:-.06em}
+    .site-logo span{color:var(--accent)}
+    .site-nav{display:flex;align-items:center;gap:23px;font-size:12px;font-weight:700}
+    .site-nav a:last-child{background:var(--accent);color:var(--onaccent);padding:12px 16px}
+    .menu-btn{display:none;border:1px solid currentColor;background:transparent;color:inherit;padding:8px 11px}
+    .site-main{display:flex;flex-direction:column}
+    .section{width:min(1440px,100%);margin:auto;padding:90px 6%;scroll-margin-top:15px}
+    .section.accent-section{width:100%;background:var(--surface)}
+    .section.accent-section>.section-inner{max-width:1268px;margin:auto}
+    .section small{display:block;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+    .section h2{max-width:850px;margin:14px 0 14px;font:600 clamp(39px,5vw,72px)/1.07 var(--font);letter-spacing:-.065em}
+    .section .lead{max-width:640px;line-height:1.8;opacity:.75}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:36px}
+    .service{
+      min-height:230px;background:var(--surface);border:1px solid #8885;
+      border-radius:calc(var(--round)/4);padding:25px;display:flex;flex-direction:column
+    }
+    .service b{color:var(--accent);font-size:11px}
+    .service h3{font:600 clamp(22px,2.5vw,32px)/1.1 var(--font);margin:25px 0 10px}
+    .service p{font-size:13px;line-height:1.65;opacity:.72;margin:0 0 20px}
+    .service button{margin-top:auto;align-self:flex-start;color:var(--accent);background:none;border:0;padding:0;font-weight:800;font-size:12px}
+    .tiles .services{grid-template-columns:repeat(2,1fr)}
+    .tiles .service{min-height:185px}
+    .lines .services{display:block}
+    .lines .service{
+      min-height:0;display:grid;grid-template-columns:45px 1fr 1fr auto;
+      align-items:center;gap:15px;border-radius:0;border-width:0 0 1px;
+      background:transparent;padding:19px 0
+    }
+    .lines .service h3,.lines .service p{margin:0}
+    .lines .service button{align-self:center}
+    .showcase{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;margin-top:35px}
+    .showcase button{padding:0;border:0;overflow:hidden;background:var(--bg);height:415px}
+    .showcase button:nth-child(2){height:310px;align-self:end}
+    .showcase img{height:100%;object-fit:cover;transition:transform .4s}
+    .showcase button:hover img{transform:scale(1.045)}
+    .story-layout{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
+    .story-layout img{height:480px;object-fit:cover;border-radius:calc(var(--round)/5)}
+    .booking{width:100%;background:var(--ink);color:var(--bg)}
+    .booking .section-inner{max-width:1268px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:8%}
+    .booking .section-inner>div:first-child p{line-height:1.8;opacity:.77}
+    .booking form{
+      display:grid;grid-template-columns:1fr 1fr;gap:15px;
+      background:var(--bg);color:var(--ink);padding:28px;border-radius:10px
+    }
+    .booking label{display:grid;gap:7px;font-size:12px;font-weight:800}
+    .booking .wide{grid-column:1/-1}
+    .booking input,.booking select{
+      width:100%;min-width:0;background:#fff;color:#222;border:1px solid #898989;
+      border-radius:4px;padding:10px;min-height:44px
+    }
+    .booking form button{width:100%}
+    .form-message{min-height:20px;margin:0;font-size:13px;line-height:1.5}
+    .saved{margin-top:25px;font-size:13px;line-height:1.9}
+    .saved button{margin-left:12px;background:none;border:0;color:inherit;text-decoration:underline}
+    .site-footer{width:min(1440px,100%);margin:auto;padding:45px 6%;display:flex;justify-content:space-between;gap:20px;font-size:12px}
+    .site-footer b{font:700 24px var(--font)}
+    .site-footer p{max-width:410px;opacity:.72}
+    .lightbox{
+      position:fixed;z-index:30;inset:0;background:#070708ee;
+      display:none;align-items:center;justify-content:center;padding:22px
+    }
+    .lightbox.open{display:flex}
+    .lightbox img{width:auto;max-width:95vw;max-height:84vh;object-fit:contain}
+    .lightbox button{position:absolute;right:20px;top:10px;border:0;background:none;color:#fff;font-size:39px}
+
+    @media(max-width:950px){
+      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .stage{min-height:560px}
+      .stage h1{font-size:clamp(50px,7vw,83px)}
+    }
+    @media(max-width:680px){
+      .directory header small{font-size:10px}
+      .intro{padding:57px 0 32px}
+      .intro h1{font-size:clamp(47px,13vw,80px)}
+      .controls{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .preview .stage h2{font-size:clamp(27px,7vw,42px)}
+      .demo-bar span{display:none}
+      .site-header{padding:15px 5%}
+      .menu-btn{display:block}
+      .site-nav{
+        display:none;position:absolute;top:100%;left:0;right:0;
+        background:var(--bg);padding:15px 5% 22px;flex-direction:column;
+        align-items:stretch;gap:0;box-shadow:0 12px 22px #0002
+      }
+      .site-nav.open{display:flex}
+      .site-nav a{padding:13px}
+      .stage,.m9 .stage{min-height:0!important}
+      .stage-inner{display:flex;flex-direction:column;min-height:0}
+      .stage-copy,.m2 .stage-copy,.m9 .stage-copy,.m10 .stage-copy,
+      .m11 .stage-copy,.flip:not(.m2):not(.m9) .stage-copy{
+        width:100%;max-width:none;margin:0;padding:47px 5% 0;
+        text-align:left
+      }
+      .stage h1{font-size:clamp(48px,12.4vw,78px)}
+      .stage p{margin:20px 0}
+      .stage-actions,.m2 .stage-actions,.m9 .stage-actions{justify-content:flex-start}
+      .stage-image,.m0 .stage-image,.m1 .stage-image,.m2 .stage-image,
+      .m3 .stage-image,.m4 .stage-image,.m5 .stage-image,.m6 .stage-image,
+      .m7 .stage-image,.m8 .stage-image,.m9 .stage-image,.m10 .stage-image,
+      .m11 .stage-image,.m12 .stage-image,
+      .flip:not(.m2):not(.m9) .stage-image,.flip.m9 .stage-image{
+        position:relative;inset:auto;width:90%;height:360px;margin:35px auto 0;
+        border:0;border-radius:12px;clip-path:none;box-shadow:none;
+        transform:none;filter:none;object-fit:cover
+      }
+      .m2 .stage,.m10 .stage{background:var(--bg);color:var(--ink)}
+      .m2 .stage-label{color:var(--accent)}
+      .m2 .stage p{margin:20px 0}
+      .depth .stage-image{transform:none}
+      .stage-stamp{display:none}
+      .section{padding:67px 5%}
+      .services,.tiles .services,.story-layout,.booking .section-inner{grid-template-columns:1fr}
+      .lines .service{grid-template-columns:35px 1fr auto}
+      .lines .service p{display:none}
+      .showcase{gap:8px}
+      .showcase button{height:285px}
+      .showcase button:nth-child(2){height:225px}
+      .story-layout img{height:330px}
+      .booking form{grid-template-columns:1fr;padding:20px}
+      .site-footer{flex-direction:column}
+    }
+    @media(max-width:380px){
+      .stage h1{font-size:45px}
+      .stage-image,.m0 .stage-image,.m1 .stage-image,.m2 .stage-image,
+      .m3 .stage-image,.m4 .stage-image,.m5 .stage-image,.m6 .stage-image,
+      .m7 .stage-image,.m8 .stage-image,.m9 .stage-image,.m10 .stage-image,
+      .m11 .stage-image,.m12 .stage-image,
+      .flip:not(.m2):not(.m9) .stage-image,.flip.m9 .stage-image{height:300px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+      .depth .stage-image{transform:none!important}
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div class="lightbox" id="lightbox" role="dialog"
+       aria-modal="true" aria-label="Photo preview">
+    <button type="button" id="closeLightbox" aria-label="Close preview">×</button>
+    <img id="lightboxImage" alt="Enlarged salon inspiration">
+  </div>
+
+  <script>
+    "use strict";
+
+    /*
+      20 salon specialties × 26 design directions = 520 clickable concepts.
+      These are generated frontend concepts, not 520 independently hand-coded
+      salon businesses. Images are externally hosted and require internet.
+    */
+
+    const niches = [
+      ["Women's Hair","Hair House","Hair that feels like you.",
+        ["Signature Cut","Blowout","Colour Refresh","Hair Treatment","Event Styling","Consultation"],
+        ["photo-1521590832167-7bcbfaa6381f","photo-1560066984-138dadb4c035"]],
+      ["Barber","Barber Club","A sharper kind of everyday.",
+        ["Precision Cut","Skin Fade","Beard Shape","Hot Towel Shave","Cut & Beard","Grooming Ritual"],
+        ["photo-1503951914875-452162b0f3f1","photo-1599351431202-1e0f0137899a"]],
+      ["Unisex Hair","Style Studio","Good hair. Your way.",
+        ["Personalized Cut","Creative Colour","Blow Dry","Treatment","Styling","Consultation"],
+        ["photo-1560066984-138dadb4c035","photo-1522337360788-8b13dee7a37e"]],
+      ["Nail Art","Nail Studio","Your hands, your canvas.",
+        ["Manicure","Gel Manicure","Custom Nail Art","Pedicure","Nail Repair","Signature Set"],
+        ["photo-1604654894610-df63bc536371","photo-1610992015732-2449b76344bc"]],
+      ["Nail Extensions","Extension Bar","Go beautifully beyond.",
+        ["Gel Extensions","Acrylic Set","Sculpted Set","French Set","Refill","Removal"],
+        ["photo-1610992015732-2449b76344bc","photo-1604654894610-df63bc536371"]],
+      ["Hair Extensions","Length Atelier","The length you imagined.",
+        ["Consultation","Tape-ins","Weft Installation","Blending","Maintenance","Removal"],
+        ["photo-1562322140-8baeececf3df","photo-1595476108010-b4d1f102b1b1"]],
+      ["Lashes","Lash Studio","Let your eyes say more.",
+        ["Classic Lashes","Hybrid Lashes","Volume Lashes","Lash Lift","Refill","Removal"],
+        ["photo-1512290923902-8a9f81dc236c","photo-1524504388940-b1c1722653e1"]],
+      ["Brows","Brow Atelier","Confidence has a shape.",
+        ["Brow Shaping","Tint","Lamination","Styling","Shape & Tint","Consultation"],
+        ["photo-1512290923902-8a9f81dc236c","photo-1522335789203-aabd1fc54bc9"]],
+      ["Braids","Braid House","Every braid tells a story.",
+        ["Box Braids","Knotless Braids","Cornrows","Twists","Braid Refresh","Consultation"],
+        ["photo-1595476108010-b4d1f102b1b1","photo-1531123897727-8f129e1688ce"]],
+      ["Curly Hair","Curl House","Come as you curl.",
+        ["Curly Cut","Curl Definition","Hydration","Wash & Style","Curl Refresh","Consultation"],
+        ["photo-1544005313-94ddf0286df2","photo-1534528741775-53994a69daeb"]],
+      ["Bridal Hair","Bridal Atelier","Made for your moment.",
+        ["Hair Trial","Wedding Hair","Bridal Party","Veil Styling","Touch-up","Consultation"],
+        ["photo-1529636798458-92182e662485","photo-1523438885200-e635ba2c371e"]],
+      ["Bridal Makeup","Makeup Atelier","A glow worth remembering.",
+        ["Makeup Trial","Wedding Makeup","Bridal Party","Evening Look","Touch-up","Consultation"],
+        ["photo-1522335789203-aabd1fc54bc9","photo-1487412947147-5cebf100ffc2"]],
+      ["Hair Colour","Colour Lab","Colour outside the ordinary.",
+        ["Balayage","Full Colour","Highlights","Gloss & Tone","Root Refresh","Consultation"],
+        ["photo-1600948836101-f9ffda59d250","photo-1562322140-8baeececf3df"]],
+      ["Skincare","Skin Studio","Feel good in your skin.",
+        ["Consultation","Hydrating Facial","Deep Cleanse","Gentle Peel","Glow Treatment","Skin Renewal"],
+        ["photo-1570172619644-dfd03ed5d881","photo-1556229010-6c3f2c9ca5f8"]],
+      ["Beauty Spa","Beauty Spa","Make room to unwind.",
+        ["Signature Facial","Massage","Body Ritual","Head Spa","Aromatherapy","Wellness Session"],
+        ["photo-1540555700478-4be289fbecef","photo-1571019613454-1cb2f99b2d8b"]],
+      ["Makeup","Makeup Room","Make an entrance.",
+        ["Soft Glam","Full Glam","Editorial Makeup","Event Makeup","Lesson","Consultation"],
+        ["photo-1522335789203-aabd1fc54bc9","photo-1487412947147-5cebf100ffc2"]],
+      ["Facials","Facial Bar","Meet your fresh start.",
+        ["Express Facial","Hydrating Facial","Brightening Facial","Deep Cleanse","Calming Facial","Consultation"],
+        ["photo-1570172619644-dfd03ed5d881","photo-1540555700478-4be289fbecef"]],
+      ["Head Spa","Head Spa","A reset from the roots.",
+        ["Scalp Consultation","Head Spa Ritual","Scalp Cleanse","Hair Mask","Massage","Scalp Treatment"],
+        ["photo-1600948836101-f9ffda59d250","photo-1540555700478-4be289fbecef"]],
+      ["Natural Hair","Texture Studio","Your texture, celebrated.",
+        ["Natural Cut","Twist Out","Protective Style","Deep Conditioning","Wash & Go","Consultation"],
+        ["photo-1531123897727-8f129e1688ce","photo-1544005313-94ddf0286df2"]],
+      ["Kids Hair","Little Hair Co.","Little cuts. Big smiles.",
+        ["Kids Cut","First Haircut","Kids Braids","Gentle Wash","Party Styling","Consultation"],
+        ["photo-1560066984-138dadb4c035","photo-1521590832167-7bcbfaa6381f"]]
+    ];
+
+    const directions = [
+      ["Maison","Editorial Luxury","Playfair Display",0],
+      ["Form","Quiet Minimal","Manrope",1],
+      ["Noir","Cinematic Dark","Playfair Display",2],
+      ["District","Urban Angle","Space Grotesk",3],
+      ["Muse","Gallery Print","Playfair Display",4],
+      ["Nova","Sculptural","Syne",5],
+      ["Casa","Organic Softness","Playfair Display",6],
+      ["Frame","Graphic Borders","Space Grotesk",7],
+      ["Orbit","Dimensional Depth","Syne",8],
+      ["Élan","Centered Editorial","Playfair Display",9],
+      ["Sable","After-Dark Boutique","Playfair Display",10],
+      ["Mode","Architectural Split","Manrope",11],
+      ["Aura","Artful Curves","Playfair Display",12],
+      ["Studio","Left Portrait","Space Grotesk",0],
+      ["Kiyo","Clean Circular","Manrope",1],
+      ["Velvet","Immersive Film","Playfair Display",2],
+      ["Pulse","Reverse Geometry","Syne",3],
+      ["Atelier","Tilted Editorial","Playfair Display",4],
+      ["Sol","Modern Geometry","Syne",5],
+      ["Onda","Playful Organic","Manrope",6],
+      ["Chrome","Future Frame 3D","Space Grotesk",7],
+      ["Opal","Floating Portrait","Playfair Display",8],
+      ["Halo","Inverse Magazine","Syne",9],
+      ["Nord","Night Modern","Manrope",10],
+      ["Lush","Spatial Layers 3D","Syne",11],
+      ["Mono","Artisan Contrast","Playfair Display",12]
+    ];
+
+    const app = document.getElementById("app");
+    const lightbox = document.getElementById("lightbox");
+    const esc = s => String(s).replace(/[&<>"']/g,c =>
+      ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const photo = (id,w=850) =>
+      `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=75`;
+
+    const designs = niches.flatMap((n,ni) => directions.map((dir,di) => {
+      const id = ni*26+di+1;
+      const dark = [2,10,15,23].includes(di);
+      const muted = [1,9,13,14,21].includes(di);
+      const hue = Math.round((id*137.508)%360);
+      const ah = (hue+28)%360;
+      const sat = muted?13:32+(id%15);
+      return {
+        id,n,dir,di,
+        name:`${dir[0]} ${n[1]}`,
+        title: n[2],
+        photo:n[4][di%2],
+        other:n[4][(di+1)%2],
+        depth:[8,20,24].includes(di),
+        group:dir[3],
+        flip:di>=13,
+        listStyle:di%3===0?"lines":di%3===1?"tiles":"",
+        sectionOrder:di%3,
+        vars:[
+          `--bg:${dark?`hsl(${hue} 19% 12%)`:`hsl(${hue} ${sat}% ${muted?95:91}%)`}`,
+          `--surface:${dark?`hsl(${hue} 15% 19%)`:`hsl(${hue} 23% 98%)`}`,
+          `--ink:${dark?"#f7f2ed":`hsl(${hue} 18% 15%)`}`,
+          `--accent:${dark?`hsl(${ah} 65% 74%)`:`hsl(${ah} 48% ${30+id%10}%)`}`,
+          `--onaccent:${dark?"#171717":"#ffffff"}`,
+          `--font:"${dir[2]}"`,
+          `--round:${["0px","12px","36px","95px"][di%4]}`,
+          `--pad:${5+(di%4)}%`
+        ].join(";")
+      };
+    }));
+
+    let category="All", style="All", query="",limit=18, lastFocus=null;
+    const today=()=>{
+      const d=new Date();
+      d.setMinutes(d.getMinutes()-d.getTimezoneOffset());
+      return d.toISOString().slice(0,10);
+    };
+    const bookingKey=id=>`forma-demo-booking-${id}`;
+    function getBookings(id){
+      try{
+        const data=JSON.parse(localStorage.getItem(bookingKey(id))||"[]");
+        return Array.isArray(data)?data:[];
+      }catch{return []}
+    }
+
+    function stage(d,small=false){
+      return `<div class="design m${d.group} ${d.flip?"flip":""} ${d.depth?"depth":""}"
+        style="${d.vars}">
+        <div class="stage">
+          <div class="stage-inner">
+            <div class="stage-copy">
+              <span class="stage-label">${esc(d.n[0])} / ${esc(d.dir[1])}</span>
+              ${small?`<h2>${esc(d.title)}</h2>`:`<h1>${esc(d.title)}</h1>`}
+              <p>Welcome to ${esc(d.name)}. Considered beauty, a little time
+                 for yourself, and a look that feels completely yours.</p>
+              <div class="stage-actions">
+                <a href="#booking" class="primary">Book your visit ↗</a>
+                <a href="#services" class="secondary">Explore services</a>
+              </div>
+            </div>
+            <img class="stage-image" src="${photo(d.photo,small?650:1450)}"
+              ${small?'loading="lazy"':'fetchpriority="high"'}
+              alt="${small?"":esc(d.n[0]+" salon inspiration")}">
+            <span class="stage-stamp">FORMA / DESIGN ${String(d.id).padStart(3,"0")}</span>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    function directory(){
+      app.innerHTML=`<div class="directory">
+        <header><div class="mark">FOR<span>MA.</span></div>
+          <small>520 salon concepts · <a href="../designs/" style="color:#df9c74">← Design Library</a></small></header>
+        <main>
+          <div class="intro">
+            <span class="kicker">Explore what your salon could become</span>
+            <h1>Beauty has<br><em>no template.</em></h1>
+            <p>20 salon specialties. 26 creative directions. 520 clickable
+              frontend concepts with distinct compositions, responsive
+              layouts and selected lightweight 3D-style effects.</p>
+          </div>
+        </main>
+        <div class="controls">
+          <input id="search" type="search" aria-label="Search concepts"
+            placeholder="Search salons, styles or services..."
+            value="${esc(query)}">
+          <select id="style" aria-label="Filter design style">
+            <option value="All">All design directions</option>
+            ${directions.map((d,i)=>`<option value="${i}" ${style===String(i)?"selected":""}>
+              ${esc(d[1])}</option>`).join("")}
+          </select>
+        </div>
+        <div class="meta">
+          <div class="chips" id="chips" aria-label="Salon specialties">
+            ${["All",...niches.map(n=>n[0])].map(n=>`
+              <button type="button" class="${category===n?"active":""}"
+                data-category="${esc(n)}" aria-pressed="${category===n}">
+                ${esc(n)}</button>`).join("")}
+          </div>
+          <div id="count" aria-live="polite"></div>
+        </div>
+        <main>
+          <div class="grid" id="grid"></div>
+          <div class="load-wrap">
+            <button id="loadMore" type="button">Load more designs ↓</button>
+          </div>
+        </main>
+      </div>`;
+      document.title="FORMA — 520 Salon Website Concepts";
+      renderCards();
+    }
+
+    function renderCards(){
+      const term=query.trim().toLowerCase();
+      const found=designs.filter(d=>{
+        if(category!=="All"&&d.n[0]!==category)return false;
+        if(style!=="All"&&d.di!==Number(style))return false;
+        return [d.id,d.name,d.n[0],d.dir[1],d.title,...d.n[3]]
+          .join(" ").toLowerCase().includes(term);
+      });
+      document.getElementById("count").textContent=
+        `Showing ${Math.min(limit,found.length)} of ${found.length} matching concepts`;
+      document.getElementById("grid").innerHTML=found.length?
+        found.slice(0,limit).map(d=>`
+          <button class="concept" type="button" data-open="${d.id}"
+            aria-label="Open design ${d.id}: ${esc(d.name)}">
+            <div class="preview">${stage(d,true)}</div>
+            <footer><strong>${String(d.id).padStart(3,"0")} · ${esc(d.dir[1])}</strong>
+              <span>${esc(d.n[0])}${d.depth?" · 3D-style":""}</span></footer>
+          </button>`).join(""):
+        `<p class="empty">No concepts match. Try another search.</p>`;
+      document.getElementById("loadMore").hidden=limit>=found.length;
+    }
+
+    function servicesSection(d){
+      return `<section class="section ${d.listStyle}" id="services">
+        <small>01 / The menu</small>
+        <h2>Made around you.</h2>
+        <p class="lead">Thoughtful services for the little transformations
+          that make a big difference.</p>
+        <div class="services">
+          ${d.n[3].map((s,i)=>`<article class="service">
+            <b>${String(i+1).padStart(2,"0")} / ${esc(d.n[0])}</b>
+            <h3>${esc(s)}</h3>
+            <p>A personal experience shaped around your style and your day.</p>
+            <button type="button" data-service="${i}">
+              Choose this service ↗</button>
+          </article>`).join("")}
+        </div></section>`;
+    }
+
+    function gallerySection(d){
+      return `<section class="section accent-section" id="gallery">
+        <div class="section-inner">
+          <small>02 / The mood</small>
+          <h2>A closer look.</h2>
+          <p class="lead">A visual moodboard for this salon concept.
+            Select an image to open it.</p>
+          <div class="showcase">
+            <button type="button" data-image="0" aria-label="Enlarge first inspiration image">
+              <img src="${photo(d.photo,1050)}" loading="lazy"
+                alt="${esc(d.n[0])} visual inspiration">
+            </button>
+            <button type="button" data-image="1" aria-label="Enlarge second inspiration image">
+              <img src="${photo(d.other,850)}" loading="lazy"
+                alt="${esc(d.n[0])} salon atmosphere">
+            </button>
+          </div>
+        </div></section>`;
+    }
+
+    function storySection(d){
+      return `<section class="section" id="story">
+        <div class="story-layout">
+          <img src="${photo(d.other,1000)}" loading="lazy"
+            alt="${esc(d.n[0])} inspiration">
+          <div>
+            <small>03 / Our point of view</small>
+            <h2>A space to feel like yourself.</h2>
+            <p class="lead">${esc(d.name)} is a ${esc(d.n[0].toLowerCase())}
+              website concept shaped by ${esc(d.dir[1].toLowerCase())}.
+              Its visual identity brings together a distinctive composition,
+              imagery, typography and atmosphere.</p>
+            <a class="secondary" style="display:inline-block;margin-top:19px"
+              href="#booking">Plan your visit ↗</a>
+          </div>
+        </div></section>`;
+    }
+
+    function bookingSection(d){
+      return `<section class="section booking" id="booking">
+        <div class="section-inner">
+          <div>
+            <small>04 / Your appointment</small>
+            <h2>Let's make time for you.</h2>
+            <p>This is a <strong>browser-only demo</strong>. Saving this form
+              does not contact a salon. Name and email are not stored; only
+              the service, date and time are saved in this browser.</p>
+            <div class="saved" id="saved"></div>
+          </div>
+          <form id="bookingForm">
+            <label>Your name
+              <input name="name" autocomplete="name" maxlength="80" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>Service
+              <select name="service" id="bookingService" required>
+                <option value="">Choose a service</option>
+                ${d.n[3].map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join("")}
+              </select>
+            </label>
+            <label>Preferred date
+              <input type="date" name="date" id="bookingDate" required>
+            </label>
+            <label class="wide">Preferred time
+              <select name="time" required>
+                <option value="">Choose a time</option>
+                ${["09:00","10:30","12:00","13:30","15:00","16:30"]
+                  .map(t=>`<option value="${t}">${t}</option>`).join("")}
+              </select>
+            </label>
+            <button class="primary wide" type="submit">Save demo booking ↗</button>
+            <p class="form-message wide" id="formMessage" aria-live="polite"></p>
+          </form>
+        </div></section>`;
+    }
+
+    function renderSaved(id){
+      const root=document.getElementById("saved");
+      if(!root)return;
+      root.replaceChildren();
+      const bookings=getBookings(id);
+      if(!bookings.length)return;
+      const heading=document.createElement("strong");
+      heading.textContent="Saved in this browser:";
+      root.append(heading);
+      bookings.forEach((b,i)=>{
+        const row=document.createElement("div");
+        const text=document.createElement("span");
+        const remove=document.createElement("button");
+        text.textContent=`${b.service} · ${b.date} at ${b.time}`;
+        remove.type="button";
+        remove.dataset.remove=String(i);
+        remove.textContent="Remove";
+        row.append(text,remove);
+        root.append(row);
+      });
+    }
+
+    function site(d){
+      const sections=[servicesSection(d),gallerySection(d),storySection(d)];
+      const sequences=[[0,1,2],[2,0,1],[1,2,0]];
+      app.innerHTML=`<div class="design site m${d.group}
+          ${d.flip?"flip":""} ${d.depth?"depth":""}" style="${d.vars}">
+        <div class="demo-bar">
+          <button type="button" data-back>← All 520 concepts</button>
+          <span>DESIGN ${String(d.id).padStart(3,"0")} / 520 · ${esc(d.dir[1])}</span>
+          <button type="button" data-next="${d.id%520+1}">Next design →</button>
+        </div>
+        <header class="site-header">
+          <a class="site-logo" href="#/site/${d.id}" aria-label="${esc(d.name)} homepage">
+            ${esc(d.dir[0])}<span> ${esc(d.n[1])}</span>
+          </a>
+          <button type="button" class="menu-btn" id="menuBtn"
+            aria-controls="siteNav" aria-expanded="false">☰ Menu</button>
+          <nav class="site-nav" id="siteNav" aria-label="Salon navigation">
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#story">Our story</a>
+            <a href="#booking">Book a visit ↗</a>
+          </nav>
+        </header>
+        <main class="site-main">
+          ${stage(d)}
+          ${sequences[d.sectionOrder].map(i=>sections[i]).join("")}
+          ${bookingSection(d)}
+        </main>
+        <footer class="site-footer">
+          <div><b>${esc(d.name)}</b><p>${esc(d.n[0])} · ${esc(d.dir[1])}</p></div>
+          <p>Generated frontend concept, not a real salon.
+             Demo bookings are not sent anywhere.</p>
+        </footer>
+      </div>`;
+      document.title=`${d.name} — FORMA`;
+      document.getElementById("bookingDate").min=today();
+      renderSaved(d.id);
+    }
+
+    function current(){
+      const match=location.hash.match(/^#\/site\/(\d+)$/);
+      return match?designs[Number(match[1])-1]:null;
+    }
+    function navigate(){
+      closeLightbox();
+      if(/^#\/site\//.test(location.hash)&&!current()){
+        location.hash="#/";
+        return;
+      }
+      const d=current();
+      d?site(d):directory();
+      window.scrollTo(0,0);
+    }
+
+    app.addEventListener("click",event=>{
+      const open=event.target.closest("[data-open]");
+      if(open){location.hash=`#/site/${open.dataset.open}`;return}
+      if(event.target.closest("[data-back]")){location.hash="#/";return}
+      const next=event.target.closest("[data-next]");
+      if(next){location.hash=`#/site/${next.dataset.next}`;return}
+
+      const cat=event.target.closest("[data-category]");
+      if(cat){
+        category=cat.dataset.category;
+        limit=18;
+        document.querySelectorAll("[data-category]").forEach(b=>{
+          const active=b===cat;
+          b.classList.toggle("active",active);
+          b.setAttribute("aria-pressed",String(active));
+        });
+        renderCards();return;
+      }
+      if(event.target.closest("#loadMore")){limit+=18;renderCards();return}
+
+      if(event.target.closest("#menuBtn")){
+        const nav=document.getElementById("siteNav");
+        const opened=nav.classList.toggle("open");
+        document.getElementById("menuBtn").setAttribute("aria-expanded",String(opened));
+        return;
+      }
+      if(event.target.closest(".site-nav a")){
+        document.getElementById("siteNav")?.classList.remove("open");
+        document.getElementById("menuBtn")?.setAttribute("aria-expanded","false");
+      }
+
+      const service=event.target.closest("[data-service]");
+      if(service){
+        const d=current();if(!d)return;
+        document.getElementById("bookingService").value=d.n[3][Number(service.dataset.service)];
+        document.getElementById("booking").scrollIntoView({
+          behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"
+        });
+        return;
+      }
+
+      const image=event.target.closest("[data-image]");
+      if(image){
+        lastFocus=image;
+        const source=image.querySelector("img");
+        document.getElementById("lightboxImage").src=source.src;
+        document.getElementById("lightboxImage").alt=source.alt;
+        lightbox.classList.add("open");
+        document.body.style.overflow="hidden";
+        document.getElementById("closeLightbox").focus();
+        return;
+      }
+
+      const remove=event.target.closest("[data-remove]");
+      if(remove){
+        const d=current();if(!d)return;
+        const bookings=getBookings(d.id);
+        bookings.splice(Number(remove.dataset.remove),1);
+        try{
+          localStorage.setItem(bookingKey(d.id),JSON.stringify(bookings));
+          renderSaved(d.id);
+        }catch{
+          document.getElementById("formMessage").textContent=
+            "Browser storage is unavailable; the entry could not be removed.";
+        }
+      }
+    });
+
+    app.addEventListener("input",event=>{
+      if(event.target.id==="search"){
+        query=event.target.value;
+        limit=18;
+        renderCards();
+      }
+    });
+    app.addEventListener("change",event=>{
+      if(event.target.id==="style"){
+        style=event.target.value;
+        limit=18;
+        renderCards();
+      }
+    });
+    app.addEventListener("submit",event=>{
+      if(event.target.id!=="bookingForm")return;
+      event.preventDefault();
+      const d=current();if(!d)return;
+      const form=event.target;
+      if(!form.reportValidity())return;
+      const data=Object.fromEntries(new FormData(form).entries());
+      const message=document.getElementById("formMessage");
+      if(data.date<today()){
+        message.textContent="Please choose today or a future date.";
+        return;
+      }
+      try{
+        const bookings=getBookings(d.id);
+        bookings.push({
+          service:data.service,
+          date:data.date,
+          time:data.time
+        });
+        localStorage.setItem(bookingKey(d.id),JSON.stringify(bookings));
+        message.textContent=`Saved for ${data.date} at ${data.time}. Demo only — no salon was contacted.`;
+        form.reset();
+        renderSaved(d.id);
+      }catch{
+        message.textContent="Browser storage is unavailable; the demo booking was not saved.";
+      }
+    });
+
+    /* Pointer depth is active only when actually hovering a 3D hero.
+       Touch devices and reduced-motion users get a static treatment. */
+    let frame=0;
+    app.addEventListener("pointermove",event=>{
+      if(event.pointerType!=="mouse"||
+         matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      const stage=event.target.closest(".site.depth .stage");
+      if(!stage)return;
+      const img=stage.querySelector(".stage-image");
+      const rect=stage.getBoundingClientRect();
+      const x=(event.clientX-rect.left)/rect.width-.5;
+      const y=(event.clientY-rect.top)/rect.height-.5;
+      cancelAnimationFrame(frame);
+      frame=requestAnimationFrame(()=>{
+        img.style.setProperty("--rx",`${(-y*7).toFixed(1)}deg`);
+        img.style.setProperty("--ry",`${(x*7).toFixed(1)}deg`);
+      });
+    });
+    app.addEventListener("pointerout",event=>{
+      const stage=event.target.closest(".site.depth .stage");
+      if(!stage||stage.contains(event.relatedTarget))return;
+      cancelAnimationFrame(frame);
+      const img=stage.querySelector(".stage-image");
+      img.style.setProperty("--rx","0deg");
+      img.style.setProperty("--ry","0deg");
+    });
+
+    function closeLightbox(){
+      if(!lightbox.classList.contains("open"))return;
+      lightbox.classList.remove("open");
+      document.getElementById("lightboxImage").removeAttribute("src");
+      document.body.style.overflow="";
+      if(lastFocus?.isConnected)lastFocus.focus();
+      lastFocus=null;
+    }
+    document.getElementById("closeLightbox").addEventListener("click",closeLightbox);
+    lightbox.addEventListener("click",event=>{
+      if(event.target===lightbox)closeLightbox();
+    });
+    document.addEventListener("keydown",event=>{
+      if(event.key==="Escape")closeLightbox();
+    });
+    window.addEventListener("hashchange",navigate);
+    navigate();
+  </script>
+</body>
+</html>
