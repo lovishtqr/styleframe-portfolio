@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>Salon Atlas — 520 Salon Website Concepts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "DM Sans", sans-serif; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    img { display: block; width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 3px solid #edac71; outline-offset: 3px; }
+    [hidden] { display: none !important; }
+
+    /* DIRECTORY */
+
+    .directory {
+      min-height: 100vh;
+      color: #f4f1ed;
+      background: #141416;
+    }
+
+    .directory-header {
+      max-width: 1480px;
+      margin: auto;
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .directory-brand {
+      font-family: "Syne", sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -.08em;
+    }
+
+    .directory-brand span { color: #e8a886; }
+    .directory-header small { color: #aaa7a6; }
+
+    .directory-intro {
+      max-width: 1480px;
+      margin: auto;
+      padding: 68px 5% 44px;
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: #e8a886;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .directory-intro h1 {
+      max-width: 950px;
+      margin: 0;
+      font: 700 clamp(48px, 8vw, 110px)/.98 "Syne", sans-serif;
+      letter-spacing: -.085em;
+    }
+
+    .directory-intro > p:last-child {
+      max-width: 700px;
+      color: #bdb8b5;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .directory-controls {
+      max-width: 1480px;
+      margin: auto;
+      padding: 0 5% 28px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .directory-search {
+      width: min(100%, 440px);
+      padding: 14px 18px;
+      border: 1px solid #555155;
+      border-radius: 9px;
+      background: #222225;
+      color: white;
+    }
+
+    .directory-search::placeholder { color: #a6a1a4; }
+
+    .categories {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 2px 0 12px;
+      scrollbar-width: thin;
+    }
+
+    .category-button {
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      border: 1px solid #4d494b;
+      border-radius: 30px;
+      background: transparent;
+      color: #e8e3e0;
+      font-size: 12px;
+    }
+
+    .category-button.active {
+      border-color: #e8a886;
+      background: #e8a886;
+      color: #211816;
+      font-weight: 800;
+    }
+
+    .results-line {
+      max-width: 1480px;
+      margin: 0 auto 18px;
+      padding: 0 5%;
+      color: #bcb6b3;
+      font-size: 13px;
+    }
+
+    .cards {
+      max-width: 1480px;
+      margin: auto;
+      padding: 0 5% 35px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 7px;
+      border: 1px solid #373437;
+      border-radius: 13px;
+      background: #222124;
+      color: white;
+      text-align: left;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #a68d83;
+    }
+
+    .mini {
+      --angle: 0deg;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      aspect-ratio: 1.45;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--display);
+    }
+
+    .mini::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: 65%;
+      aspect-ratio: 1;
+      right: -18%;
+      top: -22%;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      transform: rotate(var(--angle));
+      opacity: .65;
+    }
+
+    .mini-image {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+      width: 48%;
+      height: 83%;
+      object-fit: cover;
+      object-position: var(--position);
+      filter: var(--image-filter);
+    }
+
+    .mini-nav {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 5% 6%;
+      font: 700 clamp(7px, .75vw, 11px) "DM Sans", sans-serif;
+    }
+
+    .mini-nav b {
+      max-width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .mini-copy {
+      position: absolute;
+      z-index: 2;
+      top: 36%;
+      left: 6%;
+      width: 58%;
+    }
+
+    .mini-copy small {
+      color: var(--accent);
+      font: 800 8px "DM Sans", sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .mini-copy h2 {
+      margin: 8px 0 12px;
+      font-size: clamp(19px, 2.25vw, 37px);
+      font-weight: 600;
+      line-height: 1.03;
+      letter-spacing: -.06em;
+    }
+
+    .mini-copy i {
+      display: inline-block;
+      padding: 8px 10px;
+      background: var(--accent);
+      color: var(--button-text);
+      font: normal 700 8px "DM Sans", sans-serif;
+    }
+
+    /* Different miniature compositions */
+
+    .mini.layout-1 .mini-image,
+    .mini.layout-9 .mini-image {
+      right: 5%;
+      bottom: 7%;
+      width: 39%;
+      height: 74%;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .mini.layout-2 .mini-image,
+    .mini.layout-10 .mini-image {
+      right: 5%;
+      bottom: 12%;
+      width: 39%;
+      height: 65%;
+      border-radius: 50%;
+    }
+
+    .mini.layout-3 .mini-image,
+    .mini.layout-11 .mini-image {
+      width: 100%;
+      height: 100%;
+      filter: brightness(.4);
+    }
+
+    .mini.layout-3,
+    .mini.layout-11 {
+      color: white;
+    }
+
+    .mini.layout-3 .mini-copy small,
+    .mini.layout-11 .mini-copy small {
+      color: white;
+    }
+
+    .mini.layout-3 .mini-copy,
+    .mini.layout-11 .mini-copy {
+      left: 13%;
+      width: 74%;
+      text-align: center;
+    }
+
+    .mini.layout-4 .mini-image,
+    .mini.layout-12 .mini-image {
+      height: 100%;
+      width: 55%;
+      clip-path: polygon(23% 0,100% 0,100% 100%,0 100%);
+    }
+
+    .mini.layout-5 .mini-image,
+    .mini.layout-13 .mini-image {
+      right: 6%;
+      bottom: 13%;
+      width: 40%;
+      height: 69%;
+      transform: rotate(7deg);
+      border: 7px solid var(--surface);
+      box-shadow: 0 10px 35px #0003;
+    }
+
+    .mini.layout-6 .mini-image,
+    .mini.layout-14 .mini-image {
+      right: 5%;
+      bottom: 7%;
+      width: 43%;
+      height: 73%;
+      clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    }
+
+    .mini.layout-7 .mini-image,
+    .mini.layout-15 .mini-image {
+      right: 5%;
+      bottom: 8%;
+      width: 45%;
+      height: 72%;
+      border-radius: 5px 70px 5px 70px;
+    }
+
+    .mini.layout-8 .mini-image,
+    .mini.layout-16 .mini-image {
+      right: 5%;
+      bottom: 9%;
+      width: 43%;
+      height: 70%;
+      border: 9px solid var(--accent);
+    }
+
+    .mini.layout-9 .mini-copy,
+    .mini.layout-10 .mini-copy,
+    .mini.layout-13 .mini-copy {
+      top: 28%;
+    }
+
+    .card-caption {
+      padding: 13px 7px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-caption strong { font-size: 13px; }
+    .card-caption span { color: #b1aaa8; font-size: 11px; text-align: right; }
+
+    .more-wrap {
+      padding: 10px 5% 85px;
+      text-align: center;
+    }
+
+    .more-button {
+      padding: 14px 28px;
+      border: 1px solid #bcb2ac;
+      border-radius: 7px;
+      background: transparent;
+      color: white;
+      font-weight: 700;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 50px 15px;
+      color: #bcb6b3;
+      text-align: center;
+    }
+
+    /* FULL DEMO WEBSITE */
+
+    .site {
+      --paper: #f6eee8;
+      --surface: #fffaf5;
+      --ink: #282321;
+      --accent: #ad745f;
+      --button-text: #fff;
+      --display: "Playfair Display", serif;
+      --radius: 20px;
+      --image-filter: none;
+      --position: center;
+      --tilt-x: 0deg;
+      --tilt-y: 0deg;
+      min-height: 100vh;
+      overflow: clip;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .demo-bar {
+      position: relative;
+      z-index: 30;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 5%;
+      background: #171719;
+      color: white;
+      font-size: 12px;
+    }
+
+    .demo-bar button {
+      padding: 8px 11px;
+      border: 1px solid #777;
+      border-radius: 5px;
+      background: transparent;
+      color: white;
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 20;
+      max-width: 1480px;
+      margin: auto;
+      padding: 22px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .site-logo {
+      font-family: var(--display);
+      font-size: clamp(19px, 2vw, 28px);
+      font-weight: 700;
+      letter-spacing: -.055em;
+    }
+
+    .site-logo span { color: var(--accent); }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .site-nav button {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font-size: 13px;
+    }
+
+    .site-nav .nav-cta {
+      padding: 12px 17px;
+      background: var(--accent);
+      color: var(--button-text);
+      font-weight: 700;
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 9px 12px;
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      max-width: 1480px;
+      min-height: 630px;
+      margin: auto;
+      padding: 75px 5% 110px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 1%;
+      top: 4%;
+      width: 57%;
+      aspect-ratio: 1;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      transform: rotate(22deg);
+      opacity: .33;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+      width: 52%;
+    }
+
+    .hero-label,
+    .section-label {
+      display: block;
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      max-width: 850px;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(54px, 6.3vw, 100px);
+      font-weight: 600;
+      line-height: .99;
+      letter-spacing: -.075em;
+    }
+
+    .hero-description {
+      max-width: 460px;
+      margin: 25px 0;
+      font-size: 15px;
+      line-height: 1.75;
+      opacity: .78;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn,
+    .btn-outline {
+      min-height: 48px;
+      padding: 13px 21px;
+      border: 1px solid var(--accent);
+      border-radius: calc(var(--radius) / 4);
+      background: var(--accent);
+      color: var(--button-text);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: inherit;
+      border-color: currentColor;
+    }
+
+    .hero-art {
+      position: absolute;
+      z-index: 1;
+      top: 7%;
+      right: 5%;
+      width: 44%;
+      height: 85%;
+      perspective: 1000px;
+    }
+
+    .hero-art::before,
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .hero-art::before {
+      z-index: -1;
+      inset: 8% -6% -5% 10%;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+    }
+
+    .hero-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: var(--position);
+      filter: var(--image-filter);
+    }
+
+    .hero-note {
+      position: absolute;
+      left: 5%;
+      bottom: 28px;
+      font-size: 11px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    /* Sixteen genuinely different hero compositions */
+
+    .site.layout-1 .hero-art { border-radius: 48% 48% 0 0; overflow: hidden; }
+    .site.layout-2 .hero-art { top: 13%; right: 7%; width: 38%; height: 72%; border-radius: 50%; overflow: hidden; }
+
+    .site.layout-3 .hero,
+    .site.layout-11 .hero {
+      max-width: none;
+      color: white;
+    }
+
+    .site.layout-3 .hero-art,
+    .site.layout-11 .hero-art {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .site.layout-3 .hero-art img,
+    .site.layout-11 .hero-art img {
+      filter: brightness(.37);
+    }
+
+    .site.layout-3 .hero-copy,
+    .site.layout-11 .hero-copy {
+      width: 80%;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .site.layout-3 .hero-description,
+    .site.layout-11 .hero-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .site.layout-3 .actions,
+    .site.layout-11 .actions { justify-content: center; }
+
+    .site.layout-3 .hero-label,
+    .site.layout-11 .hero-label { color: #fff; }
+
+    .site.layout-3 .hero::before,
+    .site.layout-11 .hero::before,
+    .site.layout-3 .hero-art::before,
+    .site.layout-11 .hero-art::before { display: none; }
+
+    .site.layout-4 .hero-art {
+      top: 0;
+      right: 0;
+      width: 54%;
+      height: 100%;
+      clip-path: polygon(23% 0,100% 0,100% 100%,0 100%);
+    }
+
+    .site.layout-5 .hero-art {
+      top: 16%;
+      right: 9%;
+      width: 35%;
+      height: 68%;
+      border: 17px solid var(--surface);
+      transform: rotate(6deg);
+      box-shadow: 0 25px 50px #0002;
+    }
+
+    .site.layout-6 .hero-art {
+      top: 12%;
+      right: 8%;
+      width: 39%;
+      height: 75%;
+      clip-path: polygon(50% 0,100% 24%,100% 76%,50% 100%,0 76%,0 24%);
+    }
+
+    .site.layout-7 .hero-art {
+      top: 12%;
+      right: 6%;
+      width: 41%;
+      height: 75%;
+      border-radius: 12px 180px 12px 180px;
+      overflow: hidden;
+    }
+
+    .site.layout-8 .hero-art {
+      top: 16%;
+      right: 8%;
+      width: 39%;
+      height: 69%;
+      border: 18px solid var(--accent);
+    }
+
+    .site.layout-9 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-9 .hero-art {
+      left: 5%;
+      right: auto;
+      top: 12%;
+      width: 38%;
+      height: 74%;
+      border-radius: 50% 50% 0 0;
+      overflow: hidden;
+    }
+
+    .site.layout-10 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-10 .hero-art {
+      left: 7%;
+      right: auto;
+      top: 15%;
+      width: 37%;
+      height: 69%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .site.layout-12 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-12 .hero-art {
+      left: 0;
+      right: auto;
+      top: 0;
+      width: 54%;
+      height: 100%;
+      clip-path: polygon(0 0,78% 0,100% 100%,0 100%);
+    }
+
+    .site.layout-13 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-13 .hero-art {
+      left: 8%;
+      right: auto;
+      top: 15%;
+      width: 35%;
+      height: 68%;
+      transform: rotate(-7deg);
+      border: 17px solid var(--surface);
+      box-shadow: 0 25px 50px #0002;
+    }
+
+    .site.layout-14 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-14 .hero-art {
+      left: 8%;
+      right: auto;
+      top: 12%;
+      width: 38%;
+      height: 75%;
+      clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    }
+
+    .site.layout-15 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-15 .hero-art {
+      left: 7%;
+      right: auto;
+      top: 11%;
+      width: 40%;
+      height: 76%;
+      border-radius: 180px 12px 180px 12px;
+      overflow: hidden;
+    }
+
+    .site.layout-16 .hero-copy { order: 2; margin-left: auto; }
+    .site.layout-16 .hero-art {
+      left: 8%;
+      right: auto;
+      top: 15%;
+      width: 38%;
+      height: 68%;
+      border: 18px solid var(--accent);
+    }
+
+    /* Some visual directions get layered CSS 3D art. */
+
+    .site.is-3d .hero-art {
+      overflow: visible;
+      transform-style: preserve-3d;
+      transform:
+        rotateX(var(--tilt-x))
+        rotateY(var(--tilt-y))
+        rotate(-5deg);
+      transition: transform .18s ease-out;
+    }
+
+    .site.is-3d .hero-art img {
+      border-radius: min(var(--radius), 90px);
+      box-shadow: 24px 28px 0 var(--accent), 0 45px 75px #0004;
+    }
+
+    .site.is-3d .hero-art::before {
+      z-index: 2;
+      inset: auto -10% -12% auto;
+      width: 31%;
+      aspect-ratio: 1;
+      border: 2px solid var(--surface);
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 15px 30px #0003;
+      transform: translateZ(90px);
+    }
+
+    .site.is-3d .hero-art::after {
+      top: -7%;
+      left: -8%;
+      width: 27%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--surface);
+      box-shadow: 0 18px 30px #0003;
+      transform: translateZ(55px);
+    }
+
+    .site.is-3d .hero-art img {
+      transform: translateZ(35px);
+    }
+
+    /* Feature sections */
+
+    .section {
+      max-width: 1480px;
+      margin: auto;
+      padding: 92px 5%;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      max-width: 850px;
+      margin: 0 0 18px;
+      font-family: var(--display);
+      font-size: clamp(39px, 4.5vw, 70px);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -.065em;
+    }
+
+    .section-description {
+      max-width: 670px;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      opacity: .75;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 37px;
+    }
+
+    .service {
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      padding: 26px;
+      border: 1px solid #8884;
+      border-radius: calc(var(--radius) / 3);
+      background: var(--surface);
+    }
+
+    .service-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .service h3 {
+      margin: 24px 0 9px;
+      font-family: var(--display);
+      font-size: 26px;
+      line-height: 1.1;
+    }
+
+    .service p {
+      margin: 0 0 20px;
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: .73;
+    }
+
+    .service-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: auto;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .service-bottom button {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .full-section {
+      max-width: none;
+      background: var(--surface);
+    }
+
+    .section-inner {
+      max-width: 1332px;
+      margin: auto;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .portfolio-grid button {
+      overflow: hidden;
+      padding: 0;
+      border: 0;
+      background: var(--paper);
+      aspect-ratio: .94;
+    }
+
+    .portfolio-grid img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+
+    .portfolio-grid button:hover img { transform: scale(1.06); }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 8%;
+    }
+
+    .about-image {
+      height: 470px;
+      object-fit: cover;
+      border-radius: calc(var(--radius) / 2);
+    }
+
+    .booking-section {
+      max-width: none;
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .booking-section .section-inner {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 7%;
+    }
+
+    .booking-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 28px;
+      border-radius: calc(var(--radius) / 2);
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .booking-form label {
+      display: grid;
+      gap: 7px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .booking-form label.wide,
+    .booking-form .wide { grid-column: 1 / -1; }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      min-height: 45px;
+      padding: 10px;
+      border: 1px solid #8888;
+      border-radius: 4px;
+      background: #fff;
+      color: #222;
+    }
+
+    .booking-form .btn { width: 100%; }
+    .form-message { min-height: 18px; margin: 0; font-size: 13px; line-height: 1.5; }
+
+    .saved-bookings {
+      margin-top: 24px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .saved-bookings button {
+      margin-left: 9px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      max-width: 1480px;
+      margin: auto;
+      padding: 48px 5%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .site-footer b {
+      font-family: var(--display);
+      font-size: 24px;
+    }
+
+    .site-footer p { opacity: .72; }
+
+    .lightbox {
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background: #08080aeb;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      width: auto;
+      max-width: 95vw;
+      max-height: 85vh;
+      object-fit: contain;
+    }
+
+    .lightbox button {
+      position: absolute;
+      top: 13px;
+      right: 20px;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 40px;
+    }
+
+    @media (max-width: 1000px) {
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero { min-height: 560px; }
+    }
+
+    @media (max-width: 680px) {
+      .directory-header small { font-size: 10px; }
+      .directory-intro { padding-top: 50px; }
+      .cards { grid-template-columns: 1fr; }
+      .mini-copy h2 { font-size: clamp(26px, 7vw, 42px); }
+      .mini-nav { font-size: 10px; }
+      .demo-bar span { display: none; }
+
+      .site-header { padding: 16px 5%; }
+      .menu-toggle { display: block; }
+
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 15px 5% 20px;
+        background: var(--paper);
+        box-shadow: 0 16px 30px #0002;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+      }
+
+      .site-nav.open { display: flex; }
+      .site-nav button { padding: 12px; text-align: left; }
+
+      .hero,
+      .site.layout-3 .hero,
+      .site.layout-11 .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+        padding: 45px 5% 0;
+        background: var(--paper);
+        color: var(--ink);
+      }
+
+      .hero-copy,
+      .site.layout-3 .hero-copy,
+      .site.layout-11 .hero-copy,
+      .site.layout-9 .hero-copy,
+      .site.layout-10 .hero-copy,
+      .site.layout-12 .hero-copy,
+      .site.layout-13 .hero-copy,
+      .site.layout-14 .hero-copy,
+      .site.layout-15 .hero-copy,
+      .site.layout-16 .hero-copy {
+        order: 0;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+      }
+
+      .hero-title { font-size: clamp(49px, 12vw, 74px); }
+
+      .site.layout-3 .hero-label,
+      .site.layout-11 .hero-label { color: var(--accent); }
+
+      .site.layout-3 .hero-description,
+      .site.layout-11 .hero-description {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .site.layout-3 .actions,
+      .site.layout-11 .actions { justify-content: flex-start; }
+
+      .hero-art,
+      .site.layout-1 .hero-art,
+      .site.layout-2 .hero-art,
+      .site.layout-3 .hero-art,
+      .site.layout-4 .hero-art,
+      .site.layout-5 .hero-art,
+      .site.layout-6 .hero-art,
+      .site.layout-7 .hero-art,
+      .site.layout-8 .hero-art,
+      .site.layout-9 .hero-art,
+      .site.layout-10 .hero-art,
+      .site.layout-11 .hero-art,
+      .site.layout-12 .hero-art,
+      .site.layout-13 .hero-art,
+      .site.layout-14 .hero-art,
+      .site.layout-15 .hero-art,
+      .site.layout-16 .hero-art {
+        position: relative;
+        inset: auto;
+        order: 1;
+        width: 100%;
+        height: min(95vw, 400px);
+        margin: 38px 0 0;
+        border: 0;
+        border-radius: 0;
+        clip-path: none;
+        transform: none;
+        box-shadow: none;
+        overflow: hidden;
+      }
+
+      .site.layout-3 .hero-art img,
+      .site.layout-11 .hero-art img { filter: none; }
+
+      .site.is-3d .hero-art {
+        width: 88%;
+        height: min(80vw, 360px);
+        margin: 45px auto 35px;
+        overflow: visible;
+        transform: rotate(-4deg);
+      }
+
+      .site.is-3d .hero-art::after { display: none; }
+      .hero-note { display: none; }
+      .section { padding: 67px 5%; }
+      .services, .about, .booking-section .section-inner { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-image { height: 320px; }
+      .booking-form { grid-template-columns: 1fr; padding: 20px; }
+      .site-footer { flex-direction: column; }
+    }
+
+    @media (max-width: 380px) {
+      .directory-intro h1 { font-size: 43px; }
+      .hero-title { font-size: 45px; }
+      .portfolio-grid { gap: 8px; }
+      .demo-bar { padding-left: 3%; padding-right: 3%; }
+      .demo-bar button { font-size: 11px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .site.is-3d .hero-art { transform: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true"
+       aria-label="Gallery image preview">
+    <button id="closeLightbox" type="button" aria-label="Close preview">×</button>
+    <img id="lightboxImage" alt="Enlarged salon inspiration">
+  </div>
+
+  <script>
+    "use strict";
+
+    /*
+      20 salon specialties × 26 art directions = 520 concepts.
+      Each combination has its own identity, palette, composition, typography,
+      decoration, name and category-specific service menu.
+    */
+
+    const niches = [
+      {
+        name: "Women's Hair", noun: "Hair House",
+        titles: ["Hair, beautifully you.", "Your next hair chapter.", "The everyday glow-up."],
+        services: ["Signature Haircut", "Blowout", "Hair Treatment", "Silk Press", "Event Styling", "Hair Consultation"],
+        photos: ["photo-1521590832167-7bcbfaa6381f", "photo-1560066984-138dadb4c035"]
+      },
+      {
+        name: "Men's Barber", noun: "Barber Club",
+        titles: ["The sharper side of style.", "Good cuts. Great days.", "Grooming with an edge."],
+        services: ["Precision Cut", "Skin Fade", "Beard Shape", "Hot Towel Shave", "Cut & Beard", "Grooming Ritual"],
+        photos: ["photo-1503951914875-452162b0f3f1", "photo-1599351431202-1e0f0137899a"]
+      },
+      {
+        name: "Unisex Salon", noun: "Style Studio",
+        titles: ["Style is for everyone.", "Come as you are.", "Your look, your rules."],
+        services: ["Personalized Cut", "Colour Refresh", "Creative Styling", "Hair Treatment", "Blow Dry", "Consultation"],
+        photos: ["photo-1560066984-138dadb4c035", "photo-1522337360788-8b13dee7a37e"]
+      },
+      {
+        name: "Nail Art", noun: "Nail Studio",
+        titles: ["Your hands, your canvas.", "Small details. Big energy.", "Wear a little art."],
+        services: ["Classic Manicure", "Gel Manicure", "Custom Nail Art", "Pedicure", "Nail Repair", "Signature Set"],
+        photos: ["photo-1604654894610-df63bc536371", "photo-1610992015732-2449b76344bc"]
+      },
+      {
+        name: "Nail Extensions", noun: "Extension Bar",
+        titles: ["A little extra looks good.", "Length with personality.", "Your dream set starts here."],
+        services: ["Gel Extensions", "Acrylic Set", "Sculpted Extensions", "French Set", "Extension Refill", "Safe Removal"],
+        photos: ["photo-1610992015732-2449b76344bc", "photo-1604654894610-df63bc536371"]
+      },
+      {
+        name: "Hair Extensions", noun: "Length Atelier",
+        titles: ["More length. More you.", "The hair you've imagined.", "Go beyond your length."],
+        services: ["Extension Consultation", "Tape-in Extensions", "Weft Installation", "Blending", "Maintenance", "Removal"],
+        photos: ["photo-1562322140-8baeececf3df", "photo-1595476108010-b4d1f102b1b1"]
+      },
+      {
+        name: "Lashes", noun: "Lash Studio",
+        titles: ["Let your eyes do the talking.", "A little lift. A lot of wow.", "Wake up ready."],
+        services: ["Classic Lash Set", "Hybrid Lash Set", "Volume Lash Set", "Lash Lift", "Lash Refill", "Lash Removal"],
+        photos: ["photo-1512290923902-8a9f81dc236c", "photo-1524504388940-b1c1722653e1"]
+      },
+      {
+        name: "Brows", noun: "Brow Atelier",
+        titles: ["The shape of confidence.", "Your best brows begin here.", "Find your perfect frame."],
+        services: ["Brow Shaping", "Brow Tint", "Brow Lamination", "Brow Styling", "Shape & Tint", "Consultation"],
+        photos: ["photo-1512290923902-8a9f81dc236c", "photo-1522335789203-aabd1fc54bc9"]
+      },
+      {
+        name: "Braids", noun: "Braid House",
+        titles: ["Every braid tells a story.", "The art is in the detail.", "Braided for your life."],
+        services: ["Box Braids", "Knotless Braids", "Cornrows", "Twists", "Braid Refresh", "Protective Style Consultation"],
+        photos: ["photo-1595476108010-b4d1f102b1b1", "photo-1531123897727-8f129e1688ce"]
+      },
+      {
+        name: "Curly Hair", noun: "Curl House",
+        titles: ["Every curl belongs.", "Wear your texture proudly.", "A home for your curls."],
+        services: ["Curly Cut", "Curl Definition", "Hydration Treatment", "Wash & Style", "Curl Refresh", "Texture Consultation"],
+        photos: ["photo-1544005313-94ddf0286df2", "photo-1534528741775-53994a69daeb"]
+      },
+      {
+        name: "Bridal Hair", noun: "Bridal Atelier",
+        titles: ["Made for your moment.", "Your day, beautifully you.", "The look you'll remember."],
+        services: ["Bridal Hair Trial", "Wedding Hair", "Bridal Party Styling", "Veil Styling", "Event Touch-up", "Consultation"],
+        photos: ["photo-1529636798458-92182e662485", "photo-1523438885200-e635ba2c371e"]
+      },
+      {
+        name: "Bridal Makeup", noun: "Makeup Atelier",
+        titles: ["Your glow. Your big day.", "Beautiful in every memory.", "The moment is yours."],
+        services: ["Bridal Makeup Trial", "Wedding Makeup", "Bridal Party Makeup", "Evening Look", "Touch-up Session", "Consultation"],
+        photos: ["photo-1522335789203-aabd1fc54bc9", "photo-1487412947147-5cebf100ffc2"]
+      },
+      {
+        name: "Hair Colour", noun: "Colour Lab",
+        titles: ["Colour your own way.", "Find your new shade.", "A fresh colour story."],
+        services: ["Balayage", "Full Colour", "Highlights", "Gloss & Tone", "Root Refresh", "Colour Consultation"],
+        photos: ["photo-1600948836101-f9ffda59d250", "photo-1562322140-8baeececf3df"]
+      },
+      {
+        name: "Skincare", noun: "Skin Studio",
+        titles: ["Feel good in your skin.", "Your glow starts within.", "Skincare, made personal."],
+        services: ["Skin Consultation", "Hydrating Facial", "Deep Cleanse", "Gentle Peel", "Glow Treatment", "Skin Renewal"],
+        photos: ["photo-1570172619644-dfd03ed5d881", "photo-1556229010-6c3f2c9ca5f8"]
+      },
+      {
+        name: "Beauty Spa", noun: "Beauty Spa",
+        titles: ["Come back to yourself.", "Your calm starts here.", "A moment to slow down."],
+        services: ["Signature Facial", "Relaxation Massage", "Body Ritual", "Head Spa", "Aromatherapy", "Wellness Session"],
+        photos: ["photo-1540555700478-4be289fbecef", "photo-1571019613454-1cb2f99b2d8b"]
+      },
+      {
+        name: "Makeup Studio", noun: "Makeup Room",
+        titles: ["Show up as your brightest self.", "Make an entrance.", "Your look, elevated."],
+        services: ["Soft Glam", "Full Glam", "Editorial Makeup", "Event Makeup", "Makeup Lesson", "Consultation"],
+        photos: ["photo-1522335789203-aabd1fc54bc9", "photo-1487412947147-5cebf100ffc2"]
+      },
+      {
+        name: "Facial Studio", noun: "Facial Bar",
+        titles: ["Fresh skin feels different.", "A little love for your skin.", "Get back to your glow."],
+        services: ["Express Facial", "Hydrating Facial", "Brightening Facial", "Deep Cleanse", "Calming Facial", "Skin Consultation"],
+        photos: ["photo-1570172619644-dfd03ed5d881", "photo-1540555700478-4be289fbecef"]
+      },
+      {
+        name: "Head Spa", noun: "Head Spa",
+        titles: ["Start feeling lighter.", "A reset from the roots.", "Make space to unwind."],
+        services: ["Scalp Consultation", "Head Spa Ritual", "Scalp Cleanse", "Hair Mask", "Relaxation Massage", "Scalp Treatment"],
+        photos: ["photo-1600948836101-f9ffda59d250", "photo-1540555700478-4be289fbecef"]
+      },
+      {
+        name: "Natural Hair", noun: "Texture Studio",
+        titles: ["Your hair, celebrated.", "Be beautifully natural.", "Texture has no limits."],
+        services: ["Natural Hair Cut", "Twist Out", "Protective Styling", "Deep Conditioning", "Wash & Go", "Texture Consultation"],
+        photos: ["photo-1531123897727-8f129e1688ce", "photo-1544005313-94ddf0286df2"]
+      },
+      {
+        name: "Kids Hair", noun: "Little Hair Co.",
+        titles: ["Good hair days for little ones.", "Big smiles, little cuts.", "A happy place for hair."],
+        services: ["Kids Haircut", "First Haircut", "Kids Braids", "Gentle Wash", "Party Styling", "Family Consultation"],
+        photos: ["photo-1560066984-138dadb4c035", "photo-1521590832167-7bcbfaa6381f"]
+      }
+    ];
+
+    const directions = [
+      ["Maison", "Paris Editorial", "Playfair Display"],
+      ["Form", "Quiet Minimal", "Manrope"],
+      ["Atelier", "Luxury Portrait", "Bodoni Moda"],
+      ["District", "Urban Contrast", "Space Grotesk"],
+      ["Muse", "Gallery Wall", "Cormorant Garamond"],
+      ["Nova", "Sculptural", "Syne"],
+      ["Casa", "Soft Organic", "Playfair Display"],
+      ["Mode", "Graphic Block", "Outfit"],
+      ["Nord", "Scandi Calm", "Manrope"],
+      ["Onda", "K-Beauty Clean", "Outfit"],
+      ["Noir", "Cinematic", "Bodoni Moda"],
+      ["Studio", "Architectural", "Space Grotesk"],
+      ["Velvet", "Art Direction", "Cormorant Garamond"],
+      ["Orbit", "Dimensional 3D", "Syne"],
+      ["Aura", "Organic Geometry", "Playfair Display"],
+      ["Frame", "Bold Borders", "Outfit"],
+      ["Élan", "Modern Heritage", "Bodoni Moda"],
+      ["Nude", "Warm Neutral", "Cormorant Garamond"],
+      ["Kiyo", "Tokyo Precision", "Manrope"],
+      ["Lush", "Botanical", "Playfair Display"],
+      ["Chrome", "Future Beauty 3D", "Space Grotesk"],
+      ["Sol", "Mediterranean", "Syne"],
+      ["Opal", "Soft Editorial", "Bodoni Moda"],
+      ["Pulse", "Playful Type", "Outfit"],
+      ["Halo", "Floating Objects 3D", "Syne"],
+      ["Sable", "Dark Boutique", "Cormorant Garamond"]
+    ];
+
+    const app = document.getElementById("app");
+    const lightbox = document.getElementById("lightbox");
+
+    const escapeHTML = value => String(value).replace(/[&<>"']/g, char =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]
+    );
+
+    const photoURL = (id, width = 900) =>
+      `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=78`;
+
+    /*
+      The golden-angle hue changes for every concept. Along with 26 art
+      directions and 16 layouts, this prevents the directory from being
+      520 copies of one fixed theme.
+    */
+    function makeTheme(categoryIndex, directionIndex) {
+      const seed = categoryIndex * 26 + directionIndex;
+      const hue = Math.round((seed * 137.508) % 360);
+      const dark = [3, 10, 13, 20, 25].includes(directionIndex);
+      const pale = [1, 8, 9, 17, 18, 22].includes(directionIndex);
+      const saturation = pale ? 12 : 29 + (seed % 24);
+      const radiusOptions = ["0px", "8px", "25px", "80px", "160px"];
+      const radius = radiusOptions[(directionIndex + categoryIndex) % radiusOptions.length];
+      const accentHue = (hue + 19 + directionIndex * 3) % 360;
+
+      return {
+        paper: dark
+          ? `hsl(${hue} 18% ${10 + seed % 6}%)`
+          : `hsl(${hue} ${saturation}% ${pale ? 94 : 91}%)`,
+        surface: dark
+          ? `hsl(${hue} 15% ${17 + seed % 5}%)`
+          : `hsl(${hue} ${Math.max(9, saturation - 8)}% 98%)`,
+        ink: dark ? "#f7f2ec" : `hsl(${hue} 18% 15%)`,
+        accent: dark
+          ? `hsl(${accentHue} 58% 72%)`
+          : `hsl(${accentHue} 44% ${34 + seed % 14}%)`,
+        buttonText: dark ? "#171717" : "#ffffff",
+        radius,
+        imageFilter: directionIndex === 10 || directionIndex === 25
+          ? "grayscale(.8) contrast(1.08)"
+          : directionIndex === 20
+            ? "saturate(.72) contrast(1.08)"
+            : "none",
+        position: `${36 + (seed * 17) % 34}% center`
+      };
+    }
+
+    const designs = niches.flatMap((niche, categoryIndex) =>
+      directions.map((direction, directionIndex) => {
+        const id = categoryIndex * 26 + directionIndex + 1;
+        return {
+          id,
+          niche,
+          direction,
+          theme: makeTheme(categoryIndex, directionIndex),
+          layout: ((categoryIndex * 7 + directionIndex) % 16) + 1,
+          title: niche.titles[(categoryIndex + directionIndex) % 3],
+          name: `${direction[0]} ${niche.noun}`,
+          image: niche.photos[directionIndex % niche.photos.length],
+          secondImage: niche.photos[(directionIndex + 1) % niche.photos.length],
+          is3D: [13, 20, 24].includes(directionIndex)
+        };
+      })
+    );
+
+    let activeCategory = "All";
+    let searchText = "";
+    let visibleLimit = 24;
+
+    function themeStyle(design) {
+      const t = design.theme;
+      return [
+        `--paper:${t.paper}`,
+        `--surface:${t.surface}`,
+        `--ink:${t.ink}`,
+        `--accent:${t.accent}`,
+        `--button-text:${t.buttonText}`,
+        `--radius:${t.radius}`,
+        `--display:"${design.direction[2]}"`,
+        `--image-filter:${t.imageFilter}`,
+        `--position:${t.position}`
+      ].join(";");
+    }
+
+    function galleryPage() {
+      app.innerHTML = `
+        <div class="directory">
+          <header class="directory-header">
+            <div class="directory-brand">salon<span>atlas.</span></div>
+            <small>520 concepts · 20 salon specialties · <a href="../salonverse/" style="color:#e8a886">← Salonverse (117)</a></small>
+          </header>
+
+          <section class="directory-intro">
+            <p class="eyebrow">The salon design universe</p>
+            <h1>520 ways to stand out.</h1>
+            <p>
+              Explore 520 clickable salon frontend concepts. Different
+              compositions, art directions, typography, colour systems,
+              mobile layouts and selected 3D-style designs.
+            </p>
+          </section>
+
+          <div class="directory-controls">
+            <input class="directory-search" id="search"
+              type="search" placeholder="Search salon, style or service..."
+              aria-label="Search website concepts"
+              value="${escapeHTML(searchText)}">
+
+            <div class="categories" id="categories">
+              ${["All", ...niches.map(n => n.name)].map(name => `
+                <button class="category-button ${activeCategory === name ? "active" : ""}"
+                  data-category="${escapeHTML(name)}" type="button">
+                  ${escapeHTML(name)}
+                </button>
+              `).join("")}
+            </div>
+          </div>
+
+          <p class="results-line" id="resultsLine"></p>
+          <main class="cards" id="cards"></main>
+
+          <div class="more-wrap">
+            <button class="more-button" id="loadMore" type="button">
+              Load more websites ↓
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.title = "Salon Atlas — 520 Salon Website Concepts";
+      renderCards();
+    }
+
+    function cardHTML(d) {
+      return `
+        <button type="button" class="card" data-open="${d.id}"
+          aria-label="Open website ${d.id}: ${escapeHTML(d.name)}"
+          style="${themeStyle(d)}">
+          <div class="mini layout-${d.layout}">
+            <img class="mini-image" src="${photoURL(d.image, 640)}"
+              loading="lazy" alt="">
+            <div class="mini-nav">
+              <b>${escapeHTML(d.name)}</b>
+              <span>MENU &nbsp; ↗</span>
+            </div>
+            <div class="mini-copy">
+              <small>${escapeHTML(d.niche.name)}</small>
+              <h2>${escapeHTML(d.title)}</h2>
+              <i>EXPLORE SITE ↗</i>
+            </div>
+          </div>
+          <div class="card-caption">
+            <strong>${String(d.id).padStart(3, "0")} · ${escapeHTML(d.direction[1])}</strong>
+            <span>${escapeHTML(d.niche.name)}${d.is3D ? " · 3D" : ""}</span>
+          </div>
+        </button>
+      `;
+    }
+
+    function renderCards() {
+      const term = searchText.trim().toLowerCase();
+
+      const matches = designs.filter(d => {
+        const categoryMatches =
+          activeCategory === "All" || d.niche.name === activeCategory;
+
+        const searchable = [
+          d.id,
+          d.name,
+          d.niche.name,
+          d.direction[1],
+          d.title,
+          ...d.niche.services,
+          d.is3D ? "3d dimensional" : ""
+        ].join(" ").toLowerCase();
+
+        return categoryMatches && searchable.includes(term);
+      });
+
+      document.getElementById("resultsLine").textContent =
+        `Showing ${Math.min(visibleLimit, matches.length)} of ${matches.length} matching websites`;
+
+      document.getElementById("cards").innerHTML = matches.length
+        ? matches.slice(0, visibleLimit).map(cardHTML).join("")
+        : `<div class="empty">No designs found. Try a different search.</div>`;
+
+      document.getElementById("loadMore").hidden =
+        visibleLimit >= matches.length;
+    }
+
+    function sitePage(d) {
+      app.innerHTML = `
+        <div class="site layout-${d.layout} ${d.is3D ? "is-3d" : ""}"
+          style="${themeStyle(d)}">
+
+          <div class="demo-bar">
+            <button type="button" data-back>← All 520 websites</button>
+            <span>DESIGN ${String(d.id).padStart(3, "0")} / 520 · ${escapeHTML(d.direction[1])}</span>
+            <button type="button" data-next="${d.id % 520 + 1}">
+              Next design →
+            </button>
+          </div>
+
+          <header class="site-header">
+            <a class="site-logo" href="#/site/${d.id}"
+              aria-label="${escapeHTML(d.name)} homepage">
+              ${escapeHTML(d.direction[0])}
+              <span>${escapeHTML(d.niche.noun)}</span>
+            </a>
+
+            <button type="button" class="menu-toggle" data-menu
+              aria-controls="siteNav" aria-expanded="false">
+              ☰ Menu
+            </button>
+
+            <nav class="site-nav" id="siteNav" aria-label="Salon navigation">
+              <button type="button" data-scroll="services">Services</button>
+              <button type="button" data-scroll="portfolio">Lookbook</button>
+              <button type="button" data-scroll="about">About</button>
+              <button type="button" data-scroll="booking" class="nav-cta">
+                Book your visit ↗
+              </button>
+            </nav>
+          </header>
+
+          <main>
+            <section class="hero" id="home">
+              <div class="hero-copy">
+                <p class="hero-label">
+                  ${escapeHTML(d.niche.name)} / ${escapeHTML(d.direction[1])}
+                </p>
+
+                <h1 class="hero-title">${escapeHTML(d.title)}</h1>
+
+                <p class="hero-description">
+                  Welcome to ${escapeHTML(d.name)}. A place for personal
+                  attention, thoughtful details and a look that feels like you.
+                </p>
+
+                <div class="actions">
+                  <button class="btn" type="button" data-scroll="booking">
+                    Book an appointment ↗
+                  </button>
+                  <button class="btn-outline" type="button" data-scroll="services">
+                    View services
+                  </button>
+                </div>
+              </div>
+
+              <div class="hero-art">
+                <img src="${photoURL(d.image, 1450)}"
+                  alt="${escapeHTML(d.niche.name)} salon inspiration">
+              </div>
+
+              <div class="hero-note">
+                EST. FOR YOU / BEAUTY IN EVERY DETAIL
+              </div>
+            </section>
+
+            <section class="section" id="services">
+              <p class="section-label">01 / What we do</p>
+              <h2 class="section-title">The details make the difference.</h2>
+              <p class="section-description">
+                Explore our services. Choose one to put it straight into
+                your demo booking form.
+              </p>
+
+              <div class="services">
+                ${d.niche.services.map((service, index) => `
+                  <article class="service">
+                    <span class="service-number">
+                      ${String(index + 1).padStart(2, "0")} / ${escapeHTML(d.niche.name)}
+                    </span>
+                    <h3>${escapeHTML(service)}</h3>
+                    <p>
+                      A considered service tailored to your style,
+                      comfort and goals.
+                    </p>
+                    <div class="service-bottom">
+                      <span>From $${35 + ((d.id * 3 + index * 7) % 18) * 5}</span>
+                      <button type="button" data-service="${index}">
+                        Select ↗
+                      </button>
+                    </div>
+                  </article>
+                `).join("")}
+              </div>
+            </section>
+
+            <section class="section full-section" id="portfolio">
+              <div class="section-inner">
+                <p class="section-label">02 / Inspiration</p>
+                <h2 class="section-title">Take a closer look.</h2>
+                <p class="section-description">
+                  A visual moodboard for this concept.
+                  Tap an image to see it larger.
+                </p>
+
+                <div class="portfolio-grid">
+                  ${[d.image, d.secondImage, d.image].map((image, index) => `
+                    <button type="button" data-image="${index}"
+                      aria-label="Open inspiration photo ${index + 1}">
+                      <img src="${photoURL(image, 950)}"
+                        alt="${escapeHTML(d.niche.name)} inspiration ${index + 1}"
+                        loading="lazy"
+                        style="object-position:${30 + ((d.id * 11 + index * 23) % 55)}% center">
+                    </button>
+                  `).join("")}
+                </div>
+              </div>
+            </section>
+
+            <section class="section about" id="about">
+              <img class="about-image"
+                src="${photoURL(d.secondImage, 1100)}"
+                loading="lazy"
+                alt="${escapeHTML(d.niche.name)} salon atmosphere">
+
+              <div>
+                <p class="section-label">03 / The experience</p>
+                <h2 class="section-title">A little time, just for you.</h2>
+                <p class="section-description">
+                  ${escapeHTML(d.name)} is an original ${escapeHTML(d.niche.name.toLowerCase())}
+                  website concept. Its look follows the
+                  ${escapeHTML(d.direction[1].toLowerCase())} design direction:
+                  an individual visual identity built around the service.
+                </p>
+                <br>
+                <button class="btn-outline" type="button" data-scroll="booking">
+                  Plan your visit →
+                </button>
+              </div>
+            </section>
+
+            <section class="section booking-section" id="booking">
+              <div class="section-inner">
+                <div>
+                  <p class="section-label">04 / Appointment</p>
+                  <h2 class="section-title">Ready when you are.</h2>
+                  <p class="section-description">
+                    This is a working <strong>demo</strong> booking form.
+                    Your request is saved only in this browser; it is not
+                    sent to a salon.
+                  </p>
+                  <div class="saved-bookings" id="savedBookings"></div>
+                </div>
+
+                <form class="booking-form" id="bookingForm">
+                  <label>
+                    Your name
+                    <input name="name" autocomplete="name" maxlength="80"
+                      placeholder="Full name" required>
+                  </label>
+
+                  <label>
+                    Email
+                    <input name="email" type="email" autocomplete="email"
+                      placeholder="you@example.com" required>
+                  </label>
+
+                  <label>
+                    Service
+                    <select name="service" id="bookingService" required>
+                      <option value="">Choose a service</option>
+                      ${d.niche.services.map(service => `
+                        <option value="${escapeHTML(service)}">
+                          ${escapeHTML(service)}
+                        </option>
+                      `).join("")}
+                    </select>
+                  </label>
+
+                  <label>
+                    Preferred date
+                    <input name="date" id="bookingDate" type="date" required>
+                  </label>
+
+                  <label class="wide">
+                    Preferred time
+                    <select name="time" required>
+                      <option value="">Choose a time</option>
+                      ${["09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00"]
+                        .map(time => `<option value="${time}">${time}</option>`)
+                        .join("")}
+                    </select>
+                  </label>
+
+                  <button class="btn wide" type="submit">
+                    Save demo booking ↗
+                  </button>
+
+                  <p class="form-message wide" id="formMessage"
+                    aria-live="polite"></p>
+                </form>
+              </div>
+            </section>
+          </main>
+
+          <footer class="site-footer">
+            <div>
+              <b>${escapeHTML(d.name)}</b>
+              <p>${escapeHTML(d.niche.name)} · ${escapeHTML(d.direction[1])}</p>
+            </div>
+            <p>Original frontend concept. Not a real salon or live booking service.</p>
+          </footer>
+        </div>
+      `;
+
+      document.title = `${d.name} — Salon Atlas`;
+      document.getElementById("bookingDate").min = localToday();
+      renderBookings(d.id);
+    }
+
+    function localToday() {
+      const now = new Date();
+      const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+      return local.toISOString().slice(0, 10);
+    }
+
+    function bookingKey(id) {
+      return `salon-atlas-demo-bookings-${id}`;
+    }
+
+    function readBookings(id) {
+      try {
+        const value = JSON.parse(localStorage.getItem(bookingKey(id)) || "[]");
+        return Array.isArray(value) ? value : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function renderBookings(id) {
+      const root = document.getElementById("savedBookings");
+      if (!root) return;
+
+      const bookings = readBookings(id);
+      root.replaceChildren();
+
+      if (!bookings.length) return;
+
+      const title = document.createElement("strong");
+      title.textContent = "Saved demo bookings:";
+      root.append(title);
+
+      bookings.forEach((booking, index) => {
+        const row = document.createElement("div");
+        const text = document.createElement("span");
+        const cancel = document.createElement("button");
+
+        text.textContent =
+          `${booking.service} · ${booking.date} at ${booking.time}`;
+
+        cancel.type = "button";
+        cancel.dataset.cancel = String(index);
+        cancel.textContent = "Cancel";
+
+        row.append(text, cancel);
+        root.append(row);
+      });
+    }
+
+    function navigate() {
+      const match = location.hash.match(/^#\/site\/(\d+)$/);
+
+      if (match) {
+        const design = designs[Number(match[1]) - 1];
+
+        if (!design) {
+          location.hash = "#/";
+          return;
+        }
+
+        sitePage(design);
+      } else {
+        galleryPage();
+      }
+
+      window.scrollTo(0, 0);
+    }
+
+    app.addEventListener("click", event => {
+      const open = event.target.closest("[data-open]");
+      if (open) {
+        location.hash = `#/site/${open.dataset.open}`;
+        return;
+      }
+
+      if (event.target.closest("[data-back]")) {
+        location.hash = "#/";
+        return;
+      }
+
+      const next = event.target.closest("[data-next]");
+      if (next) {
+        location.hash = `#/site/${next.dataset.next}`;
+        return;
+      }
+
+      const category = event.target.closest("[data-category]");
+      if (category) {
+        activeCategory = category.dataset.category;
+        visibleLimit = 24;
+
+        document.querySelectorAll(".category-button").forEach(button => {
+          button.classList.toggle("active", button === category);
+        });
+
+        renderCards();
+        return;
+      }
+
+      if (event.target.closest("#loadMore")) {
+        visibleLimit += 24;
+        renderCards();
+        return;
+      }
+
+      const menu = event.target.closest("[data-menu]");
+      if (menu) {
+        const nav = document.getElementById("siteNav");
+        const expanded = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(expanded));
+        return;
+      }
+
+      const scroll = event.target.closest("[data-scroll]");
+      if (scroll) {
+        document.getElementById(scroll.dataset.scroll)?.scrollIntoView({
+          behavior: "smooth"
+        });
+
+        document.getElementById("siteNav")?.classList.remove("open");
+        document.querySelector("[data-menu]")
+          ?.setAttribute("aria-expanded", "false");
+        return;
+      }
+
+      const service = event.target.closest("[data-service]");
+      if (service) {
+        const id = Number(location.hash.match(/^#\/site\/(\d+)$/)?.[1]);
+        const design = designs[id - 1];
+        if (!design) return;
+
+        document.getElementById("bookingService").value =
+          design.niche.services[Number(service.dataset.service)];
+
+        document.getElementById("booking").scrollIntoView({
+          behavior: "smooth"
+        });
+        return;
+      }
+
+      const imageButton = event.target.closest("[data-image]");
+      if (imageButton) {
+        document.getElementById("lightboxImage").src =
+          imageButton.querySelector("img").src;
+
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+        document.getElementById("closeLightbox").focus();
+        return;
+      }
+
+      const cancel = event.target.closest("[data-cancel]");
+      if (cancel) {
+        const id = Number(location.hash.match(/^#\/site\/(\d+)$/)?.[1]);
+        if (!designs[id - 1]) return;
+
+        const bookings = readBookings(id);
+        bookings.splice(Number(cancel.dataset.cancel), 1);
+
+        try {
+          localStorage.setItem(bookingKey(id), JSON.stringify(bookings));
+          renderBookings(id);
+        } catch {
+          const message = document.getElementById("formMessage");
+          if (message) message.textContent =
+            "Browser storage is unavailable; booking could not be removed.";
+        }
+      }
+    });
+
+    app.addEventListener("input", event => {
+      if (event.target.id !== "search") return;
+
+      searchText = event.target.value;
+      visibleLimit = 24;
+      renderCards();
+    });
+
+    app.addEventListener("submit", event => {
+      if (event.target.id !== "bookingForm") return;
+      event.preventDefault();
+
+      const id = Number(location.hash.match(/^#\/site\/(\d+)$/)?.[1]);
+      if (!designs[id - 1]) return;
+
+      const form = event.target;
+      if (!form.reportValidity()) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      const message = document.getElementById("formMessage");
+
+      if (data.date < localToday()) {
+        message.textContent = "Please choose today or a future date.";
+        return;
+      }
+
+      try {
+        const bookings = readBookings(id);
+        bookings.push(data);
+
+        localStorage.setItem(bookingKey(id), JSON.stringify(bookings));
+
+        message.textContent =
+          `Saved for ${data.date} at ${data.time}. Demo only — no salon was contacted.`;
+
+        form.reset();
+        renderBookings(id);
+      } catch {
+        message.textContent =
+          "This browser blocked local storage, so the booking could not be saved.";
+      }
+    });
+
+    /* Subtle pointer-driven depth on 3D themes; touch users see static depth. */
+    app.addEventListener("pointermove", event => {
+      if (event.pointerType === "touch") return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      const art = event.target.closest(".is-3d .hero-art");
+      if (!art) return;
+
+      const rect = art.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+
+      const site = art.closest(".site");
+      site.style.setProperty("--tilt-x", `${(-y * 9).toFixed(2)}deg`);
+      site.style.setProperty("--tilt-y", `${(x * 9).toFixed(2)}deg`);
+    });
+
+    app.addEventListener("pointerout", event => {
+      const art = event.target.closest(".is-3d .hero-art");
+      if (!art || art.contains(event.relatedTarget)) return;
+
+      const site = art.closest(".site");
+      site.style.setProperty("--tilt-x", "0deg");
+      site.style.setProperty("--tilt-y", "0deg");
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      document.getElementById("lightboxImage").removeAttribute("src");
+      document.body.style.overflow = "";
+    }
+
+    document.getElementById("closeLightbox")
+      .addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeLightbox();
+    });
+
+    window.addEventListener("hashchange", navigate);
+    navigate();
+  </script>
+</body>
+</html>
