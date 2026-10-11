@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salonverse — 117 Salon Website Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "DM Sans", sans-serif; color: #24211f; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    :focus-visible { outline: 3px solid #b88665; outline-offset: 3px; }
+
+    /* GALLERY */
+    .directory { min-height: 100vh; background: #faf8f5; }
+    .directory-header {
+      max-width: 1450px; margin: auto; padding: 24px 5%;
+      display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    }
+    .directory-logo { font-size: 21px; font-weight: 800; letter-spacing: -.07em; }
+    .directory-logo span { color: #b87862; }
+    .directory-count { font-size: 13px; color: #837b76; }
+    .directory-hero { max-width: 1450px; margin: auto; padding: 72px 5% 45px; }
+    .directory-eyebrow {
+      color: #ae765e; font-size: 12px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .18em;
+    }
+    .directory-hero h1 {
+      max-width: 870px; margin: 12px 0 18px;
+      font: 500 clamp(46px, 7vw, 93px)/1.04 "Playfair Display", serif;
+      letter-spacing: -.06em;
+    }
+    .directory-hero p:last-child { max-width: 680px; line-height: 1.7; color: #736d68; }
+    .directory-controls {
+      max-width: 1450px; margin: auto; padding: 0 5% 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 15px;
+    }
+    .category-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .category-button {
+      padding: 9px 14px; border: 1px solid #e7dfd9; border-radius: 40px;
+      background: #fff; color: #625c57; font-size: 12px;
+    }
+    .category-button.active { background: #272321; color: white; border-color: #272321; }
+    .directory-search {
+      width: min(100%, 240px); padding: 11px 15px;
+      border: 1px solid #e7dfd9; border-radius: 40px; background: #fff;
+    }
+    .cards {
+      max-width: 1450px; margin: auto; padding: 0 5% 90px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .card {
+      min-width: 0; padding: 8px; border: 1px solid #eee8e3;
+      border-radius: 14px; background: white; text-align: left;
+      box-shadow: 0 8px 26px #38201708; transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px #3820171c; }
+    .card-preview {
+      position: relative; overflow: hidden; aspect-ratio: 1.47;
+      background: var(--bg); color: var(--ink);
+    }
+    .card-preview img {
+      position: absolute; top: 16%; right: 0; width: 48%; height: 84%;
+      object-position: center;
+    }
+    .card-preview::after {
+      content: ""; position: absolute; right: 0; bottom: 0;
+      width: 32%; height: 8%; background: var(--accent);
+    }
+    .mini-nav {
+      position: relative; z-index: 2; display: flex; justify-content: space-between;
+      align-items: center; padding: 5% 6%; font-size: 9px;
+    }
+    .mini-nav strong { font-size: 12px; }
+    .mini-content {
+      position: absolute; z-index: 2; top: 33%; left: 6%; width: 57%;
+    }
+    .mini-content small {
+      color: var(--accent); text-transform: uppercase; letter-spacing: .12em;
+      font-weight: 800; font-size: 7px;
+    }
+    .mini-content h3 {
+      margin: 8px 0 12px; font: 500 clamp(18px, 2.3vw, 34px)/1.04
+      "Playfair Display", serif; letter-spacing: -.05em;
+    }
+    .mini-content span {
+      display: inline-block; background: var(--accent); color: white;
+      padding: 8px 11px; font-size: 8px; font-weight: 700;
+    }
+    .card.layout-1 .card-preview img,
+    .card.layout-5 .card-preview img { right: 5%; top: 22%; width: 42%; height: 70%; border-radius: 48% 48% 0 0; }
+    .card.layout-2 .card-preview img,
+    .card.layout-6 .card-preview img { right: 5%; top: 24%; width: 41%; height: 65%; border-radius: 50%; }
+    .card.layout-3 .card-preview img,
+    .card.layout-7 .card-preview img { right: 0; top: 0; width: 100%; height: 100%; filter: brightness(.52); }
+    .card.layout-3 .card-preview,
+    .card.layout-7 .card-preview { color: #fff; }
+    .card.layout-3 .mini-content small,
+    .card.layout-7 .mini-content small { color: #fff; }
+    .card.layout-4 .card-preview img,
+    .card.layout-8 .card-preview img { width: 53%; clip-path: polygon(20% 0,100% 0,100% 100%,0 100%); }
+    .card.layout-9 .card-preview img { right: 5%; top: 21%; width: 42%; height: 69%; border: 9px solid var(--accent); }
+    .card.layout-3 .card-preview::after,
+    .card.layout-7 .card-preview::after { display: none; }
+    .card-bottom {
+      padding: 13px 7px 5px; display: flex; justify-content: space-between;
+      gap: 12px; align-items: center;
+    }
+    .card-bottom strong { font-size: 13px; }
+    .card-bottom span { color: #8b817c; font-size: 11px; text-align: right; }
+    .empty { grid-column: 1 / -1; text-align: center; padding: 60px; color: #777; }
+
+    /* FULL SALON WEBSITES */
+    .website {
+      --bg: #f5eee8; --ink: #302a27; --accent: #a16b59; --surface: #fffaf6;
+      background: var(--bg); color: var(--ink); min-height: 100vh;
+    }
+    .website.font-modern { font-family: "Space Grotesk", sans-serif; }
+    .website.font-classic { font-family: "Playfair Display", serif; }
+    .website .sans { font-family: "DM Sans", sans-serif; }
+
+    .return-bar {
+      position: sticky; top: 0; z-index: 50; background: #24211f; color: #fff;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 10px; padding: 9px max(4%, calc((100% - 1440px)/2));
+      font: 12px "DM Sans", sans-serif;
+    }
+    .return-bar button {
+      border: 1px solid #ffffff55; border-radius: 30px;
+      padding: 7px 12px; background: none; color: white;
+    }
+    .return-bar span { opacity: .8; text-align: center; }
+
+    .site-header {
+      position: relative; z-index: 20; max-width: 1440px; margin: auto;
+      padding: 23px 5%; display: flex; justify-content: space-between;
+      align-items: center; gap: 20px;
+    }
+    .site-brand { font-size: clamp(19px, 2vw, 28px); font-weight: 700; letter-spacing: -.055em; }
+    .site-brand em { color: var(--accent); font-style: normal; }
+    .site-nav { display: flex; align-items: center; gap: 25px; }
+    .site-nav button {
+      border: 0; background: transparent; color: inherit; font-size: 13px;
+    }
+    .site-nav .nav-book {
+      background: var(--ink); color: var(--bg); padding: 12px 18px;
+    }
+    .menu-toggle {
+      display: none; background: none; border: 1px solid currentColor;
+      color: inherit; padding: 8px 11px;
+    }
+
+    .site-hero {
+      position: relative; max-width: 1440px; min-height: 610px;
+      margin: auto; padding: 75px 5% 105px; display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-copy { position: relative; z-index: 3; width: 51%; }
+    .hero-kicker {
+      margin: 0 0 22px; color: var(--accent); font: 800 12px "DM Sans", sans-serif;
+      text-transform: uppercase; letter-spacing: .2em;
+    }
+    .hero-title {
+      max-width: 800px; margin: 0;
+      font-size: clamp(51px, 6vw, 92px); font-weight: 500;
+      line-height: 1.03; letter-spacing: -.065em;
+    }
+    .font-editorial .hero-title, .font-classic .hero-title,
+    .font-editorial .section-heading { font-family: "Playfair Display", serif; }
+    .hero-description {
+      max-width: 440px; margin: 24px 0 28px; line-height: 1.75;
+      opacity: .75; font: 15px/1.75 "DM Sans", sans-serif;
+    }
+    .primary-btn, .outline-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 12px 21px; border: 1px solid var(--ink);
+      background: var(--ink); color: var(--bg);
+      font: 700 13px "DM Sans", sans-serif; transition: transform .2s;
+    }
+    .outline-btn { background: transparent; color: var(--ink); }
+    .primary-btn:hover, .outline-btn:hover { transform: translateY(-2px); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-image-wrap {
+      position: absolute; z-index: 1; right: 5%; top: 6%; width: 43%;
+      height: 86%; overflow: hidden; background: var(--accent);
+    }
+    .hero-image { height: 100%; }
+    .hero-mark {
+      position: absolute; z-index: 2; right: 1%; bottom: 1%;
+      font-size: clamp(90px, 18vw, 260px); line-height: .8;
+      font-weight: 700; opacity: .09; pointer-events: none;
+    }
+    .hero-index {
+      position: absolute; bottom: 35px; left: 5%;
+      font: 11px "DM Sans", sans-serif; letter-spacing: .17em;
+      text-transform: uppercase; opacity: .6;
+    }
+
+    /* Distinct hero composition systems */
+    .website.layout-1 .hero-image-wrap { border-radius: 48% 48% 0 0; }
+    .website.layout-2 .hero-image-wrap {
+      top: 14%; height: 70%; width: 39%; border-radius: 50%;
+    }
+    .website.layout-3 .site-hero,
+    .website.layout-7 .site-hero { max-width: none; color: #fff; }
+    .website.layout-3 .hero-image-wrap,
+    .website.layout-7 .hero-image-wrap {
+      inset: 0; width: 100%; height: 100%;
+    }
+    .website.layout-3 .hero-image,
+    .website.layout-7 .hero-image { filter: brightness(.42); }
+    .website.layout-3 .hero-copy,
+    .website.layout-7 .hero-copy { width: 75%; max-width: 950px; margin: auto; text-align: center; }
+    .website.layout-3 .hero-description,
+    .website.layout-7 .hero-description { margin-left: auto; margin-right: auto; }
+    .website.layout-3 .hero-actions,
+    .website.layout-7 .hero-actions { justify-content: center; }
+    .website.layout-3 .hero-kicker,
+    .website.layout-7 .hero-kicker { color: #fff; }
+    .website.layout-3 .site-hero .primary-btn,
+    .website.layout-7 .site-hero .primary-btn { color: #222; background: #fff; border-color: #fff; }
+    .website.layout-3 .site-hero .outline-btn,
+    .website.layout-7 .site-hero .outline-btn { color: #fff; border-color: #fff; }
+    .website.layout-4 .hero-image-wrap {
+      right: 0; width: 52%; height: 100%; top: 0;
+      clip-path: polygon(19% 0,100% 0,100% 100%,0 100%);
+    }
+    .website.layout-5 .hero-image-wrap {
+      top: 13%; right: 7%; width: 39%; height: 75%;
+      border: 17px solid var(--surface);
+    }
+    .website.layout-6 .hero-image-wrap {
+      top: 13%; right: 6%; width: 40%; height: 73%;
+      border-radius: 180px 180px 20px 20px;
+    }
+    .website.layout-8 .hero-image-wrap {
+      top: 13%; right: 6%; width: 39%; height: 72%;
+      transform: rotate(4deg); border: 13px solid var(--surface);
+    }
+    .website.layout-9 .hero-image-wrap {
+      top: 19%; right: 8%; width: 36%; height: 65%; border-radius: 50%;
+    }
+
+    .site-section {
+      max-width: 1440px; margin: auto; padding: 90px 5%;
+      scroll-margin-top: 65px;
+    }
+    .section-tag {
+      margin: 0 0 12px; color: var(--accent);
+      font: 800 12px "DM Sans", sans-serif; letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .section-heading {
+      max-width: 820px; margin: 0 0 20px;
+      font-size: clamp(34px, 4.1vw, 61px);
+      font-weight: 500; line-height: 1.12; letter-spacing: -.055em;
+    }
+    .section-copy {
+      max-width: 620px; color: var(--ink); opacity: .73;
+      font: 15px/1.8 "DM Sans", sans-serif;
+    }
+    .service-grid {
+      margin-top: 37px; display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+    }
+    .service-item {
+      padding: 28px; background: var(--surface); border: 1px solid #7777771c;
+      display: flex; flex-direction: column; min-height: 240px;
+    }
+    .service-item small {
+      color: var(--accent); font: 800 12px "DM Sans", sans-serif;
+    }
+    .service-item h3 {
+      margin: 24px 0 10px; font-size: 23px; font-weight: 500;
+      letter-spacing: -.04em;
+    }
+    .service-item p {
+      margin: 0 0 20px; opacity: .7; font: 13px/1.6 "DM Sans", sans-serif;
+    }
+    .service-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; margin-top: auto; font: 700 13px "DM Sans", sans-serif;
+    }
+    .service-bottom button {
+      padding: 0; border: 0; background: none; color: var(--accent);
+      font-weight: 800;
+    }
+    .gallery-section { background: var(--surface); max-width: none; }
+    .section-inner { max-width: 1296px; margin: auto; }
+    .photo-grid {
+      margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+    }
+    .photo-grid button {
+      padding: 0; border: 0; overflow: hidden; background: var(--bg);
+      aspect-ratio: .9;
+    }
+    .photo-grid img { height: 100%; transition: transform .35s; }
+    .photo-grid button:hover img { transform: scale(1.06); }
+    .about-panel {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8%;
+      align-items: center;
+    }
+    .about-panel img { height: 440px; }
+    .about-stats {
+      display: flex; gap: 30px; margin-top: 30px;
+      font: 12px "DM Sans", sans-serif;
+    }
+    .about-stats strong { display: block; font-size: 26px; margin-bottom: 5px; }
+    .booking-section { background: var(--ink); color: var(--bg); max-width: none; }
+    .booking-section .section-tag { color: var(--accent); }
+    .booking-section .section-inner {
+      display: grid; grid-template-columns: .8fr 1.2fr; gap: 8%;
+    }
+    .booking-form {
+      padding: 30px; background: var(--bg); color: var(--ink);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .booking-form label {
+      display: flex; flex-direction: column; gap: 7px;
+      font: 700 12px "DM Sans", sans-serif;
+    }
+    .booking-form label.full, .booking-form button, .form-message { grid-column: 1 / -1; }
+    .booking-form input, .booking-form select {
+      width: 100%; padding: 12px; border: 1px solid #8885;
+      border-radius: 0; background: #fff; color: #222;
+    }
+    .booking-form button { width: 100%; }
+    .form-message { margin: 0; font: 13px/1.5 "DM Sans", sans-serif; }
+    .saved-bookings {
+      margin-top: 20px; font: 13px/1.7 "DM Sans", sans-serif;
+    }
+    .saved-bookings button {
+      margin-left: 8px; border: 0; background: transparent;
+      color: inherit; text-decoration: underline;
+    }
+    .site-footer {
+      max-width: 1440px; margin: auto; padding: 50px 5%;
+      display: flex; justify-content: space-between; gap: 20px;
+      font: 13px "DM Sans", sans-serif;
+    }
+    .site-footer strong { font-size: 20px; }
+    .site-footer p { opacity: .7; }
+
+    .lightbox {
+      position: fixed; z-index: 100; inset: 0; display: none;
+      align-items: center; justify-content: center;
+      padding: 25px; background: #0e0d0deb;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { width: auto; max-width: 95vw; max-height: 85vh; }
+    .lightbox button {
+      position: absolute; right: 23px; top: 18px;
+      color: white; background: none; border: 0; font-size: 38px;
+    }
+
+    @media (max-width: 950px) {
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .site-hero { min-height: 530px; }
+    }
+    @media (max-width: 650px) {
+      .directory-hero { padding-top: 48px; }
+      .cards { grid-template-columns: 1fr; }
+      .directory-search { width: 100%; }
+      .mini-content h3 { font-size: 30px; }
+      .return-bar span { display: none; }
+      .site-header { padding: 16px 5%; }
+      .menu-toggle { display: block; }
+      .site-nav {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        padding: 16px 5%; flex-direction: column; align-items: stretch;
+        background: var(--bg); box-shadow: 0 15px 25px #0002;
+      }
+      .site-nav.open { display: flex; }
+      .site-nav button { padding: 10px; text-align: left; }
+      .site-hero, .website.layout-3 .site-hero, .website.layout-7 .site-hero {
+        display: block; min-height: 0; padding: 50px 5% 0;
+        color: var(--ink); background: var(--bg);
+      }
+      .hero-copy, .website.layout-3 .hero-copy, .website.layout-7 .hero-copy {
+        width: 100%; margin: 0; text-align: left;
+      }
+      .hero-title { font-size: clamp(47px, 12vw, 70px); }
+      .website.layout-3 .hero-kicker, .website.layout-7 .hero-kicker { color: var(--accent); }
+      .website.layout-3 .hero-description, .website.layout-7 .hero-description {
+        margin-left: 0; margin-right: 0;
+      }
+      .website.layout-3 .hero-actions, .website.layout-7 .hero-actions {
+        justify-content: flex-start;
+      }
+      .website.layout-3 .site-hero .primary-btn,
+      .website.layout-7 .site-hero .primary-btn {
+        background: var(--ink); border-color: var(--ink); color: var(--bg);
+      }
+      .website.layout-3 .site-hero .outline-btn,
+      .website.layout-7 .site-hero .outline-btn {
+        border-color: var(--ink); color: var(--ink);
+      }
+      .hero-image-wrap,
+      .website.layout-1 .hero-image-wrap,
+      .website.layout-2 .hero-image-wrap,
+      .website.layout-3 .hero-image-wrap,
+      .website.layout-4 .hero-image-wrap,
+      .website.layout-5 .hero-image-wrap,
+      .website.layout-6 .hero-image-wrap,
+      .website.layout-7 .hero-image-wrap,
+      .website.layout-8 .hero-image-wrap,
+      .website.layout-9 .hero-image-wrap {
+        position: relative; inset: auto; display: block;
+        width: 100%; height: 320px; margin-top: 35px;
+        border: 0; border-radius: 0; clip-path: none; transform: none;
+      }
+      .website.layout-3 .hero-image, .website.layout-7 .hero-image { filter: none; }
+      .hero-index, .hero-mark { display: none; }
+      .site-section { padding: 65px 5%; }
+      .service-grid, .photo-grid, .about-panel,
+      .booking-section .section-inner { grid-template-columns: 1fr; }
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-panel img { height: 320px; }
+      .booking-form { grid-template-columns: 1fr; padding: 20px; }
+      .site-footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview">
+    <button type="button" id="closeLightbox" aria-label="Close photo">×</button>
+    <img id="lightboxImage" alt="Salon work preview">
+  </div>
+
+  <script>
+    const categories = [
+      {
+        name: "Women's Hair", suffix: "Hair House",
+        lines: ["Hair that feels like you.", "The art of great hair.", "A beautiful new chapter."],
+        services: ["Signature Cut & Style", "Blowout", "Hair Treatment", "Styling Session", "Silk Press", "Hair Consultation"],
+        image: "photo-1521590832167-7bcbfaa6381f"
+      },
+      {
+        name: "Men's Barber", suffix: "Barber Club",
+        lines: ["A sharper kind of style.", "Classic craft. Modern edge.", "Your best cut starts here."],
+        services: ["Precision Haircut", "Beard Sculpt", "Hot Towel Shave", "Skin Fade", "Hair & Beard", "Grooming Ritual"],
+        image: "photo-1503951914875-452162b0f3f1"
+      },
+      {
+        name: "Unisex Salon", suffix: "Salon",
+        lines: ["Style without limits.", "Made for every you.", "Come in. Stand out."],
+        services: ["Personalized Cut", "Creative Styling", "Color Refresh", "Hair Treatment", "Event Styling", "Style Consultation"],
+        image: "photo-1560066984-138dadb4c035"
+      },
+      {
+        name: "Nail Art", suffix: "Nail Studio",
+        lines: ["Little details. Big feeling.", "Wear your personality.", "Nails worth showing off."],
+        services: ["Classic Manicure", "Gel Manicure", "Custom Nail Art", "Luxury Pedicure", "Nail Repair", "Signature Set"],
+        image: "photo-1604654894610-df63bc536371"
+      },
+      {
+        name: "Nail Extensions", suffix: "Nail Extensions",
+        lines: ["Length meets luxury.", "Your dream set awaits.", "Extra length. Extra you."],
+        services: ["Gel Extensions", "Acrylic Full Set", "Extension Refill", "Sculpted Nails", "French Extensions", "Extension Removal"],
+        image: "photo-1610992015732-2449b76344bc"
+      },
+      {
+        name: "Lash & Brow", suffix: "Lash Atelier",
+        lines: ["The beauty is in your eyes.", "A look that says everything.", "Wake up looking ready."],
+        services: ["Classic Lash Set", "Volume Lash Set", "Lash Lift", "Brow Lamination", "Brow Shape", "Lash Refill"],
+        image: "photo-1512290923902-8a9f81dc236c"
+      },
+      {
+        name: "Hair Extensions", suffix: "Extension Studio",
+        lines: ["More length. More confidence.", "The hair you imagined.", "Your length, your way."],
+        services: ["Extension Consultation", "Tape-in Extensions", "Weft Installation", "Extension Blend", "Maintenance", "Extension Removal"],
+        image: "photo-1562322140-8baeececf3df"
+      },
+      {
+        name: "Braids", suffix: "Braid Studio",
+        lines: ["Braided with intention.", "Protective style. Personal art.", "Every braid tells a story."],
+        services: ["Box Braids", "Knotless Braids", "Cornrows", "Twists", "Braid Refresh", "Braiding Consultation"],
+        image: "photo-1595476108010-b4d1f102b1b1"
+      },
+      {
+        name: "Curly Hair", suffix: "Curl House",
+        lines: ["Love every curl.", "Curls in their element.", "Your texture, celebrated."],
+        services: ["Curly Cut", "Curl Definition", "Hydration Treatment", "Wash & Style", "Texture Consultation", "Curl Refresh"],
+        image: "photo-1544005313-94ddf0286df2"
+      },
+      {
+        name: "Bridal Beauty", suffix: "Bridal Atelier",
+        lines: ["Your day. Your glow.", "Beautifully, unmistakably you.", "Made for your moment."],
+        services: ["Bridal Hair Trial", "Wedding Hair", "Bridal Makeup", "Bridal Party Styling", "Event Touch-up", "Bridal Consultation"],
+        image: "photo-1529636798458-92182e662485"
+      },
+      {
+        name: "Hair Color", suffix: "Color Lab",
+        lines: ["Color outside the ordinary.", "Find your perfect shade.", "A new color story."],
+        services: ["Balayage", "Highlights", "Full Color", "Gloss & Tone", "Root Refresh", "Color Consultation"],
+        image: "photo-1600948836101-f9ffda59d250"
+      },
+      {
+        name: "Spa & Wellness", suffix: "Beauty Spa",
+        lines: ["Take a moment for yourself.", "The luxury of slowing down.", "Your calm starts here."],
+        services: ["Signature Facial", "Relaxation Massage", "Body Treatment", "Head Spa", "Aromatherapy", "Wellness Ritual"],
+        image: "photo-1540555700478-4be289fbecef"
+      },
+      {
+        name: "Skincare", suffix: "Skin Studio",
+        lines: ["Feel good in your skin.", "Your glow, thoughtfully made.", "Skincare made personal."],
+        services: ["Skin Consultation", "Hydrating Facial", "Deep Cleanse", "Glow Treatment", "Gentle Peel", "Skin Renewal"],
+        image: "photo-1570172619644-dfd03ed5d881"
+      }
+    ];
+
+    const cityStyles = [
+      { city: "Paris", prefix: "Maison", mood: "editorial", bg: "#f5ede8", ink: "#372d2a", accent: "#aa7467", surface: "#fffaf6" },
+      { city: "London", prefix: "The Modern", mood: "modern", bg: "#e8e9e5", ink: "#252c29", accent: "#647e70", surface: "#f9faf7" },
+      { city: "Milan", prefix: "Studio", mood: "classic", bg: "#eee5dc", ink: "#362b26", accent: "#a07655", surface: "#fffaf4" },
+      { city: "Seoul", prefix: "Onda", mood: "modern", bg: "#f4e9ee", ink: "#3c3039", accent: "#b27393", surface: "#fff9fc" },
+      { city: "Tokyo", prefix: "Kiyo", mood: "modern", bg: "#e8ebe6", ink: "#29352d", accent: "#788a6c", surface: "#fbfcf8" },
+      { city: "Dubai", prefix: "Élan", mood: "classic", bg: "#ede4d4", ink: "#382e25", accent: "#ad8851", surface: "#fcf7ed" },
+      { city: "New York", prefix: "District", mood: "modern", bg: "#e8e4e1", ink: "#262323", accent: "#a86353", surface: "#faf8f6" },
+      { city: "Copenhagen", prefix: "Nord", mood: "editorial", bg: "#e5e9e7", ink: "#283432", accent: "#6e8d89", surface: "#fafcfb" },
+      { city: "Barcelona", prefix: "Casa", mood: "editorial", bg: "#f5e7de", ink: "#402e28", accent: "#bf7656", surface: "#fff9f5" }
+    ];
+
+    const designs = categories.flatMap((category, categoryIndex) =>
+      cityStyles.map((style, styleIndex) => {
+        const id = categoryIndex * cityStyles.length + styleIndex + 1;
+        return {
+          id, category, style,
+          name: `${style.prefix} ${category.suffix}`,
+          title: category.lines[styleIndex % category.lines.length],
+          layout: styleIndex + 1,
+          // A distinct visual treatment for every category/city pairing.
+          image: category.image,
+          prices: category.services.map((_, serviceIndex) =>
+            25 + ((categoryIndex * 7 + styleIndex * 4 + serviceIndex * 9) % 17) * 5
+          )
+        };
+      })
+    );
+
+    const app = document.getElementById("app");
+    const photo = (id, width = 1200) =>
+      `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=80`;
+    const theme = d =>
+      `--bg:${d.style.bg};--ink:${d.style.ink};--accent:${d.style.accent};--surface:${d.style.surface}`;
+    const safe = text => String(text).replace(/[&<>"']/g, character =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character])
+    );
+
+    let selectedCategory = "All";
+    let searchText = "";
+
+    function galleryMarkup() {
+      return `
+        <div class="directory">
+          <header class="directory-header">
+            <div class="directory-logo">salon<span>verse.</span></div>
+            <div class="directory-count">117 salon website concepts · 13 specialties</div>
+          </header>
+          <section class="directory-hero">
+            <p class="directory-eyebrow">Explore the collection</p>
+            <h1>117 salon websites. A world of inspiration.</h1>
+            <p>Explore original, clickable frontend concepts for hair, barbers, nails, extensions, lashes, bridal beauty, skincare and more. Choose a design to open its complete demo website.</p>
+          </section>
+          <div class="directory-controls">
+            <div class="category-list" id="categoryList">
+              ${["All", ...categories.map(c => c.name)].map(name => `
+                <button type="button" class="category-button ${selectedCategory === name ? "active" : ""}"
+                  data-category="${safe(name)}">${safe(name)}</button>
+              `).join("")}
+            </div>
+            <input id="gallerySearch" class="directory-search" type="search"
+              placeholder="Search websites..." value="${safe(searchText)}" aria-label="Search websites">
+          </div>
+          <main class="cards" id="cards"></main>
+        </div>`;
+    }
+
+    function cardMarkup(d) {
+      return `
+        <button type="button" class="card layout-${d.layout}" data-open="${d.id}"
+          aria-label="Open ${safe(d.name)} website" style="${theme(d)}">
+          <div class="card-preview">
+            <img src="${photo(d.image, 650)}" alt="" loading="lazy"
+              style="object-position:${35 + (d.id * 7) % 40}% center">
+            <div class="mini-nav"><strong>${safe(d.name)}</strong><span>MENU &nbsp; BOOK ↗</span></div>
+            <div class="mini-content">
+              <small>${safe(d.category.name)} · ${safe(d.style.city)}</small>
+              <h3>${safe(d.title)}</h3>
+              <span>EXPLORE WEBSITE ↗</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <strong>${String(d.id).padStart(3, "0")} · ${safe(d.name)}</strong>
+            <span>${safe(d.category.name)} ↗</span>
+          </div>
+        </button>`;
+    }
+
+    function renderCards() {
+      const matching = designs.filter(d =>
+        (selectedCategory === "All" || d.category.name === selectedCategory) &&
+        `${d.name} ${d.category.name} ${d.style.city} ${d.title}`
+          .toLowerCase().includes(searchText.toLowerCase())
+      );
+      document.getElementById("cards").innerHTML =
+        matching.length ? matching.map(cardMarkup).join("") :
+        `<div class="empty">No websites found. Try another search.</div>`;
+    }
+    function websiteMarkup(d) {
+      const description =
+        `A ${d.style.city}-inspired ${d.category.name.toLowerCase()} experience, designed around you. Thoughtful service, beautiful details, and a little time to feel your best.`;
+
+      return `
+        <div class="website layout-${d.layout} font-${d.style.mood}" style="${theme(d)}">
+          <div class="return-bar">
+            <button type="button" data-back>← All 117 websites</button>
+            <span>Demo ${String(d.id).padStart(3, "0")} / 117 · ${safe(d.category.name)}</span>
+            <button type="button" data-next="${d.id % designs.length + 1}">Next website →</button>
+          </div>
+
+          <header class="site-header">
+            <a class="site-brand" href="#/site/${d.id}" aria-label="${safe(d.name)} home">
+              ${safe(d.style.prefix)} <em>${safe(d.category.suffix)}</em>
+            </a>
+            <button type="button" class="menu-toggle" data-menu aria-label="Toggle menu"
+              aria-expanded="false">☰ Menu</button>
+            <nav class="site-nav" id="siteNav" aria-label="Website navigation">
+              <button type="button" data-scroll="services">Services</button>
+              <button type="button" data-scroll="gallery">Gallery</button>
+              <button type="button" data-scroll="about">About</button>
+              <button type="button" data-scroll="booking" class="nav-book">Book an appointment ↗</button>
+            </nav>
+          </header>
+
+          <main>
+            <section class="site-hero" id="home">
+              <div class="hero-copy">
+                <p class="hero-kicker">${safe(d.style.city)} inspired · ${safe(d.category.name)}</p>
+                <h1 class="hero-title">${safe(d.title)}</h1>
+                <p class="hero-description">${safe(description)}</p>
+                <div class="hero-actions">
+                  <button type="button" class="primary-btn" data-scroll="booking">Book your visit ↗</button>
+                  <button type="button" class="outline-btn" data-scroll="services">Explore services</button>
+                </div>
+              </div>
+              <div class="hero-image-wrap">
+                <img class="hero-image" src="${photo(d.image)}"
+                  alt="${safe(d.category.name)} salon inspiration"
+                  style="object-position:${35 + (d.id * 7) % 40}% center">
+              </div>
+              <div class="hero-mark" aria-hidden="true">${String(d.id).padStart(2, "0")}</div>
+              <div class="hero-index">${safe(d.style.city)} / BEAUTY, YOUR WAY</div>
+            </section>
+
+            <section class="site-section" id="services">
+              <p class="section-tag">01 / Our expertise</p>
+              <h2 class="section-heading">The services you came for. The feeling you stay for.</h2>
+              <p class="section-copy">Explore our menu and choose what feels right. Tap any service to add it to your booking request.</p>
+              <div class="service-grid">
+                ${d.category.services.map((service, index) => `
+                  <article class="service-item">
+                    <small>${String(index + 1).padStart(2, "0")} / ${safe(d.category.name)}</small>
+                    <h3>${safe(service)}</h3>
+                    <p>Personalized care, beautiful results, and an experience made for you.</p>
+                    <div class="service-bottom">
+                      <span>From $${d.prices[index]}</span>
+                      <button type="button" data-service="${index}">Choose service ↗</button>
+                    </div>
+                  </article>
+                `).join("")}
+              </div>
+            </section>
+
+            <section class="site-section gallery-section" id="gallery">
+              <div class="section-inner">
+                <p class="section-tag">02 / The lookbook</p>
+                <h2 class="section-heading">Made to make you feel amazing.</h2>
+                <p class="section-copy">A glimpse into the mood and style behind ${safe(d.name)}. Tap an image to enlarge it.</p>
+                <div class="photo-grid">
+                  ${[0, 1, 2].map((n) => `
+                    <button type="button" data-photo="${n}" aria-label="Enlarge gallery image ${n + 1}">
+                      <img src="${photo(d.image, 900)}" loading="lazy"
+                        alt="${safe(d.category.name)} look ${n + 1}"
+                        style="object-position:${25 + ((d.id * 11 + n * 23) % 60)}% center">
+                    </button>
+                  `).join("")}
+                </div>
+              </div>
+            </section>
+
+            <section class="site-section about-panel" id="about">
+              <img src="${photo(d.image, 1000)}" loading="lazy"
+                alt="${safe(d.name)} atmosphere"
+                style="object-position:${70 - (d.id % 35)}% center">
+              <div>
+                <p class="section-tag">03 / Our philosophy</p>
+                <h2 class="section-heading">Beauty should feel like belonging.</h2>
+                <p class="section-copy">At ${safe(d.name)}, the best appointment is one where you can relax, be yourself, and leave feeling even more like you. Inspired by ${safe(d.style.city)}. Made for your everyday.</p>
+                <div class="about-stats">
+                  <div><strong>01</strong>Personal attention</div>
+                  <div><strong>02</strong>Thoughtful service</div>
+                  <div><strong>03</strong>Your kind of beauty</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="site-section booking-section" id="booking">
+              <div class="section-inner">
+                <div>
+                  <p class="section-tag">04 / Your appointment</p>
+                  <h2 class="section-heading">Let's make time for you.</h2>
+                  <p class="section-copy" style="color:inherit">
+                    Choose a service and date to save a demo booking in this browser.
+                    No payment required.
+                  </p>
+                  <div class="saved-bookings" id="savedBookings"></div>
+                </div>
+                <form class="booking-form" id="bookingForm">
+                  <label>Full name
+                    <input name="name" type="text" autocomplete="name" required maxlength="80"
+                      placeholder="Your name">
+                  </label>
+                  <label>Email
+                    <input name="email" type="email" autocomplete="email" required
+                      placeholder="you@example.com">
+                  </label>
+                  <label>Service
+                    <select name="service" id="bookingService" required>
+                      <option value="">Choose a service</option>
+                      ${d.category.services.map(service =>
+                        `<option value="${safe(service)}">${safe(service)}</option>`
+                      ).join("")}
+                    </select>
+                  </label>
+                  <label>Preferred date
+                    <input name="date" id="bookingDate" type="date" required>
+                  </label>
+                  <label class="full">Preferred time
+                    <select name="time" required>
+                      <option value="">Choose a time</option>
+                      ${["09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00"]
+                        .map(t => `<option value="${t}">${t}</option>`).join("")}
+                    </select>
+                  </label>
+                  <button class="primary-btn" type="submit">Save my demo booking ↗</button>
+                  <p class="form-message" id="formMessage" aria-live="polite"></p>
+                </form>
+              </div>
+            </section>
+          </main>
+
+          <footer class="site-footer">
+            <div><strong>${safe(d.name)}</strong><p>${safe(d.style.city)}-inspired ${safe(d.category.name.toLowerCase())} concept.</p></div>
+            <div><p>Original frontend demo · No physical salon location or live booking service.</p></div>
+          </footer>
+        </div>`;
+    }
+
+    function storageKey(id) { return `salonverse-bookings-${id}`; }
+
+    function getBookings(id) {
+      try {
+        const data = JSON.parse(localStorage.getItem(storageKey(id)) || "[]");
+        return Array.isArray(data) ? data : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function renderBookings(id) {
+      const container = document.getElementById("savedBookings");
+      if (!container) return;
+      const bookings = getBookings(id);
+      container.innerHTML = bookings.length
+        ? `<strong>Your saved demo bookings:</strong><br>` +
+          bookings.map((b, index) => `
+            <div>
+              ${safe(b.service)} · ${safe(b.date)} at ${safe(b.time)}
+              <button type="button" data-cancel="${index}">Cancel</button>
+            </div>
+          `).join("")
+        : "";
+    }
+
+    function route() {
+      const match = location.hash.match(/^#\/site\/(\d+)$/);
+      if (match) {
+        const d = designs[Number(match[1]) - 1];
+        if (!d) { location.hash = "#/"; return; }
+
+        app.innerHTML = websiteMarkup(d);
+        document.title = `${d.name} — Salonverse Demo`;
+        document.getElementById("bookingDate").min =
+          new Date().toLocaleDateString("en-CA");
+        renderBookings(d.id);
+      } else {
+        app.innerHTML = galleryMarkup();
+        document.title = "Salonverse — 117 Salon Website Concepts";
+        renderCards();
+      }
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    app.addEventListener("click", event => {
+      const open = event.target.closest("[data-open]");
+      if (open) {
+        location.hash = `#/site/${open.dataset.open}`;
+        return;
+      }
+
+      if (event.target.closest("[data-back]")) {
+        location.hash = "#/";
+        return;
+      }
+
+      const next = event.target.closest("[data-next]");
+      if (next) {
+        location.hash = `#/site/${next.dataset.next}`;
+        return;
+      }
+
+      const category = event.target.closest("[data-category]");
+      if (category) {
+        selectedCategory = category.dataset.category;
+        document.querySelectorAll(".category-button").forEach(button =>
+          button.classList.toggle("active", button === category)
+        );
+        renderCards();
+        return;
+      }
+
+      const menu = event.target.closest("[data-menu]");
+      if (menu) {
+        const nav = document.getElementById("siteNav");
+        const isOpen = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(isOpen));
+        return;
+      }
+
+      const scroll = event.target.closest("[data-scroll]");
+      if (scroll) {
+        document.getElementById(scroll.dataset.scroll)?.scrollIntoView({
+          behavior: "smooth"
+        });
+        document.getElementById("siteNav")?.classList.remove("open");
+        document.querySelector("[data-menu]")?.setAttribute("aria-expanded", "false");
+        return;
+      }
+
+      const service = event.target.closest("[data-service]");
+      if (service) {
+        const match = location.hash.match(/^#\/site\/(\d+)$/);
+        if (!match) return;
+        const d = designs[Number(match[1]) - 1];
+        document.getElementById("bookingService").value =
+          d.category.services[Number(service.dataset.service)];
+        document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+
+      const imageButton = event.target.closest("[data-photo]");
+      if (imageButton) {
+        const lightbox = document.getElementById("lightbox");
+        const image = document.getElementById("lightboxImage");
+        image.src = imageButton.querySelector("img").src;
+        lightbox.classList.add("open");
+        return;
+      }
+
+      const cancel = event.target.closest("[data-cancel]");
+      if (cancel) {
+        const match = location.hash.match(/^#\/site\/(\d+)$/);
+        if (!match) return;
+        const id = Number(match[1]);
+        const bookings = getBookings(id);
+        bookings.splice(Number(cancel.dataset.cancel), 1);
+        localStorage.setItem(storageKey(id), JSON.stringify(bookings));
+        renderBookings(id);
+      }
+    });
+
+    app.addEventListener("input", event => {
+      if (event.target.id === "gallerySearch") {
+        searchText = event.target.value;
+        renderCards();
+      }
+    });
+
+    app.addEventListener("submit", event => {
+      if (event.target.id !== "bookingForm") return;
+      event.preventDefault();
+
+      const match = location.hash.match(/^#\/site\/(\d+)$/);
+      if (!match) return;
+
+      const form = event.target;
+      if (!form.reportValidity()) return;
+      const data = Object.fromEntries(new FormData(form).entries());
+      const message = document.getElementById("formMessage");
+
+      if (data.date < new Date().toLocaleDateString("en-CA")) {
+        message.textContent = "Please choose today or a future date.";
+        return;
+      }
+
+      try {
+        const id = Number(match[1]);
+        const bookings = getBookings(id);
+        bookings.push(data);
+        localStorage.setItem(storageKey(id), JSON.stringify(bookings));
+        message.textContent =
+          `Saved! ${data.service} on ${data.date} at ${data.time}. This is a demo booking stored in your browser.`;
+        form.reset();
+        renderBookings(id);
+      } catch {
+        message.textContent =
+          "Your browser blocked storage, so this demo booking could not be saved.";
+      }
+    });
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("open");
+      document.getElementById("lightboxImage").removeAttribute("src");
+    }
+
+    document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox").addEventListener("click", event => {
+      if (event.target.id === "lightbox") closeLightbox();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeLightbox();
+    });
+
+    window.addEventListener("hashchange", route);
+    route();
+  </script>
+</body>
+</html>
