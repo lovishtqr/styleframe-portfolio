@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puzzle Luxury Salon — Sector 70, Mohali | Hair, Skin, Nails & Bridal</title>
+<meta name="description" content="Puzzle Luxury Salon, Sector 70 Mohali. Hair styling, colour, facials, nails & bridal packages. Rated 4.5. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAFAF7;--teal:#0F4C4C;--teal-deep:#0A3636;--coral:#F2755D;--coral-soft:#FDE7DF;--cream:#FFF6EC;--ink:#22302F;--muted:#6B7B79;--line:#E8E4D8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Poppins',sans-serif;font-weight:600;line-height:1.22}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--coral);font-weight:600;margin-bottom:1rem;display:block}
+.section{padding:92px 24px;max-width:1140px;margin:0 auto}
+.section h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:.6rem}
+.section h2 .pop{color:var(--coral)}
+.section .sub{color:var(--muted);max-width:560px;margin-bottom:2.8rem}
+.btn{display:inline-block;padding:15px 34px;border-radius:14px;font-weight:600;font-size:.92rem;transition:.3s;cursor:pointer;border:2px solid transparent;font-family:'Poppins',sans-serif}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:#E0634A;transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(242,117,93,.6)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-deep);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--teal);color:var(--teal);background:transparent}
+.btn-ghost:hover{background:var(--teal);color:#fff}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.4rem}
+.brand .p1{color:var(--teal)}.brand .p2{color:var(--coral)}
+.nav-links{display:flex;gap:26px;font-size:.85rem;font-weight:500;color:var(--muted)}
+.nav-links a:hover{color:var(--coral)}
+/* hero split */
+.hero{max-width:1140px;margin:0 auto;padding:64px 24px 90px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.hero::before{content:"";position:absolute;width:130px;height:130px;border-radius:28px;background:var(--coral-soft);top:40px;left:-30px;transform:rotate(18deg);z-index:-1}
+.hero::after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;background:#DFF0EE;bottom:60px;left:44%;z-index:-1}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.2rem);margin:1rem 0 1.1rem}
+.hero h1 .pop{color:var(--coral)}
+.hero p.lead{color:var(--muted);font-size:1.08rem;max-width:440px;margin-bottom:1.4rem}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1.8rem}
+.chip{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:8px 18px;font-size:.82rem;font-weight:600;color:var(--teal);cursor:pointer;transition:.25s}
+.chip:hover,.chip.on{border-color:var(--coral);color:var(--coral);background:var(--coral-soft)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:1.4rem}
+.hero-tel{font-weight:600;color:var(--teal)}
+.hero-visual{position:relative}
+.hero-visual img{border-radius:26px;height:560px;width:100%;object-fit:cover;box-shadow:0 30px 60px -24px rgba(15,76,76,.35)}
+.float-card{position:absolute;left:-36px;bottom:50px;background:#fff;border-radius:18px;padding:18px 22px;box-shadow:0 20px 44px -14px rgba(15,76,76,.3);max-width:250px;border-left:5px solid var(--coral)}
+.float-card .stars{color:var(--coral);letter-spacing:.1em}
+.float-card p{font-size:.86rem;color:var(--muted);margin-top:6px}
+.float-badge{position:absolute;top:26px;right:-14px;background:var(--teal);color:#fff;border-radius:16px;padding:14px 20px;text-align:center;box-shadow:0 16px 34px -12px rgba(15,76,76,.5)}
+.float-badge b{font-family:'Poppins',sans-serif;font-size:1.7rem;display:block;line-height:1}
+.float-badge span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+/* trust */
+.trust{background:var(--teal);color:#fff}
+.trust-in{max-width:1140px;margin:0 auto;padding:34px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.trust b{font-family:'Poppins',sans-serif;font-size:1.9rem;display:block;color:var(--cream)}
+.trust span{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+/* offers */
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.offer{background:#fff;border-radius:20px;padding:34px;border:1.5px dashed var(--coral);position:relative}
+.offer .tag{display:inline-block;background:var(--coral);color:#fff;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:12px;font-weight:600}
+.offer h3{font-size:1.35rem;margin-bottom:.4rem}
+.offer .was{color:var(--muted);text-decoration:line-through;font-size:.95rem}
+.offer .now{font-family:'Poppins',sans-serif;font-size:2rem;color:var(--teal);font-weight:700}
+.offer p{font-size:.86rem;color:var(--muted);margin-top:6px}
+/* accordion menu */
+.acc{border:1.5px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-item:last-child{border-bottom:none}
+.acc-head{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:600;color:var(--ink);text-align:left}
+.acc-head .arrow{color:var(--coral);font-size:1.3rem;transition:.3s}
+.acc-item.open .acc-head .arrow{transform:rotate(45deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.acc-item.open .acc-body{max-height:900px}
+.acc-inner{padding:0 28px 26px}
+.svc-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px dotted var(--line);font-size:.95rem}
+.svc-row:last-child{border:none}
+.svc-row .p{font-weight:600;color:var(--teal);white-space:nowrap}
+.svc-row .ind{font-size:.78rem;color:var(--muted)}
+.combo{background:var(--coral-soft);border-radius:14px;padding:18px 22px;margin:14px 0}
+.combo b{color:var(--coral)}
+/* bridal */
+.bridal-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.bridal-card{border-radius:22px;padding:44px;color:#fff;position:relative;overflow:hidden}
+.bridal-card.b1{background:linear-gradient(135deg,var(--teal),var(--teal-deep))}
+.bridal-card.b2{background:linear-gradient(135deg,var(--coral),#D95B41)}
+.bridal-card h3{font-size:1.9rem;margin-bottom:.4rem}
+.bridal-card .amt{font-family:'Poppins',sans-serif;font-size:2.6rem;font-weight:700;margin:10px 0 4px}
+.bridal-card ul{list-style:none;margin:18px 0 26px;font-size:.93rem;opacity:.95}
+.bridal-card li{padding:7px 0}
+.bridal-card li::before{content:"✓ "}
+.btn-white{background:#fff;color:var(--teal)}
+.btn-white:hover{transform:translateY(-2px)}
+/* ig grid */
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ig-grid img{border-radius:16px;height:280px;width:100%;object-fit:cover;transition:.4s}
+.ig-grid a:hover img{transform:scale(1.04)}
+.follow{display:flex;align-items:center;gap:14px;margin-bottom:2rem}
+.follow .ava{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:1.3rem}
+.follow b{font-family:'Poppins',sans-serif}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:#fff;border-radius:18px;padding:30px;border:1px solid var(--line)}
+.rev .stars{color:var(--coral);margin-bottom:10px;letter-spacing:.1em}
+.rev p{font-size:.93rem;color:var(--ink);font-style:italic}
+.rev b{display:block;margin-top:14px;font-size:.88rem;font-family:'Poppins',sans-serif}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-card{background:var(--teal);color:#fff;border-radius:22px;padding:46px}
+.contact-card h3{font-size:1.9rem;margin-bottom:16px}
+.contact-card p{margin:10px 0;opacity:.9}
+.contact-card a.tel{color:var(--cream);font-size:1.5rem;font-weight:700;font-family:'Poppins',sans-serif}
+.map{border-radius:22px;overflow:hidden;min-height:330px;border:1.5px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:330px;border:0;display:block}
+footer{background:var(--teal-deep);color:#BFD4D2;padding:50px 24px;text-align:center;font-size:.88rem}
+footer .ig{color:var(--coral)}
+footer .demo{margin-top:14px;font-size:.76rem;opacity:.6}
+.wa-float{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:60;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding-top:44px}
+  .hero-visual img{height:430px}
+  .float-card{left:8px}
+  .offers-grid,.rev-grid,.contact-grid,.bridal-grid{grid-template-columns:1fr}
+  .ig-grid{grid-template-columns:1fr 1fr}
+  .trust-in{grid-template-columns:1fr 1fr}
+  .section{padding:64px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#"><span class="p1">Puzzle</span> <span class="p2">Luxury Salon</span></a>
+    <div class="nav-links"><a href="#offers">Offers</a><a href="#menu">Price List</a><a href="#bridal">Bridal</a><a href="#gallery">Work</a><a href="#contact">Visit</a></div>
+    <a class="btn btn-coral" style="padding:11px 26px;border-radius:12px" href="https://wa.me/919649673473?text=Hi%20Puzzle%20Luxury%20Salon!%20I%20want%20to%20book%20an%20appointment.">Book Now</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow">Sector 70 · Mohali — Unisex Luxury Salon</span>
+    <h1>Every piece of<br>you, <span class="pop">perfectly</span> placed.</h1>
+    <p class="lead">Hair, skin, nails &amp; bridal — one studio, zero compromise. Tap a service to jump straight to its price.</p>
+    <div class="chips">
+      <a class="chip" href="#menu" onclick="openAcc(0)">Haircuts</a>
+      <a class="chip" href="#menu" onclick="openAcc(1)">Colour</a>
+      <a class="chip" href="#menu" onclick="openAcc(2)">Skin</a>
+      <a class="chip" href="#menu" onclick="openAcc(3)">Nails</a>
+      <a class="chip" href="#bridal">Bridal</a>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-coral" href="https://wa.me/919649673473?text=Hi%20Puzzle%20Luxury%20Salon!%20I%20want%20to%20book%20an%20appointment.">Book on WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+919649673473">Call the Salon</a>
+    </div>
+    <div class="hero-tel">★ 4.5 · 65 ratings · Open daily 10 AM – 8 PM</div>
+  </div>
+  <div class="hero-visual">
+    <img src="images/vendor1.jpg" alt="Puzzle Luxury Salon, Sector 70 Mohali">
+    <div class="float-badge"><b>4.5★</b><span>65 ratings</span></div>
+    <div class="float-card">
+      <div class="stars">★★★★★</div>
+      <p>"Loved my haircut and the facial glow lasted weeks!"<br><b>— Happy client</b></p>
+    </div>
+  </div>
+</header>
+
+<div class="trust"><div class="trust-in">
+  <div><b>4.5★</b><span>Rating</span></div>
+  <div><b>Hair · Skin</b><span>Nails · Bridal</span></div>
+  <div><b>Combos</b><span>Head-to-toe deals</span></div>
+  <div><b>Sec 70</b><span>Easy to reach</span></div>
+</div></div>
+
+<section class="section" id="offers">
+  <span class="eyebrow">Fresh Offers</span>
+  <h2>Deals worth <span class="pop">grabbing</span></h2>
+  <p class="sub">Screenshot the card and show it at the counter.</p>
+  <div class="offers-grid">
+    <div class="offer"><span class="tag">Head to toe</span><h3>Glow Combo</h3><div class="was">₹2,499</div><div class="now">₹1,799*</div><p>Haircut + clean-up + head massage. One price, full refresh.</p></div>
+    <div class="offer"><span class="tag">Skin</span><h3>Facial Fest</h3><div class="was">₹1,999</div><div class="now">₹1,499*</div><p>Signature glow facial — 60 minutes of pure calm.</p></div>
+    <div class="offer"><span class="tag">Nails</span><h3>Mani-Pedi Duo</h3><div class="was">₹1,299</div><div class="now">₹999*</div><p>Classic manicure + pedicure, back to back.</p></div>
+  </div>
+  <p style="font-size:.82rem;color:var(--muted);margin-top:18px">* Indicative offer pricing — confirm on WhatsApp. Valid till month-end.</p>
+</section>
+
+<section class="section" id="menu" style="padding-top:0">
+  <span class="eyebrow">Price List</span>
+  <h2>Tap a category, <span class="pop">see the rates</span></h2>
+  <p class="sub">All rates indicative — final quote confirmed on WhatsApp before your appointment.</p>
+  <div class="acc">
+    <div class="acc-item open">
+      <button class="acc-head" onclick="toggleAcc(this)">Hair <span class="arrow">+</span></button>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="svc-row"><span>Haircut + Wash + Blow-dry</span><span class="p">₹499* <span class="ind">onwards</span></span></div>
+        <div class="svc-row"><span>Hair Spa (60 min)</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Global Hair Colour</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Highlights / Balayage</span><span class="p">indicative*</span></div>
+        <div class="combo"><b>Combo:</b> Haircut + Hair Spa — <b>₹1,299*</b> (save ₹400)</div>
+      </div></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">Skin <span class="arrow">+</span></button>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="svc-row"><span>Clean-up</span><span class="p">₹599* <span class="ind">onwards</span></span></div>
+        <div class="svc-row"><span>Signature Facial</span><span class="p">₹1,499* <span class="ind">onwards</span></span></div>
+        <div class="svc-row"><span>Face Bleach</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Face Scrub + De-tan</span><span class="p">indicative*</span></div>
+        <div class="combo"><b>Combo:</b> Facial + Bleach — <b>₹1,899*</b></div>
+      </div></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">Nails <span class="arrow">+</span></button>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="svc-row"><span>Classic Manicure</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Classic Pedicure</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Gel / Acrylic Extensions</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Nail Art (per set)</span><span class="p">indicative*</span></div>
+      </div></div>
+    </div>
+    <div class="acc-item">
+      <button class="acc-head" onclick="toggleAcc(this)">Waxing &amp; Threading <span class="arrow">+</span></button>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="svc-row"><span>Full Arms + Legs Waxing</span><span class="p">indicative*</span></div>
+        <div class="svc-row"><span>Threading (eyebrows + upper lip)</span><span class="p">indicative*</span></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bridal" style="padding-top:0">
+  <span class="eyebrow">Bridal Studio</span>
+  <h2>Shaadi-season <span class="pop">packages</span></h2>
+  <p class="sub">HD &amp; airbrush bridal makeup plus pre-bridal glow plans. Trial included in every package.</p>
+  <div class="bridal-grid">
+    <div class="bridal-card b1">
+      <h3>Bridal Makeup</h3>
+      <div class="amt">₹14,999*</div><p style="opacity:.85">per look · indicative</p>
+      <ul><li>HD or airbrush bridal makeup</li><li>Hairstyling + draping</li><li>Lashes &amp; touch-up kit</li><li>Trial session included</li></ul>
+      <a class="btn btn-white" href="https://wa.me/919649673473?text=Hi!%20I%20want%20bridal%20makeup%20package%20details.">Enquire on WhatsApp</a>
+    </div>
+    <div class="bridal-card b2">
+      <h3>Pre-Bridal Glow Plan</h3>
+      <div class="amt">₹5,999*</div><p style="opacity:.85">30-day plan · indicative</p>
+      <ul><li>3 glow facials, spread over a month</li><li>Full body waxing + polishing</li><li>Hair spa + manicure-pedicure</li><li>Personalised schedule</li></ul>
+      <a class="btn btn-white" href="https://wa.me/919649673473?text=Hi!%20I%20want%20pre-bridal%20package%20details.">Enquire on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery" style="padding-top:0">
+  <span class="eyebrow">Our Work</span>
+  <h2>Fresh from <span class="pop">@puzzleluxurysalonmohali</span></h2>
+  <div class="follow">
+    <div class="ava">P</div>
+    <div><b>@puzzleluxurysalonmohali</b><br><span style="color:var(--muted);font-size:.88rem">Follow for daily transformations</span></div>
+    <a class="btn btn-teal" style="margin-left:auto;padding:12px 26px" href="https://instagram.com/puzzleluxurysalonmohali" target="_blank" rel="noopener">Follow</a>
+  </div>
+  <div class="ig-grid">
+    <a href="https://instagram.com/puzzleluxurysalonmohali" target="_blank" rel="noopener"><img src="images/vendor1.jpg" alt="Puzzle salon work"></a>
+    <a href="https://instagram.com/puzzleluxurysalonmohali" target="_blank" rel="noopener"><img src="images/merchant1.jpg" alt="Puzzle salon"></a>
+    <a href="https://instagram.com/puzzleluxurysalonmohali" target="_blank" rel="noopener"><img src="images/nails.jpg" alt="Nail art"></a>
+    <a href="https://instagram.com/puzzleluxurysalonmohali" target="_blank" rel="noopener"><img src="images/makeup.jpg" alt="Makeup artistry"></a>
+  </div>
+</section>
+
+<section class="section" id="reviews" style="padding-top:0">
+  <span class="eyebrow">Reviews</span>
+  <h2>Rated <span class="pop">4.5</span> by Mohali</h2>
+  <p class="sub">65 ratings and growing.</p>
+  <div class="rev-grid">
+    <div class="rev"><div class="stars">★★★★★</div><p>"Finally a salon in Sector 70 that does proper balayage. The colour is still perfect after 2 months."</p><b>Kanika R.</b></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Booked the glow combo before my cousin's wedding — haircut, facial, everything on point."</p><b>Mehak D.</b></div>
+    <div class="rev"><div class="stars">★★★★☆</div><p>"Clean place, polite staff, good nail art. My go-to for monthly mani-pedis now."</p><b>Shreya V.</b></div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <span class="eyebrow">Visit Us</span>
+  <h2>Find us in <span class="pop">Sector 70</span></h2>
+  <p class="sub">Walk-ins welcome · appointments preferred on weekends.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Puzzle Luxury Salon</h3>
+      <p>SCO-663, Sector 70,<br>Mohali — 160071</p>
+      <p><a class="tel" href="tel:+919649673473">+91-96496 73473</a></p>
+      <p>Open daily · 10:00 AM – 8:00 PM</p>
+      <p style="margin-top:18px"><a class="btn btn-coral" href="https://www.google.com/maps/dir/?api=1&destination=Puzzle+Luxury+Salon+Sector+70+Mohali">Get Directions</a></p>
+    </div>
+    <div class="map"><iframe title="Puzzle Luxury Salon map" loading="lazy" src="https://www.google.com/maps?q=Puzzle+Luxury+Salon+Sector+70+Mohali&output=embed"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.3rem;color:#fff"><span style="color:#7FB5B2">Puzzle</span> <span style="color:var(--coral)">Luxury Salon</span></div>
+  <p style="margin:10px 0"><a class="ig" href="https://instagram.com/puzzleluxurysalonmohali" target="_blank" rel="noopener">@puzzleluxurysalonmohali</a> · Sector 70, Mohali</p>
+  <div class="demo">Demo by StyleFrame Co.</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919649673473?text=Hi%20Puzzle%20Luxury%20Salon!%20I%20want%20to%20book%20an%20appointment." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.6c-2.3 0-4.6-.6-6.5-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.7C3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.4 16 28.4zm7-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.6-.9-.7h-.8c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z"/></svg>
+</a>
+
+<script>
+function toggleAcc(btn){
+  const item=btn.parentElement;
+  const wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.acc-item').forEach(i=>{i.classList.remove('open');i.querySelector('.acc-body').style.maxHeight=null});
+  if(!wasOpen){item.classList.add('open');const b=item.querySelector('.acc-body');b.style.maxHeight=b.scrollHeight+'px'}
+}
+function openAcc(i){
+  const items=document.querySelectorAll('.acc-item');
+  if(items[i]&&!items[i].classList.contains('open'))toggleAcc(items[i].querySelector('.acc-head'));
+}
+document.querySelectorAll('.acc-item.open .acc-body').forEach(b=>{b.style.maxHeight=b.scrollHeight+'px'});
+</script>
+</body>
+</html>

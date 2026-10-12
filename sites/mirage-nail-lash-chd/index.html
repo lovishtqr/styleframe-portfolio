@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirage Nail &amp; Lash Studio — Sector 8, Chandigarh | Luxury Nails &amp; Lashes</title>
+<meta name="description" content="Mirage Nail & Lash Studio, SCO 11 Inner Market Sector 8B Chandigarh. 5.0★ rated nail extensions, nail art & eyelash extensions. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D0D0D; --bg2:#111214; --panel:#151619;
+  --gold:#C9A227; --gold-soft:#E4C65B; --cream:#F5EFE2;
+  --muted:#A9A49A; --line:rgba(201,162,39,.22);
+  --serif:'Cormorant Garamond',serif; --sans:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(13,13,13,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1280px;margin:0 auto;padding:0 24px}
+.logo{font-family:var(--serif);font-size:26px;letter-spacing:.14em;color:var(--cream)}
+.logo em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;gap:34px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),#A8861C);color:#0D0D0D;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:15px 34px;border:none;cursor:pointer;border-radius:2px;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,162,39,.35)}
+.btn-ghost{display:inline-block;border:1px solid var(--line);color:var(--gold-soft);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;border-radius:2px;transition:.25s}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:flex-end;position:relative;background:url('images/lashes-1.jpg') center/cover no-repeat;margin-top:72px}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,.25) 40%,rgba(13,13,13,.95) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding:90px 0 70px}
+.hero h1{font-size:clamp(52px,9vw,124px);color:#fff;font-weight:600}
+.hero h1 .g{color:var(--gold-soft);font-style:italic}
+.hero .sub{font-size:18px;color:var(--muted);max-width:560px;margin:22px 0 34px;font-weight:300}
+.rating{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.stars{color:var(--gold);font-size:20px;letter-spacing:4px}
+.rating small{color:var(--muted);font-size:14px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+/* ---------- trust strip ---------- */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:38px 24px;gap:20px;text-align:center}
+.trust b{font-family:var(--serif);font-size:38px;color:var(--gold-soft);display:block}
+.trust span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+/* ---------- sections ---------- */
+section{padding:110px 0}
+.sec-head{margin-bottom:56px}
+.sec-head h2{font-size:clamp(38px,5vw,64px);color:#fff}
+.sec-head p{color:var(--muted);max-width:620px;margin-top:14px;font-weight:300}
+/* ---------- offers ---------- */
+.offers{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.offer{background:var(--panel);border:1px solid var(--line);padding:44px 34px;position:relative;border-radius:3px}
+.offer .tag{position:absolute;top:-14px;left:34px;background:var(--gold);color:#0D0D0D;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px}
+.offer h3{font-size:28px;color:#fff;margin-bottom:8px}
+.offer .strike{color:var(--muted);text-decoration:line-through;font-size:15px}
+.offer .price{font-family:var(--serif);font-size:52px;color:var(--gold-soft);line-height:1;margin:10px 0}
+.offer .valid{font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.offer p{font-size:14px;color:var(--muted);margin:14px 0 24px}
+/* ---------- services ---------- */
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+.menu-cat{margin-bottom:44px}
+.menu-cat h3{font-size:26px;color:var(--gold-soft);margin-bottom:6px;display:flex;align-items:center;gap:14px}
+.menu-cat h3::after{content:'';flex:1;height:1px;background:var(--line)}
+.menu-cat .cat-note{font-size:13px;color:var(--muted);margin-bottom:18px;font-style:italic}
+.item{display:flex;align-items:baseline;gap:14px;padding:15px 0;border-bottom:1px dotted rgba(201,162,39,.25)}
+.item .nm{font-size:16px;color:var(--cream)}
+.item .nm small{display:block;font-size:12.5px;color:var(--muted);font-weight:300;margin-top:3px}
+.item .dots{flex:1;border-bottom:1px dotted rgba(201,162,39,.35);transform:translateY(-5px)}
+.item .pr{font-family:var(--serif);font-size:22px;color:var(--gold-soft);white-space:nowrap}
+.item .pr small{font-size:13px;color:var(--muted);font-family:var(--sans)}
+.ind{font-size:12px;color:var(--muted);font-style:italic;margin-top:26px;text-align:center}
+/* ---------- gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g-item{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:3/4}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+.g-item:hover img{transform:scale(1.07)}
+.g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:13px;color:var(--gold-soft);letter-spacing:.06em}
+.g-item.wide{grid-column:span 2;aspect-ratio:16/9}
+/* ---------- reviews ---------- */
+.rev{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev-card{background:var(--panel);border:1px solid var(--line);padding:36px 30px;border-radius:3px}
+.rev-card .stars{font-size:15px;margin-bottom:16px}
+.rev-card p{font-family:var(--serif);font-size:21px;font-style:italic;color:var(--cream);line-height:1.45}
+.rev-card .who{margin-top:20px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.rev-card .who small{display:block;color:var(--muted);letter-spacing:.06em;text-transform:none;margin-top:4px}
+.gbadge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);padding:12px 22px;border-radius:40px;margin-top:36px;font-size:14px;color:var(--muted)}
+.gbadge b{color:var(--gold-soft);font-size:18px}
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.c-item{display:flex;gap:18px;margin-bottom:28px}
+.c-item .ic{width:48px;height:48px;flex:0 0 48px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold)}
+.c-item h4{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:var(--sans);font-weight:600}
+.c-item p,.c-item a{font-size:16px;color:var(--cream)}
+.c-item small{color:var(--muted);font-size:13px}
+.map{border:1px solid var(--line);border-radius:3px;overflow:hidden;min-height:420px}
+.map iframe{width:100%;height:420px;border:0;display:block;filter:grayscale(.4) contrast(1.05)}
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:54px 0 120px;background:#090909}
+.f-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .logo{font-size:22px}
+footer p{color:var(--muted);font-size:14px;max-width:380px;margin-top:12px}
+.credit{margin-top:44px;padding-top:24px;border-top:1px solid rgba(201,162,39,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#6f6a60}
+/* ---------- mobile bar ---------- */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(13,13,13,.96);border-top:1px solid var(--line);backdrop-filter:blur(10px)}
+.mbar a{flex:1;text-align:center;padding:15px 0;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mbar a.call{color:var(--cream)}
+.mbar a.wa{color:#0D0D0D;background:var(--gold)}
+.mbar a.book{color:var(--gold-soft)}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .offer-grid,.menu-grid,.rev-grid,.contact-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .g-item.wide{grid-column:span 2}
+  section{padding:76px 0}
+  .mbar{display:flex}
+  footer{padding-bottom:150px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">MIRAGE <em>NAIL &amp; LASH</em></a>
+    <div class="nav-links">
+      <a href="#offers">Offers</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20to%20book%20a%20nail%2Flush%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div class="wrap">
+      <span class="eyebrow">Sector 8 · Inner Market · Chandigarh</span>
+      <h1>Nails that <span class="g">whisper</span>,<br>lashes that <span class="g">shout.</span></h1>
+      <div class="rating"><span class="stars">★★★★★</span><small>5.0 rated · 90+ Google reviews · Sector 8B, Chandigarh</small></div>
+      <p class="sub">Chandigarh's dedicated nail &amp; lash studio — gel extensions, precision nail art and weightless lash extensions, across two floors in Sector 8 Inner Market.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20to%20book%20a%20nail%2Flush%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn-ghost" href="#services">View Price List ↓</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div><b>5.0★</b><span>Google Rating</span></div>
+    <div><b>2</b><span>Floors · Nails + Lash</span></div>
+    <div><b>100%</b><span>Dedicated Studio</span></div>
+    <div><b>8-B</b><span>Inner Market, Chd</span></div>
+  </div>
+</div>
+
+<section class="offers" id="offers">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Limited Offers</span>
+      <h2>This Season's Signatures</h2>
+      <p>Flat-rate festive pricing — no hidden charges, no surprises at billing.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer fade">
+        <span class="tag">Festive</span>
+        <h3>Gel Extensions + Art</h3>
+        <div class="strike">Actual ₹2,800</div>
+        <div class="price">₹1,999</div>
+        <div class="valid">Valid till Diwali · Appointment only</div>
+        <p>Full set of gel extensions with complimentary minimal nail art on two accent nails.</p>
+        <a class="btn-ghost" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20the%20Gel%20Extensions%20offer%20at%20%E2%82%B91%2C999." target="_blank" rel="noopener">Claim Offer</a>
+      </div>
+      <div class="offer fade">
+        <span class="tag">Best Seller</span>
+        <h3>Volume Lash Set</h3>
+        <div class="strike">Actual ₹3,000</div>
+        <div class="price">₹2,499</div>
+        <div class="valid">Valid till Diwali · Patch test free</div>
+        <p>Feather-light volume lash extensions — 2D to 5D, mapped to your eye shape.</p>
+        <a class="btn-ghost" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20the%20Volume%20Lash%20offer%20at%20%E2%82%B92%2C499." target="_blank" rel="noopener">Claim Offer</a>
+      </div>
+      <div class="offer fade">
+        <span class="tag">New</span>
+        <h3>Nails + Lashes Combo</h3>
+        <div class="strike">Actual ₹5,500</div>
+        <div class="price">₹3,999</div>
+        <div class="valid">Valid till Diwali · One sitting</div>
+        <p>The full Mirage ritual — gel extension set plus a classic lash set in one visit.</p>
+        <a class="btn-ghost" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20the%20Nails%20%2B%20Lashes%20combo%20at%20%E2%82%B93%2C999." target="_blank" rel="noopener">Claim Offer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Price Menu</span>
+      <h2>Services &amp; Rates</h2>
+      <p>Indicative pricing — final quote depends on length, design complexity and lash style. Confirm on WhatsApp before your visit.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-cat fade">
+        <h3>Nails</h3>
+        <div class="cat-note">Premium gel systems · 2–3 week wear</div>
+        <div class="item"><div class="nm">Gel Extensions (full set)<small>Almond / coffin / square — any length</small></div><div class="dots"></div><div class="pr">₹1,500 <small>onwards*</small></div></div>
+        <div class="item"><div class="nm">Acrylic Extensions<small>Sculpted, ultra-durable sets</small></div><div class="dots"></div><div class="pr">₹1,800 <small>onwards*</small></div></div>
+        <div class="item"><div class="nm">Nail Art<small>Per set — chrome, French, minimal, 3D</small></div><div class="dots"></div><div class="pr">₹500 <small>onwards*</small></div></div>
+        <div class="item"><div class="nm">Gel Polish (hands)<small>Long-wear colour, no chips</small></div><div class="dots"></div><div class="pr">₹800 <small>*</small></div></div>
+        <div class="item"><div class="nm">Extension Refill<small>Every 2–3 weeks</small></div><div class="dots"></div><div class="pr">₹1,000 <small>onwards*</small></div></div>
+        <div class="item"><div class="nm">Bridal Nail Package<small>Extensions + art + trial set</small></div><div class="dots"></div><div class="pr">₹3,500 <small>onwards*</small></div></div>
+      </div>
+      <div class="menu-cat fade">
+        <h3>Lashes</h3>
+        <div class="cat-note">Weightless mink-style fibres · eye-shape mapped</div>
+        <div class="item"><div class="nm">Classic Lash Set<small>One-to-one natural enhancement</small></div><div class="dots"></div><div class="pr">₹1,800 <small>*</small></div></div>
+        <div class="item"><div class="nm">Volume Lash Set (2D–5D)<small>Full, fluffy, camera-ready</small></div><div class="dots"></div><div class="pr">₹2,500 <small>onwards*</small></div></div>
+        <div class="item"><div class="nm">Lash Lift + Tint<small>Your natural lashes, amplified</small></div><div class="dots"></div><div class="pr">₹1,200 <small>*</small></div></div>
+        <div class="item"><div class="nm">Lash Refill<small>Within 3 weeks</small></div><div class="dots"></div><div class="pr">₹1,000 <small>onwards*</small></div></div>
+        <div class="item"><div class="nm">Lash Removal<small>Gentle, damage-free</small></div><div class="dots"></div><div class="pr">₹400 <small>*</small></div></div>
+        <div class="item"><div class="nm">Bridal Lashes + Trial<small>Mapped set + trial before the day</small></div><div class="dots"></div><div class="pr">₹2,800 <small>*</small></div></div>
+      </div>
+    </div>
+    <p class="ind">*Indicative prices based on Chandigarh market rates — final quote on WhatsApp before booking.</p>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Real Work</span>
+      <h2>The Studio &amp; The Craft</h2>
+      <p>Inside our Sector 8 studio — and the detail work we're known for.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="g-item wide fade"><img src="images/real-1.jpg" alt="Mirage Nail & Lash Studio interior, Sector 8 Chandigarh" loading="lazy"><figcaption>The studio floor — Sector 8B</figcaption></figure>
+      <figure class="g-item fade"><img src="images/goldnails-1.png" alt="Gold glitter nail art close-up" loading="lazy"><figcaption>Gold glitter set</figcaption></figure>
+      <figure class="g-item fade"><img src="images/lashes-1.jpg" alt="Volume eyelash extensions close-up" loading="lazy"><figcaption>Volume lash detail</figcaption></figure>
+      <figure class="g-item fade"><img src="images/real-2.jpg" alt="Mirage studio manicure stations" loading="lazy"><figcaption>Manicure stations</figcaption></figure>
+      <figure class="g-item fade"><img src="images/real-3.jpg" alt="Mirage Nail & Lash Studio storefront listing" loading="lazy"><figcaption>Find us in Inner Market</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Client Love</span>
+      <h2>Rated 5.0 by Chandigarh</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p>"My gel extensions lasted a full month with zero lifting. The detailing is the best I've had in Chandigarh."</p><div class="who">Priya Sharma<small>Gel Extensions</small></div></div>
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p>"Got volume lashes before my sister's wedding — they looked incredible in every single photo. So light I forgot they were on."</p><div class="who">Simran Kaur<small>Volume Lash Set</small></div></div>
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p>"Hygienic, professional, and the two-floor setup means no waiting. My go-to studio in Sector 8 now."</p><div class="who">Aishwarya Menon<small>Nails + Lashes Combo</small></div></div>
+    </div>
+    <center><span class="gbadge"><b>5.0 ★</b> from 90+ reviews on JustDial &amp; Google</span></center>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Find Your Chair</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="fade">
+        <div class="c-item"><div class="ic">✆</div><div><h4>Call / WhatsApp</h4><a href="tel:+919915408811"><b>99154 08811</b></a><br><small>Tap to call · WhatsApp for instant booking</small></div></div>
+        <div class="c-item"><div class="ic">⌖</div><div><h4>Address</h4><p>SCO 11, 1st &amp; 2nd Floor,<br>Inner Market, Sector 8-B,<br>Chandigarh</p><br><small><a href="https://www.google.com/maps/search/?api=1&query=Mirage+Nail+%26+Lash+Studio+Sector+8B+Chandigarh" target="_blank" rel="noopener" style="color:var(--gold-soft)">Open in Google Maps →</a></small></div></div>
+        <div class="c-item"><div class="ic">◷</div><div><h4>Hours</h4><p>Open all days</p><br><small>Confirm current hours on our Google listing or WhatsApp</small></div></div>
+        <div class="c-item"><div class="ic">◈</div><div><h4>Instagram</h4><a href="https://www.instagram.com/miragenailandlashstudio" target="_blank" rel="noopener"><b>@miragenailandlashstudio</b></a><br><small>Daily work posts · DM to book</small></div></div>
+        <div class="cta-row" style="margin-top:10px">
+          <a class="btn" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn-ghost" href="tel:+919915408811">Call Now</a>
+        </div>
+      </div>
+      <div class="map fade">
+        <iframe title="Mirage Nail & Lash Studio map" src="https://www.google.com/maps?q=SCO+11+Inner+Market+Sector+8B+Chandigarh&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo">MIRAGE <em>NAIL &amp; LASH</em></div>
+        <p>Sector 8B, Inner Market, Chandigarh · 99154 08811<br>Nails · Lashes · Bridal packages</p>
+      </div>
+      <div><p style="text-align:right">Instagram<br><a href="https://www.instagram.com/miragenailandlashstudio" target="_blank" rel="noopener" style="color:var(--gold-soft)">@miragenailandlashstudio</a></p></div>
+    </div>
+    <div class="credit"><span>© 2026 Mirage Nail &amp; Lash Studio. All rights reserved.</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+919915408811">Call</a>
+  <a class="wa" href="https://wa.me/919915408811?text=Hi%20Mirage!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="book" href="#offers">Offers</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

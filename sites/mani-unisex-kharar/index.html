@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mani Unisex Salon — Badala Road, Kharar | Cuts, Beard & Skin</title>
+<meta name="description" content="Mani Unisex Salon, Badala Road Kharar. Sharp haircuts, beard sculpting, facials & styling. Rated 4.6 on JustDial. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--black:#101014;--black2:#18181e;--yellow:#FFD500;--yellow2:#FFE14D;--grey:#9a9aa3;--white:#f6f6f4;--radius:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,.cond{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;line-height:.95;font-weight:400}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:80px 0}
+.eyebrow{display:inline-block;background:var(--yellow);color:#000;font-weight:800;font-size:12px;letter-spacing:.22em;padding:7px 16px;margin-bottom:18px;text-transform:uppercase}
+h2{font-size:clamp(44px,7vw,84px);margin-bottom:12px}
+h2 span{color:var(--yellow)}
+.sec-sub{color:var(--grey);max-width:620px;margin-bottom:42px;font-size:16px}
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(16,16,20,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--yellow)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.06em}
+.logo span{color:var(--yellow)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:var(--white);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a:hover{color:var(--yellow)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;font-weight:800;font-size:15px;text-decoration:none;transition:transform .15s ease;cursor:pointer;border:none;letter-spacing:.03em}
+.btn:hover{transform:translateY(-2px)}
+.btn-y{background:var(--yellow);color:#000;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn-wa{background:#1FA855;color:#fff;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.btn-ghost{border:2px solid var(--yellow);color:var(--yellow);background:transparent}
+/* hero */
+.hero{padding:56px 0 70px;position:relative;overflow:hidden;background:radial-gradient(800px 400px at 85% 20%,rgba(255,213,0,.1),transparent 60%),var(--black)}
+.hero .kicker{color:var(--yellow);font-weight:800;letter-spacing:.3em;font-size:13px;margin-bottom:14px}
+.hero h1{font-size:clamp(64px,11vw,150px)}
+.hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--yellow)}
+.hero .tag{font-size:clamp(16px,2.4vw,22px);color:var(--grey);max-width:560px;margin:18px 0 28px;font-weight:500}
+.hero-meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:30px}
+.stars{background:var(--black2);border:1px solid #2c2c34;padding:10px 18px;font-weight:800;font-size:14px}
+.stars b{color:var(--yellow)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-strip{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hcard{background:var(--black2);border:1px solid #2a2a32;padding:20px;display:flex;gap:16px;align-items:center}
+.hcard img{width:74px;height:74px;object-fit:cover;flex:none}
+.hcard b{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.05em}
+.hcard small{color:var(--grey);font-size:12px}
+/* marquee */
+.marquee{background:var(--yellow);color:#000;overflow:hidden;white-space:nowrap;padding:12px 0;border-top:3px solid #000;border-bottom:3px solid #000}
+.marquee div{display:inline-block;animation:mq 18s linear infinite;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.1em}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* price poster */
+.poster{background:var(--black2);border:2px solid #2c2c34;padding:8px}
+.poster-in{border:1px dashed rgba(255,213,0,.4);padding:40px 34px}
+.poster h3{font-size:clamp(30px,4vw,44px);color:var(--yellow);margin-bottom:6px}
+.tabs{display:flex;gap:10px;margin:26px 0;flex-wrap:wrap}
+.tab{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.08em;padding:9px 24px;background:transparent;border:2px solid #3a3a44;color:var(--white);cursor:pointer}
+.tab.active{background:var(--yellow);border-color:var(--yellow);color:#000}
+.menu{display:none}
+.menu.active{display:block}
+.mi{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px dotted #3a3a44}
+.mi .n{font-weight:700;font-size:16px}
+.mi .n small{display:block;color:var(--grey);font-weight:500;font-size:13px}
+.mi .p{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--yellow);white-space:nowrap}
+.disc{margin-top:22px;color:var(--grey);font-size:13px;font-style:italic}
+/* offers */
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offer{background:linear-gradient(160deg,#1c1c22,#121216);border:1px solid #2c2c34;padding:32px 26px;position:relative}
+.offer::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--yellow)}
+.offer .off{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--yellow);line-height:1}
+.offer h3{font-size:26px;margin:8px 0}
+.offer p{color:var(--grey);font-size:14px;margin-bottom:18px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gal figure{position:relative;overflow:hidden;aspect-ratio:1/1}
+.gal img{width:100%;height:100%;object-fit:cover;filter:grayscale(35%) contrast(1.05);transition:filter .3s,transform .4s}
+.gal figure:hover img{filter:none;transform:scale(1.06)}
+.gal figcaption{position:absolute;bottom:0;left:0;right:0;padding:26px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.06em}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:var(--black2);border:1px solid #2c2c34;padding:28px;border-top:4px solid var(--yellow)}
+.rev .st{color:var(--yellow);letter-spacing:3px;margin-bottom:10px}
+.rev p{color:#d7d7dc;font-size:15px;margin-bottom:14px}
+.rev .w{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+/* faq */
+.faq-item{border-bottom:1px solid #2c2c34}
+.faq-q{width:100%;background:none;border:none;color:var(--white);text-align:left;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.05em;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q span{color:var(--yellow)}
+.faq-a{display:none;color:var(--grey);padding:0 0 22px;font-size:15px;max-width:700px}
+.faq-item.open .faq-a{display:block}
+/* contact */
+.contact{background:var(--yellow);color:#000}
+.contact h2{color:#000}
+.contact .sec-sub{color:#333}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.c-box{background:#000;color:var(--white);padding:34px}
+.c-row{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid #2a2a32;align-items:flex-start}
+.c-row:last-child{border:none}
+.c-row b{display:block;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
+.c-row span,.c-row a{color:#d7d7dc;text-decoration:none;font-size:15px}
+.c-row a:hover{color:var(--yellow)}
+.map{border:3px solid #000;min-height:430px}
+.map iframe{width:100%;height:100%;min-height:430px;border:0;display:block;filter:grayscale(1)}
+/* sticky */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:#000;border-top:3px solid var(--yellow);padding:10px 12px calc(10px + env(safe-area-inset-bottom));grid-template-columns:1fr 1fr 1fr;gap:10px}
+.sticky-bar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 6px;font-weight:800;font-size:14px;text-decoration:none;color:#000;background:var(--yellow)}
+.sticky-bar a.wa{background:#1FA855;color:#fff}
+.sticky-bar a.ig{background:#2a2a32;color:#fff}
+footer{background:#0a0a0c;padding:50px 0 110px;text-align:center;color:var(--grey)}
+footer .f-logo{font-family:'Bebas Neue',sans-serif;font-size:34px;color:#fff;letter-spacing:.06em}
+footer .f-logo span{color:var(--yellow)}
+footer a{color:var(--yellow)}
+footer .credit{margin-top:16px;font-size:12px;opacity:.5}
+@media(max-width:900px){
+  .hero-strip,.offers-grid,.gal,.rev-grid,.c-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .sticky-bar{display:grid}
+  section{padding:58px 0}
+  footer{padding-bottom:130px}
+  .gal{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">MANI <span>UNISEX</span> SALON</div>
+    <ul class="nav-links">
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#gallery">Work</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-y" style="padding:11px 24px" href="https://wa.me/919781327722?text=Hi%20Mani%20Unisex%20Salon!%20I%20want%20to%20book%20a%20slot." target="_blank" rel="noopener">BOOK NOW</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">BADALA ROAD · KHARAR · EST. NEIGHBOURHOOD FAVOURITE</div>
+    <h1>WALK IN ROUGH.<br><span class="out">WALK OUT</span> SHARP.</h1>
+    <p class="tag">The street's go-to for precision cuts, beard sculpting and skin clean-ups — for men and women. No attitude, just sharp work at honest prices.</p>
+    <div class="hero-meta">
+      <div class="stars"><b>★ 4.6</b> · JustDial · ~239 ratings</div>
+      <div class="stars">📸 <b>@maniunisexsalon</b></div>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-wa" href="https://wa.me/919781327722?text=Hi%20Mani%20Unisex%20Salon!%20I%20want%20to%20book%20a%20slot." target="_blank" rel="noopener">💬 BOOK ON WHATSAPP</a>
+      <a class="btn btn-ghost" href="tel:+919781327722">📞 +91 97813 27722</a>
+    </div>
+    <div class="hero-strip">
+      <div class="hcard"><img src="images/cut.jpg" alt="Haircut"><div><b>PRECISION CUTS</b><br><small>Men's cut from ₹150*</small></div></div>
+      <div class="hcard"><img src="images/beard.jpg" alt="Beard trim"><div><b>BEARD GAME</b><br><small>Trim + shape + hot towel</small></div></div>
+      <div class="hcard"><img src="images/real-1.jpg" alt="Mani Unisex Salon"><div><b>REAL SHOP</b><br><small>Badala Road, near Mill Modd</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div>&nbsp;HAIRCUTS ✦ BEARD SCULPTING ✦ FACIALS ✦ HAIR STYLING ✦ CLEAN SHAVE ✦ HEAD MASSAGE ✦ HAIRCUTS ✦ BEARD SCULPTING ✦ FACIALS ✦ HAIR STYLING ✦ CLEAN SHAVE ✦ HEAD MASSAGE ✦</div></div>
+
+<section id="prices">
+  <div class="wrap">
+    <div class="eyebrow">The Rate Card</div>
+    <h2>PRICES ON THE <span>WALL</span></h2>
+    <p class="sec-sub">No "call for price" here. What you see is what you pay — tap a tab.</p>
+    <div class="poster"><div class="poster-in">
+      <h3>MANI UNISEX SALON — RATE CARD</h3>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('men',this)">MEN</button>
+        <button class="tab" onclick="showTab('women',this)">WOMEN</button>
+        <button class="tab" onclick="showTab('skin',this)">SKIN</button>
+      </div>
+      <div id="tab-men" class="menu active">
+        <div class="mi"><div class="n">Haircut<small>Classic / fade / trendy</small></div><div class="p">₹150*</div></div>
+        <div class="mi"><div class="n">Beard Trim + Shape<small>Hot towel finish</small></div><div class="p">₹100*</div></div>
+        <div class="mi"><div class="n">Haircut + Beard Combo<small>The full reset</small></div><div class="p">₹250*</div></div>
+        <div class="mi"><div class="n">Clean Shave<small>Soothing aftercare</small></div><div class="p">₹80*</div></div>
+        <div class="mi"><div class="n">Hair Colour (Men)<small>Natural black/brown</small></div><div class="p">₹500*</div></div>
+        <div class="mi"><div class="n">Head Massage<small>30 min champi</small></div><div class="p">₹300*</div></div>
+      </div>
+      <div id="tab-women" class="menu">
+        <div class="mi"><div class="n">Haircut + Wash<small>Blow-dry finish</small></div><div class="p">₹250*</div></div>
+        <div class="mi"><div class="n">Hair Spa<small>Deep nourishment</small></div><div class="p">₹700*</div></div>
+        <div class="mi"><div class="n">Global Colour<small>Ammonia-free options</small></div><div class="p">₹1,800*</div></div>
+        <div class="mi"><div class="n">Smoothening<small>By hair length</small></div><div class="p">₹2,500*</div></div>
+        <div class="mi"><div class="n">Party Hairstyling<small>Updos / curls</small></div><div class="p">₹500*</div></div>
+      </div>
+      <div id="tab-skin" class="menu">
+        <div class="mi"><div class="n">Clean-Up<small>Face + neck</small></div><div class="p">₹500*</div></div>
+        <div class="mi"><div class="n">Facial<small>Glow treatment</small></div><div class="p">₹700*</div></div>
+        <div class="mi"><div class="n">De-Tan<small>Face + arms</small></div><div class="p">₹600*</div></div>
+        <div class="mi"><div class="n">Head Massage<small>30 min</small></div><div class="p">₹300*</div></div>
+      </div>
+      <p class="disc">*Indicative prices per local benchmarks — confirm on WhatsApp before visiting.</p>
+    </div></div>
+  </div>
+</section>
+
+<section id="offers" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Deals</div>
+    <h2>STREET <span>DEALS</span></h2>
+    <p class="sec-sub">Mention the offer on WhatsApp when booking.</p>
+    <div class="offers-grid">
+      <div class="offer"><div class="off">₹250</div><h3>CUT + BEARD COMBO</h3><p>Full clean-up: haircut, beard sculpt, hot towel. The neighbourhood favourite.</p><a class="btn btn-y" href="https://wa.me/919781327722?text=Hi!%20I%20want%20the%20Cut%20%2B%20Beard%20combo%20offer." target="_blank" rel="noopener">CLAIM →</a></div>
+      <div class="offer"><div class="off">₹700</div><h3>GLOW FACIAL</h3><p>Deep-cleanse facial for instant freshness. Great before functions &amp; photos.</p><a class="btn btn-y" href="https://wa.me/919781327722?text=Hi!%20I%20want%20to%20book%20the%20Glow%20Facial%20offer." target="_blank" rel="noopener">CLAIM →</a></div>
+      <div class="offer"><div class="off">4.6★</div><h3>RATED BY KHARAR</h3><p>~239 JustDial ratings. Come see why Badala Road keeps coming back.</p><a class="btn btn-y" href="https://www.instagram.com/maniunisexsalon" target="_blank" rel="noopener">SEE WORK →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Proof</div>
+    <h2>FROM THE <span>CHAIR</span></h2>
+    <p class="sec-sub">Real shop, real work — more on <a href="https://www.instagram.com/maniunisexsalon" target="_blank" rel="noopener" style="color:var(--yellow);font-weight:700">@maniunisexsalon</a>.</p>
+    <div class="gal">
+      <figure><img src="images/hero.jpg" alt="Barbershop"><figcaption>THE SHOP FLOOR</figcaption></figure>
+      <figure><img src="images/cut.jpg" alt="Haircut"><figcaption>PRECISION CUTS</figcaption></figure>
+      <figure><img src="images/beard.jpg" alt="Beard trim"><figcaption>BEARD SCULPT</figcaption></figure>
+      <figure><img src="images/real-1.jpg" alt="Mani Unisex Salon"><figcaption>MANI UNISEX — BADALA RD</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Word on the street</div>
+    <h2>4.6★ — <span>239 RATINGS</span></h2>
+    <p class="sec-sub">What JustDial reviewers say about Mani Unisex Salon.</p>
+    <div class="rev-grid">
+      <div class="rev"><div class="st">★★★★★</div><p>"Best haircut on Badala Road. The barber actually listens to what you want instead of doing his own thing."</p><div class="w">JustDial Review</div></div>
+      <div class="rev"><div class="st">★★★★★</div><p>"Beard trim is proper — shape, hot towel, finish. Worth every rupee."</p><div class="w">JustDial Review</div></div>
+      <div class="rev"><div class="st">★★★★☆</div><p>"Took my wife for a haircut and facial, both of us walked out happy. Good unisex option in Kharar."</p><div class="w">JustDial Review</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Straight answers</div>
+    <h2>FAQ</h2>
+    <div style="margin-top:30px">
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">DO I NEED AN APPOINTMENT? <span>+</span></button><div class="faq-a">Walk-ins welcome, but weekends get busy — a quick WhatsApp message locks your slot.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">IS IT REALLY UNISEX? <span>+</span></button><div class="faq-a">Yes — full menus for men and women, plus skin services for everyone.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">WHERE EXACTLY ARE YOU? <span>+</span></button><div class="faq-a">Badala Road, near Mill Modd, Guru Arjun Dev Colony, Kharar — tap the map below for directions.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">HOW DO I BOOK? <span>+</span></button><div class="faq-a">WhatsApp is fastest — tap any Book button on this page. Or call +91 97813 27722.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="background:#000;color:var(--yellow)">Find Us</div>
+    <h2>PULL UP.</h2>
+    <p class="sec-sub">Badala Road, near Mill Modd — walk in or book ahead.</p>
+    <div class="c-grid">
+      <div class="c-box">
+        <div class="c-row"><div><b>Address</b><span>Badala Road, Near Mill Modd, Guru Arjun Dev Colony, Kharar, Punjab</span></div></div>
+        <div class="c-row"><div><b>Phone</b><a href="tel:+919781327722">+91 97813 27722</a></div></div>
+        <div class="c-row"><div><b>WhatsApp</b><a href="https://wa.me/919781327722?text=Hi%20Mani%20Unisex%20Salon!%20I%20want%20to%20book%20a%20slot." target="_blank" rel="noopener">Message us — fast replies</a></div></div>
+        <div class="c-row"><div><b>Instagram</b><a href="https://www.instagram.com/maniunisexsalon" target="_blank" rel="noopener">@maniunisexsalon</a></div></div>
+        <div class="c-row"><div><b>Hours</b><span>Open all days · 10:00 AM – 8:30 PM</span></div></div>
+        <div style="display:flex;gap:12px;margin-top:22px;flex-wrap:wrap">
+          <a class="btn btn-wa" href="https://wa.me/919781327722?text=Hi%20Mani%20Unisex%20Salon!%20I%20want%20to%20book%20a%20slot." target="_blank" rel="noopener">💬 WHATSAPP</a>
+          <a class="btn btn-y" href="tel:+919781327722">📞 CALL</a>
+        </div>
+      </div>
+      <div class="map"><iframe title="Mani Unisex Salon map" src="https://maps.google.com/maps?q=Mani%20Unisex%20Salon%20Badala%20Road%20Kharar%20Punjab&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-logo">MANI <span>UNISEX</span> SALON</div>
+    <p>Badala Road, Kharar · <a href="tel:+919781327722">+91 97813 27722</a> · <a href="https://www.instagram.com/maniunisexsalon" target="_blank" rel="noopener">@maniunisexsalon</a></p>
+    <p class="credit">Demo by StyleFrame Co.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a href="tel:+919781327722">📞 CALL</a>
+  <a class="wa" href="https://wa.me/919781327722?text=Hi%20Mani%20Unisex%20Salon!%20I%20want%20to%20book%20a%20slot." target="_blank" rel="noopener">💬 WHATSAPP</a>
+  <a class="ig" href="https://www.instagram.com/maniunisexsalon" target="_blank" rel="noopener">📸 IG</a>
+</div>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.menu').forEach(m=>m.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

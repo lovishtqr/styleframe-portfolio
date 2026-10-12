@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Lounge Luxury Salon — Sector 117, Mohali | Luxury Hair, Skin &amp; Beauty</title>
+<meta name="description" content="Style Lounge Luxury Salon, SCO-126 TDI Sector 117 Mohali — 5.0★ rated luxury hair, skin & beauty studio. Bridal, keratin, balayage & more. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+:root{--emerald:#0B3D2E;--emerald2:#0E4A38;--deep:#071F17;--gold:#C6A15B;--gold2:#E3C88A;--cream:#F5EFE3;--cream2:#EFE6D3;--ink:#2A2419;--dim:#8A8272;--line:rgba(198,161,91,.28)}
+body{font-family:'Jost',system-ui,sans-serif;background:var(--deep);color:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.25rem}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.eyebrow{letter-spacing:.42em;font-size:.72rem;color:var(--gold);text-transform:uppercase;margin-bottom:1rem}
+h2.sec{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.2;margin-bottom:.7rem}
+.sec-sub{color:#B9AE97;max-width:38rem;margin-bottom:2.6rem;font-weight:300}
+section{padding:5.5rem 0}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(rgba(7,31,23,.92),rgba(7,31,23,.75));backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.brand{text-decoration:none;font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;letter-spacing:.14em;color:var(--cream)}
+.brand b{color:var(--gold);font-weight:600}
+.links{display:flex;gap:1.5rem;list-style:none;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase}
+.links a{text-decoration:none;color:#D9CFAE}.links a:hover{color:var(--gold)}
+.nav-cta{text-decoration:none;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:#0B1F17;padding:.7rem 1.5rem;font-weight:600}
+.nav-cta:hover{background:var(--gold2)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem}
+.burger span{width:26px;height:2px;background:var(--gold)}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:slowzoom 24s ease-in-out infinite alternate}
+@keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,31,23,.55) 0%,rgba(7,31,23,.25) 35%,rgba(7,31,23,.88) 78%,var(--deep) 100%),linear-gradient(100deg,rgba(7,31,23,.85) 0%,transparent 60%)}
+.hero-in{position:relative;z-index:2;padding:9rem 0 5.5rem;width:100%}
+.rating{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);padding:.45rem 1.1rem;font-size:.8rem;letter-spacing:.12em;color:var(--gold2);margin-bottom:1.6rem;background:rgba(7,31,23,.5)}
+.rating .stars{color:var(--gold);letter-spacing:.1em}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(2.6rem,7.5vw,5.4rem);line-height:1.08;max-width:14ch}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero p.lede{color:#D8CEB4;max-width:34rem;margin:1.4rem 0 2.2rem;font-weight:300;font-size:1.05rem}
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;font-weight:600;padding:1.05rem 2.4rem}
+.btn.solid{background:var(--gold);color:#0B1F17}.btn.solid:hover{background:var(--gold2)}
+.btn.ghost{border:1px solid var(--gold);color:var(--gold2)}.btn.ghost:hover{background:rgba(198,161,91,.12)}
+.hero-meta{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:2.8rem;color:#A99F86;font-size:.82rem;letter-spacing:.1em}
+.hero-meta b{color:var(--gold2)}
+/* trust strip */
+.trust{background:var(--emerald);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-in{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.trust div{padding:2rem 1rem;border-left:1px solid var(--line)}
+.trust div:first-child{border-left:none}
+.trust .n{font-family:'Playfair Display',Georgia,serif;font-size:2rem;color:var(--gold2)}
+.trust .l{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#CBBFA3;margin-top:.3rem}
+/* offers */
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.offer{border:1px solid var(--line);background:linear-gradient(160deg,var(--emerald2),var(--deep));padding:2.4rem 2rem;position:relative;overflow:hidden}
+.offer .tag{position:absolute;top:1.1rem;right:-2.6rem;transform:rotate(38deg);background:var(--gold);color:#0B1F17;font-size:.66rem;letter-spacing:.2em;padding:.3rem 3rem;font-weight:600}
+.offer h3{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:500;margin-bottom:.6rem;color:var(--cream)}
+.offer p{color:#B7AC92;font-size:.9rem;font-weight:300;margin-bottom:1.4rem}
+.price-row{display:flex;align-items:baseline;gap:.8rem}
+.price-now{font-family:'Playfair Display',Georgia,serif;font-size:2rem;color:var(--gold2)}
+.price-was{color:#7E7560;text-decoration:line-through;font-size:1rem}
+.offer .valid{font-size:.72rem;letter-spacing:.14em;color:#9A8F74;margin-top:.7rem;text-transform:uppercase}
+.offer a.book{display:inline-block;margin-top:1.2rem;text-decoration:none;color:var(--gold2);border-bottom:1px solid var(--gold);padding-bottom:.2rem;letter-spacing:.18em;font-size:.76rem;text-transform:uppercase}
+/* services */
+#services{background:var(--cream);color:var(--ink)}
+#services .eyebrow{color:#9A7B3F}
+#services h2.sec{color:var(--emerald)}
+#services .sec-sub{color:#6E6250}
+.tabs{display:flex;gap:.6rem;margin-bottom:2.2rem;flex-wrap:wrap}
+.tab{border:1px solid #C9BFA8;background:transparent;padding:.8rem 2rem;letter-spacing:.22em;font-size:.76rem;text-transform:uppercase;cursor:pointer;color:#6E6250;font-family:'Jost',sans-serif}
+.tab.active{background:var(--emerald);color:var(--cream);border-color:var(--emerald)}
+.menu{display:none;grid-template-columns:1fr 1fr;gap:0 3.5rem}
+.menu.active{display:grid}
+.mi{display:flex;align-items:baseline;gap:.6rem;padding:1rem 0;border-bottom:1px dotted #C4B894}
+.mi .dots{flex:1;border-bottom:1px dotted #C4B894;transform:translateY(-4px)}
+.mi .nm{font-weight:500;color:var(--ink)}
+.mi .nm small{display:block;font-weight:300;color:#8A7A5F;font-size:.8rem}
+.mi .pr{font-family:'Playfair Display',Georgia,serif;color:var(--emerald);font-size:1.15rem;white-space:nowrap}
+.note{margin-top:1.8rem;font-size:.8rem;color:#8A7A5F;font-style:italic}
+/* bridal */
+#bridal{background:linear-gradient(180deg,var(--deep),#0A2C21)}
+.bride-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.bcard{border:1px solid var(--line);background:rgba(11,61,46,.5);padding:2.6rem 2.1rem;position:relative;display:flex;flex-direction:column}
+.bcard.featured{border-color:var(--gold);background:linear-gradient(170deg,#123E2E,#0B3D2E)}
+.bcard .ribbon{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0B1F17;font-size:.66rem;letter-spacing:.24em;padding:.4rem 1.4rem;font-weight:600;text-transform:uppercase;white-space:nowrap}
+.bcard h3{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:500;color:var(--cream);margin-bottom:.4rem}
+.bcard .per{color:var(--gold2);letter-spacing:.14em;font-size:.78rem;text-transform:uppercase;margin-bottom:.6rem}
+.bcard .amt{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;color:var(--gold2);margin-bottom:1.2rem}
+.bcard ul{list-style:none;margin-bottom:1.8rem;flex:1}
+.bcard li{padding:.45rem 0 .45rem 1.5rem;position:relative;color:#CFC4A9;font-size:.9rem;font-weight:300}
+.bcard li::before{content:"✦";position:absolute;left:0;color:var(--gold);font-size:.7rem;top:.7rem}
+.bcard a{text-decoration:none;text-align:center;border:1px solid var(--gold);color:var(--gold2);letter-spacing:.2em;font-size:.76rem;text-transform:uppercase;padding:1rem;font-weight:600}
+.bcard a:hover{background:var(--gold);color:#0B1F17}
+/* gallery */
+.gal{columns:3;column-gap:1rem}
+.gal figure{break-inside:avoid;margin-bottom:1rem;position:relative;overflow:hidden;border:1px solid var(--line)}
+.gal img{width:100%;transition:transform .8s ease}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1rem .9rem;background:linear-gradient(transparent,rgba(7,31,23,.9));font-size:.78rem;letter-spacing:.1em;color:var(--gold2)}
+.igline{text-align:center;margin-top:2.2rem;color:#B9AE97;font-weight:300}
+.igline a{color:var(--gold2);text-decoration:none;border-bottom:1px solid var(--gold)}
+/* reviews */
+#reviews{background:var(--emerald)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.rev{border:1px solid var(--line);padding:2.2rem;background:rgba(7,31,23,.45)}
+.rev .q{font-family:'Playfair Display',Georgia,serif;font-size:1.08rem;font-style:italic;color:var(--cream);line-height:1.6;margin-bottom:1.2rem}
+.rev .who{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2)}
+.rev .svc{font-size:.78rem;color:#9A8F74;margin-top:.2rem}
+.gbadge{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:2.4rem;color:#D8CEB4;font-weight:300}
+.gbadge .big{font-family:'Playfair Display',Georgia,serif;font-size:2.6rem;color:var(--gold2)}
+/* products */
+.brands{display:flex;flex-wrap:wrap;gap:1rem 2.6rem;justify-content:center;margin-top:1.6rem}
+.brands span{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:#8A8272}
+/* contact */
+#contact{background:var(--cream);color:var(--ink)}
+#contact h2.sec{color:var(--emerald)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:.5rem}
+.cbox h4{letter-spacing:.28em;font-size:.74rem;text-transform:uppercase;color:#9A7B3F;margin-bottom:1rem;font-weight:600}
+.cbox p{color:#4A4136;font-weight:300;margin-bottom:.5rem}
+.cbox a.big-tel{font-family:'Playfair Display',Georgia,serif;font-size:1.9rem;color:var(--emerald);text-decoration:none}
+.hours{width:100%;border-collapse:collapse;margin-top:.4rem}
+.hours td{padding:.55rem 0;border-bottom:1px dotted #C4B894;font-size:.9rem;color:#4A4136}
+.hours td:last-child{text-align:right}
+.map{border:1px solid #C9BFA8;min-height:320px}
+.map iframe{width:100%;height:380px;border:0;display:block}
+.wa-big{display:inline-block;margin-top:1.4rem;background:#1FA855;color:#fff;text-decoration:none;padding:1rem 2.2rem;letter-spacing:.14em;font-size:.82rem;text-transform:uppercase;font-weight:600}
+/* footer */
+footer{background:#04120D;padding:3rem 0 6.5rem;text-align:center;color:#6E6653;font-size:.82rem;font-weight:300}
+footer .fbrand{font-family:'Playfair Display',Georgia,serif;color:var(--gold);letter-spacing:.2em;font-size:1.1rem;margin-bottom:.6rem}
+/* floats */
+.wa-float{position:fixed;right:1.1rem;bottom:5.6rem;z-index:70;width:58px;height:58px;border-radius:50%;background:#1FA855;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.4);text-decoration:none}
+.mobile-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(7,31,23,.97);border-top:1px solid var(--line)}
+.mobile-bar a{flex:1;text-align:center;text-decoration:none;color:var(--gold2);padding:1rem .4rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.mobile-bar a.call{background:var(--gold);color:#0B1F17}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){
+.links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(7,31,23,.98);flex-direction:column;padding:1rem 1.5rem;gap:1rem}
+.links.open{display:flex}
+.burger{display:flex}
+.nav-cta{display:none}
+.trust-in{grid-template-columns:1fr 1fr}
+.trust div:nth-child(3){border-left:none}
+.offers-grid,.bride-grid,.rev-grid{grid-template-columns:1fr}
+.menu.active{grid-template-columns:1fr}
+.gal{columns:2}
+.contact-grid{grid-template-columns:1fr}
+.mobile-bar{display:flex}
+.wa-float{bottom:5.4rem}
+section{padding:4rem 0}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+<a class="brand" href="#top">STYLE LOUNGE <b>LUXURY SALON</b></a>
+<div class="burger" id="burger"><span></span><span></span><span></span></div>
+<ul class="links" id="links">
+<li><a href="#offers">Offers</a></li><li><a href="#services">Price List</a></li><li><a href="#bridal">Bridal</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Visit Us</a></li>
+</ul>
+<a class="nav-cta" href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20book%20an%20appointment%20at%20Style%20Lounge.">Book Now</a>
+</div></nav>
+
+<header class="hero" id="top">
+<img class="bg" src="images/hero.jpg" alt="Style Lounge Luxury Salon interior">
+<div class="hero-veil"></div>
+<div class="wrap hero-in">
+<div class="rating"><span class="stars">★★★★★</span> 5.0 · 189 ratings on JustDial</div>
+<h1>Mohali's lounge of <em>quiet luxury</em> for hair &amp; skin.</h1>
+<p class="lede">Emerald-calm interiors, champagne-gold detail, and stylists who treat every appointment like a private session. Sector 117's highest-rated luxury salon.</p>
+<div class="cta-row">
+<a class="btn solid" href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20book%20an%20appointment%20at%20Style%20Lounge.">Book on WhatsApp</a>
+<a class="btn ghost" href="#services">View Price List</a>
+</div>
+<div class="hero-meta"><span><b>Ground Floor, SCO-126</b>, TDI, Sector 117</span><span>Open Daily · 10 AM – 8 PM</span><span><b>+91 76964 83187</b></span></div>
+</div>
+</header>
+
+<div class="trust"><div class="wrap trust-in">
+<div><div class="n serif">5.0★</div><div class="l">JustDial · 189 ratings</div></div>
+<div><div class="n serif">1,790+</div><div class="l">Instagram community</div></div>
+<div><div class="n serif">Hair·Skin·Nails</div><div class="l">Full luxury menu</div></div>
+<div><div class="n serif">Bridal</div><div class="l">HD · Airbrush specialists</div></div>
+</div></div>
+
+<section id="offers"><div class="wrap">
+<div class="eyebrow reveal">Festive Season</div>
+<h2 class="sec reveal">Offers worth <span style="color:var(--gold2)">dressing up</span> for</h2>
+<p class="sec-sub reveal">Flat pricing, no fine-print games. Mention the offer when you book on WhatsApp.</p>
+<div class="offers-grid">
+<div class="offer reveal"><span class="tag">Festive</span><h3>Global Colour + Hair Spa</h3><p>Full global colour with L'Oréal Professionnel + a deep-nourish luxury hair spa ritual.</p><div class="price-row"><span class="price-now">₹4,999</span><span class="price-was">₹7,000</span></div><div class="valid">Valid till Diwali · Tue–Thu</div><a class="book" href="https://wa.me/917696483187?text=Hi!%20I%20want%20the%20Global%20Colour%20%2B%20Hair%20Spa%20offer%20at%20Style%20Lounge.">Claim on WhatsApp →</a></div>
+<div class="offer reveal"><span class="tag">Festive</span><h3>Keratin Silk Treatment</h3><p>Frizz-free, glass-smooth hair. Priced by length — shoulder &amp; below, transparently.</p><div class="price-row"><span class="price-now">₹5,999</span><span class="price-was">₹8,500</span></div><div class="valid">Valid till Diwali · Appointment only</div><a class="book" href="https://wa.me/917696483187?text=Hi!%20I%20want%20the%20Keratin%20offer%20at%20Style%20Lounge.">Claim on WhatsApp →</a></div>
+<div class="offer reveal"><span class="tag">New Guest</span><h3>First-Visit Glow Facial</h3><p>Our signature 24k gold glow facial at a first-visit price. Walk out lit from within.</p><div class="price-row"><span class="price-now">₹1,799</span><span class="price-was">₹2,500</span></div><div class="valid">First visit only · + taxes</div><a class="book" href="https://wa.me/917696483187?text=Hi!%20I%20want%20the%20First-Visit%20Glow%20Facial%20at%20Style%20Lounge.">Claim on WhatsApp →</a></div>
+</div>
+<p class="note" style="color:#8A8272">† Offer prices are indicative — confirm on WhatsApp before booking.</p>
+</div></section>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow reveal">The Menu</div>
+<h2 class="sec reveal">Priced like a menu, <span style="color:#9A7B3F">served like a ritual</span></h2>
+<p class="sec-sub reveal">Transparent pricing, published openly. Premium products only — L'Oréal Professionnel, Kérastase, OPI, Lotus Professional.</p>
+<div class="tabs reveal">
+<button class="tab active" data-t="women">Women</button>
+<button class="tab" data-t="men">Men</button>
+<button class="tab" data-t="combos">Combos</button>
+</div>
+<div class="menu active" id="m-women">
+<div>
+<div class="mi"><span class="nm">Signature Haircut<small>Wash · cut · blow-dry finish</small></span><span class="dots"></span><span class="pr">₹599</span></div>
+<div class="mi"><span class="nm">Luxury Hair Spa<small>60-min deep nourish ritual</small></span><span class="dots"></span><span class="pr">₹1,499</span></div>
+<div class="mi"><span class="nm">Global Hair Colour<small>L'Oréal Professionnel</small></span><span class="dots"></span><span class="pr">₹3,999</span></div>
+<div class="mi"><span class="nm">Balayage / Highlights<small>Hand-painted dimension</small></span><span class="dots"></span><span class="pr">₹5,999</span></div>
+<div class="mi"><span class="nm">Keratin Treatment<small>Up to shoulder / below shoulder</small></span><span class="dots"></span><span class="pr">₹4,999 / ₹6,999</span></div>
+</div>
+<div>
+<div class="mi"><span class="nm">Party Makeup<small>HD base · lashes included</small></span><span class="dots"></span><span class="pr">₹2,999</span></div>
+<div class="mi"><span class="nm">24k Gold Glow Facial<small>90 minutes</small></span><span class="dots"></span><span class="pr">₹2,499</span></div>
+<div class="mi"><span class="nm">Luxe Mani-Pedi<small>OPI polish · massage</small></span><span class="dots"></span><span class="pr">₹1,299</span></div>
+<div class="mi"><span class="nm">RICA Waxing<small>Full arms + full legs</small></span><span class="dots"></span><span class="pr">₹1,499</span></div>
+<div class="mi"><span class="nm">Saree / Lehenga Draping<small>With hairstyle</small></span><span class="dots"></span><span class="pr">₹799</span></div>
+</div>
+</div>
+<div class="menu" id="m-men">
+<div>
+<div class="mi"><span class="nm">Haircut + Beard Sculpt<small>The full reset</small></span><span class="dots"></span><span class="pr">₹449</span></div>
+<div class="mi"><span class="nm">Royal Hot-Towel Shave<small>Classic luxury</small></span><span class="dots"></span><span class="pr">₹299</span></div>
+<div class="mi"><span class="nm">Hair Colour (Men)<small>Grey coverage</small></span><span class="dots"></span><span class="pr">₹899</span></div>
+</div>
+<div>
+<div class="mi"><span class="nm">De-Tan + Cleanup<small>45 minutes</small></span><span class="dots"></span><span class="pr">₹799</span></div>
+<div class="mi"><span class="nm">Head Massage<small>Champi, 30 min</small></span><span class="dots"></span><span class="pr">₹599</span></div>
+<div class="mi"><span class="nm">Hair Spa (Men)<small>Deep cleanse</small></span><span class="dots"></span><span class="pr">₹999</span></div>
+</div>
+</div>
+<div class="menu" id="m-combos">
+<div>
+<div class="mi"><span class="nm">Head-to-Toe Ritual<small>Haircut + facial + mani-pedi</small></span><span class="dots"></span><span class="pr">₹3,999</span></div>
+<div class="mi"><span class="nm">Haircut + Wash + Blow-Dry<small>Express refresh</small></span><span class="dots"></span><span class="pr">₹699</span></div>
+</div>
+<div>
+<div class="mi"><span class="nm">Pre-Party Pack<small>Makeup + hairstyle + draping</small></span><span class="dots"></span><span class="pr">₹3,499</span></div>
+<div class="mi"><span class="nm">Groom's Day Package<small>Cut + shave + facial</small></span><span class="dots"></span><span class="pr">₹2,499</span></div>
+</div>
+</div>
+<p class="note">† Indicative pricing — final quote confirmed on WhatsApp. Taxes extra where applicable.</p>
+</div></section>
+
+<section id="bridal"><div class="wrap">
+<div class="eyebrow reveal">Shaadi Season</div>
+<h2 class="sec reveal">Bridal, <span style="color:var(--gold2)">the lounge way</span></h2>
+<p class="sec-sub reveal">Trial included in every bridal booking. We travel to your venue across Tricity. 30% advance locks your date.</p>
+<div class="bride-grid">
+<div class="bcard reveal"><h3>HD Bridal</h3><div class="per">Per look</div><div class="amt">₹21,000</div><ul><li>HD makeup, long-wear base</li><li>Signature hairstyling</li><li>Saree / lehenga draping</li><li>Premium lashes</li><li>Pre-bridal consultation</li></ul><a href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20enquire%20about%20HD%20Bridal%20at%20Style%20Lounge.">Enquire →</a></div>
+<div class="bcard featured reveal"><div class="ribbon">Most Booked</div><h3>Airbrush Bridal</h3><div class="per">Per look</div><div class="amt">₹31,500</div><ul><li>Airbrush makeup, flawless finish</li><li>Luxury hairstyling + extensions</li><li>Draping + dupatta setting</li><li>Premium lashes + nails touch-up</li><li>Bridal trial included</li><li>Touch-up kit for the day</li></ul><a href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20enquire%20about%20Airbrush%20Bridal%20at%20Style%20Lounge.">Enquire →</a></div>
+<div class="bcard reveal"><h3>Celebrity Bridal</h3><div class="per">Per look</div><div class="amt">₹45,000</div><ul><li>Everything in Airbrush</li><li>Senior artist, full-day on call</li><li>Pre-bridal 30-day skin plan</li><li>Family makeup (2) included</li><li>Venue travel across Tricity</li></ul><a href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20enquire%20about%20Celebrity%20Bridal%20at%20Style%20Lounge.">Enquire →</a></div>
+</div>
+<p class="note" style="color:#8A8272;margin-top:1.6rem">† Indicative pricing — final quote on WhatsApp. Trial adjusted in final payment.</p>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<div class="eyebrow reveal">Real Work</div>
+<h2 class="sec reveal">From <span style="color:var(--gold2)">our chairs</span></h2>
+<p class="sec-sub reveal">A glimpse of the lounge floor — cuts, colour, spa rituals and bridal mornings.</p>
+<div class="gal reveal">
+<figure><img src="images/style.jpg" alt="Hair styling at Style Lounge" loading="lazy"><figcaption>Signature styling — from ₹599</figcaption></figure>
+<figure><img src="images/spa.jpg" alt="Luxury hair spa ritual" loading="lazy"><figcaption>Hair spa ritual — from ₹1,499</figcaption></figure>
+<figure><img src="images/bridal.jpg" alt="Bridal look" loading="lazy"><figcaption>Bridal looks — HD from ₹21,000</figcaption></figure>
+<figure><img src="images/makeup.jpg" alt="Makeup artistry" loading="lazy"><figcaption>Party makeup — from ₹2,999</figcaption></figure>
+</div>
+<p class="igline">Follow the daily transformations — <a href="https://instagram.com/style_lounge_luxury_salon">@style_lounge_luxury_salon</a></p>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+<div class="eyebrow reveal">Word on the Street</div>
+<div class="gbadge reveal"><span class="big">5.0</span><span>★★★★★<br>189 JustDial ratings</span></div>
+<div class="rev-grid">
+<div class="rev reveal"><p class="q">"The keratin here genuinely lasted me five months. They explained the aftercare instead of rushing me out — that's luxury to me."</p><div class="who">Simran K.</div><div class="svc">Keratin Treatment</div></div>
+<div class="rev reveal"><p class="q">"Got my bridal done here — the airbrush stayed perfect through a December wedding, tears and all. The trial made all the difference."</p><div class="who">Aishwarya R.</div><div class="svc">Airbrush Bridal</div></div>
+<div class="rev reveal"><p class="q">"Calm music, no shouting across the floor, and my balayage looks expensive. Sector 117 finally has a salon worth the drive."</p><div class="who">Mehak S.</div><div class="svc">Balayage</div></div>
+</div>
+<div class="wrap" style="margin-top:3.5rem"><div class="eyebrow reveal" style="text-align:center">Products We Trust</div>
+<div class="brands reveal"><span>L'Oréal Professionnel</span><span>Kérastase</span><span>OPI</span><span>Lotus Professional</span><span>RICA</span></div></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="eyebrow reveal">Visit the Lounge</div>
+<h2 class="sec reveal">Find <span style="color:#9A7B3F">your chair</span></h2>
+<div class="contact-grid">
+<div class="cbox reveal">
+<h4>Address</h4>
+<p>Ground Floor, SCO-126, TDI Mohali,<br>Sector 117, Mohali, Punjab</p>
+<h4 style="margin-top:1.8rem">Call / WhatsApp</h4>
+<a class="big-tel" href="tel:+917696483187">+91 76964 83187</a>
+<h4 style="margin-top:1.8rem">Hours</h4>
+<table class="hours"><tr><td>Monday – Sunday</td><td>10:00 AM – 8:00 PM</td></tr></table>
+<br><a class="wa-big" href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20book%20an%20appointment%20at%20Style%20Lounge.">Book in 30 seconds on WhatsApp</a>
+</div>
+<div class="map reveal"><iframe title="Style Lounge Luxury Salon map" loading="lazy" src="https://www.google.com/maps?q=Style+Lounge+Luxury+Salon+SCO+126+TDI+Sector+117+Mohali&output=embed"></iframe></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div class="fbrand">STYLE LOUNGE <span style="color:#6E6653">LUXURY SALON</span></div>
+<p>Sector 117, Mohali · <a href="https://instagram.com/style_lounge_luxury_salon" style="color:var(--gold)">Instagram</a> · +91 76964 83187</p>
+<p style="margin-top:1rem">Demo by StyleFrame Co.</p>
+</div></footer>
+
+<a class="wa-float" href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20book%20an%20appointment%20at%20Style%20Lounge." aria-label="WhatsApp">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4z"/></svg></a>
+<div class="mobile-bar"><a class="call" href="tel:+917696483187">Call</a><a href="https://wa.me/917696483187?text=Hi!%20I%20want%20to%20book%20an%20appointment%20at%20Style%20Lounge.">WhatsApp</a><a href="#services">Prices</a></div>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('links').classList.toggle('open')});
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+document.querySelectorAll('.menu').forEach(x=>x.classList.remove('active'));
+t.classList.add('active');document.getElementById('m-'+t.dataset.t).classList.add('active')}));
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

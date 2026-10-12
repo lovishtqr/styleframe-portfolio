@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikhaar Studio — Randhawa Road, Kharar | Bridal, Skin & Hair</title>
+<meta name="description" content="Nikhaar Studio, Randhawa Road Kharar. Soft-glam bridal makeup, facials, hair & nails. Rated 5.0 on JustDial. DM on Instagram to book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blush:#F3D9D7;--blush-d:#E0A8A6;--rose:#B76E79;--cream:#FBF4EF;--cream2:#F6E9E2;--ink:#2B2B2B;--mut:#8a7a74;--radius:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Quicksand',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+section{padding:92px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.34em;font-size:11px;font-weight:700;color:var(--rose);margin-bottom:16px}
+h2{font-size:clamp(34px,4.8vw,52px);margin-bottom:14px}
+h2 em{font-style:italic;color:var(--rose)}
+.sec-sub{color:var(--mut);max-width:620px;margin-bottom:48px;font-size:16px}
+.pill{display:inline-block;background:#fff;border:1px solid var(--blush-d);color:var(--rose);border-radius:999px;padding:9px 20px;font-weight:700;font-size:13px;margin-bottom:20px;box-shadow:0 6px 16px rgba(183,110,121,.1)}
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(251,244,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(224,168,166,.4)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700}
+.logo em{color:var(--rose)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em}
+.nav-links a:hover{color:var(--rose)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 34px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:none;transition:transform .18s ease,box-shadow .18s ease;font-family:'Quicksand',sans-serif}
+.btn:hover{transform:translateY(-2px)}
+.btn-rose{background:linear-gradient(135deg,var(--rose),#d28f96);color:#fff;box-shadow:0 12px 28px rgba(183,110,121,.35)}
+.btn-ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);color:#fff;box-shadow:0 12px 28px rgba(221,42,123,.3)}
+.btn-line{border:2px solid var(--rose);color:var(--rose);background:transparent}
+/* hero */
+.hero{padding:60px 0 90px;background:radial-gradient(800px 420px at 15% 10%,rgba(243,217,215,.9),transparent 60%),radial-gradient(700px 400px at 90% 90%,rgba(224,168,166,.5),transparent 60%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(44px,5.8vw,72px);margin:8px 0 18px}
+.hero h1 em{color:var(--rose)}
+.hero p.lead{color:var(--mut);font-size:17px;margin-bottom:28px;max-width:460px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.date-check{background:#fff;border-radius:var(--radius);padding:22px 24px;box-shadow:0 14px 34px rgba(183,110,121,.14);border:1px solid rgba(224,168,166,.5);max-width:460px}
+.date-check b{font-family:'Cormorant Garamond',serif;font-size:20px;display:block;margin-bottom:4px}
+.date-check p{font-size:13px;color:var(--mut);margin-bottom:14px}
+.hero-img{position:relative}
+.hero-img img.main{border-radius:160px 160px var(--radius) var(--radius);box-shadow:0 24px 60px rgba(183,110,121,.22);aspect-ratio:4/5;object-fit:cover;width:100%}
+.hero-img .frame{position:absolute;inset:18px;border:1px solid rgba(255,255,255,.7);border-radius:142px 142px 14px 14px;pointer-events:none}
+.float-badge{position:absolute;background:#fff;border-radius:16px;box-shadow:0 14px 34px rgba(183,110,121,.2);padding:14px 20px;text-align:center}
+.float-badge.a{left:-24px;bottom:52px}
+.float-badge.b{right:-14px;top:44px}
+.float-badge .big{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--rose)}
+.float-badge small{color:var(--mut);font-size:12px;font-weight:600}
+/* trust */
+.trust{background:#fff;border-top:1px solid rgba(224,168,166,.4);border-bottom:1px solid rgba(224,168,166,.4);padding:36px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.trust-grid .n{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--rose);font-weight:700}
+.trust-grid .l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 30px rgba(183,110,121,.1);transition:transform .2s}
+.svc:hover{transform:translateY(-6px)}
+.svc img{height:190px;width:100%;object-fit:cover}
+.svc .body{padding:26px}
+.svc h3{font-size:25px;margin-bottom:6px}
+.svc .pr{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--rose);font-weight:700;margin-bottom:8px}
+.svc p{font-size:14px;color:var(--mut);margin-bottom:18px}
+.svc .mini{font-size:13px;font-weight:700;color:var(--rose);text-decoration:none}
+/* bridal */
+.bridal{background:linear-gradient(140deg,#f8e4e1,#f3d3cf)}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.b-card{background:rgba(255,255,255,.75);backdrop-filter:blur(6px);border-radius:var(--radius);padding:40px 32px;border:1px solid rgba(183,110,121,.25);position:relative;text-align:center}
+.b-card.hot{background:#fff;border:2px solid var(--rose);box-shadow:0 20px 50px rgba(183,110,121,.22)}
+.b-card .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--rose);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;padding:6px 18px;border-radius:999px;white-space:nowrap}
+.b-card h3{font-size:28px;margin-bottom:4px}
+.b-card .bp{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--rose);font-weight:700;margin:8px 0 2px}
+.b-card .per{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:22px}
+.b-card ul{list-style:none;margin-bottom:28px;text-align:left}
+.b-card li{padding:9px 0;border-bottom:1px dashed rgba(183,110,121,.3);font-size:14px}
+.b-card li::before{content:"♡ ";color:var(--rose)}
+/* gallery */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal-grid figure{border-radius:18px;overflow:hidden;position:relative;aspect-ratio:3/4}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.gal-grid figure:hover img{transform:scale(1.07)}
+.gal-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(70,40,44,.78));color:#fff;font-size:13px;font-weight:600}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq-item{background:#fff;border-radius:16px;margin-bottom:12px;box-shadow:0 8px 22px rgba(183,110,121,.08);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+.faq-q span{color:var(--rose);font-size:26px}
+.faq-a{display:none;padding:0 26px 24px;color:var(--mut);font-size:15px}
+.faq-item.open .faq-a{display:block}
+/* reviews */
+.reviews{background:#fff}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev{background:var(--cream);border-radius:var(--radius);padding:30px;border:1px solid rgba(224,168,166,.4)}
+.rev .hearts{color:var(--rose);letter-spacing:2px;margin-bottom:12px;font-size:18px}
+.rev p{font-size:15px;color:#5c524d;margin-bottom:14px;font-style:italic}
+.rev .w{font-weight:700;font-size:13px;letter-spacing:.08em}
+/* contact */
+.contact{background:var(--ink);color:#f6efe9}
+.contact .eyebrow{color:var(--blush-d)}
+.contact h2{color:#fff}
+.contact .sec-sub{color:#b7a79f}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.c-card{background:#35322e;border-radius:var(--radius);padding:38px;border:1px solid rgba(224,168,166,.2)}
+.c-row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(224,168,166,.15);align-items:flex-start}
+.c-row:last-of-type{border:none}
+.c-row .t{font-size:20px}
+.c-row b{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blush-d);margin-bottom:2px}
+.c-row span,.c-row a{color:#e9ded4;text-decoration:none;font-size:15px}
+.c-row a:hover{color:var(--blush-d)}
+.dm-box{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);border-radius:16px;padding:24px;margin-top:22px;text-align:center}
+.dm-box b{font-family:'Cormorant Garamond',serif;font-size:22px;display:block;margin-bottom:6px}
+.dm-box p{font-size:13px;opacity:.9;margin-bottom:16px}
+.dm-box a{background:#fff;color:#a02060;font-weight:700;padding:12px 30px;border-radius:999px;text-decoration:none;display:inline-block;font-size:14px}
+.map{border-radius:var(--radius);overflow:hidden;min-height:440px}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:#fff;border-top:1px solid var(--blush-d);padding:10px 12px calc(10px + env(safe-area-inset-bottom));grid-template-columns:1fr 1fr;gap:10px}
+.sticky-bar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 6px;border-radius:14px;font-weight:700;font-size:14px;text-decoration:none}
+.sticky-bar .a{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);color:#fff}
+.sticky-bar .b{background:var(--ink);color:#fff}
+footer{background:#211f1d;color:#b7a79f;padding:54px 0 110px;text-align:center}
+footer .f-logo{font-family:'Cormorant Garamond',serif;font-size:30px;color:#fff;margin-bottom:8px}
+footer .f-logo em{color:var(--blush-d)}
+footer a{color:var(--blush-d)}
+footer p{font-size:14px;max-width:540px;margin:0 auto 6px}
+footer .credit{margin-top:16px;font-size:12px;opacity:.5;letter-spacing:.08em}
+@media(max-width:900px){
+  .hero-grid,.c-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+  .svc-grid,.b-grid,.rev-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .sticky-bar{display:grid}
+  section{padding:64px 0}
+  footer{padding-bottom:130px}
+  .float-badge.a{left:8px}.float-badge.b{right:8px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Nikhaar <em>Studio</em></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#bridal">Bridal</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-ig" style="padding:11px 24px" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to Book</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill">♡ &nbsp;Randhawa Road · Kharar</div>
+      <h1>Soft glam,<br><em>done beautifully.</em></h1>
+      <p class="lead">Nikhaar Studio is Kharar's 5.0★-rated boutique for bridal makeup, glow facials, hair and nails — gentle, detailed, and all about you.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ig" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">📸 DM @nikhaarstudioofficial</a>
+        <a class="btn btn-line" href="#bridal">Bridal Packages ↓</a>
+      </div>
+      <div class="date-check">
+        <b>Getting married? Check your date ♡</b>
+        <p>Bridal dates fill fast in shaadi season — DM your wedding date on Instagram for availability &amp; a free consultation.</p>
+        <a class="btn btn-rose" style="padding:12px 28px;font-size:14px" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">Check My Date</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img class="main" src="images/hero.jpg" alt="Bridal look at Nikhaar Studio">
+      <div class="frame"></div>
+      <div class="float-badge a"><div><div class="big">5.0★</div><small>JustDial · 71 ratings</small></div></div>
+      <div class="float-badge b"><div><div class="big">Bridal</div><small>specialists</small></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div><div class="n">5.0★</div><div class="l">JustDial · 71 ratings</div></div>
+    <div><div class="n">5 yrs</div><div class="l">In business</div></div>
+    <div><div class="n">Bridal</div><div class="l">Makeup experts</div></div>
+    <div><div class="n">Boutique</div><div class="l">Personal attention</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2>Everything <em>pretty,</em> under one roof</h2>
+    <p class="sec-sub">Skin, hair, makeup and nails — book any service with a quick Instagram DM.</p>
+    <div class="svc-grid">
+      <div class="svc"><img src="images/spa.jpg" alt="Facials"><div class="body"><h3>Glow Facials</h3><div class="pr">₹900* onwards</div><p>Deep-cleanse, brightening &amp; de-tan facials for that lit-from-within glow.</p><a class="mini" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to book →</a></div></div>
+      <div class="svc"><img src="images/cosmetics.jpg" alt="Makeup"><div class="body"><h3>Makeup Artistry</h3><div class="pr">₹2,000* onwards</div><p>Party, engagement &amp; HD makeup — soft, skin-like, photograph-perfect.</p><a class="mini" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to book →</a></div></div>
+      <div class="svc"><img src="images/hero.jpg" alt="Hair services"><div class="body"><h3>Hair Studio</h3><div class="pr">₹250* onwards</div><p>Cuts, styling, colour &amp; spa rituals for healthy, happy hair.</p><a class="mini" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to book →</a></div></div>
+    </div>
+    <p style="text-align:center;margin-top:26px;font-size:13px;color:var(--mut);font-style:italic">*Indicative prices per local benchmarks — exact quote on DM / consultation.</p>
+  </div>
+</section>
+
+<section id="bridal" class="bridal">
+  <div class="wrap">
+    <div class="eyebrow">Shaadi Season</div>
+    <h2>Bridal <em>packages</em></h2>
+    <p class="sec-sub">Three tiers of bridal artistry — every package includes a trial consultation.</p>
+    <div class="b-grid">
+      <div class="b-card">
+        <h3>Engagement Glow</h3>
+        <div class="bp">₹4,000*</div>
+        <div class="per">per look</div>
+        <ul><li>HD party makeup</li><li>Hairstyling</li><li>Lashes &amp; draping</li><li>Skin-prep guidance</li></ul>
+        <a class="btn btn-line" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to Enquire</a>
+      </div>
+      <div class="b-card hot">
+        <div class="ribbon">MOST BOOKED ♡</div>
+        <h3>Signature Bridal</h3>
+        <div class="bp">₹10,000*</div>
+        <div class="per">per look</div>
+        <ul><li>HD bridal makeup</li><li>Bridal hairstyling</li><li>Lehenga / saree draping</li><li>Pre-bridal glow facial</li><li>Trial included</li></ul>
+        <a class="btn btn-rose" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to Enquire</a>
+      </div>
+      <div class="b-card">
+        <h3>Airbrush Couture</h3>
+        <div class="bp">₹18,000*</div>
+        <div class="per">per look</div>
+        <ul><li>Airbrush makeup</li><li>Designer hairstyling</li><li>Complete look styling</li><li>Venue travel on request</li></ul>
+        <a class="btn btn-line" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">DM to Enquire</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:28px;font-size:13px;color:var(--mut);font-style:italic">*Indicative — final quote after trial. A small advance locks your wedding date.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio</div>
+    <h2>Real <em>work,</em> real glow</h2>
+    <p class="sec-sub">Fresh looks drop daily on <a href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener" style="color:var(--rose);font-weight:700">@nikhaarstudioofficial</a>.</p>
+    <div class="gal-grid">
+      <figure><img src="images/hero.jpg" alt="Bridal look"><figcaption>Bridal glow</figcaption></figure>
+      <figure><img src="images/cosmetics.jpg" alt="Makeup kit"><figcaption>Pro kit</figcaption></figure>
+      <figure><img src="images/spa.jpg" alt="Spa ritual"><figcaption>Skin rituals</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow" style="text-align:center">Good to know</div>
+    <h2 style="text-align:center">Questions, <em>answered</em></h2>
+    <p class="sec-sub" style="text-align:center">The things brides &amp; clients ask us most.</p>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you offer a bridal trial? <span>+</span></button><div class="faq-a">Yes — every bridal package includes a trial consultation so your wedding-day look is exactly right. Trial cost adjusts in the final payment.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you travel to the venue? <span>+</span></button><div class="faq-a">On request, yes — DM your venue location and date on Instagram for travel details.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I book? <span>+</span></button><div class="faq-a">DM us on Instagram @nikhaarstudioofficial — we reply personally and confirm your slot.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What are your hours? <span>+</span></button><div class="faq-a">Monday–Saturday 9:30 AM – 10:00 PM, Sunday 9:00 AM – 5:00 PM.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Love notes</div>
+    <h2>Rated <em>5.0</em> on JustDial</h2>
+    <p class="sec-sub">71 ratings, a perfect score — here's why.</p>
+    <div class="rev-grid">
+      <div class="rev"><div class="hearts">♥♥♥♥♥</div><p>"My bridal makeup was so soft and natural — exactly what I asked for. The trial made me fully confident."</p><div class="w">JustDial Review</div></div>
+      <div class="rev"><div class="hearts">♥♥♥♥♥</div><p>"Lovely little studio. Facial was relaxing and my skin glowed for days. Very hygienic."</p><div class="w">JustDial Review</div></div>
+      <div class="rev"><div class="hearts">♥♥♥♥♥</div><p>"Booked for my sister's engagement makeup — punctual, professional, beautiful work."</p><div class="w">JustDial Review</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow">Visit Us</div>
+    <h2>Come say <em>hello</em></h2>
+    <p class="sec-sub">DM is the fastest way to reach us — we reply personally.</p>
+    <div class="c-grid">
+      <div class="c-card">
+        <div class="c-row"><div class="t">📍</div><div><b>Address</b><span>Shop No. 3, Darpan Green Gate No. 4, Opposite Darpan Green, Randhawa Road, Kharar – 140301</span></div></div>
+        <div class="c-row"><div class="t">📸</div><div><b>Instagram (book here)</b><a href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">@nikhaarstudioofficial</a></div></div>
+        <div class="c-row"><div class="t">🕙</div><div><b>Hours</b><span>Mon–Sat: 9:30 AM – 10:00 PM<br>Sunday: 9:00 AM – 5:00 PM</span></div></div>
+        <div class="dm-box">
+          <b>♡ Book via Instagram DM</b>
+          <p>Send your service + preferred date — we confirm personally.</p>
+          <a href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">Open Instagram</a>
+        </div>
+      </div>
+      <div class="map"><iframe title="Nikhaar Studio map" src="https://maps.google.com/maps?q=Nikhaar%20Studio%20Randhawa%20Road%20Kharar%20Punjab&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-logo">Nikhaar <em>Studio</em></div>
+    <p>Randhawa Road, Kharar · <a href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">@nikhaarstudioofficial</a></p>
+    <p class="credit">Demo by StyleFrame Co.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="a" href="https://www.instagram.com/nikhaarstudioofficial" target="_blank" rel="noopener">📸 DM to Book</a>
+  <a class="b" href="#bridal">♡ Bridal</a>
+</div>
+
+</body>
+</html>

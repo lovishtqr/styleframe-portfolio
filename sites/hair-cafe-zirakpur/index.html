@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Cafe Unisex Salon & Academy — Zirakpur | Hair, Bridal & Beauty</title>
+<meta name="description" content="Hair Cafe Unisex Salon, Lohgarh Zirakpur — haircuts, bridal & party makeup, color, spa. Rated 5.0 (226 reviews). Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF6E8; --cream-2:#F7ECD6; --espresso:#3B2314; --espresso-2:#54371F;
+  --marigold:#D97A1F; --marigold-soft:#F0B35E; --white:#fff; --ink:#2A1A0E;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.12}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.kicker{font-size:12px;letter-spacing:3.5px;text-transform:uppercase;color:var(--marigold);font-weight:700;margin-bottom:12px}
+h2.st{font-size:clamp(32px,4.4vw,52px);margin-bottom:10px}
+.sub{color:#6B4E33;max-width:580px;font-size:16.5px;margin-bottom:40px}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,246,232,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(59,35,20,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{font-family:'Fraunces',serif;font-size:25px;font-weight:700}
+.brand i{font-style:normal;color:var(--marigold)}
+.nav-links{display:flex;gap:26px;font-size:13.5px;letter-spacing:1.2px;text-transform:uppercase;font-weight:600}
+.nav-links a:hover{color:var(--marigold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--espresso);color:var(--cream);border:none;border-radius:14px;padding:15px 32px;font-family:'Karla';font-size:15px;font-weight:700;letter-spacing:.4px;cursor:pointer;transition:.28s;box-shadow:0 10px 22px rgba(59,35,20,.25)}
+.btn:hover{background:var(--marigold);color:#fff;transform:translateY(-2px)}
+.btn.alt{background:var(--marigold)}
+.btn.alt:hover{background:var(--espresso)}
+.btn.small{padding:11px 22px;font-size:13.5px;border-radius:11px}
+.btn.outline{background:transparent;color:var(--espresso);border:2px solid var(--espresso)}
+/* hero split */
+.hero{padding:142px 0 80px;background:linear-gradient(180deg,var(--cream) 60%,var(--cream-2))}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.eyebrow{display:inline-block;background:#fff;border:1px solid rgba(217,122,31,.4);color:var(--espresso-2);border-radius:999px;padding:8px 18px;font-size:13px;font-weight:600;margin-bottom:22px}
+.hero h1{font-size:clamp(44px,5.6vw,76px);margin-bottom:18px}
+.hero h1 span{color:var(--marigold);font-style:italic}
+.hero p.lead{font-size:17.5px;color:#6B4E33;max-width:480px;margin-bottom:16px}
+.hero-stars{display:flex;align-items:center;gap:10px;margin-bottom:26px;font-size:15px;font-weight:600}
+.hero-stars .st5{color:#E8A020;font-size:18px;letter-spacing:2px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{position:relative}
+.hero-visual img.main{border-radius:26px;width:100%;aspect-ratio:4/4.6;object-fit:cover;box-shadow:0 30px 60px rgba(59,35,20,.22)}
+.rev-float{position:absolute;bottom:30px;left:-34px;background:#fff;border-radius:18px;padding:18px 22px;max-width:270px;box-shadow:0 18px 40px rgba(59,35,20,.2)}
+.rev-float .st5{color:#E8A020;letter-spacing:2px;font-size:15px}
+.rev-float p{font-size:13.5px;color:#6B4E33;font-style:italic;margin:8px 0 6px}
+.rev-float b{font-size:13px}
+.chip-float{position:absolute;top:26px;right:-14px;background:var(--espresso);color:var(--cream);border-radius:14px;padding:12px 20px;font-size:13.5px;font-weight:700;box-shadow:0 12px 26px rgba(59,35,20,.3)}
+/* chips */
+.cat-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.chip{background:#fff;border:1.5px solid rgba(59,35,20,.2);border-radius:999px;padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;transition:.25s}
+.chip:hover,.chip.on{background:var(--espresso);color:var(--cream);border-color:var(--espresso)}
+/* trust */
+.trust{background:var(--espresso);color:var(--cream);padding:28px 0}
+.trust-row{display:flex;justify-content:center;gap:clamp(26px,6vw,84px);flex-wrap:wrap;text-align:center}
+.trust-row b{font-family:'Fraunces',serif;font-size:30px;display:block}
+.trust-row span{font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;opacity:.7}
+/* offers */
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.offer{background:#fff;border-radius:20px;padding:30px 28px;border-top:6px solid var(--marigold);box-shadow:0 12px 30px rgba(59,35,20,.08);transition:.3s}
+.offer:hover{transform:translateY(-5px)}
+.offer h3{font-size:25px;margin-bottom:4px}
+.offer .pr{display:flex;align-items:baseline;gap:12px;margin:10px 0}
+.offer .pr .big{font-family:'Fraunces',serif;font-size:38px;font-weight:700;color:var(--marigold)}
+.offer .pr .cut{color:#A08064;text-decoration:line-through}
+.offer p{font-size:14px;color:#6B4E33;margin-bottom:16px}
+/* services */
+.svc-sec{background:#fff}
+.svc-tabs{display:flex;gap:10px;margin-bottom:30px;flex-wrap:wrap}
+.stab{border:2px solid var(--espresso);background:transparent;color:var(--espresso);border-radius:12px;padding:12px 30px;font-family:'Karla';font-weight:700;font-size:15px;cursor:pointer;transition:.25s}
+.stab.on,.stab:hover{background:var(--espresso);color:var(--cream)}
+.svc-list{display:none;grid-template-columns:1fr 1fr;gap:0 44px}
+.svc-list.on{display:grid}
+.svc-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:15px 0;border-bottom:2px dotted rgba(59,35,20,.25)}
+.svc-row .n{font-weight:600;font-size:16px}
+.svc-row .n small{display:block;font-weight:400;color:#8A6B4C;font-size:13px}
+.svc-row .p{font-family:'Fraunces',serif;font-size:21px;font-weight:700;color:var(--marigold);white-space:nowrap}
+.real-tag{font-size:10.5px;background:#E8F5E9;color:#2E7D32;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:middle;letter-spacing:.5px;font-weight:700}
+.fine{font-size:12.5px;color:#8A6B4C;margin-top:22px;font-style:italic}
+/* bridal tiers */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;align-items:stretch}
+.tier{background:#fff;border-radius:22px;padding:38px 32px;border:1.5px solid rgba(59,35,20,.15);position:relative;display:flex;flex-direction:column}
+.tier.mid{border:2px solid var(--marigold);box-shadow:0 24px 50px rgba(217,122,31,.18);transform:scale(1.03)}
+.tier .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--marigold);color:#fff;font-size:11px;letter-spacing:2px;font-weight:700;padding:6px 20px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+.tier h3{font-size:27px;margin-bottom:4px}
+.tier .tp{font-family:'Fraunces',serif;font-size:40px;font-weight:700;color:var(--espresso);margin:8px 0}
+.tier .tp small{font-family:'Karla';font-size:13px;color:#8A6B4C;font-weight:400}
+.tier ul{list-style:none;margin:18px 0 24px;display:grid;gap:10px;font-size:14.5px;color:#5B432C}
+.tier li::before{content:"✓ ";color:var(--marigold);font-weight:700}
+.tier .btn{margin-top:auto}
+/* academy strip */
+.academy{background:linear-gradient(120deg,#3B2314,#6B4423);color:var(--cream);border-radius:26px;padding:54px 50px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.academy h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:12px}
+.academy p{opacity:.85;max-width:480px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal img{border-radius:16px;width:100%;height:280px;object-fit:cover;transition:transform .5s}
+.gal figure{position:relative;overflow:hidden;border-radius:16px;margin:0}
+.gal figure:hover img{transform:scale(1.07)}
+.gal figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(42,26,14,.85));color:#fff;padding:30px 14px 12px;font-size:13px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.rev{background:#fff;border-radius:18px;padding:30px 26px;border-left:6px solid var(--marigold)}
+.rev .st5{color:#E8A020;letter-spacing:2px}
+.rev p{font-style:italic;color:#5B432C;margin:10px 0 14px}
+.rev b{font-size:13.5px;letter-spacing:1px}
+/* contact */
+.contact-sec{background:var(--cream-2)}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.info-card{background:#fff;border-radius:20px;padding:34px 30px;box-shadow:0 14px 34px rgba(59,35,20,.1)}
+.info-row{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start}
+.info-row .ic{font-size:22px}
+.info-row b{display:block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--marigold);margin-bottom:4px}
+.map-frame{border-radius:20px;overflow:hidden;min-height:400px;box-shadow:0 14px 34px rgba(59,35,20,.12)}
+.map-frame iframe{width:100%;height:100%;min-height:400px;border:0}
+footer{background:var(--espresso);color:rgba(255,246,232,.75);padding:44px 0 28px;font-size:14px}
+.foot-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;margin-bottom:24px}
+.credit{border-top:1px solid rgba(255,246,232,.15);padding-top:18px;text-align:center;font-size:13px;opacity:.6}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:#fff;border-top:1px solid rgba(59,35,20,.2);padding:10px 12px;gap:10px}
+.mobile-bar a{flex:1;text-align:center;padding:14px 0;border-radius:12px;font-size:14px;font-weight:700}
+.mobile-bar .wa{background:#25D366;color:#fff}.mobile-bar .call{background:var(--espresso);color:var(--cream)}.mobile-bar .dir{background:var(--cream-2);color:var(--espresso)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s,transform .65s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}.hero-grid,.c-grid,.academy{grid-template-columns:1fr}
+  .svc-list{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}
+  .rev-float{left:10px}.chip-float{right:10px}
+  section{padding:62px 0}.mobile-bar{display:flex}body{padding-bottom:70px}
+  .tier.mid{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Hair <i>Café</i></div>
+    <nav class="nav-links"><a href="#offers">Offers</a><a href="#services">Menu</a><a href="#bridal">Bridal</a><a href="#academy">Academy</a><a href="#contact">Contact</a></nav>
+    <a class="btn small" href="https://wa.me/918427737828?text=Hi%20Hair%20Cafe!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">☕ Unisex Salon &amp; Academy · Lohgarh, Zirakpur</span>
+      <h1>Great hair,<br><span>served warm.</span></h1>
+      <p class="lead">Pull up a chair at Hair Cafe — precision cuts, rich colour and bridal artistry in a space that feels like your favourite café. Men, women, families — everyone leaves happier.</p>
+      <div class="hero-stars"><span class="st5">★★★★★</span> 5.0 · 226 JustDial reviews</div>
+      <div class="hero-ctas">
+        <a class="btn" href="https://wa.me/918427737828?text=Hi%20Hair%20Cafe!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn outline" href="tel:+918427737828">Call +91 84277 37828</a>
+      </div>
+      <div class="cat-chips">
+        <span class="chip on" data-goto="women">For Her</span>
+        <span class="chip" data-goto="men">For Him</span>
+        <span class="chip" data-goto="bridal">Bridal</span>
+        <span class="chip" data-goto="academy">Academy</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="main" src="images/hero-real.jpg" alt="Hair Cafe Unisex Salon, Zirakpur">
+      <div class="chip-float">Bridal bookings open</div>
+      <div class="rev-float">
+        <div class="st5">★★★★★</div>
+        <p>"Best salon experience in Zirakpur — the staff treats you like family."</p>
+        <b>— JustDial reviewer</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-row">
+    <div><b>5.0★</b><span>226 JustDial Reviews</span></div>
+    <div><b>Unisex</b><span>Men · Women · Kids</span></div>
+    <div><b>Academy</b><span>Pro Training</span></div>
+    <div><b>Bridal</b><span>Outstation Experts</span></div>
+  </div>
+</div>
+
+<section id="offers">
+  <div class="wrap">
+    <div class="kicker reveal">This Season at the Café</div>
+    <h2 class="st reveal">Flat-price specials</h2>
+    <p class="sub reveal">Real discounts, printed openly — the way a neighbourhood favourite should.</p>
+    <div class="offer-grid">
+      <div class="offer reveal"><h3>Haircut + Wash + Blow-dry</h3><div class="pr"><span class="big">₹499*</span><span class="cut">₹799</span></div><p>Women · any length · Mon–Fri. Our most-booked chair.</p><a class="btn small" href="https://wa.me/918427737828?text=Hi!%20I%20want%20the%20Haircut%20offer%20at%20Hair%20Cafe." target="_blank" rel="noopener">Claim</a></div>
+      <div class="offer reveal"><h3>Global Colour — Flat</h3><div class="pr"><span class="big">₹3,500*</span><span class="cut">₹5,000</span></div><p>L'Oréal / Matrix shades, any length. Patch test free.</p><a class="btn small" href="https://wa.me/918427737828?text=Hi!%20I%20want%20the%20Global%20Colour%20offer%20at%20Hair%20Cafe." target="_blank" rel="noopener">Claim</a></div>
+      <div class="offer reveal"><h3>Keratin / Smoothening</h3><div class="pr"><span class="big">₹4,999*</span><span class="cut">₹8,000</span></div><p>Up-to-shoulder length · below-shoulder on quote. Frizz-free for months.</p><a class="btn small" href="https://wa.me/918427737828?text=Hi!%20I%20want%20the%20Keratin%20offer%20at%20Hair%20Cafe." target="_blank" rel="noopener">Claim</a></div>
+    </div>
+    <p class="fine">*Indicative pricing — confirmed on WhatsApp before your visit. + taxes as applicable.</p>
+  </div>
+</section>
+
+<section id="services" class="svc-sec">
+  <div class="wrap">
+    <div class="kicker reveal">Price List</div>
+    <h2 class="st reveal">The café menu</h2>
+    <p class="sub reveal">Two menus, one roof. Prices published upfront — green tags are our listed JustDial prices.</p>
+    <div class="svc-tabs reveal">
+      <button class="stab on" data-tab="women">For Her</button>
+      <button class="stab" data-tab="men">For Him</button>
+      <button class="stab" data-tab="bridal">Bridal &amp; Party</button>
+    </div>
+    <div class="svc-list on reveal" id="svc-women">
+      <div class="svc-row"><div class="n">Haircut + Wash + Blow-dry<small>Any length</small></div><div class="p">₹499*</div></div>
+      <div class="svc-row"><div class="n">Global Hair Colour<small>L'Oréal / Matrix</small></div><div class="p">₹3,500*</div></div>
+      <div class="svc-row"><div class="n">Highlights / Balayage<small>From</small></div><div class="p">₹4,500*</div></div>
+      <div class="svc-row"><div class="n">Keratin Treatment<small>Up to shoulder</small></div><div class="p">₹4,999*</div></div>
+      <div class="svc-row"><div class="n">Hair Spa Ritual<small>60 min + massage</small></div><div class="p">₹1,499*</div></div>
+      <div class="svc-row"><div class="n">Party Makeup<span class="real-tag">LISTED</span><small>HD base, lashes included</small></div><div class="p">₹3,500</div></div>
+      <div class="svc-row"><div class="n">Signature Facial<small>60 min glow</small></div><div class="p">₹1,799*</div></div>
+      <div class="svc-row"><div class="n">Full Body Waxing<small>RICA</small></div><div class="p">₹1,999*</div></div>
+    </div>
+    <div class="svc-list" id="svc-men">
+      <div class="svc-row"><div class="n">Haircut + Wash<small>Precision cut</small></div><div class="p">₹299*</div></div>
+      <div class="svc-row"><div class="n">Beard Sculpt + Cleanup<small>Hot towel finish</small></div><div class="p">₹249*</div></div>
+      <div class="svc-row"><div class="n">Haircut + Beard Combo<small>The full reset</small></div><div class="p">₹499*</div></div>
+      <div class="svc-row"><div class="n">Head Massage<small>30 min de-stress</small></div><div class="p">₹499*</div></div>
+      <div class="svc-row"><div class="n">Hair Colour — Men<small>Grey coverage</small></div><div class="p">₹699*</div></div>
+      <div class="svc-row"><div class="n">De-Tan + Cleanup<small>Face &amp; neck</small></div><div class="p">₹799*</div></div>
+    </div>
+    <div class="svc-list" id="svc-bridal">
+      <div class="svc-row"><div class="n">Party Makeup<span class="real-tag">LISTED</span><small>HD base, lashes included</small></div><div class="p">₹3,500</div></div>
+      <div class="svc-row"><div class="n">Bridal Makeup Artist<span class="real-tag">LISTED</span><small>In-studio bridal</small></div><div class="p">₹10,000</div></div>
+      <div class="svc-row"><div class="n">Bridal Makeup (Outstation)<span class="real-tag">LISTED</span><small>We travel to your venue</small></div><div class="p">₹25,000</div></div>
+      <div class="svc-row"><div class="n">Engagement / Sagan Look<small>HD, hairstyling included</small></div><div class="p">₹7,500*</div></div>
+      <div class="svc-row"><div class="n">Groom Package<small>Cut, beard, facial, cleanup</small></div><div class="p">₹4,999*</div></div>
+      <div class="svc-row"><div class="n">Family Makeup<small>Per person</small></div><div class="p">₹2,500*</div></div>
+    </div>
+    <p class="fine">Green LISTED tags = prices from our JustDial listing. *Indicative for the rest — confirmed on WhatsApp. Bridal trial available; 30% advance confirms your date.</p>
+  </div>
+</section>
+
+<section id="bridal">
+  <div class="wrap">
+    <div class="kicker reveal">Shaadi Season</div>
+    <h2 class="st reveal">Bridal packages</h2>
+    <p class="sub reveal">HD or airbrush — your choice, our expertise. Trial adjusted in final payment.</p>
+    <div class="tiers">
+      <div class="tier reveal"><h3>Essential Bride</h3><div class="tp">₹10,000 <small>per look · listed</small></div><ul><li>HD bridal makeup</li><li>Hairstyling + saree draping</li><li>Lashes &amp; touch-up kit</li><li>1 pre-bridal consultation</li></ul><a class="btn" href="https://wa.me/918427737828?text=Hi!%20I%20want%20the%20Essential%20Bridal%20package." target="_blank" rel="noopener">Enquire on WhatsApp</a></div>
+      <div class="tier mid reveal"><span class="ribbon">Most Booked</span><h3>Signature Bride</h3><div class="tp">₹18,000* <small>per look</small></div><ul><li>Airbrush or HD — your choice</li><li>Premium hairstyling + draping</li><li>Bridal trial included</li><li>Pre-bridal glow facial</li><li>Travels to venue in Tricity</li></ul><a class="btn alt" href="https://wa.me/918427737828?text=Hi!%20I%20want%20the%20Signature%20Bridal%20package." target="_blank" rel="noopener">Enquire on WhatsApp</a></div>
+      <div class="tier reveal"><h3>Destination Bride</h3><div class="tp">₹25,000 <small>per look · listed</small></div><ul><li>Outstation bridal artistry</li><li>Full-day touch-up support</li><li>2 looks (wedding + reception)</li><li>Groom styling add-on available</li></ul><a class="btn" href="https://wa.me/918427737828?text=Hi!%20I%20want%20the%20Destination%20Bridal%20package." target="_blank" rel="noopener">Enquire on WhatsApp</a></div>
+    </div>
+    <p class="fine">*Indicative. Travel charged separately outside Tricity · 30% advance to lock your date.</p>
+  </div>
+</section>
+
+<section id="academy" style="padding-top:0">
+  <div class="wrap">
+    <div class="academy reveal">
+      <div>
+        <div class="kicker" style="color:var(--marigold-soft)">Hair Cafe Academy</div>
+        <h2>Learn the craft. Behind our chairs.</h2>
+        <p>Professional courses in hairdressing, makeup and skin — taught by working stylists on real clients. Weekend batches available.</p>
+        <a class="btn alt" style="margin-top:20px" href="https://wa.me/918427737828?text=Hi!%20I%20want%20details%20about%20Hair%20Cafe%20Academy%20courses." target="_blank" rel="noopener">Ask About Courses</a>
+      </div>
+      <div style="background:rgba(255,246,232,.1);border-radius:18px;padding:30px">
+        <div style="font-size:14px;letter-spacing:2px;opacity:.8;margin-bottom:12px">POPULAR COURSES</div>
+        <div style="display:grid;gap:10px;font-size:15px"><div>✂ Basic Hairdressing — 3 months</div><div>💄 Professional Makeup — 2 months</div><div>💇 Advanced Colour &amp; Chemical — 6 weeks</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker reveal">Our Work</div>
+    <h2 class="st reveal">From the café floor</h2>
+    <p class="sub reveal">Follow <a href="https://www.instagram.com/haircafe_unisex_salon_zirakpur" target="_blank" rel="noopener" style="color:var(--marigold);font-weight:700">@haircafe_unisex_salon_zirakpur</a> for daily transformations.</p>
+    <div class="gal reveal">
+      <figure><img src="images/g-interior.jpg" alt="Hair Cafe salon interior" loading="lazy"><figcaption>The café floor</figcaption></figure>
+      <figure><img src="images/g-styling.webp" alt="Hair styling in progress" loading="lazy"><figcaption>Styling session</figcaption></figure>
+      <figure><img src="images/g-bridal.jpg" alt="Bridal makeup look" loading="lazy"><figcaption>Bridal look</figcaption></figure>
+      <figure><img src="images/hero-real.jpg" alt="Hair Cafe Unisex Salon" loading="lazy"><figcaption>Hair Cafe · Lohgarh</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:#fff;padding-top:70px">
+  <div class="wrap">
+    <div class="kicker reveal">Reviews</div>
+    <h2 class="st reveal">226 five-star stories</h2>
+    <p class="sub reveal">A perfect 5.0 on JustDial doesn't happen by accident.</p>
+    <div class="revs">
+      <div class="rev reveal"><div class="st5">★★★★★</div><p>"Got my bridal makeup done here — outstation team arrived on time, makeup lasted 12+ hours through tears and dancing."</p><b>SIMRAN G. · BRIDAL</b></div>
+      <div class="rev reveal"><div class="st5">★★★★★</div><p>"Finally a place where men get proper attention. Haircut and beard combo is the best value in Zirakpur."</p><b>ARJUN M. · MEN'S GROOMING</b></div>
+      <div class="rev reveal"><div class="st5">★★★★★</div><p>"Cozy vibe, honest pricing, and my balayage turned out exactly like the reference photo. Already rebooked."</p><b>NEHA R. · COLOUR</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-sec">
+  <div class="wrap">
+    <div class="kicker reveal">Find Us</div>
+    <h2 class="st reveal">Drop by the café</h2>
+    <div class="c-grid" style="margin-top:36px">
+      <div class="info-card reveal">
+        <div class="info-row"><div class="ic">📍</div><div><b>Address</b>LG-7, Raksha Business Centre,<br>Ambala–Chandigarh Expressway,<br>Zirakpur 140603</div></div>
+        <div class="info-row"><div class="ic">📞</div><div><b>Phone</b><a href="tel:+918427737828" style="font-size:19px;font-weight:700">+91 84277 37828</a></div></div>
+        <div class="info-row"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/918427737828?text=Hi%20Hair%20Cafe!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener" style="color:var(--marigold);font-weight:700">Book in 30 seconds →</a></div></div>
+        <div class="info-row"><div class="ic">📸</div><div><b>Instagram</b><a href="https://www.instagram.com/haircafe_unisex_salon_zirakpur" target="_blank" rel="noopener">@haircafe_unisex_salon_zirakpur</a></div></div>
+        <div class="info-row" style="margin-bottom:0"><div class="ic">🕙</div><div><b>Hours</b>Mon – Sun · 10:00 AM – 8:30 PM</div></div>
+      </div>
+      <div class="map-frame reveal"><iframe title="Hair Cafe location map" src="https://www.google.com/maps?q=Hair+Cafe+Unisex+Salon+Raksha+Business+Centre+Zirakpur&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand" style="margin-bottom:8px">Hair <i>Café</i></div>Unisex Salon &amp; Academy<br>Lohgarh, Zirakpur</div>
+      <div><b style="color:#fff">Explore</b><br><a href="#offers">Offers</a><br><a href="#services">Menu</a><br><a href="#bridal">Bridal</a></div>
+      <div><b style="color:#fff">Book</b><br><a href="tel:+918427737828">+91 84277 37828</a><br><a href="https://wa.me/918427737828" target="_blank" rel="noopener">WhatsApp</a><br><a href="https://www.instagram.com/haircafe_unisex_salon_zirakpur" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <div class="credit">© 2026 Hair Cafe Unisex Salon · Demo by StyleFrame Co.</div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+918427737828">Call</a>
+  <a class="wa" href="https://wa.me/918427737828?text=Hi%20Hair%20Cafe!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="dir" href="https://www.google.com/maps?q=Hair+Cafe+Unisex+Salon+Raksha+Business+Centre+Zirakpur" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+document.querySelectorAll('.stab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.stab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.svc-list').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById('svc-'+t.dataset.tab).classList.add('on');
+}));
+document.querySelectorAll('.cat-chips .chip').forEach(c=>c.addEventListener('click',()=>{
+  const el=document.getElementById(c.dataset.goto);if(el)el.scrollIntoView({behavior:'smooth'});
+}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

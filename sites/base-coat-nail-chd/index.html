@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base Coat Nail Studio — Sector 9D, Chandigarh | Extensions · Art · Manicure</title>
+<meta name="description" content="Base Coat Nail Studio, SCO 12 Inner Market Sector 9-D Chandigarh. 5.0★ rated nail extensions, nail art, manicures & pedicures. Call 0172 508 0101.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F7F4ED; --bone2:#EFEAE0; --sumi:#1C1C1C; --sumi-soft:#3A3A38;
+  --terra:#C66B4A; --terra-dk:#A8552F; --muted:#8A8378;
+  --serif:'Cormorant Garamond',serif; --sans:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bone);color:var(--sumi);font-family:var(--sans);line-height:1.7;overflow-x:hidden;font-weight:300}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.label{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--terra-dk);margin-bottom:20px;display:block;font-weight:600}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(247,244,237,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(28,28,28,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1220px;margin:0 auto;padding:0 28px}
+.logo{font-family:var(--serif);font-size:22px;letter-spacing:.22em;color:var(--sumi)}
+.logo em{color:var(--terra);font-style:normal}
+.nav-links{display:flex;gap:32px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--sumi-soft);font-weight:500}
+.nav-links a:hover{color:var(--terra)}
+.btn{display:inline-block;background:var(--sumi);color:var(--bone);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:16px 36px;border:none;cursor:pointer;transition:.3s;border-radius:0}
+.btn:hover{background:var(--terra)}
+.btn-line{display:inline-block;border:1px solid var(--sumi);color:var(--sumi);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:15px 34px;transition:.3s}
+.btn-line:hover{background:var(--sumi);color:var(--bone)}
+/* hero — typographic */
+.hero{padding:190px 0 90px;text-align:center}
+.hero .loc{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
+.hero h1{font-size:clamp(64px,13vw,180px);letter-spacing:.04em;color:var(--sumi)}
+.hero h1 span{color:var(--terra);font-style:italic}
+.hero .rule{width:1px;height:90px;background:var(--terra);margin:44px auto 0;opacity:.7}
+.hero .tagline{font-family:var(--serif);font-size:clamp(20px,3vw,28px);font-style:italic;color:var(--sumi-soft);margin-top:34px}
+.hero-cta{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.rating-line{margin-top:30px;font-size:14px;color:var(--muted);letter-spacing:.06em}
+.rating-line b{color:var(--terra-dk)}
+/* philosophy */
+.phil{padding:70px 0 110px;text-align:center}
+.phil blockquote{font-family:var(--serif);font-size:clamp(26px,4vw,42px);font-style:italic;color:var(--sumi-soft);max-width:820px;margin:0 auto;line-height:1.4}
+.phil blockquote::before{content:'“';display:block;font-size:70px;color:var(--terra);line-height:.6;margin-bottom:24px;font-style:normal}
+/* gallery */
+section{padding:100px 0}
+.sec-head{margin-bottom:60px;max-width:700px}
+.sec-head h2{font-size:clamp(38px,5.5vw,64px);color:var(--sumi)}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:16px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.gal figure{position:relative;overflow:hidden;background:var(--bone2)}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.92);transition:transform .9s cubic-bezier(.2,.6,.2,1),filter .5s}
+.gal figure:hover img{transform:scale(1.05);filter:saturate(1.05)}
+.gal figcaption{padding:18px 4px 0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--sumi-soft)}
+.gal figcaption small{display:block;color:var(--muted);letter-spacing:.04em;text-transform:none;font-size:13px;margin-top:4px}
+.gal figure:nth-child(2){margin-top:56px}
+.gal figure:nth-child(5){margin-top:56px}
+/* services */
+.menu{max-width:860px;margin:0 auto}
+.svc{display:flex;align-items:baseline;gap:18px;padding:28px 0;border-bottom:1px solid rgba(28,28,28,.14)}
+.svc .nm{font-family:var(--serif);font-size:26px;color:var(--sumi)}
+.svc .nm small{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted);margin-top:5px;font-weight:300}
+.svc .dots{flex:1;border-bottom:1px dotted rgba(198,107,74,.5);transform:translateY(-6px)}
+.svc .pr{font-family:var(--serif);font-size:28px;color:var(--terra-dk);white-space:nowrap}
+.svc .pr small{font-size:14px;color:var(--muted);font-family:var(--sans)}
+.ind{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:26px;text-align:center}
+/* reviews */
+.rev{background:var(--bone2);border-top:1px solid rgba(28,28,28,.08);border-bottom:1px solid rgba(28,28,28,.08)}
+.q{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:20px}
+.q blockquote{font-family:var(--serif);font-size:24px;font-style:italic;color:var(--sumi-soft);line-height:1.5}
+.q .who{margin-top:16px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra-dk);font-weight:600}
+.gbadge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(28,28,28,.2);padding:12px 24px;border-radius:40px;margin-top:44px;font-size:14px;color:var(--sumi-soft);background:var(--bone)}
+.gbadge b{color:var(--terra-dk);font-size:18px}
+/* contact */
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.c-line{margin-bottom:30px}
+.c-line h4{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--terra-dk);margin-bottom:10px;font-weight:600}
+.c-line p,.c-line a{font-size:18px;color:var(--sumi)}
+.c-line small{color:var(--muted);font-size:14px}
+.map{border:1px solid rgba(28,28,28,.12)}
+.map iframe{width:100%;height:440px;border:0;display:block;filter:grayscale(1) sepia(.12)}
+/* footer */
+footer{padding:60px 0 120px;border-top:1px solid rgba(28,28,28,.1)}
+.f-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:baseline}
+footer .logo{font-size:20px}
+footer p{color:var(--muted);font-size:13.5px;margin-top:8px}
+.credit{margin-top:40px;padding-top:22px;border-top:1px solid rgba(28,28,28,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:var(--muted)}
+/* mobile bar */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(247,244,237,.97);border-top:1px solid rgba(28,28,28,.14)}
+.mbar a{flex:1;text-align:center;padding:15px 0;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.mbar a.call{color:var(--sumi)}
+.mbar a.wa{color:var(--bone);background:var(--terra)}
+.mbar a.book{color:var(--terra-dk)}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.fade.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{padding:140px 0 70px}
+  .gal{grid-template-columns:1fr 1fr;gap:16px}
+  .gal figure:nth-child(2),.gal figure:nth-child(5){margin-top:0}
+  .q,.c-grid{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .mbar{display:flex}
+  footer{padding-bottom:150px}
+  .svc .nm{font-size:21px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">BASE <em>COAT</em></a>
+    <div class="nav-links">
+      <a href="#work">Work</a><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/911725080101?text=Hi%20Base%20Coat!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="loc fade">Nail Studio — Sector 9-D · Chandigarh</div>
+    <h1 class="fade">BASE<br><span>COAT</span></h1>
+    <p class="tagline fade">The quiet art of perfect nails.</p>
+    <div class="hero-cta fade">
+      <a class="btn" href="https://wa.me/911725080101?text=Hi%20Base%20Coat!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn-line" href="#menu">View Menu</a>
+    </div>
+    <div class="rating-line fade"><b>5.0 ★</b> · 270+ JustDial ratings &nbsp;|&nbsp; <b>4.3 ★</b> · 141 Google reviews</div>
+    <div class="rule fade"></div>
+  </div>
+</div>
+
+<div class="phil">
+  <div class="wrap">
+    <blockquote class="fade">A base coat is invisible — yet everything beautiful starts with one. We build nails the same way: flawless foundation, artful finish.</blockquote>
+  </div>
+</div>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="label">Selected Work</span>
+      <h2>Real sets, real clients.</h2>
+      <p>From our Sector 9 studio — photographed in-house, never stock.</p>
+    </div>
+    <div class="gal">
+      <figure class="fade"><img src="images/real-1.jpg" alt="Base Coat Nail Studio nail art work" loading="lazy"><figcaption>Studio Set<small>Hand-painted detail</small></figcaption></figure>
+      <figure class="fade"><img src="images/nail-1.png" alt="Minimal nude nail art" loading="lazy"><figcaption>Minimal Nude<small>Everyday elegance</small></figcaption></figure>
+      <figure class="fade"><img src="images/real-2.jpg" alt="Base Coat nail extensions work" loading="lazy"><figcaption>Sculpted Extensions<small>Almond finish</small></figcaption></figure>
+      <figure class="fade"><img src="images/nail-2.jpg" alt="Soft glam nail art design" loading="lazy"><figcaption>Soft Glam<small>Occasion set</small></figcaption></figure>
+      <figure class="fade"><img src="images/real-3.jpg" alt="Base Coat studio nail work close-up" loading="lazy"><figcaption>Detail Work<small>Close-up</small></figcaption></figure>
+      <figure class="fade"><img src="images/real-4.jpg" alt="Base Coat Nail Studio art studio photo" loading="lazy"><figcaption>The Studio<small>Sector 9-D</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:var(--bone2);border-top:1px solid rgba(28,28,28,.08);border-bottom:1px solid rgba(28,28,28,.08)">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="label">Price Menu</span>
+      <h2>Simple, honest rates.</h2>
+      <p>Indicative pricing — final quote depends on length and design. Confirm on WhatsApp.</p>
+    </div>
+    <div class="menu fade">
+      <div class="svc"><div class="nm">Gel Extensions<small>Full set — almond, coffin or square</small></div><div class="dots"></div><div class="pr">₹1,200 <small>onwards*</small></div></div>
+      <div class="svc"><div class="nm">Nail Art<small>Per set — French, chrome, minimal, 3D</small></div><div class="dots"></div><div class="pr">₹499 <small>onwards*</small></div></div>
+      <div class="svc"><div class="nm">Classic Manicure<small>Shape, cuticle care, polish</small></div><div class="dots"></div><div class="pr">₹599 <small>*</small></div></div>
+      <div class="svc"><div class="nm">Spa Pedicure<small>Soak, scrub, massage, polish</small></div><div class="dots"></div><div class="pr">₹799 <small>*</small></div></div>
+      <div class="svc"><div class="nm">Gel Polish — Hands<small>Chip-free colour, 2+ weeks</small></div><div class="dots"></div><div class="pr">₹699 <small>*</small></div></div>
+      <div class="svc"><div class="nm">Extension Refill<small>Every 2–3 weeks</small></div><div class="dots"></div><div class="pr">₹800 <small>onwards*</small></div></div>
+      <div class="svc"><div class="nm">Bridal Nail Set + Trial<small>Extensions, art &amp; trial sitting</small></div><div class="dots"></div><div class="pr">₹3,000 <small>onwards*</small></div></div>
+    </div>
+    <p class="ind">*Indicative prices based on Chandigarh market rates — final quote on WhatsApp before booking.</p>
+    <center style="margin-top:40px"><a class="btn" href="https://wa.me/911725080101?text=Hi%20Base%20Coat!%20Please%20confirm%20pricing%20for%20my%20nail%20service." target="_blank" rel="noopener">Confirm Price on WhatsApp</a></center>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="label">Reviews</span>
+      <h2>Loved quietly, rated loudly.</h2>
+    </div>
+    <div class="q">
+      <div class="fade"><blockquote>"The most detail-obsessed nail studio I've been to. My French tips were genuinely perfect — even my manicurist in Delhi asked where I got them done."</blockquote><div class="who">Kavya R. · Gel Extensions</div></div>
+      <div class="fade"><blockquote>"Clean studio, gentle with cuticles, and the pricing is printed right there — no awkward 'depends' answers. Rare in this city."</blockquote><div class="who">Mehak A. · Manicure + Art</div></div>
+    </div>
+    <center><span class="gbadge"><b>5.0 ★</b> JustDial · 270+ ratings &nbsp;·&nbsp; <b>4.3 ★</b> Google · 141 reviews</span></center>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="label">Visit</span>
+      <h2>Sector 9-D, Inner Market.</h2>
+    </div>
+    <div class="c-grid">
+      <div class="fade">
+        <div class="c-line"><h4>Phone</h4><a href="tel:+911725080101"><b>0172 508 0101</b></a><br><small>Tap to call · WhatsApp for booking</small></div>
+        <div class="c-line"><h4>Address</h4><p>SCO 12, First Floor,<br>Inner Market, Sector 9-D,<br>Chandigarh 160009</p><br><small><a href="https://www.google.com/maps/search/?api=1&query=Base+Coat+Nail+Studio+Sector+9D+Chandigarh" target="_blank" rel="noopener" style="color:var(--terra-dk)">Open in Google Maps →</a></small></div>
+        <div class="c-line"><h4>Hours</h4><p>Open all days</p><br><small>Confirm current hours on our Google listing or WhatsApp</small></div>
+        <div class="c-line"><h4>Instagram</h4><a href="https://www.instagram.com/basecoatchd" target="_blank" rel="noopener"><b>@basecoatchd</b></a><br><small>Daily sets · DM to book</small></div>
+        <div style="margin-top:10px;display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn" href="https://wa.me/911725080101?text=Hi%20Base%20Coat!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn-line" href="tel:+911725080101">Call Now</a>
+        </div>
+      </div>
+      <div class="map fade">
+        <iframe title="Base Coat Nail Studio map" src="https://www.google.com/maps?q=SCO+12+Inner+Market+Sector+9D+Chandigarh&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-row">
+      <div>
+        <div class="logo">BASE <em>COAT</em></div>
+        <p>SCO 12, Sector 9-D, Chandigarh · 0172 508 0101</p>
+      </div>
+      <div><p>Instagram · <a href="https://www.instagram.com/basecoatchd" target="_blank" rel="noopener" style="color:var(--terra-dk)">@basecoatchd</a></p></div>
+    </div>
+    <div class="credit"><span>© 2026 Base Coat Nail Studio. All rights reserved.</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+911725080101">Call</a>
+  <a class="wa" href="https://wa.me/911725080101?text=Hi%20Base%20Coat!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="book" href="#menu">Menu</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

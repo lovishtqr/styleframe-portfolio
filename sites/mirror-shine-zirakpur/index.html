@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirror Shine — A Family Beauty Salon | Dhakoli, Zirakpur</title>
+<meta name="description" content="Mirror Shine, a family beauty salon in Dhakoli Zirakpur — hair, beauty & grooming for the whole family. Rated 5.0 from 340 reviews. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBFCFD; --silver:#C9CDD3; --ice:#B8D4E3; --ice-soft:#E8F1F7;
+  --slate:#1A2430; --slate-2:#2C3A4A; --white:#fff; --accent:#5B8FB9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--slate);background:var(--paper);line-height:1.65;overflow-x:hidden;font-weight:300}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.kicker{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+h2.st{font-size:clamp(36px,5vw,60px);font-weight:500;margin-bottom:14px}
+.sub{color:#5B6B7C;max-width:560px;font-size:16.5px;margin-bottom:48px}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,252,253,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,36,48,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;letter-spacing:3px}
+.nav-links{display:flex;gap:30px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--slate);color:#fff;border:none;border-radius:0;padding:16px 36px;font-family:'Inter';font-size:13px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--accent)}
+.btn.small{padding:12px 26px;font-size:11.5px}
+/* editorial hero */
+.hero{padding:170px 0 70px;text-align:center;position:relative;background:linear-gradient(180deg,var(--ice-soft),var(--paper))}
+.hero .where{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(64px,13vw,190px);letter-spacing:.04em;font-weight:600;line-height:.95}
+.hero h1 .shine{background:linear-gradient(100deg,#8FA8BC 20%,#1A2430 40%,#B8D4E3 55%,#1A2430 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,2.6vw,27px);color:#5B6B7C;margin:22px auto 8px;max-width:620px}
+.hero-meta{display:flex;justify-content:center;gap:26px;align-items:center;margin:26px 0 34px;flex-wrap:wrap;font-size:14px}
+.hero-meta .stars{color:#E8A020;letter-spacing:3px;font-size:17px}
+.hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-img{margin:64px auto 0;max-width:1000px;border-radius:4px;overflow:hidden;box-shadow:0 40px 80px rgba(26,36,48,.14)}
+.hero-img img{width:100%;height:clamp(300px,46vw,520px);object-fit:cover}
+.scroll-cue{margin-top:26px;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#8FA0B3}
+/* stats */
+.stats{border-top:1px solid rgba(26,36,48,.1);border-bottom:1px solid rgba(26,36,48,.1);padding:38px 0;background:#fff}
+.stats-row{display:flex;justify-content:center;gap:clamp(30px,8vw,110px);flex-wrap:wrap;text-align:center}
+.stats-row b{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;display:block}
+.stats-row span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8FA0B3}
+/* family sections */
+.fam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(26,36,48,.12)}
+.fam{padding:52px 40px;border-right:1px solid rgba(26,36,48,.12);transition:.35s;background:#fff}
+.fam:last-child{border-right:none}
+.fam:hover{background:var(--ice-soft)}
+.fam .num{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--accent);letter-spacing:2px}
+.fam h3{font-size:32px;margin:12px 0 10px}
+.fam p{font-size:14.5px;color:#5B6B7C;margin-bottom:20px}
+.fam a.link{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--slate);padding-bottom:3px}
+/* services menu */
+.svc-sec{background:var(--slate);color:#EDEFF2}
+.svc-sec .kicker{color:var(--ice)}
+.svc-sec h2.st{color:#fff}
+.svc-sec .sub{color:#A9B8C6}
+.svc-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
+.svc-group h3{font-size:24px;color:var(--ice);margin:34px 0 6px;letter-spacing:1px}
+.svc-group h3:first-child{margin-top:0}
+.svc-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(184,212,227,.18)}
+.svc-row .n{font-weight:400;font-size:16px}
+.svc-row .n small{display:block;color:#8FA0B3;font-size:12.5px;font-weight:300}
+.svc-row .p{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;white-space:nowrap}
+.fine{font-size:12.5px;color:#8FA0B3;margin-top:26px;font-style:italic}
+/* gallery */
+.gal-grid{columns:3;column-gap:16px}
+.gal-item{break-inside:avoid;margin-bottom:16px;overflow:hidden;position:relative}
+.gal-item img{width:100%;transition:transform .7s;filter:saturate(.92)}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,36,48,.8));color:#fff;padding:32px 16px 12px;font-size:13px;letter-spacing:.5px}
+/* reviews */
+.rev-sec{background:#fff}
+.rev-big{max-width:820px;margin:0 auto;text-align:center}
+.rev-big blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.4vw,36px);font-style:italic;line-height:1.4;color:var(--slate)}
+.rev-big .who{margin-top:18px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:600}
+.rev-dots{display:flex;justify-content:center;gap:10px;margin-top:28px}
+.rev-dots span{width:9px;height:9px;border-radius:50%;background:var(--silver);cursor:pointer;transition:.3s}
+.rev-dots span.on{background:var(--slate);transform:scale(1.3)}
+.badge-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:44px}
+.badge{border:1px solid rgba(26,36,48,.2);padding:12px 26px;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+/* contact */
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.c-block{margin-bottom:28px}
+.c-block b{display:block;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.c-block .big{font-family:'Cormorant Garamond',serif;font-size:26px}
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;font-size:14.5px;max-width:340px}
+.hours div{display:flex;justify-content:space-between;border-bottom:1px dotted var(--silver);padding:6px 0}
+.map-frame{border:1px solid rgba(26,36,48,.12);min-height:420px}
+.map-frame iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:grayscale(.3)}
+footer{background:var(--slate);color:#A9B8C6;padding:48px 0 28px;font-size:13.5px}
+.foot-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;margin-bottom:24px}
+.credit{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;text-align:center;font-size:12.5px;opacity:.6}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:#fff;border-top:1px solid rgba(26,36,48,.15);padding:10px 12px;gap:10px}
+.mobile-bar a{flex:1;text-align:center;padding:14px 0;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+.mobile-bar .wa{background:#25D366;color:#fff}.mobile-bar .call{background:var(--slate);color:#fff}.mobile-bar .dir{background:var(--ice-soft);color:var(--slate)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}.fam-grid{grid-template-columns:1fr}.fam{border-right:none;border-bottom:1px solid rgba(26,36,48,.12)}
+  .svc-cols,.c-grid{grid-template-columns:1fr}.gal-grid{columns:2}
+  section{padding:68px 0}.mobile-bar{display:flex}body{padding-bottom:68px}
+}
+@media(max-width:520px){.gal-grid{columns:1}.hero{padding-top:130px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">MIRROR SHINE</div>
+    <nav class="nav-links"><a href="#family">Family</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+    <a class="btn small" href="https://wa.me/917340853265?text=Hi%20Mirror%20Shine!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="where reveal">Dhakoli · Zirakpur</div>
+    <h1 class="reveal"><span class="shine">MIRROR</span><br>SHINE</h1>
+    <p class="tagline reveal">A family beauty salon — where every mirror tells you the same thing: you look luminous.</p>
+    <div class="hero-meta reveal"><span class="stars">★★★★★</span><span><b>5.0</b> · 340 ratings on JustDial</span><span>·</span><span>Hair · Skin · Grooming</span></div>
+    <div class="hero-ctas reveal">
+      <a class="btn" href="https://wa.me/917340853265?text=Hi%20Mirror%20Shine!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn" style="background:transparent;color:var(--slate);border:1px solid var(--slate)" href="#services">View Services</a>
+    </div>
+    <div class="hero-img reveal"><img src="images/g-gloss-1.jpg" alt="Mirror-shine glossy hair at Mirror Shine salon"></div>
+    <div class="scroll-cue">Scroll ↓</div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-row">
+    <div><b>5.0★</b><span>340 JustDial Reviews</span></div>
+    <div><b>Family</b><span>Men · Women · Kids</span></div>
+    <div><b>Full</b><span>Hair + Beauty Parlour</span></div>
+    <div><b>Dhakoli</b><span>Srishti Plaza</span></div>
+  </div>
+</div>
+
+<section id="family">
+  <div class="wrap">
+    <div class="kicker reveal">One Salon, Everyone</div>
+    <h2 class="st reveal">Built for the whole family</h2>
+    <p class="sub reveal">No separate trips, no compromises. Dad's cut, mom's facial and the kids' trim — one visit, one roof.</p>
+    <div class="fam-grid reveal">
+      <div class="fam"><div class="num">01</div><h3>For Her</h3><p>Cuts, colour, keratin, facials, waxing, party &amp; bridal makeup — the complete beauty parlour menu.</p><a class="link" href="#services">See her menu</a></div>
+      <div class="fam"><div class="num">02</div><h3>For Him</h3><p>Precision cuts, beard sculpting, de-tan, head massage — sharp grooming without the fuss.</p><a class="link" href="#services">See his menu</a></div>
+      <div class="fam"><div class="num">03</div><h3>For Kids</h3><p>Patient, gentle stylists for first haircuts and school trims. Parents stay right beside the chair.</p><a class="link" href="#services">See kids' menu</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="svc-sec">
+  <div class="wrap">
+    <div class="kicker reveal">Price List</div>
+    <h2 class="st reveal">The menu</h2>
+    <p class="sub reveal">Moderate, honest pricing — published openly. Confirm your quote on WhatsApp before you visit.</p>
+    <div class="svc-cols reveal">
+      <div class="svc-group">
+        <h3>Hair — Women</h3>
+        <div class="svc-row"><div class="n">Haircut + Wash + Blow-dry<small>Any length</small></div><div class="p">₹599*</div></div>
+        <div class="svc-row"><div class="n">Global Colour<small>L'Oréal / Matrix</small></div><div class="p">₹2,999*</div></div>
+        <div class="svc-row"><div class="n">Highlights<small>From</small></div><div class="p">₹3,999*</div></div>
+        <div class="svc-row"><div class="n">Smoothening / Keratin<small>Length-tiered</small></div><div class="p">₹4,499*</div></div>
+        <div class="svc-row"><div class="n">Hair Spa<small>60 min</small></div><div class="p">₹1,299*</div></div>
+        <h3>Skin &amp; Beauty</h3>
+        <div class="svc-row"><div class="n">Signature Facial<small>60 min</small></div><div class="p">₹1,499*</div></div>
+        <div class="svc-row"><div class="n">Cleanup + De-tan<small>Face &amp; neck</small></div><div class="p">₹799*</div></div>
+        <div class="svc-row"><div class="n">Full Arms + Legs Waxing<small>RICA</small></div><div class="p">₹899*</div></div>
+        <div class="svc-row"><div class="n">Party Makeup<small>HD, lashes included</small></div><div class="p">₹3,000*</div></div>
+      </div>
+      <div class="svc-group">
+        <h3>Hair — Men</h3>
+        <div class="svc-row"><div class="n">Haircut + Wash<small>Precision cut</small></div><div class="p">₹249*</div></div>
+        <div class="svc-row"><div class="n">Beard Sculpt<small>Hot towel finish</small></div><div class="p">₹199*</div></div>
+        <div class="svc-row"><div class="n">Cut + Beard Combo<small></small></div><div class="p">₹399*</div></div>
+        <div class="svc-row"><div class="n">Head Massage<small>30 min</small></div><div class="p">₹449*</div></div>
+        <h3>Kids</h3>
+        <div class="svc-row"><div class="n">Kids' Haircut<small>Under 12</small></div><div class="p">₹199*</div></div>
+        <div class="svc-row"><div class="n">First Haircut Ceremony<small>Keepsake lock included</small></div><div class="p">₹349*</div></div>
+        <h3>Bridal</h3>
+        <div class="svc-row"><div class="n">HD Bridal Makeup<small>Trial available</small></div><div class="p">₹12,000*</div></div>
+        <div class="svc-row"><div class="n">Engagement Look<small></small></div><div class="p">₹6,500*</div></div>
+      </div>
+    </div>
+    <p class="fine">*Prices indicative — final quote confirmed on WhatsApp. + taxes as applicable. Family combos on request.</p>
+    <div style="margin-top:34px"><a class="btn" style="background:#fff;color:var(--slate)" href="https://wa.me/917340853265?text=Hi%20Mirror%20Shine!%20I%20want%20to%20book%20a%20family%20appointment." target="_blank" rel="noopener">Book Family Visit</a></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="kicker reveal">Portfolio</div>
+    <h2 class="st reveal">The shine, up close</h2>
+    <p class="sub reveal">Real work from our chairs. More daily on <a href="https://www.instagram.com/mirror_shine_salon" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">@mirror_shine_salon</a>.</p>
+    <div class="gal-grid reveal">
+      <div class="gal-item"><img src="images/g-gloss-2.jpg" alt="Glossy finished hair" loading="lazy"><div class="gal-cap">Gloss finish · Colour + gloss</div></div>
+      <div class="gal-item"><img src="images/work-real-1.jpg" alt="Real salon work at Mirror Shine" loading="lazy"><div class="gal-cap">In-studio work</div></div>
+      <div class="gal-item"><img src="images/g-facial.jpg" alt="Facial treatment glow" loading="lazy"><div class="gal-cap">Skin ritual · Post-facial glow</div></div>
+      <div class="gal-item"><img src="images/work-real-2.jpg" alt="Real salon work at Mirror Shine" loading="lazy"><div class="gal-cap">In-studio work</div></div>
+      <div class="gal-item"><img src="images/g-gloss-1.jpg" alt="Mirror shine hair closeup" loading="lazy"><div class="gal-cap">The mirror-shine effect</div></div>
+      <div class="gal-item"><img src="images/work-real-3.jpg" alt="Real salon work at Mirror Shine" loading="lazy"><div class="gal-cap">In-studio work</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="rev-sec">
+  <div class="wrap">
+    <div class="kicker reveal" style="text-align:center">Reviews</div>
+    <div class="rev-big reveal">
+      <blockquote id="revQuote">"Took my whole family — my wife's facial, my haircut, my daughter's first trim. Everyone walked out happy. Rare to find one place that does all three well."</blockquote>
+      <div class="who" id="revWho">Rajesh K. · Family visit · Dhakoli</div>
+      <div class="rev-dots"><span class="on" data-i="0"></span><span data-i="1"></span><span data-i="2"></span></div>
+    </div>
+    <div class="badge-row reveal">
+      <div class="badge">★ 5.0 on JustDial</div><div class="badge">340 verified ratings</div><div class="badge">Family salon</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="kicker reveal">Visit</div>
+    <h2 class="st reveal">Find your shine</h2>
+    <div class="c-grid" style="margin-top:44px">
+      <div class="reveal">
+        <div class="c-block"><b>Address</b><div class="big">SCO 9, Lower Ground, Srishti Plaza,<br>Old Ambala Road, Zirakpur</div></div>
+        <div class="c-block"><b>Phone</b><div class="big"><a href="tel:+917340853265">+91 73408 53265</a></div></div>
+        <div class="c-block"><b>WhatsApp</b><div><a href="https://wa.me/917340853265?text=Hi%20Mirror%20Shine!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">Book in 30 seconds →</a></div></div>
+        <div class="c-block"><b>Instagram</b><div><a href="https://www.instagram.com/mirror_shine_salon" target="_blank" rel="noopener">@mirror_shine_salon</a></div></div>
+        <div class="c-block"><b>Hours</b><div class="hours"><div><span>Mon – Sat</span><span>10 AM – 8 PM</span></div><div><span>Sunday</span><span>10 AM – 6 PM</span></div></div></div>
+      </div>
+      <div class="map-frame reveal"><iframe title="Mirror Shine location map" src="https://www.google.com/maps?q=Mirror+Shine+Family+Beauty+Salon+Srishti+Plaza+Dhakoli+Zirakpur&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand" style="margin-bottom:8px">MIRROR SHINE</div>A Family Beauty Salon<br>Dhakoli, Zirakpur</div>
+      <div><b style="color:#fff">Explore</b><br><a href="#family">Family</a><br><a href="#services">Services</a><br><a href="#gallery">Gallery</a></div>
+      <div><b style="color:#fff">Book</b><br><a href="tel:+917340853265">+91 73408 53265</a><br><a href="https://wa.me/917340853265" target="_blank" rel="noopener">WhatsApp</a><br><a href="https://www.instagram.com/mirror_shine_salon" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <div class="credit">© 2026 Mirror Shine — A Family Beauty Salon · Demo by StyleFrame Co.</div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+917340853265">Call</a>
+  <a class="wa" href="https://wa.me/917340853265?text=Hi%20Mirror%20Shine!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="dir" href="https://www.google.com/maps?q=Mirror+Shine+Family+Beauty+Salon+Srishti+Plaza+Dhakoli+Zirakpur" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+const quotes=[
+  {q:"\"Took my whole family — my wife's facial, my haircut, my daughter's first trim. Everyone walked out happy. Rare to find one place that does all three well.\"",w:"Rajesh K. · Family visit · Dhakoli"},
+  {q:"\"My smoothening still looks salon-fresh after two months. They explained every step and never pushed extra services.\"",w:"Pooja S. · Keratin · Zirakpur"},
+  {q:"\"Booked my engagement makeup here. HD base lasted the entire evening, and the trial beforehand removed all my stress.\"",w:"Kavya M. · Bridal · Panchkula"}
+];
+let qi=0;const qEl=document.getElementById('revQuote'),wEl=document.getElementById('revWho'),dots=document.querySelectorAll('.rev-dots span');
+function showQ(i){qi=i;qEl.textContent=quotes[i].q;wEl.textContent=quotes[i].w;dots.forEach((d,j)=>d.classList.toggle('on',j===i));}
+dots.forEach(d=>d.addEventListener('click',()=>showQ(+d.dataset.i)));
+setInterval(()=>showQ((qi+1)%quotes.length),6000);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

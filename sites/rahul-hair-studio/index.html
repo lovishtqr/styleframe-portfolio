@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Hair Studio &amp; A Family Salon — Sector 67, Mohali | 4.7★ Family Salon</title>
+<meta name="description" content="Rahul Hair Studio & A Family Salon, Airport Road Sector 67 Mohali — 4.7★ rated (105 ratings). Haircuts, facials, bridal makeup for the whole family. DM us on Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+:root{--mari:#D97A1F;--mari2:#F0A04B;--esp:#3B2314;--esp2:#2A180D;--cream:#FFF6E8;--cream2:#FBEEDC;--teal:#14666B;--ink:#3B2314;--dim:#8A6F52;--line:#EADBC2}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.25rem}
+.serif{font-family:'Fraunces',Georgia,serif}
+.eyebrow{letter-spacing:.34em;font-size:.7rem;color:var(--mari);text-transform:uppercase;margin-bottom:1rem;font-weight:700}
+h2.sec{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(1.9rem,4.8vw,2.9rem);line-height:1.18;margin-bottom:.8rem}
+.sec-sub{color:var(--dim);max-width:38rem;margin-bottom:2.6rem}
+section{padding:5rem 0}
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,246,232,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:.85rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.brand{text-decoration:none;font-family:'Fraunces',Georgia,serif;font-size:1.15rem;color:var(--esp)}
+.brand b{color:var(--mari);font-weight:600}
+.links{display:flex;gap:1.4rem;list-style:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.links a{text-decoration:none;color:var(--dim)}.links a:hover{color:var(--mari)}
+.nav-cta{text-decoration:none;background:var(--mari);color:#fff;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:.75rem 1.5rem;font-weight:700;border-radius:999px}
+.nav-cta:hover{background:var(--esp)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem}
+.burger span{width:26px;height:2px;background:var(--mari)}
+/* hero split */
+.hero{padding:3.5rem 0 4.5rem}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center}
+.rating{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.45rem 1.1rem;font-size:.78rem;letter-spacing:.08em;color:var(--ink);margin-bottom:1.6rem;box-shadow:0 4px 14px rgba(59,35,20,.06)}
+.rating .stars{color:var(--mari);letter-spacing:.12em}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:clamp(2.4rem,5.6vw,3.9rem);line-height:1.12;margin-bottom:1.2rem}
+.hero h1 em{color:var(--mari);font-style:italic}
+.hero p.lede{color:var(--dim);max-width:30rem;margin-bottom:2rem}
+.cta-row{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:700;padding:1.05rem 2.2rem;border-radius:999px}
+.btn.solid{background:var(--mari);color:#fff}.btn.solid:hover{background:var(--esp)}
+.btn.ghost{border:1.5px solid var(--esp);color:var(--esp)}.btn.ghost:hover{background:var(--esp);color:#fff}
+.hero-meta{display:flex;gap:1.8rem;flex-wrap:wrap;margin-top:2.2rem;font-size:.82rem;color:var(--dim)}
+.hero-meta b{color:var(--esp)}
+.hero-visual{position:relative}
+.hero-visual .main{border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(59,35,20,.18)}
+.hero-visual .main img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.float-card{position:absolute;left:-2rem;bottom:2.4rem;background:#fff;border-radius:16px;padding:1.2rem 1.4rem;box-shadow:0 18px 44px rgba(59,35,20,.16);max-width:250px;border:1px solid var(--line)}
+.float-card .stars{color:var(--mari);letter-spacing:.2em;font-size:.85rem;margin-bottom:.5rem}
+.float-card p{font-size:.85rem;color:var(--ink);font-style:italic;line-height:1.55;margin-bottom:.5rem}
+.float-card .who{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.float-badge{position:absolute;top:1.4rem;right:-.8rem;background:var(--teal);color:#fff;border-radius:999px;padding:.7rem 1.3rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;box-shadow:0 10px 26px rgba(20,102,107,.35)}
+/* chips */
+.chips{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.4rem}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.75rem 1.6rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);text-decoration:none;transition:.2s}
+.chip:hover{background:var(--esp);color:#fff;border-color:var(--esp)}
+/* price accordion tabs */
+#prices{background:var(--cream2)}
+.ptabs{display:flex;gap:.6rem;margin-bottom:2rem;flex-wrap:wrap}
+.ptab{border:1.5px solid var(--esp);background:transparent;color:var(--esp);padding:.85rem 2.1rem;border-radius:999px;letter-spacing:.2em;font-size:.74rem;text-transform:uppercase;cursor:pointer;font-family:'Manrope',sans-serif;font-weight:700}
+.ptab.active{background:var(--esp);color:#fff}
+.plist{display:none;grid-template-columns:1fr 1fr;gap:0 3rem;background:#fff;border:1px solid var(--line);border-radius:18px;padding:1rem 2.2rem}
+.plist.active{display:grid}
+.prow{display:flex;align-items:baseline;gap:.7rem;padding:1.05rem 0;border-bottom:1px dashed var(--line)}
+.prow:last-child{border-bottom:none}
+.prow .dots{flex:1;border-bottom:1px dashed var(--line);transform:translateY(-4px)}
+.prow .nm{font-weight:600}
+.prow .nm small{display:block;font-weight:400;color:var(--dim);font-size:.78rem}
+.prow .pr{font-family:'Fraunces',Georgia,serif;font-size:1.25rem;color:var(--mari);white-space:nowrap;font-weight:600}
+.note{margin-top:1.4rem;font-size:.8rem;color:var(--dim);font-style:italic;text-align:center}
+/* family */
+.fam-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.fam{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.fam img{width:100%;height:210px;object-fit:cover}
+.fam .body{padding:1.8rem}
+.fam h3{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:500;margin-bottom:.5rem}
+.fam p{font-size:.88rem;color:var(--dim);margin-bottom:1.1rem}
+.fam .pr{font-family:'Fraunces',Georgia,serif;font-size:1.5rem;color:var(--mari);font-weight:600}
+/* bridal */
+#bridal{background:var(--esp);color:var(--cream)}
+#bridal .eyebrow{color:var(--mari2)}
+#bridal h2.sec{color:#fff}
+#bridal .sec-sub{color:#C9AE8B}
+.bride-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.bcard{background:var(--esp2);border:1px solid rgba(240,160,75,.3);border-radius:18px;padding:2.4rem 2rem;position:relative;display:flex;flex-direction:column}
+.bcard.hot{border-color:var(--mari2);background:#2E1C0F}
+.bcard .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--mari);color:#fff;font-size:.64rem;letter-spacing:.24em;padding:.4rem 1.3rem;border-radius:999px;font-weight:700;white-space:nowrap}
+.bcard h3{font-family:'Fraunces',Georgia,serif;font-size:1.55rem;font-weight:500;margin-bottom:.3rem;color:#fff}
+.bcard .amt{font-family:'Fraunces',Georgia,serif;font-size:2.3rem;color:var(--mari2);margin:.5rem 0 1.1rem}
+.bcard .per{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#C9AE8B}
+.bcard ul{list-style:none;margin-bottom:1.6rem;flex:1}
+.bcard li{padding:.42rem 0 .42rem 1.5rem;position:relative;color:#D9C4A6;font-size:.88rem}
+.bcard li::before{content:"✦";position:absolute;left:0;color:var(--mari2);font-size:.7rem;top:.62rem}
+.bcard a{text-decoration:none;text-align:center;background:var(--mari);color:#fff;border-radius:999px;letter-spacing:.18em;font-size:.74rem;text-transform:uppercase;padding:1rem;font-weight:700}
+.bcard a:hover{background:var(--mari2);color:var(--esp)}
+/* gallery/ig */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.ig-grid a{position:relative;display:block;border-radius:14px;overflow:hidden}
+.ig-grid img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .7s ease}
+.ig-grid a:hover img{transform:scale(1.06)}
+.ig-grid .ov{position:absolute;inset:0;background:rgba(59,35,20,.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:.3s;color:#fff;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+.ig-grid a:hover .ov{opacity:1}
+.ig-cta{text-align:center;margin-top:2.2rem}
+/* reviews */
+#reviews{background:var(--cream2)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.rev{background:#fff;border:1px solid var(--line);border-radius:18px;padding:2.1rem}
+.rev .stars{color:var(--mari);letter-spacing:.2em;margin-bottom:.9rem;font-size:.85rem}
+.rev .q{font-style:italic;color:var(--ink);font-size:.94rem;margin-bottom:1.1rem;line-height:1.65}
+.rev .who{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.rev .svc{font-size:.76rem;color:var(--mari);margin-top:.15rem}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;margin-top:.5rem}
+.cbox h4{letter-spacing:.3em;font-size:.72rem;text-transform:uppercase;color:var(--mari);margin-bottom:1rem;font-weight:700}
+.cbox p{color:var(--dim);margin-bottom:.5rem}
+.dm-big{display:inline-block;margin-top:1.2rem;background:linear-gradient(45deg,#F09433,#DC2743,#BC1888);color:#fff;text-decoration:none;padding:1.05rem 2.4rem;border-radius:999px;letter-spacing:.14em;font-size:.8rem;text-transform:uppercase;font-weight:700}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.9rem;color:var(--dim)}
+.hours td:last-child{text-align:right;color:var(--ink)}
+.map{border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.map iframe{width:100%;height:380px;border:0;display:block}
+footer{background:var(--esp);color:#C9AE8B;padding:3rem 0 6.5rem;text-align:center;font-size:.82rem}
+footer .fbrand{font-family:'Fraunces',Georgia,serif;color:var(--mari2);letter-spacing:.16em;font-size:1.2rem;margin-bottom:.6rem}
+.wa-float{display:none}
+.mobile-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,246,232,.98);border-top:1px solid var(--line)}
+.mobile-bar a{flex:1;text-align:center;text-decoration:none;color:var(--esp);padding:1.05rem .4rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.mobile-bar a.dm{background:var(--mari);color:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+.links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(255,246,232,.98);flex-direction:column;padding:1rem 1.5rem;gap:1rem}
+.links.open{display:flex}
+.burger{display:flex}
+.nav-cta{display:none}
+.hero-grid{grid-template-columns:1fr}
+.float-card{left:.8rem;bottom:1.2rem}
+.plist.active{grid-template-columns:1fr;padding:1rem 1.4rem}
+.fam-grid,.bride-grid,.rev-grid{grid-template-columns:1fr}
+.ig-grid{grid-template-columns:1fr 1fr}
+.contact-grid{grid-template-columns:1fr}
+.mobile-bar{display:flex}
+section{padding:3.6rem 0}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-in">
+<a class="brand" href="#top">Rahul <b>Hair Studio</b></a>
+<div class="burger" id="burger"><span></span><span></span><span></span></div>
+<ul class="links" id="links">
+<li><a href="#prices">Price List</a></li><li><a href="#family">Family</a></li><li><a href="#bridal">Bridal</a></li><li><a href="#gallery">Work</a></li><li><a href="#visit">Visit</a></li>
+</ul>
+<a class="nav-cta" href="https://ig.me/m/rahulhairstudiomohali67">DM to Book</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap hero-grid">
+<div>
+<div class="rating reveal"><span class="stars">★★★★★</span> 4.7 · 105 ratings on JustDial</div>
+<h1 class="reveal">One salon for <em>the whole family.</em></h1>
+<p class="lede reveal">Sector 67's warm neighbourhood studio — dad's haircut, mom's facial, the kids' first trim, and bridal mornings, all under one friendly roof.</p>
+<div class="cta-row reveal">
+<a class="btn solid" href="https://ig.me/m/rahulhairstudiomohali67">DM Us on Instagram</a>
+<a class="btn ghost" href="#prices">View Price List</a>
+</div>
+<div class="hero-meta reveal"><span><b>Airport Road</b>, Sector 67, Mohali</span><span>Open Daily · 10 AM – 8 PM</span></div>
+</div>
+<div class="hero-visual reveal">
+<div class="main"><img src="images/hero.jpg" alt="Rahul Hair Studio — family salon"></div>
+<div class="float-card"><div class="stars">★★★★★</div><p>"Took my whole family — kids loved it, my wife's facial was superb."</p><div class="who">Gurpreet · Family Visit</div></div>
+<div class="float-badge">Family Salon</div>
+</div>
+</div></header>
+
+<section style="padding-top:1rem"><div class="wrap">
+<div class="eyebrow reveal" style="text-align:center">Jump Straight To</div>
+<div class="chips reveal">
+<a class="chip" href="#prices">Haircuts</a>
+<a class="chip" href="#prices">Facials</a>
+<a class="chip" href="#bridal">Bridal</a>
+<a class="chip" href="#family">Family Packs</a>
+<a class="chip" href="https://ig.me/m/rahulhairstudiomohali67">DM to Book</a>
+</div>
+</div></section>
+
+<section id="prices"><div class="wrap">
+<div class="eyebrow reveal">Honest Pricing</div>
+<h2 class="sec reveal">The family <span style="color:var(--mari)">rate card</span></h2>
+<p class="sec-sub reveal">One menu for everyone — men, women and little ones. Tap a tab.</p>
+<div class="ptabs reveal">
+<button class="ptab active" data-p="women">Women</button>
+<button class="ptab" data-p="men">Men</button>
+<button class="ptab" data-p="kids">Kids &amp; Family</button>
+</div>
+<div class="plist active reveal" id="pl-women">
+<div>
+<div class="prow"><span class="nm">Haircut + Wash + Blow-Dry<small>Signature finish</small></span><span class="dots"></span><span class="pr">₹499</span></div>
+<div class="prow"><span class="nm">Glow Facial<small>60 minutes</small></span><span class="dots"></span><span class="pr">₹1,299</span></div>
+<div class="prow"><span class="nm">Clean-Up<small>Express radiance</small></span><span class="dots"></span><span class="pr">₹599</span></div>
+<div class="prow"><span class="nm">Hair Spa<small>Deep nourish</small></span><span class="dots"></span><span class="pr">₹999</span></div>
+</div>
+<div>
+<div class="prow"><span class="nm">Global Hair Colour<small>From</small></span><span class="dots"></span><span class="pr">₹2,499</span></div>
+<div class="prow"><span class="nm">Party Makeup<small>Lashes included</small></span><span class="dots"></span><span class="pr">₹2,499</span></div>
+<div class="prow"><span class="nm">Waxing — Full Arms + Legs<small>RICA</small></span><span class="dots"></span><span class="pr">₹1,199</span></div>
+<div class="prow"><span class="nm">Threading<small>Eyebrows · upper lip</small></span><span class="dots"></span><span class="pr">₹50</span></div>
+</div>
+</div>
+<div class="plist reveal" id="pl-men">
+<div>
+<div class="prow"><span class="nm">Haircut<small>Classic / trendy</small></span><span class="dots"></span><span class="pr">₹199</span></div>
+<div class="prow"><span class="nm">Beard Trim + Shape<small>With hot towel</small></span><span class="dots"></span><span class="pr">₹149</span></div>
+<div class="prow"><span class="nm">Cut + Beard Combo<small>The full reset</small></span><span class="dots"></span><span class="pr">₹299</span></div>
+</div>
+<div>
+<div class="prow"><span class="nm">Head Massage<small>Champi · 30 min</small></span><span class="dots"></span><span class="pr">₹399</span></div>
+<div class="prow"><span class="nm">De-Tan<small>Face + neck</small></span><span class="dots"></span><span class="pr">₹499</span></div>
+<div class="prow"><span class="nm">Hair Colour (Men)<small>Grey coverage</small></span><span class="dots"></span><span class="pr">₹699</span></div>
+</div>
+</div>
+<div class="plist reveal" id="pl-kids">
+<div>
+<div class="prow"><span class="nm">Kids Haircut (under 10)<small>Patient, gentle stylists</small></span><span class="dots"></span><span class="pr">₹199</span></div>
+<div class="prow"><span class="nm">Family of 4 Pack<small>2 cuts + 2 cleanups</small></span><span class="dots"></span><span class="pr">₹1,499</span></div>
+</div>
+<div>
+<div class="prow"><span class="nm">Mom + Daughter Duo<small>Facial + haircut</small></span><span class="dots"></span><span class="pr">₹1,599</span></div>
+<div class="prow"><span class="nm">Dad + Son Duo<small>Cut + beard</small></span><span class="dots"></span><span class="pr">₹449</span></div>
+</div>
+</div>
+<p class="note">† Indicative pricing — DM us on Instagram for the confirmed quote.</p>
+</div></section>
+
+<section id="family"><div class="wrap">
+<div class="eyebrow reveal">Made for Families</div>
+<h2 class="sec reveal">Everyone leaves <span style="color:var(--mari)">happy</span></h2>
+<p class="sec-sub reveal">A real family salon: patient with kids, gentle with grandparents, and honest with pricing.</p>
+<div class="fam-grid">
+<div class="fam reveal"><img src="images/cut.jpg" alt="Haircut at Rahul Hair Studio" loading="lazy"><div class="body"><h3>Sharp Cuts, Zero Fuss</h3><p>Classic and trendy cuts for men, women and kids — finished properly, priced fairly.</p><div class="pr">from ₹199</div></div></div>
+<div class="fam reveal"><img src="images/facial.jpg" alt="Facial at Rahul Hair Studio" loading="lazy"><div class="body"><h3>Skin That Glows</h3><p>Clean-ups to full glow facials — the 60-minute reset every mom deserves.</p><div class="pr">from ₹599</div></div></div>
+<div class="fam reveal"><img src="images/makeup.jpg" alt="Makeup at Rahul Hair Studio" loading="lazy"><div class="body"><h3>Party &amp; Occasion</h3><p>Makeup and styling for family functions, festivals and special days.</p><div class="pr">from ₹2,499</div></div></div>
+</div>
+</div></section>
+
+<section id="bridal"><div class="wrap">
+<div class="eyebrow reveal">Shaadi Season</div>
+<h2 class="sec reveal">Bridal, with a <span style="color:var(--mari2)">family touch</span></h2>
+<p class="sec-sub reveal">Trial included · travels to venue · 30% advance locks your date.</p>
+<div class="bride-grid">
+<div class="bcard reveal"><h3>HD Bridal</h3><div class="per">per look</div><div class="amt">₹15,000</div><ul><li>HD makeup, long-wear</li><li>Hairstyling</li><li>Draping</li><li>Lashes included</li></ul><a href="https://ig.me/m/rahulhairstudiomohali67">DM to Enquire</a></div>
+<div class="bcard hot reveal"><div class="flag">Most Booked</div><h3>Airbrush Bridal</h3><div class="per">per look</div><div class="amt">₹25,000</div><ul><li>Airbrush flawless finish</li><li>Luxury hairstyling</li><li>Draping + dupatta setting</li><li>Trial included</li></ul><a href="https://ig.me/m/rahulhairstudiomohali67">DM to Enquire</a></div>
+<div class="bcard reveal"><h3>Bride + Family</h3><div class="per">package</div><div class="amt">₹35,000</div><ul><li>Everything in Airbrush</li><li>Family makeup (2)</li><li>Groom styling</li><li>Venue travel</li></ul><a href="https://ig.me/m/rahulhairstudiomohali67">DM to Enquire</a></div>
+</div>
+<p class="note" style="color:#C9AE8B">† Indicative pricing — DM for confirmed quote. Trial adjusted in final payment.</p>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<div class="eyebrow reveal">Our Work</div>
+<h2 class="sec reveal">Fresh from <span style="color:var(--mari)">our chairs</span></h2>
+<p class="sec-sub reveal">Tap any photo to see more on Instagram.</p>
+<div class="ig-grid reveal">
+<a href="https://instagram.com/rahulhairstudiomohali67"><img src="images/bridal.jpg" alt="Bridal work" loading="lazy"><span class="ov">View on Instagram</span></a>
+<a href="https://instagram.com/rahulhairstudiomohali67"><img src="images/facial.jpg" alt="Facial glow" loading="lazy"><span class="ov">View on Instagram</span></a>
+<a href="https://instagram.com/rahulhairstudiomohali67"><img src="images/hero.jpg" alt="Salon work" loading="lazy"><span class="ov">View on Instagram</span></a>
+</div>
+<div class="ig-cta reveal"><a class="btn ghost" href="https://instagram.com/rahulhairstudiomohali67">Follow @rahulhairstudiomohali67 · 12,950 followers</a></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+<div class="eyebrow reveal">Neighbourhood Love</div>
+<h2 class="sec reveal">4.7★ from <span style="color:var(--mari)">105 ratings</span></h2>
+<div class="rev-grid" style="margin-top:2.4rem">
+<div class="rev reveal"><div class="stars">★★★★★</div><p class="q">"My 6-year-old actually sat still for his haircut — the team is so patient with kids. Our go-to family salon now."</p><div class="who">Manpreet K.</div><div class="svc">Kids Haircut</div></div>
+<div class="rev reveal"><div class="stars">★★★★★</div><p class="q">"Got my bridal makeup here. Looked natural in photos and lasted the whole day. The trial helped me decide stress-free."</p><div class="who">Komal S.</div><div class="svc">HD Bridal</div></div>
+<div class="rev reveal"><div class="stars">★★★★☆</div><p class="q">"Fair prices, no pushing extra services. The glow facial before my sister's wedding got me so many compliments."</p><div class="who">Ravinder G.</div><div class="svc">Glow Facial</div></div>
+</div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+<div class="eyebrow reveal">Visit Us</div>
+<h2 class="sec reveal">Come say <span style="color:var(--mari)">sat sri akal</span></h2>
+<div class="contact-grid" style="margin-top:2rem">
+<div class="cbox reveal">
+<h4>Address</h4>
+<p>Airport Road, Sector 67,<br>Mohali — 160062</p>
+<h4 style="margin-top:1.6rem">Book / Enquire</h4>
+<p>We take bookings on Instagram DM — fastest reply, usually within the hour.</p>
+<a class="dm-big" href="https://ig.me/m/rahulhairstudiomohali67">DM @rahulhairstudiomohali67</a>
+<h4 style="margin-top:1.8rem">Hours</h4>
+<table class="hours"><tr><td>Monday – Sunday</td><td>10:00 AM – 8:00 PM</td></tr></table>
+</div>
+<div class="map reveal"><iframe title="Rahul Hair Studio map" loading="lazy" src="https://www.google.com/maps?q=Rahul+Hair+Studio+Airport+Road+Sector+67+Mohali&output=embed"></iframe></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div class="fbrand">RAHUL HAIR STUDIO <span style="color:#8A6F52">&amp; A FAMILY SALON</span></div>
+<p>Sector 67, Mohali · <a href="https://instagram.com/rahulhairstudiomohali67" style="color:var(--mari2)">Instagram</a></p>
+<p style="margin-top:1rem">Demo by StyleFrame Co.</p>
+</div></footer>
+
+<div class="mobile-bar"><a class="dm" href="https://ig.me/m/rahulhairstudiomohali67">DM to Book</a><a href="#prices">Prices</a><a href="#visit">Visit</a></div>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){document.getElementById('links').classList.toggle('open')});
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+document.querySelectorAll('.ptab').forEach(t=>t.addEventListener('click',()=>{
+document.querySelectorAll('.ptab').forEach(x=>x.classList.remove('active'));
+document.querySelectorAll('.plist').forEach(x=>x.classList.remove('active'));
+t.classList.add('active');document.getElementById('pl-'+t.dataset.p).classList.add('active')}));
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

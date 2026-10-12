@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaira Studio Unisex Salon — Nails, Lashes & Beauty | Zirakpur</title>
+<meta name="description" content="Zaira Studio Unisex Salon, Oxford Street Zirakpur — soft-gel nails, nail art, cat-eye nails, eyelash extensions. Rated 5.0 on JustDial. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --champagne:#F7E7CE; --champagne-soft:#FBF3E4; --rosegold:#B76E79; --rosegold-deep:#9E5460;
+  --plum:#3E2A35; --plum-soft:#6B5560; --white:#FFFFFF; --gold:#D4A24E;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--plum);background:var(--champagne-soft);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:88px 0}
+.label{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--rosegold-deep);font-weight:500;margin-bottom:14px}
+h2.section-title{font-size:clamp(34px,4.5vw,54px);margin-bottom:12px}
+.section-sub{color:var(--plum-soft);max-width:560px;font-size:17px;margin-bottom:44px}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,243,228,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(183,110,121,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;letter-spacing:1px}
+.brand span{color:var(--rosegold)}
+.nav-links{display:flex;gap:28px;font-size:14px;letter-spacing:1.5px;text-transform:uppercase}
+.nav-links a{position:relative}
+.nav-links a:hover{color:var(--rosegold-deep)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--rosegold);color:#fff;border:none;border-radius:999px;padding:15px 34px;font-family:'Jost';font-size:15px;font-weight:500;letter-spacing:1px;cursor:pointer;transition:.3s;box-shadow:0 8px 24px rgba(183,110,121,.3)}
+.btn:hover{background:var(--rosegold-deep);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--rosegold-deep);border:1.5px solid var(--rosegold)}
+.btn.small{padding:11px 24px;font-size:13px}
+/* hero */
+.hero{padding:150px 0 90px;position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 80% 10%,rgba(183,110,121,.16),transparent),var(--champagne-soft)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(48px,6.5vw,88px);font-weight:600;margin-bottom:18px}
+.hero h1 em{color:var(--rosegold);font-style:italic}
+.hero p.lead{font-size:18px;color:var(--plum-soft);max-width:460px;margin-bottom:26px}
+.rating-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(183,110,121,.25);border-radius:999px;padding:9px 20px;font-size:14px;margin-bottom:26px;box-shadow:0 4px 14px rgba(183,110,121,.12)}
+.stars{color:#E8A020;letter-spacing:2px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{position:relative}
+.hero-main-img{border-radius:28px;box-shadow:0 30px 60px rgba(62,42,53,.18);width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.float-card{position:absolute;background:#fff;border-radius:18px;padding:14px 20px;box-shadow:0 14px 34px rgba(62,42,53,.16);font-size:14px;display:flex;align-items:center;gap:12px}
+.float-card .dot{width:11px;height:11px;border-radius:50%;background:#4CAF7D;flex-shrink:0}
+.float-1{top:-22px;right:24px}
+.float-2{bottom:34px;left:-24px}
+.float-card b{font-family:'Cormorant Garamond',serif;font-size:20px;display:block;line-height:1.2}
+.sparkle{position:absolute;font-size:26px;color:var(--rosegold);opacity:.55;animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.9)}50%{opacity:.8;transform:scale(1.15)}}
+/* trust strip */
+.trust{background:var(--plum);color:var(--champagne);padding:30px 0}
+.trust-row{display:flex;justify-content:center;gap:clamp(24px,6vw,80px);flex-wrap:wrap;text-align:center}
+.trust-row div b{font-family:'Cormorant Garamond',serif;font-size:30px;display:block;color:#fff}
+.trust-row div span{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(247,231,206,.7)}
+/* offers */
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.offer-card{background:#fff;border-radius:22px;padding:34px 30px;position:relative;border:1px solid rgba(183,110,121,.2);transition:.35s}
+.offer-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(183,110,121,.18)}
+.offer-card .tag{position:absolute;top:-13px;left:28px;background:var(--rosegold);color:#fff;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:999px}
+.offer-card h3{font-size:28px;margin-bottom:6px}
+.offer-card .old{color:var(--plum-soft);text-decoration:line-through;font-size:15px}
+.offer-card .now{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--rosegold-deep);line-height:1.1}
+.offer-card .now small{font-family:'Jost';font-size:13px;color:var(--plum-soft)}
+.offer-card p{font-size:14px;color:var(--plum-soft);margin:10px 0 18px}
+.fine{font-size:12.5px;color:var(--plum-soft);margin-top:26px;font-style:italic}
+/* services */
+.services-sec{background:#fff}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.tab{border:1.5px solid rgba(183,110,121,.4);background:transparent;color:var(--plum);border-radius:999px;padding:11px 28px;font-family:'Jost';font-size:14px;letter-spacing:1px;cursor:pointer;transition:.25s}
+.tab.active,.tab:hover{background:var(--rosegold);border-color:var(--rosegold);color:#fff}
+.menu{display:none;grid-template-columns:1fr 1fr;gap:0 48px}
+.menu.active{display:grid}
+.menu-item{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px dotted rgba(183,110,121,.45)}
+.menu-item .name{font-weight:500;font-size:16.5px}
+.menu-item .name small{display:block;font-weight:300;color:var(--plum-soft);font-size:13.5px}
+.price{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--rosegold-deep);white-space:nowrap}
+/* membership */
+.member{background:linear-gradient(135deg,#3E2A35,#5A3E4E);color:var(--champagne);border-radius:30px;padding:60px 56px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.member h2{font-size:clamp(30px,3.6vw,44px);color:#fff;margin-bottom:14px}
+.member ul{list-style:none;margin:22px 0;display:grid;gap:12px}
+.member li{display:flex;gap:12px;align-items:center}
+.member li::before{content:"✦";color:var(--gold)}
+.member-card-visual{background:linear-gradient(120deg,#B76E79,#E0A899);border-radius:20px;padding:36px 32px;color:#fff;box-shadow:0 24px 50px rgba(0,0,0,.3);position:relative;overflow:hidden}
+.member-card-visual::after{content:"ZAIRA";position:absolute;bottom:-14px;right:14px;font-family:'Cormorant Garamond',serif;font-size:64px;opacity:.18;letter-spacing:6px}
+.member-card-visual h3{font-size:30px;margin-bottom:8px}
+/* gallery */
+.gal-grid{columns:3;column-gap:18px}
+.gal-item{break-inside:avoid;margin-bottom:18px;border-radius:18px;overflow:hidden;position:relative;cursor:pointer}
+.gal-item img{width:100%;transition:transform .6s}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(62,42,53,.85));color:#fff;padding:34px 18px 14px;font-size:13.5px}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.rev-card{background:#fff;border-radius:20px;padding:32px 28px;border:1px solid rgba(183,110,121,.2)}
+.rev-card .stars{margin-bottom:12px}
+.rev-card p{font-style:italic;color:var(--plum-soft);margin-bottom:16px}
+.rev-card b{font-size:14px;letter-spacing:1px}
+.rev-card small{color:var(--rosegold-deep);font-size:12.5px;display:block}
+/* contact */
+.contact-sec{background:var(--plum);color:var(--champagne)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-sec h2{color:#fff}
+.contact-info{display:grid;gap:22px;margin-top:26px}
+.c-row{display:flex;gap:16px;align-items:flex-start}
+.c-ico{width:46px;height:46px;border-radius:50%;background:rgba(183,110,121,.25);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.c-row b{display:block;color:#fff;letter-spacing:1px;font-size:14px;text-transform:uppercase;margin-bottom:4px}
+.map-frame{border-radius:22px;overflow:hidden;border:1px solid rgba(183,110,121,.3);min-height:380px}
+.map-frame iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+/* footer */
+footer{background:#2A1D25;color:rgba(247,231,206,.75);padding:44px 0 30px;font-size:14px}
+.foot-grid{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;margin-bottom:26px}
+footer .credit{border-top:1px solid rgba(247,231,206,.15);padding-top:20px;text-align:center;font-size:13px;color:rgba(247,231,206,.55)}
+/* sticky mobile bar */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:#fff;border-top:1px solid rgba(183,110,121,.25);padding:10px 12px;gap:10px}
+.mobile-bar a{flex:1;text-align:center;padding:14px 0;border-radius:12px;font-size:14px;font-weight:600;letter-spacing:.5px}
+.mobile-bar .wa{background:#25D366;color:#fff}
+.mobile-bar .call{background:var(--rosegold);color:#fff}
+.mobile-bar .dir{background:var(--champagne);color:var(--plum)}
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:99;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .hero-grid,.member,.contact-grid{grid-template-columns:1fr}
+  .menu{grid-template-columns:1fr}
+  .gal-grid{columns:2}
+  section{padding:64px 0}
+  .member{padding:44px 28px}
+  .float-2{left:8px}
+  .mobile-bar{display:flex}
+  .wa-float{display:none}
+  body{padding-bottom:70px}
+}
+@media(max-width:520px){.gal-grid{columns:1}.hero{padding-top:120px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Zaira <span>Studio</span></div>
+    <nav class="nav-links">
+      <a href="#offers">Offers</a><a href="#services">Services</a><a href="#membership">Membership</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn small" href="https://wa.me/917087728370?text=Hi%20Zaira%20Studio!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="sparkle" style="top:130px;left:8%">✦</span>
+  <span class="sparkle" style="top:220px;right:6%;animation-delay:1.2s">✦</span>
+  <span class="sparkle" style="bottom:120px;left:44%;animation-delay:2s">✦</span>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="rating-badge"><span class="stars">★★★★★</span> <b>5.0</b>&nbsp;· 160 ratings on JustDial</div>
+      <h1>Nails that <em>shine</em>, lashes that speak.</h1>
+      <p class="lead">Zirakpur's blush-pink nail &amp; lash bar — soft-gel nails, cat-eye art and featherlight lash extensions, done with chrome-finish precision.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="https://wa.me/917087728370?text=Hi%20Zaira%20Studio!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn ghost" href="#services">View Price List</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="hero-main-img" src="images/hero-real.jpg" alt="Zaira Studio Unisex Salon, Oxford Street Zirakpur">
+      <div class="float-card float-1"><span class="dot"></span><div><b>Open Today</b>10 AM – 8 PM</div></div>
+      <div class="float-card float-2"><div><b>Soft-Gel Nails</b>from ₹1,499*</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-row">
+    <div><b>5.0★</b><span>JustDial Rating</span></div>
+    <div><b>160+</b><span>Verified Reviews</span></div>
+    <div><b>Nail Bar</b><span>Specialist Studio</span></div>
+    <div><b>Unisex</b><span>Hair · Skin · Nails</span></div>
+  </div>
+</div>
+
+<section id="offers">
+  <div class="wrap">
+    <div class="label reveal">Festive Specials</div>
+    <h2 class="section-title reveal">Flat-price offers, no fine-print games</h2>
+    <p class="section-sub reveal">Walk in with the offer, walk out glowing. Show this page at the studio to claim.</p>
+    <div class="offer-grid">
+      <div class="offer-card reveal"><span class="tag">Most Loved</span><h3>Soft-Gel Nail Extensions</h3><div class="old">₹2,200</div><div class="now">FLAT ₹1,499 <small>*+ taxes</small></div><p>Full set soft-gel extensions with shape of your choice. Valid Mon–Thu.</p><a class="btn small" href="https://wa.me/917087728370?text=Hi!%20I%20want%20the%20Soft-Gel%20Nails%20offer%20at%20Zaira%20Studio." target="_blank" rel="noopener">Claim Offer</a></div>
+      <div class="offer-card reveal"><span class="tag">Trending</span><h3>Cat-Eye Nail Art</h3><div class="old">₹1,400</div><div class="now">FLAT ₹999 <small>*+ taxes</small></div><p>Magnetic cat-eye art on any base — chrome finish included. Valid all week.</p><a class="btn small" href="https://wa.me/917087728370?text=Hi!%20I%20want%20the%20Cat-Eye%20Nail%20Art%20offer%20at%20Zaira%20Studio." target="_blank" rel="noopener">Claim Offer</a></div>
+      <div class="offer-card reveal"><span class="tag">Limited</span><h3>Classic Lash Extensions</h3><div class="old">₹3,500</div><div class="now">FLAT ₹2,499 <small>*+ taxes</small></div><p>Natural 1:1 lash set, 2-week fill at half price. Appointment mandatory.</p><a class="btn small" href="https://wa.me/917087728370?text=Hi!%20I%20want%20the%20Lash%20Extensions%20offer%20at%20Zaira%20Studio." target="_blank" rel="noopener">Claim Offer</a></div>
+    </div>
+    <p class="fine">*Indicative pricing — final quote confirmed on WhatsApp before your visit. Offers valid till end of this month.</p>
+  </div>
+</section>
+
+<section id="services" class="services-sec">
+  <div class="wrap">
+    <div class="label reveal">Price List</div>
+    <h2 class="section-title reveal">The menu</h2>
+    <p class="section-sub reveal">Transparent pricing, published upfront. Every service starts with a free consultation.</p>
+    <div class="tabs reveal">
+      <button class="tab active" data-tab="nails">Nails</button>
+      <button class="tab" data-tab="lashes">Lashes &amp; Brows</button>
+      <button class="tab" data-tab="hair">Hair</button>
+      <button class="tab" data-tab="skin">Skin</button>
+    </div>
+    <div class="menu active reveal" id="menu-nails">
+      <div class="menu-item"><div class="name">Soft-Gel Nail Extensions<small>Full set, any shape</small></div><div class="price">₹1,499*</div></div>
+      <div class="menu-item"><div class="name">Cat-Eye Nail Art<small>Magnetic chrome finish</small></div><div class="price">₹999*</div></div>
+      <div class="menu-item"><div class="name">Gel Polish (Hands)<small>3-week wear, 60+ shades</small></div><div class="price">₹799*</div></div>
+      <div class="menu-item"><div class="name">Nail Art — per set<small>Minimal to 3D art</small></div><div class="price">₹499*</div></div>
+      <div class="menu-item"><div class="name">Ash-Blonde Highlights + Nails Combo<small>Signature Zaira pairing</small></div><div class="price">₹4,999*</div></div>
+      <div class="menu-item"><div class="name">Gel Removal + Spa Manicure<small>Gentle, no damage</small></div><div class="price">₹599*</div></div>
+    </div>
+    <div class="menu" id="menu-lashes">
+      <div class="menu-item"><div class="name">Classic Lash Extensions<small>1:1 natural set</small></div><div class="price">₹2,499*</div></div>
+      <div class="menu-item"><div class="name">Volume Lash Extensions<small>Fuller, dramatic</small></div><div class="price">₹3,499*</div></div>
+      <div class="menu-item"><div class="name">Lash Lift + Tint<small>Your lashes, curled 6–8 weeks</small></div><div class="price">₹1,799*</div></div>
+      <div class="menu-item"><div class="name">Brow Shaping + Tint<small>Frame your face</small></div><div class="price">₹399*</div></div>
+    </div>
+    <div class="menu" id="menu-hair">
+      <div class="menu-item"><div class="name">Haircut + Wash + Blow-dry<small>Women</small></div><div class="price">₹699*</div></div>
+      <div class="menu-item"><div class="name">Ash-Blonde Highlights<small>Up to shoulder / below shoulder</small></div><div class="price">₹3,999*</div></div>
+      <div class="menu-item"><div class="name">Global Colour<small>L'Oréal / Matrix shades</small></div><div class="price">₹2,999*</div></div>
+      <div class="menu-item"><div class="name">Keratin / Smoothening<small>Length-tiered pricing</small></div><div class="price">₹4,999*</div></div>
+      <div class="menu-item"><div class="name">Haircut — Men<small>Wash included</small></div><div class="price">₹299*</div></div>
+    </div>
+    <div class="menu" id="menu-skin">
+      <div class="menu-item"><div class="name">Signature Glow Facial<small>60 min, all skin types</small></div><div class="price">₹1,499*</div></div>
+      <div class="menu-item"><div class="name">De-Tan Cleanup<small>Face + neck</small></div><div class="price">₹799*</div></div>
+      <div class="menu-item"><div class="name">Full Arms + Legs Waxing<small>RICA wax</small></div><div class="price">₹899*</div></div>
+      <div class="menu-item"><div class="name">Party Makeup<small>HD base, lashes included</small></div><div class="price">₹3,500*</div></div>
+    </div>
+    <p class="fine">*Prices indicative — confirmed on WhatsApp before booking. + taxes as applicable.</p>
+  </div>
+</section>
+
+<section id="membership">
+  <div class="wrap">
+    <div class="member reveal">
+      <div>
+        <div class="label" style="color:var(--gold)">Zaira Circle</div>
+        <h2>Membership that pays for itself</h2>
+        <p style="color:rgba(247,231,206,.85)">One card, a year of glow. Shareable with your sister, your bestie, your mom.</p>
+        <ul>
+          <li>20% off all nail &amp; lash services, all year</li>
+          <li>1 complimentary gel polish change every quarter</li>
+          <li>Birthday month: free brow shaping + tint</li>
+          <li>Shareable with 1 family member</li>
+        </ul>
+        <a class="btn" href="https://wa.me/917087728370?text=Hi!%20I%20want%20to%20join%20Zaira%20Circle%20membership." target="_blank" rel="noopener" style="margin-top:6px">Join — ₹999/yr</a>
+      </div>
+      <div class="member-card-visual">
+        <div style="font-size:12px;letter-spacing:3px;opacity:.85">ZAIRA CIRCLE · MEMBER</div>
+        <h3>Glow, on repeat.</h3>
+        <p style="opacity:.9">20% off · Free quarterly polish change · Birthday treat</p>
+        <div style="margin-top:26px;font-family:'Cormorant Garamond',serif;font-size:22px">₹999 / year</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="label reveal">Real Work</div>
+    <h2 class="section-title reveal">Fresh from the nail bar</h2>
+    <p class="section-sub reveal">Actual sets done at the studio. Follow <a href="https://www.instagram.com/zairastudio_" target="_blank" rel="noopener" style="color:var(--rosegold-deep);font-weight:500">@zairastudio_</a> for daily drops.</p>
+    <div class="gal-grid reveal">
+      <div class="gal-item"><img src="images/work-real-1.jpg" alt="Real client nail work at Zaira Studio" loading="lazy"><div class="gal-cap">In-studio work · Soft-gel set</div></div>
+      <div class="gal-item"><img src="images/g-nails-1.jpg" alt="Pink chrome nails" loading="lazy"><div class="gal-cap">Pink chrome · Signature finish</div></div>
+      <div class="gal-item"><img src="images/g-lashes.jpg" alt="Eyelash extension styles" loading="lazy"><div class="gal-cap">Lash menu · Classic to volume</div></div>
+      <div class="gal-item"><img src="images/g-nails-2.jpg" alt="Glossy pink nail extensions" loading="lazy"><div class="gal-cap">Gloss extensions · Almond shape</div></div>
+      <div class="gal-item"><img src="images/g-nails-3.jpg" alt="Nail art detail" loading="lazy"><div class="gal-cap">Detail art · Hand-painted</div></div>
+      <div class="gal-item"><img src="images/hero-real.jpg" alt="Zaira Studio interior" loading="lazy"><div class="gal-cap">The studio · Oxford Street</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:#fff">
+  <div class="wrap">
+    <div class="label reveal">Reviews</div>
+    <h2 class="section-title reveal">5.0 stars, and they mean it</h2>
+    <p class="section-sub reveal">160 verified ratings on JustDial — here's what regulars say.</p>
+    <div class="rev-grid">
+      <div class="rev-card reveal"><div class="stars">★★★★★</div><p>"My soft-gel set lasted five weeks without a single lift. The cat-eye art gets me compliments every single day."</p><b>PRIYA S.</b><small>Soft-gel nails · Zirakpur</small></div>
+      <div class="rev-card reveal"><div class="stars">★★★★★</div><p>"Got classic lashes before my sister's wedding — they looked completely natural in every photo. Zero irritation."</p><b>ANANYA M.</b><small>Lash extensions · Chandigarh</small></div>
+      <div class="rev-card reveal"><div class="stars">★★★★★</div><p>"Clean studio, on-time appointments, and they actually listen to what shape you want. My go-to nail bar now."</p><b>RITU K.</b><small>Gel polish · Dhakoli</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-sec">
+  <div class="wrap">
+    <div class="label reveal" style="color:var(--gold)">Visit Us</div>
+    <h2 class="section-title reveal">Come get glossy</h2>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info">
+          <div class="c-row"><div class="c-ico">📍</div><div><b>Address</b>SCO 20, Upper Ground, Oxford Street,<br>Ambala–Chandigarh Expressway, Zirakpur 140603</div></div>
+          <div class="c-row"><div class="c-ico">📞</div><div><b>Phone</b><a href="tel:+917087728370" style="color:#fff;font-size:19px">+91 70877 28370</a><br><span style="font-size:13px">Tap to call · 10 AM – 8 PM</span></div></div>
+          <div class="c-row"><div class="c-ico">💬</div><div><b>WhatsApp</b><a href="https://wa.me/917087728370?text=Hi%20Zaira%20Studio!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener" style="color:#fff">Chat &amp; book in 30 seconds</a></div></div>
+          <div class="c-row"><div class="c-ico">📸</div><div><b>Instagram</b><a href="https://www.instagram.com/zairastudio_" target="_blank" rel="noopener" style="color:#fff">@zairastudio_</a><br><span style="font-size:13px">Daily nail drops &amp; booking DMs</span></div></div>
+          <div class="c-row"><div class="c-ico">🕙</div><div><b>Hours</b>Mon – Sun · 10:00 AM – 8:00 PM</div></div>
+        </div>
+      </div>
+      <div class="map-frame reveal">
+        <iframe title="Zaira Studio location map" src="https://www.google.com/maps?q=Zaira+Studio+Unisex+Salon+Oxford+Street+Zirakpur&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand" style="margin-bottom:10px">Zaira <span style="color:var(--rosegold)">Studio</span></div><div>Nails · Lashes · Hair · Skin<br>Oxford Street, Zirakpur</div></div>
+      <div><b style="color:#fff">Quick links</b><br><a href="#offers">Offers</a><br><a href="#services">Price list</a><br><a href="#gallery">Gallery</a></div>
+      <div><b style="color:#fff">Book</b><br><a href="tel:+917087728370">+91 70877 28370</a><br><a href="https://wa.me/917087728370" target="_blank" rel="noopener">WhatsApp</a><br><a href="https://www.instagram.com/zairastudio_" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <div class="credit">© 2026 Zaira Studio Unisex Salon · Demo by StyleFrame Co.</div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="call" href="tel:+917087728370">Call</a>
+  <a class="wa" href="https://wa.me/917087728370?text=Hi%20Zaira%20Studio!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="dir" href="https://www.google.com/maps?q=Zaira+Studio+Unisex+Salon+Oxford+Street+Zirakpur" target="_blank" rel="noopener">Directions</a>
+</div>
+<a class="wa-float" href="https://wa.me/917087728370?text=Hi%20Zaira%20Studio!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.8 1.7.3.2.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.5z"/></svg>
+</a>
+
+<script>
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.menu').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');document.getElementById('menu-'+t.dataset.tab).classList.add('active');
+}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ombré Beauty &amp; Makeup Lounge — Sector 125, Kharar | Balayage &amp; Bridal Glow</title>
+<meta name="description" content="Ombré Beauty & Makeup Lounge, Sector 125 Kharar — balayage, hair colour, bridal & party makeup. 4.9 rated, 628 reviews. Call +91 98887 38584.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coral:#F2755D; --coral-deep:#D95B41; --sand:#F6E9D6; --sand-deep:#EDDCC0;
+  --brown:#3B2314; --cocoa:#5C3D28; --cream:#FFF9F1; --rose:#C97B63;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;line-height:1.65;font-weight:300}
+img{max-width:100%;display:block}
+a{color:inherit}
+.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.label{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--coral-deep);font-weight:500}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:20px 0;transition:.4s}
+header.scrolled{background:rgba(255,249,241,.94);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(59,35,20,.1);padding:12px 0}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:.14em;color:#fff;transition:.4s}
+header.scrolled .brand{color:var(--brown)}
+.brand em{font-style:italic;color:var(--coral)}
+.nav nav a{margin-left:28px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#fff;opacity:.9;transition:.4s}
+header.scrolled .nav nav a{color:var(--brown)}
+.nav nav a:hover{color:var(--coral-deep)}
+@media(max-width:780px){.nav nav{display:none}}
+
+/* hero — bride portrait */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;color:#fff;position:relative}
+.hero-copy{background:linear-gradient(160deg,#4A2C1A 0%,#3B2314 55%,#2A180D 100%);display:flex;flex-direction:column;justify-content:center;padding:140px 60px 80px 8vw;position:relative;overflow:hidden}
+.hero-copy::after{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(242,117,93,.35),transparent 70%);top:-120px;right:-120px}
+.hero-photo{background:url('images/hero.jpg') center/cover;min-height:100svh}
+.hero-copy>*{position:relative;z-index:2}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(50px,6.5vw,96px);line-height:1.02;font-weight:500;margin:20px 0 14px}
+.hero h1 em{font-style:italic;color:#F5A98B}
+.hero p.lead{font-size:17px;opacity:.85;max-width:440px}
+.g-badge{display:flex;align-items:center;gap:12px;margin:28px 0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 18px;max-width:400px}
+.g-badge .g{font-family:'Cormorant Garamond',serif;font-size:34px;color:#F5A98B;font-weight:600}
+.g-badge span{font-size:13px;opacity:.85}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:999px;text-decoration:none;font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:.3s}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:var(--coral-deep);transform:translateY(-2px);box-shadow:0 14px 34px rgba(242,117,93,.4)}
+.btn-line{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.hero-photo{min-height:52svh;order:-1}.hero-copy{padding:60px 24px 80px}}
+
+/* trust strip */
+.strip{background:var(--sand);padding:24px 0}
+.strip .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;text-align:center}
+.stat b{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--coral-deep);display:block;font-weight:600}
+.stat span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--cocoa)}
+
+/* sections */
+section{padding:100px 0}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,60px);font-weight:500;line-height:1.08;margin:14px 0 12px}
+.sec-head h2 em{font-style:italic;color:var(--coral-deep)}
+.sec-head p{color:#8A6F5C}
+
+/* signature services */
+.sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sig{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 16px 44px rgba(59,35,20,.08);transition:transform .35s}
+.sig:hover{transform:translateY(-8px)}
+.sig img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.sig .body{padding:28px 26px}
+.sig h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;margin-bottom:8px}
+.sig p{font-size:14px;color:#8A6F5C}
+.sig .price{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--coral-deep);font-weight:600;margin-top:14px}
+.sig .price small{font-family:'Jost';font-size:12px;color:#8A6F5C;display:block}
+@media(max-width:860px){.sig-grid{grid-template-columns:1fr}}
+
+/* colour consult banner */
+.consult{background:linear-gradient(120deg,var(--coral) 0%,#E88B5F 50%,var(--rose) 100%);border-radius:28px;padding:64px 54px;color:#fff;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.consult::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.14);top:-140px;right:-100px}
+.consult h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.6vw,54px);font-weight:500;line-height:1.1;margin-bottom:14px}
+.consult p{opacity:.92;max-width:480px}
+.consult .steps{position:relative}
+.step{display:flex;gap:16px;margin:18px 0;align-items:flex-start}
+.step .n{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0}
+.step b{display:block;font-size:16px}
+.step span{font-size:13.5px;opacity:.85}
+@media(max-width:860px){.consult{grid-template-columns:1fr;padding:44px 28px}}
+
+/* price list */
+.menu{background:#fff;border-radius:24px;padding:54px 48px;box-shadow:0 20px 60px rgba(59,35,20,.07);max-width:900px;margin:0 auto}
+.mi{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;border-bottom:1px dotted #D9C6AE}
+.mi:last-child{border-bottom:none}
+.mi .n b{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;display:block}
+.mi .n span{font-size:13px;color:#8A6F5C}
+.mi .p{font-family:'Cormorant Garamond',serif;font-size:23px;color:var(--coral-deep);white-space:nowrap;font-weight:600}
+.mi .p small{font-family:'Jost';font-size:11px;color:#8A6F5C;display:block;text-align:right}
+@media(max-width:640px){.menu{padding:36px 24px}}
+
+/* bridal tiers */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tier{background:var(--sand);border-radius:22px;padding:40px 30px;text-align:center;position:relative;transition:transform .3s}
+.tier:hover{transform:translateY(-6px)}
+.tier.hot{background:#fff;border:2px solid var(--coral);box-shadow:0 24px 54px rgba(242,117,93,.18)}
+.tier .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--coral);color:#fff;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:7px 22px;border-radius:999px;white-space:nowrap}
+.tier h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600}
+.tier .amt{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--coral-deep);font-weight:600;margin:8px 0}
+.tier ul{list-style:none;margin:20px 0;font-size:14px;color:var(--cocoa);text-align:left}
+.tier li{padding:8px 0;border-bottom:1px dashed #DCC7A8}
+.tier li::before{content:"✦ ";color:var(--coral-deep)}
+@media(max-width:860px){.tiers{grid-template-columns:1fr}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal a{overflow:hidden;border-radius:14px;display:block}
+.gal img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .55s}
+.gal a:hover img{transform:scale(1.07)}
+@media(max-width:860px){.gal{grid-template-columns:1fr 1fr}}
+
+/* reviews */
+.rev-sec{background:var(--sand)}
+.rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev-card{background:#fff;border-radius:18px;padding:34px 28px;box-shadow:0 14px 36px rgba(59,35,20,.07)}
+.rev-card .stars{color:var(--coral-deep);letter-spacing:3px}
+.rev-card p{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;line-height:1.45;margin:16px 0;color:var(--brown)}
+.rev-card cite{font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8A6F5C}
+@media(max-width:860px){.rev-cards{grid-template-columns:1fr}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:stretch}
+.c-card{background:#fff;border-radius:22px;padding:46px 38px;box-shadow:0 24px 60px rgba(59,35,20,.09)}
+.c-card h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.4vw,52px);font-weight:500;margin:14px 0 20px}
+.c-line{margin:16px 0;font-size:15px}
+.c-line b{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:5px}
+.c-line a.tel{font-family:'Cormorant Garamond',serif;font-size:32px;text-decoration:none;color:var(--brown);font-weight:600}
+.map-frame{border-radius:22px;overflow:hidden;min-height:440px;box-shadow:0 24px 60px rgba(59,35,20,.09)}
+.map-frame iframe{width:100%;height:100%;min-height:440px;border:0}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+/* mobile bar */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--sand-deep);padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+.mbar a{flex:1;text-align:center;padding:13px 6px;border-radius:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.mbar .book{background:var(--coral);color:#fff}
+.mbar .call{background:var(--sand);color:var(--brown)}
+.mbar .wa{background:#1FAD55;color:#fff}
+@media(max-width:780px){.mbar{display:flex;gap:10px}body{padding-bottom:74px}}
+
+footer{background:var(--brown);color:#D8BE9F;padding:58px 0 28px;font-size:13px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;margin-bottom:38px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:10px}
+footer a{text-decoration:none;opacity:.85}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;opacity:.75}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">OMBR<em>É</em></div>
+    <nav><a href="#signature">Signature</a><a href="#menu">Prices</a><a href="#bridal">Bridal</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-copy">
+    <span class="label rv" style="color:#F5A98B">Beauty &amp; Makeup Lounge · Sector 125, Kharar</span>
+    <h1 class="rv">Where colour<br>learns to <em>glow.</em></h1>
+    <p class="lead rv">Balayage, dimensional colour and bridal artistry — in a lounge that treats every appointment like golden hour.</p>
+    <div class="g-badge rv"><div class="g">4.9</div><span>★★★★★ · 628 Google &amp; JustDial reviews<br>6 years of trusted artistry</span></div>
+    <div class="hero-ctas rv">
+      <a class="btn btn-coral" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20to%20book%20a%20colour%20consultation." target="_blank" rel="noopener">Book Colour Consult</a>
+      <a class="btn btn-line" href="#menu">View Prices</a>
+    </div>
+  </div>
+  <div class="hero-photo"></div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="stat"><b>4.9★</b><span>628 reviews</span></div>
+    <div class="stat"><b>6 yrs</b><span>In business</span></div>
+    <div class="stat"><b>₹11K</b><span>Hair styling from</span></div>
+    <div class="stat"><b>Balayage</b><span>Specialists</span></div>
+  </div>
+</div>
+
+<section id="signature">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="label">Signature Services</span>
+      <h2>Known for <em>colour.</em></h2>
+      <p>Dimensional balayage, lived-in blondes and rich brunettes — colour that grows out gracefully.</p>
+    </div>
+    <div class="sig-grid">
+      <div class="sig rv"><img src="images/g-salon.jpg" alt="Balayage colour work" loading="lazy"><div class="body"><h3>Balayage &amp; Ombré</h3><p>Hand-painted dimension, sun-kissed blends, seamless grow-out.</p><div class="price">₹4,500+<small>indicative · by length &amp; density</small></div></div></div>
+      <div class="sig rv"><img src="images/hero.jpg" alt="Global hair colour" loading="lazy"><div class="body"><h3>Global Colour</h3><p>Rich, even, glossy colour from roots to ends.</p><div class="price">₹3,000+<small>indicative · by length</small></div></div></div>
+      <div class="sig rv"><img src="images/g-bridal.jpg" alt="Bridal makeup" loading="lazy"><div class="body"><h3>Bridal &amp; Party Makeup</h3><p>HD looks with premium kits, hair setting included.</p><div class="price">₹3,000+<small>indicative · bridal on consultation</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="consult rv">
+      <div>
+        <span class="label" style="color:#fff">Free with every colour service</span>
+        <h2>Book your colour consultation.</h2>
+        <p>Great colour starts before the first foil. Sit with our colourist, talk through your inspo pics, and leave with an honest plan — and an honest price.</p>
+        <div style="margin-top:26px"><a class="btn" style="background:#fff;color:var(--coral-deep)" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20to%20book%20a%20colour%20consultation." target="_blank" rel="noopener">WhatsApp to Book</a></div>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><b>Analyse</b><span>Your hair history, texture &amp; lifestyle.</span></div></div>
+        <div class="step"><div class="n">2</div><div><b>Design</b><span>Shade mapping matched to your skin tone.</span></div></div>
+        <div class="step"><div class="n">3</div><div><b>Quote</b><span>Fixed price before we begin — no surprises.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label">Price List</span>
+      <h2>Honest <em>numbers.</em></h2>
+    </div>
+    <div class="menu rv">
+      <div class="mi"><div class="n"><b>Hair Styling (Signature)</b><span>Our speciality — editorial &amp; occasion styling</span></div><div class="p">₹11,000<small>starting · JustDial</small></div></div>
+      <div class="mi"><div class="n"><b>Balayage / Ombré Colour</b><span>Hand-painted, dimensional</span></div><div class="p">₹4,500+<small>indicative · by length</small></div></div>
+      <div class="mi"><div class="n"><b>Global Hair Colour</b><span>Single-process, rich &amp; glossy</span></div><div class="p">₹3,000+<small>indicative · by length</small></div></div>
+      <div class="mi"><div class="n"><b>Party Makeup (HD)</b><span>With hairstyling &amp; lashes</span></div><div class="p">₹3,000+<small>indicative</small></div></div>
+      <div class="mi"><div class="n"><b>Women's Haircut + Styling</b><span>Wash, cut &amp; blow-dry</span></div><div class="p">₹400+<small>indicative</small></div></div>
+      <div class="mi"><div class="n"><b>Signature Facial</b><span>Glow ritual for events</span></div><div class="p">₹1,500+<small>indicative</small></div></div>
+      <div class="mi"><div class="n"><b>Keratin / Smoothening</b><span>Silk-finish frizz control</span></div><div class="p">₹3,000+<small>indicative · by length</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="bridal" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="label">Shaadi Season</span>
+      <h2>Bridal <em>tiers.</em></h2>
+      <p>Trial included · travels to venue · family packages available.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier rv"><h3>HD Bridal</h3><div class="amt">₹15,000+</div><ul><li>HD bridal makeup</li><li>Bridal hairstyling</li><li>Draping &amp; lashes</li><li>Touch-up kit</li></ul><a class="btn btn-coral" style="width:100%;justify-content:center" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20HD%20bridal%20details." target="_blank" rel="noopener">Enquire</a></div>
+      <div class="tier hot rv"><div class="ribbon">Most Booked</div><h3>Signature Bridal</h3><div class="amt">₹25,000+</div><ul><li>Premium HD / airbrush</li><li>Pre-bridal glow facial</li><li>Hairstyling + draping</li><li>1 family look included</li></ul><a class="btn btn-coral" style="width:100%;justify-content:center" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20Signature%20bridal%20details." target="_blank" rel="noopener">Enquire</a></div>
+      <div class="tier rv"><h3>Luxe Bridal</h3><div class="amt">₹40,000+</div><ul><li>Celebrity airbrush finish</li><li>Full pre-bridal plan</li><li>On-venue bridal team</li><li>Groom styling add-on</li></ul><a class="btn btn-coral" style="width:100%;justify-content:center" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20Luxe%20bridal%20details." target="_blank" rel="noopener">Enquire</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="label">Real Work</span>
+      <h2>The <em>glow</em> gallery.</h2>
+      <p>More transformations daily on <a href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener" style="color:var(--coral-deep);font-weight:500">@ombrebeautylounge</a>.</p>
+    </div>
+    <div class="gal">
+      <a class="rv" href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener"><img src="images/g-salon.jpg" alt="Colour work" loading="lazy"></a>
+      <a class="rv" href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener"><img src="images/g-wedding.jpg" alt="Wedding look" loading="lazy"></a>
+      <a class="rv" href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener"><img src="images/g-bridal.jpg" alt="Bridal look" loading="lazy"></a>
+      <a class="rv" href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener"><img src="images/hero.jpg" alt="Lounge work" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="rev-sec" style="padding-top:0">
+  <div class="wrap" style="padding-top:100px">
+    <div class="sec-head rv">
+      <span class="label">Guest Words</span>
+      <h2>4.9★ from <em>628</em> reviews.</h2>
+    </div>
+    <div class="rev-cards">
+      <div class="rev-card rv"><div class="stars">★★★★★</div><p>"My balayage gets compliments from strangers. The consultation alone was worth it."</p><cite>— JustDial Review</cite></div>
+      <div class="rev-card rv"><div class="stars">★★★★★</div><p>"Six years in business and it shows — calm, professional, and the colour is perfect."</p><cite>— JustDial Review</cite></div>
+      <div class="rev-card rv"><div class="stars">★★★★★</div><p>"Bridal makeup stayed flawless through the whole wedding. Best decision I made."</p><cite>— JustDial Review</cite></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-card rv">
+        <span class="label">Visit the Lounge</span>
+        <h2>Come catch the <em style="color:var(--coral-deep);font-style:italic">golden hour.</em></h2>
+        <div class="c-line"><b>Address</b>SCO 56, New Sunny Enclave, behind KFC &amp; Gopal Sweets, Sector 125, Kharar</div>
+        <div class="c-line"><b>Phone / WhatsApp</b><a class="tel" href="tel:+919888738584">+91 98887 38584</a></div>
+        <div class="c-line"><b>Hours</b>Mon–Sat · 9:00 AM – 7:30 PM · Sun · 10:00 AM – 8:00 PM</div>
+        <div class="c-line"><b>Instagram</b><a href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener" style="font-weight:500">@ombrebeautylounge</a></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a class="btn btn-coral" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" style="border:1px solid var(--brown);color:var(--brown)" href="https://www.google.com/maps?q=Ombre+Beauty+Makeup+Lounge+SCO+56+New+Sunny+Enclave+Sector+125+Kharar" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="map-frame rv">
+        <iframe title="Ombre location map" loading="lazy" src="https://www.google.com/maps?q=Ombre%20Beauty%20Makeup%20Lounge%20SCO%2056%20New%20Sunny%20Enclave%20Sector%20125%20Kharar&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>OMBRÉ</h4><p>Beauty &amp; makeup lounge in Sector 125, Kharar. Balayage, colour, bridal &amp; party makeup — golden-hour glow, every appointment.</p></div>
+      <div><h4>Explore</h4><p><a href="#signature">Signature</a><br><a href="#menu">Prices</a><br><a href="#bridal">Bridal</a><br><a href="#gallery">Gallery</a></p></div>
+      <div><h4>Connect</h4><p><a href="tel:+919888738584">+91 98887 38584</a><br><a href="https://www.instagram.com/ombrebeautylounge" target="_blank" rel="noopener">Instagram</a></p></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Ombré Beauty &amp; Makeup Lounge · Sector 125, Kharar</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="book" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book</a>
+  <a class="call" href="tel:+919888738584">Call</a>
+  <a class="wa" href="https://wa.me/919888738584?text=Hi%20Ombr%C3%A9!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

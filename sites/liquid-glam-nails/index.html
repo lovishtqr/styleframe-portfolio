@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liquid Glam Nails Studio — Sector 9C, Chandigarh | Chrome · Holographic · Y2K Nails</title>
+<meta name="description" content="Liquid Glam Nails Studio, Sector 9-C Chandigarh. 4.5★ rated chrome, holographic & gel nail art + home service. Book on WhatsApp — 084370 60606.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0A14; --bg2:#100F1E; --panel:#14132A;
+  --pink:#FF2E88; --violet:#8B2FF7; --lime:#C6FF4A; --cyan:#4AE3FF;
+  --txt:#F2F0FF; --muted:#9B97B8;
+  --grad:linear-gradient(120deg,#FF2E88,#8B2FF7,#4AE3FF);
+  --disp:'Sora',sans-serif; --sans:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-block;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;margin-bottom:16px;padding:8px 18px;border-radius:30px;background:rgba(139,47,247,.14);border:1px solid rgba(139,47,247,.4);color:var(--cyan)}
+h1,h2,h3{font-family:var(--disp);line-height:1.08}
+/* header + sticky book */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,20,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(139,47,247,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1260px;margin:0 auto;padding:0 24px}
+.logo{font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:.06em}
+.logo .lg{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:28px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.nav-links a:hover{color:var(--pink)}
+.btn{display:inline-block;background:var(--grad);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;padding:15px 32px;border:none;cursor:pointer;border-radius:30px;transition:transform .25s,box-shadow .25s;box-shadow:0 8px 30px rgba(139,47,247,.4)}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 40px rgba(255,46,136,.45)}
+.btn-line{display:inline-block;border:1px solid rgba(255,46,136,.6);color:var(--pink);font-weight:600;font-size:14px;padding:14px 30px;border-radius:30px;transition:.25s}
+.btn-line:hover{background:rgba(255,46,136,.1)}
+/* hero */
+.hero{margin-top:68px;padding:80px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(139,47,247,.28),transparent 65%);top:-200px;right:-200px;pointer-events:none}
+.hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,46,136,.18),transparent 65%);bottom:-180px;left:-160px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,7vw,92px);font-weight:800;color:#fff}
+.hero h1 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--muted);font-size:17px;margin:20px 0 8px;max-width:480px}
+.rating{display:flex;align-items:center;gap:10px;margin:18px 0 24px}
+.stars{color:var(--lime);font-size:18px;letter-spacing:3px}
+.rating small{color:var(--muted);font-size:13.5px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.home-tag{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:13.5px;font-weight:600;color:var(--lime);border:1px dashed rgba(198,255,74,.5);padding:9px 18px;border-radius:30px}
+.hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-imgs img{border-radius:18px;aspect-ratio:3/4;object-fit:cover;width:100%;border:1px solid rgba(139,47,247,.35);box-shadow:0 20px 60px rgba(139,47,247,.25)}
+.hero-imgs img:nth-child(2){margin-top:44px}
+/* marquee */
+.marquee{border-top:1px solid rgba(139,47,247,.25);border-bottom:1px solid rgba(139,47,247,.25);background:var(--bg2);overflow:hidden;white-space:nowrap;padding:16px 0}
+.marquee span{font-family:var(--disp);font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 28px}
+.marquee span b{color:var(--pink)}
+.mq-in{display:inline-block;animation:mq 26s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:96px 0}
+.sec-head{margin-bottom:52px}
+.sec-head h2{font-size:clamp(34px,5vw,58px);color:#fff;font-weight:800}
+.sec-head h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-head p{color:var(--muted);max-width:600px;margin-top:12px}
+/* service cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--panel);border:1px solid rgba(139,47,247,.25);border-radius:22px;padding:36px 30px;transition:transform .35s,box-shadow .35s,border-color .35s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-8px) rotate(-.5deg);border-color:rgba(255,46,136,.6);box-shadow:0 24px 60px rgba(139,47,247,.3)}
+.card:hover::before{opacity:1}
+.card .emoji{font-size:38px}
+.card h3{font-size:22px;margin:16px 0 8px;color:#fff}
+.card p{font-size:14px;color:var(--muted);margin-bottom:16px}
+.card .pr{font-family:var(--disp);font-size:30px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card .pr small{font-size:13px;color:var(--muted);font-family:var(--sans);font-weight:400;-webkit-text-fill-color:var(--muted)}
+.card .book{margin-top:20px;display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+/* gallery masonry */
+.masonry{columns:3;column-gap:16px}
+.masonry figure{break-inside:avoid;margin-bottom:16px;position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(139,47,247,.25)}
+.masonry img{width:100%;transition:transform .7s}
+.masonry figure:hover img{transform:scale(1.06)}
+.masonry figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(5,5,12,.9));font-size:13px;font-weight:600;color:#fff}
+/* offers */
+.offer{background:var(--grad);border-radius:26px;padding:52px 48px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
+.offer::after{content:'✦';position:absolute;right:24px;top:8px;font-size:120px;color:rgba(255,255,255,.14)}
+.offer h2{color:#fff;font-size:clamp(28px,4vw,46px);font-weight:800}
+.offer p{color:rgba(255,255,255,.85);margin-top:10px;max-width:520px}
+.offer .big{font-family:var(--disp);font-size:clamp(48px,6vw,84px);font-weight:800;color:#fff;line-height:1}
+.offer .big small{font-size:16px;font-family:var(--sans);font-weight:400;opacity:.85}
+.offer .btn{background:#0A0A14;color:#fff;box-shadow:none;margin-top:18px}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev-card{background:var(--panel);border:1px solid rgba(139,47,247,.25);border-radius:20px;padding:30px 26px}
+.rev-card .stars{color:var(--lime);font-size:14px;margin-bottom:12px;letter-spacing:3px}
+.rev-card p{font-size:14.5px;color:var(--txt)}
+.rev-card .who{margin-top:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink);font-weight:700}
+.gbadge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(139,47,247,.35);padding:12px 22px;border-radius:40px;margin-top:32px;font-size:14px;color:var(--muted)}
+.gbadge b{color:var(--lime);font-size:18px}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.c-item{display:flex;gap:16px;margin-bottom:26px}
+.c-item .ic{width:48px;height:48px;flex:0 0 48px;border-radius:16px;background:rgba(139,47,247,.15);border:1px solid rgba(139,47,247,.4);display:flex;align-items:center;justify-content:center;font-size:20px}
+.c-item h4{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:6px;font-weight:700}
+.c-item p,.c-item a{font-size:16px}
+.c-item small{color:var(--muted);font-size:13px}
+.map{border:1px solid rgba(139,47,247,.35);border-radius:20px;overflow:hidden}
+.map iframe{width:100%;height:420px;border:0;display:block;filter:hue-rotate(-15deg) saturate(1.1)}
+/* footer */
+footer{border-top:1px solid rgba(139,47,247,.25);padding:50px 0 130px;background:#07070F}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+footer p{color:var(--muted);font-size:14px;margin-top:10px;max-width:380px}
+.credit{margin-top:40px;padding-top:22px;border-top:1px solid rgba(139,47,247,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#6a6685}
+/* mobile bar */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(10,10,20,.97);border-top:1px solid rgba(139,47,247,.35)}
+.mbar a{flex:1;text-align:center;padding:15px 0;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.mbar a.call{color:var(--txt)}
+.mbar a.wa{color:#fff;background:var(--grad)}
+.mbar a.book{color:var(--pink)}
+.pop{opacity:0;transform:translateY(30px) scale(.98);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1.2)}
+.pop.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{padding:50px 0 64px}
+  .hero-grid,.contact-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .masonry{columns:2}
+  .offer{grid-template-columns:1fr;padding:40px 30px}
+  section{padding:68px 0}
+  .mbar{display:flex}
+  footer{padding-bottom:160px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">LIQUID <span class="lg">GLAM</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#offer">Offer</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">✦ Sector 9-C · Chandigarh ✦</span>
+      <h1>Nails with <span class="hl">main-character</span> energy.</h1>
+      <div class="rating"><span class="stars">★★★★☆</span><small>4.5 rated · 255+ reviews · chrome · holographic · Y2K sets</small></div>
+      <p class="sub">Chandigarh's trend-lab for nails — mirror chrome, holographic glazes and gel art that breaks the algorithm. Home service available.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn-line" href="#gallery">See the Glam ↓</a>
+      </div>
+      <div><span class="home-tag">🏠 Home service available — we come to you</span></div>
+    </div>
+    <div class="hero-imgs pop">
+      <img src="images/holo-1.jpg" alt="Holographic chrome nail art">
+      <img src="images/holo-2.jpg" alt="Purple chrome manicure close-up">
+    </div>
+  </div>
+</div>
+
+<div class="marquee"><div class="mq-in">
+  <span>CHROME <b>✦</b></span><span>HOLOGRAPHIC <b>✦</b></span><span>GEL-X <b>✦</b></span><span>3D ART <b>✦</b></span><span>AURA NAILS <b>✦</b></span><span>FRENCH TWIST <b>✦</b></span>
+  <span>CHROME <b>✦</b></span><span>HOLOGRAPHIC <b>✦</b></span><span>GEL-X <b>✦</b></span><span>3D ART <b>✦</b></span><span>AURA NAILS <b>✦</b></span><span>FRENCH TWIST <b>✦</b></span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head pop">
+      <span class="eyebrow">The Menu</span>
+      <h2>Pick your <span class="hl">poison.</span></h2>
+      <p>Indicative pricing — final quote depends on length &amp; design complexity. Confirm on WhatsApp.</p>
+    </div>
+    <div class="cards">
+      <div class="card pop"><div class="emoji">💅</div><h3>Gel Extensions</h3><p>Full sculpted sets — almond, stiletto, coffin. 2–3 week wear.</p><div class="pr">₹1,000 <small>onwards*</small></div><a class="book" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20gel%20extensions." target="_blank" rel="noopener">Book this →</a></div>
+      <div class="card pop"><div class="emoji">✨</div><h3>Chrome / Holographic</h3><p>Mirror chrome, glazed donut, holographic shifts — the viral finishes.</p><div class="pr">₹1,299 <small>onwards*</small></div><a class="book" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20chrome%20nails." target="_blank" rel="noopener">Book this →</a></div>
+      <div class="card pop"><div class="emoji">🎨</div><h3>Nail Art Lab</h3><p>Hand-painted, 3D charms, aura, French twists — per set.</p><div class="pr">₹499 <small>onwards*</small></div><a class="book" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20nail%20art." target="_blank" rel="noopener">Book this →</a></div>
+      <div class="card pop"><div class="emoji">💎</div><h3>Gel Polish</h3><p>Chip-proof colour that survives real life. Hands or toes.</p><div class="pr">₹699 <small>*</small></div><a class="book" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20gel%20polish." target="_blank" rel="noopener">Book this →</a></div>
+      <div class="card pop"><div class="emoji">🔁</div><h3>Refills</h3><p>Keep the set fresh every 2–3 weeks.</p><div class="pr">₹800 <small>onwards*</small></div><a class="book" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20need%20a%20refill." target="_blank" rel="noopener">Book this →</a></div>
+      <div class="card pop"><div class="emoji">🏠</div><h3>Home Service</h3><p>Full studio experience at your doorstep — extensions, art, polish.</p><div class="pr">₹1,499 <small>onwards*</small></div><a class="book" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20HOME%20service." target="_blank" rel="noopener">Book this →</a></div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:22px;text-align:center">*Indicative prices based on Chandigarh market rates — final quote on WhatsApp before booking.</p>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head pop">
+      <span class="eyebrow">The Feed</span>
+      <h2>Fresh from the <span class="hl">lab.</span></h2>
+      <p>More drops daily on <a href="https://www.instagram.com/liquidglamchd" target="_blank" rel="noopener" style="color:var(--pink)">@liquidglamchd</a></p>
+    </div>
+    <div class="masonry pop">
+      <figure><img src="images/holo-1.jpg" alt="Holographic nail set" loading="lazy"><figcaption>Holographic glaze</figcaption></figure>
+      <figure><img src="images/holo-3.jpg" alt="Chrome nail art design" loading="lazy"><figcaption>Chrome drip</figcaption></figure>
+      <figure><img src="images/holo-2.jpg" alt="Purple chrome manicure" loading="lazy"><figcaption>Ultraviolet chrome</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="offer" style="padding-top:0">
+  <div class="wrap">
+    <div class="offer pop">
+      <div>
+        <h2>Festive Glam Drop</h2>
+        <p>Chrome extensions + aura art — full statement set at a flat festive rate. Limited slots daily.</p>
+        <a class="btn" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20the%20Festive%20Glam%20Drop%20at%20%E2%82%B91%2C799." target="_blank" rel="noopener">Claim on WhatsApp</a>
+      </div>
+      <div class="big">₹1,799<br><small>flat · till Diwali</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head pop">
+      <span class="eyebrow">Reviews</span>
+      <h2>The group chat <span class="hl">agrees.</span></h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card pop"><div class="stars">★★★★★</div><p>"The chrome set I got here went viral on my own feed. People keep asking where it's from."</p><div class="who">Ananya · Chrome Set</div></div>
+      <div class="rev-card pop"><div class="stars">★★★★★</div><p>"Booked home service before a wedding — they carried the whole setup and the nails lasted 3 weeks."</p><div class="who">Gurleen · Home Service</div></div>
+      <div class="rev-card pop"><div class="stars">★★★★☆</div><p>"Trendy designs you won't find elsewhere in Chandigarh. Book ahead on weekends — it fills fast."</p><div class="who">Sana · Nail Art</div></div>
+    </div>
+    <center><span class="gbadge"><b>4.5 ★</b> from 255+ JustDial reviews · 172 Google reviews</span></center>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head pop">
+      <span class="eyebrow">Pull Up</span>
+      <h2>Find the <span class="hl">glam.</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="pop">
+        <div class="c-item"><div class="ic">✆</div><div><h4>Call / WhatsApp</h4><a href="tel:+918437060606"><b>084370 60606</b></a><br><small>Tap to call · WhatsApp for instant booking</small></div></div>
+        <div class="c-item"><div class="ic">⌖</div><div><h4>Address</h4><p>SCO 137-138, Sector 9-C, Madhya Marg<br>(Basement, Standard Chartered Bank — after Citco Petrol Pump, near RBL Bank)<br>Chandigarh 160009</p><br><small><a href="https://www.google.com/maps/search/?api=1&query=Liquid+Glam+Nails+Sector+9C+Chandigarh" target="_blank" rel="noopener" style="color:var(--pink)">Open in Google Maps →</a></small></div></div>
+        <div class="c-item"><div class="ic">◷</div><div><h4>Hours</h4><p>Open all days</p><br><small>Confirm current hours on our Google listing or WhatsApp</small></div></div>
+        <div class="c-item"><div class="ic">◈</div><div><h4>Instagram</h4><a href="https://www.instagram.com/liquidglamchd" target="_blank" rel="noopener"><b>@liquidglamchd</b></a><br><small>Daily drops · DM to book</small></div></div>
+        <div class="cta-row" style="margin-top:8px">
+          <a class="btn" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn-line" href="tel:+918437060606">Call Now</a>
+        </div>
+      </div>
+      <div class="map pop">
+        <iframe title="Liquid Glam Nails map" src="https://www.google.com/maps?q=SCO+137+Sector+9C+Madhya+Marg+Chandigarh&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo">LIQUID <span class="lg">GLAM</span></div>
+        <p>SCO 137-138, Sector 9-C, Chandigarh · 084370 60606<br>Chrome · Holographic · Home Service</p>
+      </div>
+      <div><p>Instagram<br><a href="https://www.instagram.com/liquidglamchd" target="_blank" rel="noopener" style="color:var(--pink)">@liquidglamchd</a></p></div>
+    </div>
+    <div class="credit"><span>© 2026 Liquid Glam Nails Studio. All rights reserved.</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+918437060606">Call</a>
+  <a class="wa" href="https://wa.me/918437060606?text=Hi%20Liquid%20Glam!%20I%20want%20to%20book%20a%20nail%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="book" href="#offer">Offer</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.pop').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

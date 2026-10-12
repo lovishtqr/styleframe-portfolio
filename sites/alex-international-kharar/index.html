@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex International Salon — Sector 126, Kharar | Hair · Beauty · Bridal</title>
+<meta name="description" content="Alex International Salon, Nijjar Road Sector 126 Kharar. Full-service luxury salon — hair, beauty, bridal. Rated 4.8 on Google. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FAF6EF;--ivory2:#F3ECDF;--gold:#C9A227;--gold-d:#9c7f1c;--ink:#22201C;--mut:#7a746a;--line:rgba(34,32,28,.14)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--ivory);color:var(--ink);line-height:1.75;font-weight:400;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:500;line-height:1.12}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+section{padding:110px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.42em;font-size:11px;font-weight:600;color:var(--gold-d);margin-bottom:22px;text-align:center}
+h2{font-size:clamp(34px,4.6vw,54px);text-align:center;margin-bottom:16px;font-weight:500}
+h2 em{font-style:italic;color:var(--gold-d)}
+.sec-sub{text-align:center;color:var(--mut);max-width:620px;margin:0 auto 64px;font-size:17px;font-weight:300}
+.divider{width:1px;height:64px;background:var(--gold);margin:0 auto;opacity:.6}
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(250,246,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Playfair Display',serif;font-size:21px;letter-spacing:.06em}
+.logo i{font-style:italic;color:var(--gold-d)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
+.nav-links a:hover{color:var(--gold-d)}
+.book-link{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:600}
+/* hero — oversized typographic */
+.hero{padding:90px 0 40px;text-align:center;position:relative}
+.hero .loc{letter-spacing:.4em;font-size:12px;text-transform:uppercase;color:var(--mut);margin-bottom:30px}
+.hero h1{font-size:clamp(58px,11vw,148px);letter-spacing:.01em}
+.hero h1 .it{font-style:italic;color:var(--gold-d)}
+.hero .rule{width:80px;height:1px;background:var(--gold);margin:34px auto}
+.hero .tagline{font-size:clamp(16px,2.2vw,21px);font-weight:300;color:var(--mut);max-width:600px;margin:0 auto 14px;font-style:italic}
+.hero .rating-line{font-size:14px;letter-spacing:.14em;color:var(--gold-d);font-weight:500;margin-bottom:44px}
+.hero .rating-line b{font-size:16px}
+.hero-img{max-width:980px;margin:0 auto;position:relative}
+.hero-img img{width:100%;aspect-ratio:16/8.2;object-fit:cover}
+.hero-img .cap{position:absolute;bottom:22px;left:26px;color:#fff;font-size:13px;letter-spacing:.18em;text-transform:uppercase;background:rgba(20,18,14,.55);padding:10px 18px;backdrop-filter:blur(4px)}
+.hero-ctas{display:flex;gap:18px;justify-content:center;margin:46px 0 0;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:all .25s ease;cursor:pointer;border:none;font-family:'Jost',sans-serif}
+.btn-dark{background:var(--ink);color:var(--ivory)}
+.btn-dark:hover{background:var(--gold-d)}
+.btn-line{border:1px solid var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{border-color:var(--gold-d);color:var(--gold-d)}
+.btn-wa{background:#1FA855;color:#fff;letter-spacing:.14em}
+/* philosophy */
+.philo{text-align:center}
+.philo p.big{font-family:'Playfair Display',serif;font-size:clamp(22px,3.2vw,32px);font-style:italic;max-width:760px;margin:0 auto;color:var(--ink);line-height:1.6}
+.philo .sig{margin-top:26px;letter-spacing:.3em;font-size:12px;text-transform:uppercase;color:var(--gold-d)}
+/* services — restaurant menu */
+.svc-wrap{max-width:860px;margin:0 auto}
+.svc-cat{margin-bottom:54px}
+.svc-cat h3{font-size:26px;margin-bottom:6px;text-align:center}
+.svc-cat .cn{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);text-align:center;margin-bottom:30px}
+.svc{display:flex;align-items:baseline;gap:14px;padding:15px 0}
+.svc .dots{flex:1;border-bottom:1px dotted #b9a86a;transform:translateY(-5px);min-width:30px}
+.svc .nm{font-size:17px;font-weight:500}
+.svc .nm small{display:block;font-size:13px;color:var(--mut);font-weight:300}
+.svc .pr{font-family:'Playfair Display',serif;font-size:19px;color:var(--gold-d);white-space:nowrap}
+.book-each{text-align:center;margin-top:44px}
+/* bridal */
+.bridal{background:var(--ink);color:var(--ivory)}
+.bridal .eyebrow{color:var(--gold)}
+.bridal h2{color:var(--ivory)}
+.bridal .sec-sub{color:#b9b2a6}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,162,39,.3);border:1px solid rgba(201,162,39,.3);max-width:1000px;margin:0 auto}
+.b-card{background:var(--ink);padding:48px 36px;text-align:center;position:relative}
+.b-card.mid{background:#26231d}
+.b-card .tier{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.b-card h3{font-size:30px;margin-bottom:8px;color:var(--ivory)}
+.b-card .bp{font-family:'Playfair Display',serif;font-size:40px;color:var(--gold);margin:10px 0 6px;font-style:italic}
+.b-card .per{font-size:13px;color:#b9b2a6;letter-spacing:.1em;margin-bottom:26px}
+.b-card ul{list-style:none;margin-bottom:34px;text-align:left}
+.b-card li{padding:10px 0;border-bottom:1px solid rgba(201,162,39,.18);font-size:14px;font-weight:300;color:#d8d2c4}
+.b-card li::before{content:"— ";color:var(--gold)}
+.b-card .btn{width:100%;justify-content:center}
+/* gallery — monochrome with gold accents */
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal-grid figure{overflow:hidden;position:relative}
+.gal-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1);transition:filter .5s ease,transform .5s ease}
+.gal-grid figure:hover img{filter:grayscale(0);transform:scale(1.04)}
+.gal-grid figcaption{margin-top:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);text-align:center}
+/* reviews */
+.reviews{background:var(--ivory2)}
+.rev-feature{max-width:760px;margin:0 auto;text-align:center}
+.rev-feature .stars{color:var(--gold-d);letter-spacing:6px;font-size:20px;margin-bottom:22px}
+.rev-feature blockquote{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);font-style:italic;line-height:1.6;margin-bottom:22px}
+.rev-feature .who{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--mut)}
+.rev-row{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:860px;margin:60px auto 0}
+.rev-mini{border-top:1px solid var(--gold);padding-top:24px}
+.rev-mini .stars{color:var(--gold-d);letter-spacing:4px;margin-bottom:10px}
+.rev-mini p{font-weight:300;color:#4a463e;font-size:15px;margin-bottom:10px}
+.rev-mini .who{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+/* contact */
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1000px;margin:0 auto}
+.c-info h3{font-size:28px;margin-bottom:20px}
+.c-line{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:18px}
+.c-line .k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-d);min-width:96px;padding-top:4px;font-weight:600}
+.c-line .v{font-weight:300;font-size:16px}
+.c-line a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+.c-line a:hover{color:var(--gold-d)}
+.c-ctas{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.map{border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block;filter:grayscale(.4) sepia(.12)}
+/* sticky */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:var(--ivory);border-top:1px solid var(--gold);padding:10px 14px calc(10px + env(safe-area-inset-bottom));grid-template-columns:1fr 1fr 1fr;gap:10px}
+.sticky-bar a{display:flex;align-items:center;justify-content:center;gap:6px;padding:14px 4px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;text-decoration:none}
+.sticky-bar .a{background:var(--ink);color:var(--ivory)}
+.sticky-bar .b{background:#1FA855;color:#fff}
+.sticky-bar .c{border:1px solid var(--ink);color:var(--ink)}
+footer{padding:70px 0 120px;text-align:center;border-top:1px solid var(--line)}
+footer .f-name{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:10px}
+footer .f-name i{color:var(--gold-d)}
+footer p{color:var(--mut);font-size:14px;font-weight:300;max-width:520px;margin:0 auto 6px}
+footer a{color:var(--gold-d)}
+footer .credit{margin-top:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55}
+@media(max-width:900px){
+  .b-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .c-grid,.rev-row{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .sticky-bar{display:grid}
+  section{padding:70px 0}
+  footer{padding-bottom:140px}
+  .hero-img img{aspect-ratio:4/4.4}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Alex <i>International</i></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#bridal">Bridal</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="book-link" href="https://wa.me/919878718167?text=Hi%20Alex%20International%20Salon!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="loc">Sector 126 · Greater Mohali · Kharar</div>
+    <h1>Alex <span class="it">International</span><br>Salon</h1>
+    <div class="rule"></div>
+    <p class="tagline">A quieter kind of luxury — hair, beauty &amp; bridal, composed with care.</p>
+    <div class="rating-line"><b>★ 4.8</b> &nbsp;·&nbsp; ~242 Google reviews</div>
+    <div class="hero-img">
+      <img src="images/hero.jpg" alt="Alex International Salon interior">
+      <div class="cap">The salon floor — Sector 126</div>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-wa" href="https://wa.me/919878718167?text=Hi%20Alex%20International%20Salon!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-line" href="#services">The Menu ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="philo" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow">Philosophy</div>
+    <p class="big">"Beauty, done properly, is never loud. It is precise cuts, honest products, and the patience to get the details right."</p>
+    <div class="sig">— The Alex Standard</div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">The Menu</div>
+    <h2>Services, <em>priced openly</em></h2>
+    <p class="sec-sub">A full-service salon — hair, skin, nails and bridal — with transparent pricing.</p>
+    <div class="svc-wrap">
+      <div class="svc-cat">
+        <h3>Hair</h3><div class="cn">Cut · Colour · Texture</div>
+        <div class="svc"><div class="nm">Haircut + Finish<small>Wash, cut, blow-dry</small></div><div class="dots"></div><div class="pr">₹300*</div></div>
+        <div class="svc"><div class="nm">Hair Spa Ritual<small>Deep nourishment, 45 min</small></div><div class="dots"></div><div class="pr">₹900*</div></div>
+        <div class="svc"><div class="nm">Global Colour<small>Ammonia-free options</small></div><div class="dots"></div><div class="pr">₹2,200*</div></div>
+        <div class="svc"><div class="nm">Balayage / Highlights<small>By hair length</small></div><div class="dots"></div><div class="pr">₹4,500*</div></div>
+        <div class="svc"><div class="nm">Keratin / Smoothening<small>Shoulder &amp; below-shoulder tiers</small></div><div class="dots"></div><div class="pr">₹3,000*</div></div>
+      </div>
+      <div class="svc-cat">
+        <h3>Skin &amp; Beauty</h3><div class="cn">Facials · Clean-ups · Waxing</div>
+        <div class="svc"><div class="nm">Signature Facial<small>Cleanse, exfoliate, mask, glow</small></div><div class="dots"></div><div class="pr">₹1,000*</div></div>
+        <div class="svc"><div class="nm">Luxury Glow Facial<small>With de-tan &amp; massage</small></div><div class="dots"></div><div class="pr">₹1,800*</div></div>
+        <div class="svc"><div class="nm">Clean-Up<small>Face + neck</small></div><div class="dots"></div><div class="pr">₹600*</div></div>
+        <div class="svc"><div class="nm">Manicure / Pedicure<small>Spa soak</small></div><div class="dots"></div><div class="pr">₹700*</div></div>
+      </div>
+      <div class="book-each">
+        <p style="color:var(--mut);font-weight:300;margin-bottom:18px;font-style:italic">Every service bookable individually on WhatsApp.</p>
+        <a class="btn btn-dark" href="https://wa.me/919878718167?text=Hi%20Alex%20International%20Salon!%20I%20would%20like%20to%20book%20a%20service." target="_blank" rel="noopener">Book a Service</a>
+      </div>
+      <p style="text-align:center;margin-top:26px;font-size:13px;color:var(--mut);font-style:italic">*Indicative prices per local benchmarks — exact quote on consultation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="bridal" class="bridal">
+  <div class="wrap">
+    <div class="eyebrow">Bridal</div>
+    <h2>For the <em>wedding day</em></h2>
+    <p class="sec-sub">Three composed bridal looks — trial included, travels to venue on request.</p>
+    <div class="b-grid">
+      <div class="b-card">
+        <div class="tier">I — Essential</div>
+        <h3>Party Look</h3>
+        <div class="bp">₹3,500*</div>
+        <div class="per">per look</div>
+        <ul><li>HD party makeup</li><li>Hairstyling</li><li>Lashes &amp; draping</li></ul>
+        <a class="btn btn-line" style="border-color:var(--gold);color:var(--gold)" href="https://wa.me/919878718167?text=Hi!%20I%20want%20details%20of%20the%20Party%20Look%20bridal%20package." target="_blank" rel="noopener">Enquire</a>
+      </div>
+      <div class="b-card mid">
+        <div class="tier">II — Signature</div>
+        <h3>Classic Bridal</h3>
+        <div class="bp">₹8,000*</div>
+        <div class="per">per look · most booked</div>
+        <ul><li>HD bridal makeup</li><li>Bridal hairstyling</li><li>Lehenga / saree draping</li><li>Pre-bridal glow facial</li><li>Trial session included</li></ul>
+        <a class="btn btn-dark" style="background:var(--gold);color:#1a1712" href="https://wa.me/919878718167?text=Hi!%20I%20want%20details%20of%20the%20Classic%20Bridal%20package." target="_blank" rel="noopener">Enquire</a>
+      </div>
+      <div class="b-card">
+        <div class="tier">III — Couture</div>
+        <h3>Airbrush Bridal</h3>
+        <div class="bp">₹15,000*</div>
+        <div class="per">per look</div>
+        <ul><li>Airbrush makeup</li><li>Designer hairstyling</li><li>Complete trousseau styling</li><li>Venue travel available</li></ul>
+        <a class="btn btn-line" style="border-color:var(--gold);color:var(--gold)" href="https://wa.me/919878718167?text=Hi!%20I%20want%20details%20of%20the%20Airbrush%20Bridal%20package." target="_blank" rel="noopener">Enquire</a>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:30px;font-size:13px;color:#8f887a;font-style:italic">*Indicative — final quote after trial. 30% advance locks your wedding date.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="eyebrow">Portfolio</div>
+    <h2>Selected <em>work</em></h2>
+    <p class="sec-sub">Hover to see in colour — daily work on <a href="https://www.instagram.com/alex_international_salonkharar" target="_blank" rel="noopener" style="color:var(--gold-d);font-weight:600">@alex_international_salonkharar</a>.</p>
+    <div class="gal-grid">
+      <figure><img src="images/real-1.jpg" alt="Alex International Salon"><figcaption>Alex International — Kharar</figcaption></figure>
+      <figure><img src="images/makeup.jpg" alt="Makeup artistry"><figcaption>Makeup artistry</figcaption></figure>
+      <figure><img src="images/styling.jpg" alt="Hair styling"><figcaption>Hair, composed</figcaption></figure>
+      <figure><img src="images/real-2.jpg" alt="Alex International Salon"><figcaption>The studio</figcaption></figure>
+      <figure><img src="images/hero.jpg" alt="Salon interior"><figcaption>Salon floor</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Reviews</div>
+    <h2>Quietly <em>excellent</em></h2>
+    <p class="sec-sub">4.8★ across ~242 Google reviews.</p>
+    <div class="rev-feature">
+      <div class="stars">★★★★★</div>
+      <blockquote>"The most premium-feeling salon in this part of Kharar. My bridal makeup lasted the entire function — and the trial made all the difference."</blockquote>
+      <div class="who">Google Review</div>
+    </div>
+    <div class="rev-row">
+      <div class="rev-mini"><div class="stars">★★★★★</div><p>Walked in for a haircut, walked out feeling like a new person. Calm place, skilled staff, fair prices.</p><div class="who">Google Review</div></div>
+      <div class="rev-mini"><div class="stars">★★★★★</div><p>Best facial I've had in Kharar. No pushy upselling, just good work. Highly recommended.</p><div class="who">Google Review</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Visit</div>
+    <h2>Find <em>us</em></h2>
+    <p class="sec-sub">SCO 22, Nijjar Road — we reply on WhatsApp within minutes.</p>
+    <div class="c-grid">
+      <div class="c-info">
+        <h3>Alex International Salon</h3>
+        <div class="c-line"><div class="k">Address</div><div class="v">SCO 22, Nijjar Road, Sector 126,<br>Greater Mohali, Mundi Kharar, Punjab</div></div>
+        <div class="c-line"><div class="k">Phone</div><div class="v"><a href="tel:+919878718167">+91 98787 18167</a></div></div>
+        <div class="c-line"><div class="k">WhatsApp</div><div class="v"><a href="https://wa.me/919878718167?text=Hi%20Alex%20International%20Salon!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Chat with us</a></div></div>
+        <div class="c-line"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/alex_international_salonkharar" target="_blank" rel="noopener">@alex_international_salonkharar</a></div></div>
+        <div class="c-line"><div class="k">Hours</div><div class="v">Open all days · 10:00 AM – 8:30 PM</div></div>
+        <div class="c-ctas">
+          <a class="btn btn-wa" href="https://wa.me/919878718167?text=Hi%20Alex%20International%20Salon!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-line" href="tel:+919878718167">Call</a>
+        </div>
+      </div>
+      <div class="map"><iframe title="Alex International Salon map" src="https://maps.google.com/maps?q=Alex%20International%20Salon%20Nijjar%20Road%20Sector%20126%20Kharar&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-name">Alex <i>International</i> Salon</div>
+    <p>Sector 126, Kharar · <a href="tel:+919878718167">+91 98787 18167</a> · <a href="https://www.instagram.com/alex_international_salonkharar" target="_blank" rel="noopener">@alex_international_salonkharar</a></p>
+    <p class="credit">Demo by StyleFrame Co.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="a" href="tel:+919878718167">Call</a>
+  <a class="b" href="https://wa.me/919878718167?text=Hi%20Alex%20International%20Salon!%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="c" href="https://www.instagram.com/alex_international_salonkharar" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+</body>
+</html>

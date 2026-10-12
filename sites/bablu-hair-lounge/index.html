@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bablu Hair Lounge — Family Salon &amp; Non-Surgical Hair Fixing | Sector 16, Panchkula</title>
+<meta name="description" content="Bablu Hair Lounge, SCO-266 Sector 16 Panchkula. 4.9★ rated family salon — men's & women's hair, kids cuts & non-surgical hair fixing studio. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1D1209; --bg2:#241709; --panel:#2A1B0D;
+  --copper:#C97B3D; --copper-lt:#E8A566; --cream:#F7F1E8;
+  --muted:#B8A48C; --line:rgba(201,123,61,.25);
+  --cond:'Oswald',sans-serif; --sans:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.6;overflow-x:hidden;
+  background-image:radial-gradient(ellipse at 20% 0%,rgba(201,123,61,.07),transparent 55%),radial-gradient(ellipse at 85% 100%,rgba(201,123,61,.06),transparent 50%)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--copper);margin-bottom:16px;display:block;font-weight:600}
+h1,h2,h3{font-family:var(--cond);line-height:1.08;text-transform:uppercase;letter-spacing:.02em}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(29,18,9,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1280px;margin:0 auto;padding:0 24px}
+.logo{font-family:var(--cond);font-size:24px;letter-spacing:.1em;color:var(--cream)}
+.logo em{color:var(--copper-lt);font-style:normal}
+.nav-links{display:flex;gap:30px;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.nav-links a:hover{color:var(--copper-lt)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--copper),#A05E27);color:#fff;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:15px 32px;border:none;cursor:pointer;border-radius:3px;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(201,123,61,.35)}
+.btn-ghost{display:inline-block;border:1px solid var(--line);color:var(--copper-lt);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:14px 30px;border-radius:3px;transition:.25s}
+.btn-ghost:hover{border-color:var(--copper);background:rgba(201,123,61,.1)}
+/* hero — split */
+.hero{margin-top:72px;padding:70px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(48px,6.5vw,88px);color:#fff}
+.hero h1 .c{color:var(--copper-lt)}
+.hero .sub{font-size:17px;color:var(--muted);margin:20px 0 26px;max-width:500px;font-weight:300}
+.rating{display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.stars{color:var(--copper-lt);font-size:19px;letter-spacing:3px}
+.rating small{color:var(--muted);font-size:13.5px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero-img{position:relative}
+.hero-img img{border-radius:8px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.rev-float{position:absolute;left:-26px;bottom:36px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;max-width:280px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.rev-float .stars{font-size:14px}
+.rev-float p{font-size:13.5px;color:var(--cream);margin:8px 0}
+.rev-float .who{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper)}
+/* chips */
+.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.chip{border:1px solid var(--line);border-radius:30px;padding:10px 22px;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--cream);cursor:pointer;transition:.25s;background:transparent}
+.chip:hover,.chip.on{background:var(--copper);border-color:var(--copper);color:#fff}
+/* trust strip */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:36px 24px;gap:18px;text-align:center}
+.trust b{font-family:var(--cond);font-size:36px;color:var(--copper-lt);display:block}
+.trust span{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+/* sections */
+section{padding:100px 0}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(36px,5vw,60px);color:#fff}
+.sec-head p{color:var(--muted);max-width:620px;margin-top:12px;font-weight:300}
+/* accordion price menu */
+.acc{border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-head{width:100%;background:none;border:none;color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:26px 6px;cursor:pointer;font-family:var(--cond);font-size:24px;text-transform:uppercase;letter-spacing:.03em;text-align:left}
+.acc-head .plus{color:var(--copper);font-size:30px;font-weight:400;transition:transform .3s}
+.acc-item.open .acc-head .plus{transform:rotate(45deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.acc-item.open .acc-body{max-height:900px}
+.acc-body-inner{padding:4px 6px 34px}
+.item{display:flex;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px dotted rgba(201,123,61,.25)}
+.item .nm{font-size:15.5px}
+.item .nm small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.item .dots{flex:1;border-bottom:1px dotted rgba(201,123,61,.35);transform:translateY(-5px)}
+.item .pr{font-family:var(--cond);font-size:21px;color:var(--copper-lt);white-space:nowrap}
+.item .pr small{font-size:12px;color:var(--muted);font-family:var(--sans)}
+.ind{font-size:12px;color:var(--muted);font-style:italic;margin-top:22px}
+/* fixing studio band */
+.fixing{background:linear-gradient(135deg,#241709,#1a1005);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fixing-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.fixing img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.fixing ul{list-style:none;margin:22px 0 30px}
+.fixing li{padding:12px 0 12px 34px;position:relative;border-bottom:1px dotted rgba(201,123,61,.2);font-size:15.5px}
+.fixing li::before{content:'✓';position:absolute;left:0;color:var(--copper-lt);font-weight:700}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev-card{background:var(--panel);border:1px solid var(--line);padding:32px 28px;border-radius:8px}
+.rev-card .stars{font-size:14px;margin-bottom:14px}
+.rev-card p{font-size:15px;color:var(--cream);font-weight:300}
+.rev-card .who{margin-top:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
+.gbadge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);padding:12px 22px;border-radius:40px;margin-top:34px;font-size:14px;color:var(--muted)}
+.gbadge b{color:var(--copper-lt);font-size:18px}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.c-item{display:flex;gap:18px;margin-bottom:26px}
+.c-item .ic{width:48px;height:48px;flex:0 0 48px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--copper-lt)}
+.c-item h4{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--copper);margin-bottom:6px;font-weight:600}
+.c-item p,.c-item a{font-size:16px}
+.c-item small{color:var(--muted);font-size:13px}
+.map{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.map iframe{width:100%;height:420px;border:0;display:block;filter:sepia(.25) saturate(.9)}
+/* footer */
+footer{border-top:1px solid var(--line);padding:50px 0 120px;background:#150d05}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+footer p{color:var(--muted);font-size:14px;max-width:380px;margin-top:10px}
+.credit{margin-top:40px;padding-top:22px;border-top:1px solid rgba(201,123,61,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#7a6a55}
+/* mobile bar */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(29,18,9,.96);border-top:1px solid var(--line)}
+.mbar a{flex:1;text-align:center;padding:15px 0;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mbar a.call{color:var(--cream)}
+.mbar a.wa{color:#fff;background:var(--copper)}
+.mbar a.book{color:var(--copper-lt)}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{padding:44px 0 60px}
+  .hero-grid,.fixing-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-img img{aspect-ratio:4/3}
+  .rev-float{left:12px;bottom:14px}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .mbar{display:flex}
+  footer{padding-bottom:150px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">BABLU <em>HAIR LOUNGE</em></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#fixing">Hair Fixing</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/919988377327?text=Hi%20Bablu%20Hair%20Lounge!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Family Salon · Sector 16 · Panchkula</span>
+      <h1>The craft of a <span class="c">perfect cut.</span></h1>
+      <div class="rating"><span class="stars">★★★★★</span><small>4.9 rated · 175+ reviews · Family salon + non-surgical hair fixing studio</small></div>
+      <p class="sub">Sharp fades, honest prices, and a dedicated non-surgical hair fixing studio — one chair, one family, zero compromise.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/919988377327?text=Hi%20Bablu%20Hair%20Lounge!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn-ghost" href="tel:+919988377327">Call 99883 77327</a>
+      </div>
+      <div class="chips" id="chips">
+        <button class="chip on" data-t="men">Men</button>
+        <button class="chip" data-t="women">Women</button>
+        <button class="chip" data-t="kids">Kids</button>
+        <button class="chip" data-t="fixing">Hair Fixing</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/hero-cut.jpg" alt="Precision haircut at Bablu Hair Lounge, Panchkula">
+      <div class="rev-float">
+        <div class="stars">★★★★★</div>
+        <p>"Best fade I've had in Panchkula. Clean studio, fair price, no rush."</p>
+        <div class="who">Rohit · Men's Haircut</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div><b>4.9★</b><span>Rating · 175+ reviews</span></div>
+    <div><b>₹149</b><span>Cuts from — honest rates</span></div>
+    <div><b>2-in-1</b><span>Salon + Fixing Studio</span></div>
+    <div><b>16</b><span>Sec-16, Panchkula</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Rate Card</span>
+      <h2>Straight-Up Pricing</h2>
+      <p>Real published rates — no "call for price". Tap a category to expand.</p>
+    </div>
+    <div class="acc" id="acc">
+      <div class="acc-item open" data-cat="men">
+        <button class="acc-head">Men <span class="plus">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <div class="item"><div class="nm">Hair Cut for Men<small>Precision cut + wash + styling</small></div><div class="dots"></div><div class="pr">₹149 <small>onwards</small></div></div>
+          <div class="item"><div class="nm">Inoa Hair Colour for Men<small>Ammonia-free colour, natural finish</small></div><div class="dots"></div><div class="pr">₹699 <small>onwards/session</small></div></div>
+          <div class="item"><div class="nm">Beard Sculpt + Shave<small>Hot towel, razor finish</small></div><div class="dots"></div><div class="pr">₹199 <small>onwards*</small></div></div>
+          <div class="item"><div class="nm">Head Massage (30 min)<small>Relaxing champi, the classic</small></div><div class="dots"></div><div class="pr">₹299 <small>*</small></div></div>
+        </div></div>
+      </div>
+      <div class="acc-item" data-cat="women">
+        <button class="acc-head">Women <span class="plus">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <div class="item"><div class="nm">Haircut + Wash + Blow Dry<small>All lengths</small></div><div class="dots"></div><div class="pr">₹399 <small>onwards*</small></div></div>
+          <div class="item"><div class="nm">Global Hair Colour<small>Up to shoulder / Below shoulder</small></div><div class="dots"></div><div class="pr">₹1,999 / ₹2,999 <small>*</small></div></div>
+          <div class="item"><div class="nm">Hair Smoothing / Keratin<small>Up to shoulder / Below shoulder</small></div><div class="dots"></div><div class="pr">₹2,999 / ₹4,999 <small>*</small></div></div>
+          <div class="item"><div class="nm">Hair Spa Ritual (60 min)<small>Deep repair + massage</small></div><div class="dots"></div><div class="pr">₹999 <small>*</small></div></div>
+        </div></div>
+      </div>
+      <div class="acc-item" data-cat="kids">
+        <button class="acc-head">Kids <span class="plus">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <div class="item"><div class="nm">Hair Cut for Kids<small>Patient, gentle, quick</small></div><div class="dots"></div><div class="pr">₹149 <small>onwards</small></div></div>
+          <div class="item"><div class="nm">Kids Head Massage<small>Light, relaxing</small></div><div class="dots"></div><div class="pr">₹199 <small>*</small></div></div>
+        </div></div>
+      </div>
+      <div class="acc-item" data-cat="fixing">
+        <button class="acc-head">Non-Surgical Hair Fixing <span class="plus">+</span></button>
+        <div class="acc-body"><div class="acc-body-inner">
+          <div class="item"><div class="nm">Free Consultation<small>Hair-loss assessment + patch options</small></div><div class="dots"></div><div class="pr">FREE</div></div>
+          <div class="item"><div class="nm">Hair Patch / System Fixing<small>Natural look, undetectable hairline</small></div><div class="dots"></div><div class="pr">Quote <small>on consult*</small></div></div>
+          <div class="item"><div class="nm">Patch Servicing<small>Re-fit + clean + style</small></div><div class="dots"></div><div class="pr">₹799 <small>onwards*</small></div></div>
+        </div></div>
+      </div>
+    </div>
+    <p class="ind">Published rates from our JustDial rate card; *indicative market rates — confirm on WhatsApp before booking.</p>
+    <div style="margin-top:34px"><a class="btn" href="https://wa.me/919988377327?text=Hi%20Bablu%20Hair%20Lounge!%20Please%20confirm%20pricing%20for%20my%20service." target="_blank" rel="noopener">Confirm Price on WhatsApp</a></div>
+  </div>
+</section>
+
+<section class="fixing" id="fixing">
+  <div class="wrap fixing-grid">
+    <div class="fade">
+      <span class="eyebrow">Non-Surgical Hair Fixing Studio</span>
+      <h2 style="font-size:clamp(34px,4.5vw,54px);color:#fff">Hair loss? <span style="color:var(--copper-lt)">Fixed in one sitting.</span></h2>
+      <ul>
+        <li>Undetectable hair systems matched to your hairline &amp; density</li>
+        <li>No surgery, no pain, no downtime — walk out with hair</li>
+        <li>Free private consultation — honest advice, zero pressure</li>
+        <li>Servicing &amp; re-fitting available in-house</li>
+      </ul>
+      <a class="btn" href="https://wa.me/919988377327?text=Hi!%20I%20want%20a%20FREE%20hair%20fixing%20consultation." target="_blank" rel="noopener">Book Free Consultation</a>
+    </div>
+    <div class="fade"><img src="images/interior.webp" alt="Bablu Hair Lounge studio interior" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Word on the Street</span>
+      <h2>175+ Reviews, 4.9 Stars</h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p>"Took my 8-year-old here — they were so patient. ₹149 for a kids' cut is unbeatable value."</p><div class="who">Harpreet Singh · Kids Cut</div></div>
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p>"The Inoa colour for men actually looks natural, not that shoe-polish black. Genuinely impressed."</p><div class="who">Vikram Mehta · Men's Colour</div></div>
+      <div class="rev-card fade"><div class="stars">★★★★★</div><p>"Got my hair fixing done here. Nobody can tell. The consultation was honest — no upselling."</p><div class="who">Anonymous · Hair Fixing</div></div>
+    </div>
+    <center><span class="gbadge"><b>4.9 ★</b> from 175+ reviews on JustDial &amp; Google</span></center>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Find Us</span>
+      <h2>Walk In, Walk Out Sharp</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="fade">
+        <div class="c-item"><div class="ic">✆</div><div><h4>Call / WhatsApp</h4><a href="tel:+919988377327"><b>+91 99883 77327</b></a><br><small>Tap to call · WhatsApp for instant booking</small></div></div>
+        <div class="c-item"><div class="ic">⌖</div><div><h4>Address</h4><p>SCO-266, 1st Floor,<br>Sector 16, Panchkula</p><br><small><a href="https://www.google.com/maps/search/?api=1&query=Bablu+Hair+Lounge+Sector+16+Panchkula" target="_blank" rel="noopener" style="color:var(--copper-lt)">Open in Google Maps →</a></small></div></div>
+        <div class="c-item"><div class="ic">◷</div><div><h4>Hours</h4><p>Open all days</p><br><small>Confirm current hours on our Google listing or WhatsApp</small></div></div>
+        <div class="c-item"><div class="ic">◈</div><div><h4>Instagram</h4><a href="https://www.instagram.com/babluhairlounge.9" target="_blank" rel="noopener"><b>@babluhairlounge.9</b></a><br><small>Work photos · DM to book</small></div></div>
+        <div class="cta-row" style="margin-top:8px">
+          <a class="btn" href="https://wa.me/919988377327?text=Hi%20Bablu%20Hair%20Lounge!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn-ghost" href="tel:+919988377327">Call Now</a>
+        </div>
+      </div>
+      <div class="map fade">
+        <iframe title="Bablu Hair Lounge map" src="https://www.google.com/maps?q=SCO-266+Sector+16+Panchkula&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo">BABLU <em>HAIR LOUNGE</em></div>
+        <p>SCO-266, Sector 16, Panchkula · +91 99883 77327<br>Family Salon · Non-Surgical Hair Fixing Studio</p>
+      </div>
+      <div><p style="text-align:right">Instagram<br><a href="https://www.instagram.com/babluhairlounge.9" target="_blank" rel="noopener" style="color:var(--copper-lt)">@babluhairlounge.9</a></p></div>
+    </div>
+    <div class="credit"><span>© 2026 Bablu Hair Lounge. All rights reserved.</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+919988377327">Call</a>
+  <a class="wa" href="https://wa.me/919988377327?text=Hi%20Bablu%20Hair%20Lounge!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="book" href="#services">Rates</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+document.querySelectorAll('.acc-head').forEach(h=>h.addEventListener('click',()=>{
+  const it=h.parentElement, open=it.classList.contains('open');
+  document.querySelectorAll('.acc-item').forEach(x=>x.classList.remove('open'));
+  if(!open)it.classList.add('open');
+}));
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');
+  const t=c.dataset.t;
+  document.querySelectorAll('.acc-item').forEach(x=>{
+    const match=x.dataset.cat===t;x.classList.toggle('open',match);
+  });
+  document.getElementById('acc').scrollIntoView({behavior:'smooth',block:'center'});
+}));
+</script>
+</body>
+</html>

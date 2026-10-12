@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NITZ Beauty Lab & Co — Salon & Spa | Sector 79, Mohali</title>
+<meta name="description" content="NITZ Beauty Lab & Co, Sector 79 Mohali — couple spa with jacuzzi, Lomi Lomi massage, ritual hair spas, bridal makeover rooms & nail bar. Rated 4.9.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F9F7F2;--ink:#1C1C1C;--terra:#C66B4A;--sand:#EDE4D3;--stone:#6E655A;--line:#E3DACA}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.9;font-weight:300;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.25}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:var(--terra);margin-bottom:1.4rem;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.section{padding:110px 0}
+.section h2{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:1rem}
+.section h2 em{font-style:italic;color:var(--terra)}
+.lead{color:var(--stone);max-width:600px;font-size:1.05rem}
+.btn{display:inline-block;padding:14px 40px;border:1px solid var(--ink);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;transition:.35s;background:transparent;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn-terra{border-color:var(--terra);color:var(--terra)}
+.btn-terra:hover{background:var(--terra);color:#fff}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(249,247,242,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.14em}
+.brand small{color:var(--terra)}
+.nav-links{display:flex;gap:32px;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--stone)}
+.nav-links a:hover{color:var(--terra)}
+/* hero */
+.hero{padding:90px 0 130px;text-align:center;position:relative}
+.hero .kicker{font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:var(--stone);margin-bottom:2rem}
+.hero h1{font-size:clamp(3.4rem,10vw,7rem);letter-spacing:.04em;margin-bottom:.4rem}
+.hero h1 .amp{color:var(--terra);font-style:italic}
+.hero .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--stone);margin-bottom:3rem}
+.hero-frame{max-width:860px;margin:0 auto;position:relative}
+.hero-frame img{width:100%;height:480px;object-fit:cover}
+.hero-frame::after{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.5);pointer-events:none}
+.hero-meta{display:flex;justify-content:center;gap:40px;margin-top:2.4rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+.hero-meta b{color:var(--ink);font-weight:500}
+.hero-ctas{margin-top:2.4rem;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* concept */
+.concept{text-align:center;max-width:760px;margin:0 auto}
+.concept p.big{font-family:'Cormorant Garamond',serif;font-size:1.7rem;line-height:1.7;font-style:italic;color:var(--ink);margin:1.6rem 0}
+.rule{width:64px;height:2px;background:var(--terra);margin:2rem auto}
+/* menu list */
+.menu{border-top:1px solid var(--line)}
+.menu-row{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:baseline;padding:30px 8px;border-bottom:1px solid var(--line);transition:.3s}
+.menu-row:hover{background:#fff;padding-left:20px}
+.menu-row h3{font-size:1.5rem;margin-bottom:.3rem}
+.menu-row p{color:var(--stone);font-size:.92rem;max-width:560px}
+.menu-row .price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--terra);white-space:nowrap}
+.menu-cat{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--terra);margin:3.4rem 0 .6rem}
+.menu-note{font-size:.82rem;color:var(--stone);margin-top:2rem;text-align:center}
+/* rituals grid */
+.rituals{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}
+.ritual{background:var(--paper);padding:48px;transition:.3s}
+.ritual:hover{background:#fff}
+.ritual .num{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--terra);letter-spacing:.2em}
+.ritual h3{font-size:1.6rem;margin:.8rem 0 .5rem}
+.ritual p{color:var(--stone);font-size:.93rem}
+/* gallery */
+.gal{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:3rem}
+.gal img{height:340px;width:100%;object-fit:cover;transition:.6s}
+.gal figure{overflow:hidden;position:relative}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;bottom:0;left:0;right:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(28,28,28,.75));color:#fff;font-size:.82rem;letter-spacing:.08em}
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}
+.review{background:var(--paper);padding:42px}
+.review .stars{color:var(--terra);letter-spacing:.15em;margin-bottom:12px}
+.review p{font-style:italic;color:var(--stone);font-size:.94rem}
+.review b{display:block;margin-top:16px;font-weight:500;font-size:.9rem}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:3rem}
+.visit-info{padding:56px}
+.visit-info h3{font-size:2rem;margin-bottom:1.2rem}
+.visit-info p{margin:10px 0;color:var(--stone)}
+.visit-info a.tel{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--terra)}
+.map{min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:sepia(25%)}
+.hours{margin-top:1.6rem;font-size:.88rem}
+/* wa */
+.wa-band{text-align:center;padding:100px 28px;border-top:1px solid var(--line)}
+.wa-band p{color:var(--stone);max-width:440px;margin:1rem auto 2rem}
+footer{border-top:1px solid var(--line);padding:44px 28px;text-align:center;color:var(--stone);font-size:.84rem}
+footer .ig{color:var(--terra);letter-spacing:.1em}
+footer .demo{margin-top:12px;font-size:.74rem;opacity:.65}
+.wa-float{position:fixed;bottom:22px;right:22px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:60;box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .section{padding:70px 0}
+  .rituals,.reviews,.visit{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .hero-frame img{height:340px}
+  .hero-meta{flex-wrap:wrap;gap:18px}
+  .menu-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#">NITZ <small>BEAUTY LAB &amp; CO</small></a>
+    <div class="nav-links"><a href="#concept">Concept</a><a href="#menu">Menu</a><a href="#rituals">Rituals</a><a href="#visit">Visit</a></div>
+    <a class="btn btn-terra" style="padding:10px 26px" href="https://wa.me/919915547979?text=Hi%20NITZ!%20I%20want%20to%20book%20an%20appointment.">Book</a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="kicker">Salon · Spa · Nail Bar — Sector 79, Mohali</div>
+  <h1>NITZ <span class="amp">&amp;</span> CO</h1>
+  <div class="tag">a beauty lab, not a parlour</div>
+  <div class="hero-frame">
+    <img src="images/press1.jpg" alt="NITZ Beauty Lab & Co, Sector 79 Mohali">
+  </div>
+  <div class="hero-meta">
+    <span><b>4.9★</b> · 174 ratings</span>
+    <span><b>5,000</b> sq ft of calm</span>
+    <span><b>10–8</b> · open daily</span>
+  </div>
+  <div class="hero-ctas">
+    <a class="btn btn-terra" href="https://wa.me/919915547979?text=Hi%20NITZ!%20I%20want%20to%20book%20an%20appointment.">Book on WhatsApp</a>
+    <a class="btn" href="#menu">Explore the Menu</a>
+  </div>
+</header>
+
+<section class="section wrap" id="concept" style="padding-top:20px">
+  <div class="concept">
+    <span class="eyebrow">The Concept</span>
+    <p class="big">"Beauty, treated as a science and served as a ritual — in bohemian rooms designed for deep exhale."</p>
+    <div class="rule"></div>
+    <p class="lead" style="margin:0 auto">Mohali's first true beauty lab: Japanese water therapy, hydro-oxygeno skin therapy, a couple's spa with jacuzzi and private bridal makeover rooms — 50 guests at a time, each one unhurried.</p>
+  </div>
+</section>
+
+<section class="section wrap" id="menu" style="padding-top:20px">
+  <span class="eyebrow">The Menu</span>
+  <h2>Services, <em>listed plainly</em></h2>
+  <p class="lead">No "call for pricing". Standard services carry open rates; bespoke rituals are quoted on WhatsApp.</p>
+  <div class="menu">
+    <div class="menu-cat">Hair</div>
+    <div class="menu-row"><div><h3 class="serif">L'Oréal Global Colour</h3><p>Medium length · first wash included</p></div><div class="price">₹449*</div></div>
+    <div class="menu-row"><div><h3 class="serif">L'Oréal Hair Smoothening</h3><p>Frizz-control silk finish</p></div><div class="price">₹449*</div></div>
+    <div class="menu-row"><div><h3 class="serif">Ritual Hair Spa</h3><p>Deep-repair masque + head massage</p></div><div class="price">on WhatsApp</div></div>
+    <div class="menu-cat">Spa &amp; Rituals</div>
+    <div class="menu-row"><div><h3 class="serif">Couple Body Spa + Jacuzzi</h3><p>A private retreat for two — Mohali's first</p></div><div class="price">on WhatsApp</div></div>
+    <div class="menu-row"><div><h3 class="serif">Lomi Lomi Massage</h3><p>Hawaiian pressure-point rejuvenation</p></div><div class="price">on WhatsApp</div></div>
+    <div class="menu-row"><div><h3 class="serif">Paraffin Candle Therapy</h3><p>Warm-oil deep relaxation ritual</p></div><div class="price">on WhatsApp</div></div>
+    <div class="menu-row"><div><h3 class="serif">Japanese Water Therapy</h3><p>Signature body rejuvenation treatment</p></div><div class="price">on WhatsApp</div></div>
+    <div class="menu-cat">Nails &amp; Grooming</div>
+    <div class="menu-row"><div><h3 class="serif">Nail Bar · Mani-Pedi</h3><p>Extensions, art &amp; luxury pedicures</p></div><div class="price">on WhatsApp</div></div>
+    <div class="menu-row"><div><h3 class="serif">Beard Trim / Shave</h3><p>Precision grooming for men</p></div><div class="price">₹350*</div></div>
+    <div class="menu-cat">Bridal</div>
+    <div class="menu-row"><div><h3 class="serif">Bridal Makeover Rooms</h3><p>Private rooms with exclusive change areas · HD &amp; airbrush</p></div><div class="price">on WhatsApp</div></div>
+  </div>
+  <p class="menu-note">* Indicative rates from listings — confirmed on WhatsApp before booking. + taxes as applicable.</p>
+</section>
+
+<section class="section wrap" id="rituals" style="padding-top:20px">
+  <span class="eyebrow">Signature Rituals</span>
+  <h2>Only at <em>NITZ</em></h2>
+  <div class="rituals">
+    <div class="ritual"><div class="num">01</div><h3 class="serif">Couple Spa + Jacuzzi</h3><p>The tricity's first couple's body spa with a private jacuzzi — book the room, leave the world outside.</p></div>
+    <div class="ritual"><div class="num">02</div><h3 class="serif">Lomi Lomi</h3><p>Hawaiian technique using rhythmic pressure points for full-body rejuvenation.</p></div>
+    <div class="ritual"><div class="num">03</div><h3 class="serif">Hydro-Oxygeno Therapy</h3><p>Skin hydration and detoxification — the facial Mohali talks about.</p></div>
+    <div class="ritual"><div class="num">04</div><h3 class="serif">Bridal Makeover Rooms</h3><p>Private bridal suites with change rooms — your wedding morning, undisturbed.</p></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:110px">
+  <span class="eyebrow">The Space</span>
+  <h2 class="serif" style="font-size:clamp(2.2rem,5vw,3.2rem)">Bohemian rooms, <em style="color:var(--terra)">quiet luxury</em></h2>
+  <div class="gal">
+    <figure><img src="images/press1.jpg" alt="NITZ salon interior"><figcaption>The launch — 5,000 sq ft</figcaption></figure>
+    <figure><img src="images/spa1.jpg" alt="Spa therapy"><figcaption>Body rituals</figcaption></figure>
+    <figure><img src="images/facial.jpg" alt="Skin therapy"><figcaption>Skin lab</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:110px">
+  <span class="eyebrow">Guest Words</span>
+  <h2 class="serif" style="font-size:clamp(2.2rem,5vw,3.2rem)">Rated <em style="color:var(--terra)">4.9</em> · 174 reviews</h2>
+  <div class="reviews">
+    <div class="review"><div class="stars">★★★★★</div><p>"The couple spa with jacuzzi is unlike anything in Mohali. We left feeling brand new."</p><b>Rohan &amp; Simran</b></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Lomi Lomi here fixed my month. The interiors alone are worth the visit — so calm."</p><b>Manpreet K.</b></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Got smoothening done at a price I couldn't believe. Professional from start to finish."</p><b>Jasleen A.</b></div>
+  </div>
+</section>
+
+<section class="wrap" id="visit" style="padding-bottom:110px">
+  <span class="eyebrow">Visit</span>
+  <h2 class="serif" style="font-size:clamp(2.2rem,5vw,3.2rem)">Find your <em style="color:var(--terra)">calm</em></h2>
+  <div class="visit">
+    <div class="visit-info">
+      <h3 class="serif">NITZ Beauty Lab &amp; Co</h3>
+      <p>S.C.O 11-12, Sector 79,<br>Sahibzada Ajit Singh Nagar, Mohali — 140308</p>
+      <p><a class="tel" href="tel:+919915547979">+91 99155 47979</a></p>
+      <p>info@nitzbeautylab.com</p>
+      <div class="hours"><p><b>Open daily</b><br>Monday – Sunday · 10:00 AM – 8:00 PM</p></div>
+      <p style="margin-top:22px"><a class="btn btn-terra" href="https://www.google.com/maps/dir/?api=1&destination=NITZ+Beauty+Lab+Sector+79+Mohali">Get Directions</a></p>
+    </div>
+    <div class="map"><iframe title="NITZ Beauty Lab map" loading="lazy" src="https://www.google.com/maps?q=NITZ+Beauty+Lab+Sector+79+Mohali&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="wa-band">
+  <span class="eyebrow">Reservations</span>
+  <h2 class="serif">Begin with a message</h2>
+  <p>Tell us the ritual you want and your preferred time — we reply within minutes, 10 AM to 8 PM.</p>
+  <a class="btn btn-terra" href="https://wa.me/919915547979?text=Hi%20NITZ!%20I%20want%20to%20book%20an%20appointment.">WhatsApp NITZ</a>
+</section>
+
+<footer>
+  <div class="serif" style="font-size:1.3rem;letter-spacing:.12em">NITZ <span style="color:var(--terra)">BEAUTY LAB &amp; CO</span></div>
+  <p style="margin:8px 0"><a class="ig" href="https://instagram.com/nitzbeautylab" target="_blank" rel="noopener">@nitzbeautylab</a> · Sector 79, Mohali</p>
+  <div class="demo">Demo by StyleFrame Co.</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919915547979?text=Hi%20NITZ!%20I%20want%20to%20book%20an%20appointment." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.6c-2.3 0-4.6-.6-6.5-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.7C3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.4 16 28.4zm7-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.6-.9-.7h-.8c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z"/></svg>
+</a>
+
+</body>
+</html>

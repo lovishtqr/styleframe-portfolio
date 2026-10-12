@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affinity Luxury Salon — Sector 80, Mohali | Hair, Colour & Beauty</title>
+<meta name="description" content="Affinity Luxury Salon, Sector 80 Mohali. Luxury hair colour, ash blondes, keratin, facials & grooming. 81K+ Instagram family.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0D0D;--bg2:#141414;--gold:#C9A227;--gold-soft:#E6C96A;--cream:#F5F1E8;--muted:#A79F8E;--line:rgba(201,162,39,.22)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:600;line-height:1.18}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.eyebrow{font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;display:block}
+.section{padding:104px 24px;max-width:1200px;margin:0 auto}
+.section h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.7rem}
+.section h2 em{font-style:italic;color:var(--gold-soft)}
+.section .sub{color:var(--muted);max-width:580px;margin-bottom:3.2rem}
+.btn{display:inline-block;padding:16px 38px;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;transition:.3s;cursor:pointer;border:1px solid transparent}
+.btn-gold{background:var(--gold);color:#0D0D0D}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+.btn-line{border-color:var(--gold);color:var(--gold)}
+.btn-line:hover{background:var(--gold);color:#0D0D0D}
+/* nav */
+nav{position:sticky;top:0;z-index:60;background:rgba(13,13,13,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Playfair Display',serif;font-size:1.45rem;letter-spacing:.06em}
+.brand b{color:var(--gold)}
+.nav-links{display:flex;gap:30px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{font-size:.75rem;padding:12px 26px}
+/* hero */
+.hero{min-height:92vh;display:flex;align-items:flex-end;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,.25) 40%,rgba(13,13,13,.92) 100%)}
+.hero-in{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 24px 90px;width:100%}
+.hero h1{font-size:clamp(3.2rem,8vw,6rem);margin:1rem 0 1.2rem}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p.lead{font-size:1.1rem;color:var(--cream);opacity:.85;max-width:520px;margin-bottom:1.4rem}
+.rating{display:flex;align-items:center;gap:12px;margin-bottom:2rem;color:var(--muted);font-size:.95rem}
+.stars{color:var(--gold);letter-spacing:.15em}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:var(--gold);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;animation:bob 2s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+/* stats */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stats-in{max-width:1200px;margin:0 auto;padding:44px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stats b{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);display:block}
+.stats span{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+/* offers */
+.offer-band{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.offer{border:1px solid var(--line);background:linear-gradient(160deg,#161616,#0f0f0f);padding:44px;position:relative}
+.offer::before{content:"";position:absolute;top:0;left:0;width:64px;height:4px;background:var(--gold)}
+.offer .tag{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+.offer h3{font-size:1.9rem;margin-bottom:.6rem}
+.offer p{color:var(--muted);font-size:.95rem}
+.offer .cta{margin-top:22px;display:inline-block;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.8rem;border-bottom:1px solid var(--gold);padding-bottom:4px}
+/* menu */
+.tabs{display:flex;gap:12px;margin-bottom:32px}
+.tab{padding:12px 32px;border:1px solid var(--line);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);cursor:pointer;background:transparent;transition:.3s}
+.tab.active,.tab:hover{background:var(--gold);color:#0D0D0D;border-color:var(--gold)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 56px}
+.menu-item{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dotted rgba(201,162,39,.25)}
+.menu-item .dots{flex:1;border-bottom:2px dotted rgba(201,162,39,.25);transform:translateY(-4px)}
+.menu-item .name{font-weight:500;font-size:1.02rem}
+.menu-item .name small{display:block;font-weight:400;color:var(--muted);font-size:.82rem;margin-top:2px}
+.menu-item .price{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);white-space:nowrap}
+.menu-note{color:var(--muted);font-size:.82rem;margin-top:24px;text-align:center}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal figure{position:relative;overflow:hidden}
+.gal img{height:380px;width:100%;object-fit:cover;filter:grayscale(25%);transition:.6s}
+.gal figure:hover img{filter:grayscale(0);transform:scale(1.05)}
+.gal figcaption{position:absolute;bottom:0;left:0;right:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.9));font-size:.85rem;letter-spacing:.06em}
+/* testimonials */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.rev{border:1px solid var(--line);padding:34px;background:var(--bg2)}
+.rev .q{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--gold);line-height:1}
+.rev p{font-style:italic;color:var(--cream);opacity:.9;margin:10px 0 18px;font-size:.95rem}
+.rev b{font-size:.9rem}.rev small{color:var(--muted)}
+/* booking modal */
+.modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.7);align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-card{background:#161616;border:1px solid var(--gold);max-width:440px;width:100%;padding:44px;text-align:center;position:relative}
+.modal-card h3{font-size:2rem;margin-bottom:.6rem}
+.modal-card p{color:var(--muted);font-size:.92rem;margin-bottom:26px}
+.modal-card .btn{margin:6px}
+.close{position:absolute;top:14px;right:18px;font-size:1.6rem;color:var(--muted);cursor:pointer;background:none;border:none}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.contact-card{border:1px solid var(--line);padding:48px;background:var(--bg2)}
+.contact-card h3{font-size:1.9rem;margin-bottom:20px;color:var(--gold-soft)}
+.contact-card p{margin:12px 0;color:var(--muted)}
+.contact-card a.tel{color:var(--gold);font-size:1.5rem;font-weight:600;font-family:'Playfair Display',serif}
+.map{min-height:340px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(60%)}
+/* mobile sticky bar */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#161616;border-top:1px solid var(--line)}
+.sticky-bar a{flex:1;text-align:center;padding:15px 0;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.sticky-bar .b1{background:var(--gold);color:#0D0D0D}
+.sticky-bar .b2{color:var(--cream);border-right:1px solid var(--line)}
+.sticky-bar .b3{color:#25D366}
+footer{border-top:1px solid var(--line);padding:56px 24px 110px;text-align:center;color:var(--muted);font-size:.88rem}
+footer .brand{font-size:1.5rem;color:var(--cream)}
+footer .demo{margin-top:14px;font-size:.75rem;opacity:.6}
+.wa-float{position:fixed;bottom:76px;right:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;z-index:59;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .menu-grid,.rev-grid,.contact-grid,.offer-band{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .stats-in{grid-template-columns:1fr 1fr}
+  .section{padding:70px 20px}
+  .sticky-bar{display:flex}
+  .wa-float{bottom:82px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#">AFFINITY <b>LUXURY SALON</b></a>
+    <div class="nav-links"><a href="#offers">Offers</a><a href="#menu">Menu</a><a href="#gallery">Work</a><a href="#reviews">Reviews</a><a href="#contact">Visit</a></div>
+    <button class="btn btn-gold nav-cta" onclick="openModal()">Book Now</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"><img src="images/interior.jpg" alt="Affinity Luxury Salon interior, Sector 80 Mohali"></div>
+  <div class="hero-in">
+    <span class="eyebrow">Sector 80 · Sahibzada Ajit Singh Nagar · Mohali</span>
+    <h1>Luxury hair,<br><em>redefined.</em></h1>
+    <p class="lead">Ash blondes, seamless balayage, keratin rituals and precision grooming — Mohali's address for transformations.</p>
+    <div class="rating"><span class="stars">★★★★☆</span><span><b style="color:var(--cream)">4.2</b> · 212 ratings · 81K+ Instagram family</span></div>
+    <div class="hero-ctas">
+      <button class="btn btn-gold" onclick="openModal()">Book Appointment</button>
+      <a class="btn btn-line" href="#menu">View Price Menu</a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<div class="stats"><div class="stats-in">
+  <div><b>81K+</b><span>Instagram followers</span></div>
+  <div><b>190+</b><span>Services on menu</span></div>
+  <div><b>4.2★</b><span>212 ratings</span></div>
+  <div><b>Unisex</b><span>Women · Men · Bridal</span></div>
+</div></div>
+
+<section class="section" id="offers">
+  <span class="eyebrow">Limited-Time</span>
+  <h2>Signature <em>offers</em></h2>
+  <p class="sub">Real offers, real math. Quote this website when booking on WhatsApp.</p>
+  <div class="offer-band">
+    <div class="offer">
+      <span class="tag">Mon – Thu only</span>
+      <h3 class="serif">20% off Keratin &amp; Smoothening</h3>
+      <p>All keratin rituals and hair smoothening treatments — mid-week luxury for less. Appointment mandatory.</p>
+      <a class="cta" href="https://wa.me/919779933833?text=Hi%20Affinity!%20I%20want%20the%2020%25%20off%20keratin%20offer.">Claim on WhatsApp →</a>
+    </div>
+    <div class="offer">
+      <span class="tag">Colour bookings</span>
+      <h3 class="serif">Free consultation + gloss</h3>
+      <p>Every colour booking includes a 1:1 colour consultation and a complimentary gloss refresh at your next visit.</p>
+      <a class="cta" href="https://wa.me/919779933833?text=Hi%20Affinity!%20I%20want%20to%20book%20a%20colour%20consultation.">Book consultation →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="menu" style="padding-top:0">
+  <span class="eyebrow">Price Menu</span>
+  <h2>The <em>menu</em></h2>
+  <p class="sub">Transparent rates. Chemical services priced by hair length — ask for your exact quote on WhatsApp.</p>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('women',this)">Women</button>
+    <button class="tab" onclick="showTab('men',this)">Men</button>
+  </div>
+  <div class="tab-panel active" id="tab-women">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="name">Signature Haircut<small>wash + blow-dry included</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Global Colour<small>ammonia-free options</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Ash Blonde / Ash Colour<small>speciality colour</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Balayage / Highlights<small>per length</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Keratin Treatment<small>up to shoulder / below shoulder</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Hair Spa Ritual<small>60 min</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Luxury Facial<small>24k gold / hydra options</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Reception / Party Makeup<small>trial available</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+    </div>
+  </div>
+  <div class="tab-panel" id="tab-men">
+    <div class="menu-grid">
+      <div class="menu-item"><div class="name">Beard Shave<small>hot towel finish</small></div><div class="dots"></div><div class="price">₹400</div></div>
+      <div class="menu-item"><div class="name">Beard Trim<small>shape + line-up</small></div><div class="dots"></div><div class="price">₹500</div></div>
+      <div class="menu-item"><div class="name">Premium Shave<small>luxury ritual</small></div><div class="dots"></div><div class="price">₹1,000</div></div>
+      <div class="menu-item"><div class="name">Haircut + Styling<small>wash included</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">Fade / Shape-up<small>precision cut</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+      <div class="menu-item"><div class="name">De-tan Facial<small>for men</small></div><div class="dots"></div><div class="price">indicative*</div></div>
+    </div>
+  </div>
+  <p class="menu-note">* Indicative rates from listings — final quote confirmed on WhatsApp before your appointment. + taxes as applicable.</p>
+</section>
+
+<section class="section" id="gallery" style="padding-top:0">
+  <span class="eyebrow">Portfolio</span>
+  <h2>Signature <em>transformations</em></h2>
+  <p class="sub">Follow <a href="https://instagram.com/affinitysalonmohali_80" target="_blank" rel="noopener" style="color:var(--gold)">@affinitysalonmohali_80</a> for daily transformations from our 81K-strong community.</p>
+  <div class="gal">
+    <figure><img src="images/color.jpg" alt="Hair colour work"><figcaption>Colour artistry</figcaption></figure>
+    <figure><img src="images/style.jpg" alt="Styling session"><figcaption>Editorial styling</figcaption></figure>
+    <figure><img src="images/interior.jpg" alt="Salon interior"><figcaption>The Sector 80 studio</figcaption></figure>
+    <figure><img src="images/groom.jpg" alt="Men's grooming"><figcaption>Precision grooming</figcaption></figure>
+  </div>
+</section>
+
+<section class="section" id="reviews" style="padding-top:0">
+  <span class="eyebrow">Client Words</span>
+  <h2>What Mohali <em>says</em></h2>
+  <p class="sub">212 ratings across listings.</p>
+  <div class="rev-grid">
+    <div class="rev"><div class="q">"</div><p>The ash blonde came out exactly like the reference I showed. Finally a colourist in Mohali who gets it.</p><b>Gurleen B.</b><br><small>Global Colour</small></div>
+    <div class="rev"><div class="q">"</div><p>Premium shave is genuinely a ritual here — hot towel, zero rush. Best grooming experience in the tricity.</p><b>Arshdeep S.</b><br><small>Premium Shave</small></div>
+    <div class="rev"><div class="q">"</div><p>Got my reception makeup done — it photographed beautifully and lasted the whole evening.</p><b>Navpreet K.</b><br><small>Reception Makeup</small></div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <span class="eyebrow">Visit Us</span>
+  <h2>Find the <em>studio</em></h2>
+  <p class="sub">Walk in for a consultation — or lock your slot on WhatsApp.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3 class="serif">Affinity Luxury Salon</h3>
+      <p>SCO 3, Sector 80,<br>Sahibzada Ajit Singh Nagar, Mohali</p>
+      <p><a class="tel" href="tel:+919779933833">+91-97799 33833</a></p>
+      <p>Open daily · 10:00 AM – 8:30 PM</p>
+      <p style="margin-top:20px"><button class="btn btn-gold" onclick="openModal()">Book Appointment</button></p>
+    </div>
+    <div class="map"><iframe title="Affinity Luxury Salon map" loading="lazy" src="https://www.google.com/maps?q=Affinity+Luxury+Salon+Sector+80+Mohali&output=embed"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">AFFINITY <b>LUXURY SALON</b></div>
+  <p style="margin:10px 0"><a href="https://instagram.com/affinitysalonmohali_80" target="_blank" rel="noopener" style="color:var(--gold)">@affinitysalonmohali_80</a> · Sector 80, Mohali</p>
+  <div class="demo">Demo by StyleFrame Co.</div>
+</footer>
+
+<div class="modal" id="bookModal">
+  <div class="modal-card">
+    <button class="close" onclick="closeModal()">×</button>
+    <span class="eyebrow">Reserve your chair</span>
+    <h3 class="serif">Book in one tap</h3>
+    <p>Message us your service + preferred time. We confirm within minutes during working hours.</p>
+    <a class="btn btn-gold" href="https://wa.me/919779933833?text=Hi%20Affinity!%20I%20want%20to%20book%20an%20appointment.">WhatsApp Us</a><br>
+    <a class="btn btn-line" href="tel:+919779933833">Call +91-97799 33833</a>
+  </div>
+</div>
+
+<div class="sticky-bar">
+  <a class="b1" href="#" onclick="openModal();return false;">Book</a>
+  <a class="b2" href="tel:+919779933833">Call</a>
+  <a class="b3" href="https://wa.me/919779933833?text=Hi%20Affinity!%20I%20want%20to%20book%20an%20appointment.">WhatsApp</a>
+</div>
+
+<a class="wa-float" href="https://wa.me/919779933833?text=Hi%20Affinity!%20I%20want%20to%20book%20an%20appointment." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.6c-2.3 0-4.6-.6-6.5-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.7C3.2 9 9 3.2 16 3.2S28.8 9 28.8 16 23 28.4 16 28.4zm7-9.3c-.4-.2-2.2-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.6-.9-.7h-.8c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2.8.3 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.2-.8-.4z"/></svg>
+</a>
+
+<script>
+function openModal(){document.getElementById('bookModal').classList.add('open')}
+function closeModal(){document.getElementById('bookModal').classList.remove('open')}
+document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

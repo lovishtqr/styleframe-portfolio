@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styloria Studio — Aesthetics &amp; International Academy, Kharar</title>
+<meta name="description" content="Styloria Studio Aesthetics & International Academy, Sunny Enclave Kharar — advanced skin aesthetics, makeup & professional beauty courses. Call +91 96552 80001.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2E1A33; --plum-deep:#1D1122; --rose:#B76E79; --rose-light:#E3B7AC;
+  --champ:#F7E7CE; --cream:#FBF6EF; --ink:#3E2A35; --muted:#8A7584;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;line-height:1.65;font-weight:300}
+img{max-width:100%;display:block}
+a{color:inherit}
+.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+.label{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--rose);font-weight:500}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.rv.in{opacity:1;transform:none}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:22px 0;transition:.4s}
+header.scrolled{background:rgba(29,17,34,.94);backdrop-filter:blur(12px);padding:13px 0;box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.nav{display:flex;justify-content:space-between;align-items:center;color:#fff}
+.brand{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.28em}
+.brand i{font-style:normal;color:var(--rose-light)}
+.nav nav a{margin-left:30px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;text-decoration:none;opacity:.8}
+.nav nav a:hover{opacity:1;color:var(--rose-light)}
+@media(max-width:780px){.nav nav{display:none}}
+
+/* typographic hero */
+.hero{background:linear-gradient(180deg,rgba(29,17,34,.62),rgba(29,17,34,.34) 50%,rgba(29,17,34,.88)),url('images/hero.jpg') center/cover;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;position:relative}
+.hero-inner{padding:130px 0 60px;text-align:center;width:100%}
+.hero .kicker{font-size:12px;letter-spacing:.5em;text-transform:uppercase;color:var(--rose-light)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(64px,14vw,190px);line-height:.95;letter-spacing:.04em;margin:26px 0 8px}
+.hero h1 .thin{font-style:italic;font-weight:400;color:var(--rose-light)}
+.hero .sub{font-size:13px;letter-spacing:.32em;text-transform:uppercase;opacity:.75}
+.hero-line{width:1px;height:64px;background:linear-gradient(var(--rose-light),transparent);margin:34px auto 0}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 38px;border-radius:999px;text-decoration:none;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;transition:.3s}
+.btn-rose{background:var(--rose);color:#fff}
+.btn-rose:hover{background:#c5828a;transform:translateY(-2px);box-shadow:0 14px 34px rgba(183,110,121,.4)}
+.btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* press strip */
+.press{background:var(--plum-deep);color:#D8C3CE;padding:20px 0;text-align:center;font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+.press b{color:var(--rose-light)}
+
+/* sections */
+section{padding:110px 0}
+.sec-head{max-width:660px;margin:0 auto 60px;text-align:center}
+.sec-head h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5.5vw,62px);font-weight:500;line-height:1.08;margin:16px 0 14px}
+.sec-head h2 em{font-style:italic;color:var(--rose)}
+.sec-head p{color:var(--muted);font-size:16px}
+
+/* philosophy-first (Japanese-minimal influence on recipe 2) */
+.concept{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.concept img{border-radius:6px;aspect-ratio:3/3.6;object-fit:cover;width:100%}
+.concept .big{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.6vw,44px);line-height:1.25;font-weight:500;margin:20px 0}
+.concept .big em{color:var(--rose);font-style:italic}
+.concept p{color:var(--muted);margin-bottom:16px}
+.sign{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--rose);margin-top:18px}
+@media(max-width:860px){.concept{grid-template-columns:1fr}}
+
+/* services — editorial menu */
+.menu-sec{background:#fff}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 70px;max-width:980px;margin:0 auto}
+.menu-cat{margin-bottom:44px}
+.menu-cat h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin-bottom:6px}
+.menu-cat .cat-sub{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);margin-bottom:18px}
+.mi{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid #EBDFD5}
+.mi .n b{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;display:block}
+.mi .n span{font-size:13px;color:var(--muted)}
+.mi .p{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--plum);white-space:nowrap;font-weight:600}
+.mi .p small{font-family:'Inter';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;text-align:right}
+@media(max-width:760px){.menu-cols{grid-template-columns:1fr}}
+
+/* academy band */
+.academy{background:linear-gradient(135deg,var(--plum) 0%,#43244B 60%,var(--plum-deep) 100%);color:#F3E7EF;position:relative;overflow:hidden}
+.academy::before{content:"ACADEMY";position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,22vw,300px);opacity:.05;top:20px;left:50%;transform:translateX(-50%);white-space:nowrap;pointer-events:none}
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.ac-grid img{border-radius:6px;aspect-ratio:4/4.4;object-fit:cover;width:100%}
+.ac-grid h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.6vw,56px);font-weight:500;line-height:1.1;margin:16px 0}
+.ac-grid h2 em{color:var(--rose-light);font-style:italic}
+.course{border-left:2px solid var(--rose);padding:6px 0 6px 22px;margin:20px 0}
+.course b{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;display:block;color:#fff}
+.course span{font-size:13.5px;opacity:.75}
+@media(max-width:860px){.ac-grid{grid-template-columns:1fr}}
+
+/* gallery — monochrome-feel grid where work carries color */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gal a{overflow:hidden;border-radius:6px;display:block;position:relative}
+.gal img{aspect-ratio:3/3.8;object-fit:cover;width:100%;transition:transform .6s}
+.gal a:hover img{transform:scale(1.06)}
+.gal .cap{position:absolute;bottom:0;left:0;right:0;padding:26px 14px 12px;background:linear-gradient(transparent,rgba(29,17,34,.8));color:#fff;font-size:12px;letter-spacing:.1em}
+@media(max-width:860px){.gal{grid-template-columns:1fr 1fr}}
+
+/* reviews */
+.rev-sec{background:var(--champ)}
+.quote{max-width:760px;margin:0 auto;text-align:center}
+.quote .stars{color:var(--rose);letter-spacing:4px;font-size:18px}
+.quote blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.6vw,40px);font-style:italic;line-height:1.35;margin:24px 0}
+.quote cite{font-style:normal;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.q-nav{display:flex;gap:10px;justify-content:center;margin-top:28px}
+.q-dot{width:10px;height:10px;border-radius:50%;background:#D9C3B4;cursor:pointer;border:none}
+.q-dot.on{background:var(--rose)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+.c-info h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.6vw,54px);font-weight:500;margin:16px 0 20px}
+.c-line{padding:18px 0;border-bottom:1px solid #E4D5C6;font-size:16px}
+.c-line b{display:block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:5px}
+.c-line a.tel{font-family:'Cormorant Garamond',serif;font-size:30px;text-decoration:none;color:var(--plum);font-weight:600}
+.map-frame{border-radius:6px;overflow:hidden;min-height:440px;box-shadow:0 24px 60px rgba(46,26,51,.12)}
+.map-frame iframe{width:100%;height:100%;min-height:440px;border:0}
+.cta-duo{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+/* mobile bar */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(29,17,34,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+.mbar a{flex:1;text-align:center;padding:13px 6px;border-radius:10px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.mbar .call{background:var(--rose);color:#fff}
+.mbar .wa{background:#1FAD55;color:#fff}
+@media(max-width:780px){.mbar{display:flex;gap:10px}body{padding-bottom:72px}}
+
+footer{background:var(--plum-deep);color:#B79FAE;padding:60px 0 30px;font-size:13px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:40px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:12px;letter-spacing:.06em}
+footer a{text-decoration:none;opacity:.8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;opacity:.7}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">STYLORIA <i>·</i></div>
+    <nav><a href="#concept">Studio</a><a href="#menu">Menu</a><a href="#academy">Academy</a><a href="#gallery">Work</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap hero-inner">
+    <div class="kicker rv">Aesthetics · Salon · International Academy</div>
+    <h1 class="rv">STY<span class="thin">loria</span></h1>
+    <div class="sub rv">Sunny Enclave · Kharar</div>
+    <div class="hero-ctas rv">
+      <a class="btn btn-rose" href="https://wa.me/919655280001?text=Hi%20Styloria!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+919655280001">Call +91 96552 80001</a>
+    </div>
+    <div class="hero-line"></div>
+  </div>
+</section>
+
+<div class="press">Rated <b>5.0 ★ on JustDial</b> · 84 reviews · <b>International Academy</b> certified courses</div>
+
+<section id="concept">
+  <div class="wrap concept">
+    <img class="rv" src="images/g-skin.jpg" alt="Advanced skin treatment at Styloria" loading="lazy">
+    <div class="rv">
+      <span class="label">The Studio</span>
+      <div class="big">Beauty is a <em>discipline.</em><br>We treat it like one.</div>
+      <p>Styloria is where clinical aesthetics meets artistry. Every skin treatment begins with analysis, every makeup look with a face study, every course with a curriculum — not a shortcut.</p>
+      <p>Our academy trains the next generation of Kharar's beauty professionals to international standards, and our studio floor is where that standard is on display daily.</p>
+      <div class="sign">— Team Styloria</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="label">Service Menu</span>
+      <h2>Chosen with <em>intention.</em></h2>
+      <p>Indicative pricing — your consultation confirms the final plan for your skin and hair.</p>
+    </div>
+    <div class="menu-cols">
+      <div>
+        <div class="menu-cat rv">
+          <h3>Aesthetics &amp; Skin</h3><div class="cat-sub">Clinical · Results-driven</div>
+          <div class="mi"><div class="n"><b>Signature Glow Facial</b><span>Deep cleanse, exfoliation &amp; hydration ritual</span></div><div class="p">₹1,500+<small>indicative</small></div></div>
+          <div class="mi"><div class="n"><b>Advanced Skin Treatment</b><span>Concern-based therapy after skin analysis</span></div><div class="p">₹2,500+<small>indicative</small></div></div>
+          <div class="mi"><div class="n"><b>De-Tan &amp; Brightening</b><span>Even-tone treatment for face &amp; neck</span></div><div class="p">₹1,200+<small>indicative</small></div></div>
+          <div class="mi"><div class="n"><b>Clean-Up Ritual</b><span>Express refresh for busy schedules</span></div><div class="p">₹700+<small>indicative</small></div></div>
+        </div>
+        <div class="menu-cat rv">
+          <h3>Nails</h3><div class="cat-sub">Detail-obsessed</div>
+          <div class="mi"><div class="n"><b>Nail Extensions</b><span>Acrylic / gel with shape consultation</span></div><div class="p">₹1,500+<small>indicative</small></div></div>
+          <div class="mi"><div class="n"><b>Gel Polish &amp; Art</b><span>Long-wear colour, minimal to maximal art</span></div><div class="p">₹800+<small>indicative</small></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="menu-cat rv">
+          <h3>Hair</h3><div class="cat-sub">Cut · Colour · Care</div>
+          <div class="mi"><div class="n"><b>Designer Haircut</b><span>Consultation, wash, cut &amp; finish</span></div><div class="p">₹400+<small>indicative</small></div></div>
+          <div class="mi"><div class="n"><b>Global Colour / Highlights</b><span>Trend shades with bond-care</span></div><div class="p">₹2,500+<small>indicative · by length</small></div></div>
+          <div class="mi"><div class="n"><b>Keratin Therapy</b><span>Smoothing treatment for frizz control</span></div><div class="p">₹3,000+<small>indicative · by length</small></div></div>
+          <div class="mi"><div class="n"><b>Luxury Hair Spa</b><span>Restorative scalp &amp; strand ritual</span></div><div class="p">₹1,000+<small>indicative</small></div></div>
+        </div>
+        <div class="menu-cat rv">
+          <h3>Makeup</h3><div class="cat-sub">Camera-true</div>
+          <div class="mi"><div class="n"><b>Party Makeup</b><span>HD finish with hairstyling</span></div><div class="p">₹2,500+<small>indicative</small></div></div>
+          <div class="mi"><div class="n"><b>Bridal Makeup</b><span>HD / airbrush, trial included</span></div><div class="p">₹10,000+<small>indicative · on consultation</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="academy" id="academy">
+  <div class="wrap ac-grid">
+    <img class="rv" src="images/g-academy.jpg" alt="Styloria International Academy training" loading="lazy">
+    <div class="rv">
+      <span class="label" style="color:var(--rose-light)">International Academy</span>
+      <h2>Learn the craft. <em>Own the chair.</em></h2>
+      <p style="opacity:.8">Professional beauty courses with certification — makeup artistry, skin aesthetics, hair design and nail technology, taught on live studio floors.</p>
+      <div class="course"><b>Professional Makeup Artistry</b><span>HD, airbrush &amp; bridal — portfolio-led training</span></div>
+      <div class="course"><b>Skin &amp; Aesthetics</b><span>Facials, treatments &amp; client consultation skills</span></div>
+      <div class="course"><b>Hair Design Program</b><span>Cutting, colour science &amp; chemical services</span></div>
+      <div class="cta-duo">
+        <a class="btn btn-rose" href="https://wa.me/919655280001?text=Hi%20Styloria!%20I%20want%20course%20details%20for%20the%20Academy." target="_blank" rel="noopener">Course Enquiry</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener">Student Work ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="label">Portfolio</span>
+      <h2>The work <em>speaks.</em></h2>
+      <p>Real clients, real transformations — more daily on <a href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener" style="color:var(--rose);font-weight:500">@styloriastudioaesthetics</a> (7,600+ followers).</p>
+    </div>
+    <div class="gal">
+      <a class="rv" href="images/real-jd.jpg" target="_blank"><img src="images/real-jd.jpg" alt="Styloria studio — real photo" loading="lazy"><span class="cap">Our studio floor</span></a>
+      <a class="rv" href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener"><img src="images/g-makeup.jpg" alt="Makeup artistry" loading="lazy"><span class="cap">Makeup artistry</span></a>
+      <a class="rv" href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener"><img src="images/hero.jpg" alt="Skin aesthetics" loading="lazy"><span class="cap">Skin aesthetics</span></a>
+      <a class="rv" href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener"><img src="images/g-academy.jpg" alt="Academy training" loading="lazy"><span class="cap">Academy in session</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="rev-sec">
+  <div class="wrap">
+    <div class="quote rv">
+      <span class="label">Guest Words</span>
+      <div class="stars" style="margin-top:14px">★★★★★</div>
+      <blockquote id="qtext">"The most professional salon experience in Kharar. My skin has never looked better — the analysis before treatment sold me completely."</blockquote>
+      <cite id="qcite">— JustDial Review · 5.0 rated</cite>
+      <div class="q-nav">
+        <button class="q-dot on" onclick="q(0)" aria-label="review 1"></button>
+        <button class="q-dot" onclick="q(1)" aria-label="review 2"></button>
+        <button class="q-dot" onclick="q(2)" aria-label="review 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="c-info rv">
+        <span class="label">Visit the Studio</span>
+        <h2>Begin with a <em style="color:var(--rose);font-style:italic">consultation.</em></h2>
+        <div class="c-line"><b>Address</b>SCO 52, IInd Floor, Sunny Enclave, Kharar, Punjab</div>
+        <div class="c-line"><b>Phone / WhatsApp</b><a class="tel" href="tel:+919655280001">+91 96552 80001</a></div>
+        <div class="c-line"><b>Hours</b>Mon–Sun · 10:00 AM – 9:00 PM</div>
+        <div class="c-line"><b>Instagram</b><a href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener" style="font-weight:500">@styloriastudioaesthetics</a></div>
+        <div class="cta-duo">
+          <a class="btn btn-rose" href="https://wa.me/919655280001?text=Hi%20Styloria!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-outline" style="border-color:var(--plum);color:var(--plum)" href="https://www.google.com/maps?q=Styloria+Studio+Aesthetics+Sunny+Enclave+Kharar" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <div class="map-frame rv">
+        <iframe title="Styloria location map" loading="lazy" src="https://www.google.com/maps?q=Styloria%20Studio%20Aesthetics%20Sunny%20Enclave%20Kharar&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>STYLORIA</h4><p>Aesthetics studio &amp; international beauty academy in Sunny Enclave, Kharar. Skin, hair, makeup, nails — and the courses that teach them.</p></div>
+      <div><h4>Explore</h4><p><a href="#concept">Studio</a><br><a href="#menu">Menu</a><br><a href="#academy">Academy</a><br><a href="#gallery">Work</a></p></div>
+      <div><h4>Connect</h4><p><a href="tel:+919655280001">+91 96552 80001</a><br><a href="https://www.instagram.com/styloriastudioaesthetics" target="_blank" rel="noopener">Instagram</a></p></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Styloria Studio · Sunny Enclave, Kharar</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+919655280001">Call</a>
+  <a class="wa" href="https://wa.me/919655280001?text=Hi%20Styloria!%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const Q=[
+ ["The most professional salon experience in Kharar. My skin has never looked better — the analysis before treatment sold me completely.","— JustDial Review · 5.0 rated"],
+ ["Did their makeup course and now I freelance full-time. The trainers actually care about your portfolio.","— Academy Student"],
+ ["Bridal makeup stayed flawless from morning pheras to late-night reception. Worth every rupee.","— JustDial Review · 5.0 rated"]
+];
+function q(i){
+ document.getElementById('qtext').textContent='"'+Q[i][0]+'"';
+ document.getElementById('qcite').textContent=Q[i][1];
+ document.querySelectorAll('.q-dot').forEach((d,j)=>d.classList.toggle('on',j===i));
+}
+</script>
+</body>
+</html>

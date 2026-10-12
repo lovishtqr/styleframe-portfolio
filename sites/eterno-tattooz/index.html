@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eterno Tattooz — Custom Tattoos &amp; Piercings | Oxford Street, Zirakpur</title>
+<meta name="description" content="Eterno Tattooz, Oxford Street Zirakpur. 5.0★ rated (644 reviews) custom tattoo studio & professional piercing shop. Free design consultation. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0A0B; --ink2:#101012; --panel:#141416;
+  --red:#C41E24; --red-lt:#E8403F; --bone:#EDE6DA; --muted:#8E8A80;
+  --line:rgba(196,30,36,.3);
+  --disp:'Bebas Neue',sans-serif; --sans:'Inter',sans-serif;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:var(--grain);opacity:.05;pointer-events:none;z-index:5}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--red-lt);margin-bottom:18px;display:block;font-weight:700}
+h1,h2,h3{font-family:var(--disp);line-height:.95;letter-spacing:.02em;font-weight:400}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,11,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1260px;margin:0 auto;padding:0 24px}
+.logo{font-family:var(--disp);font-size:30px;letter-spacing:.08em;color:var(--bone)}
+.logo em{color:var(--red-lt);font-style:normal}
+.nav-links{display:flex;gap:30px;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.nav-links a:hover{color:var(--red-lt)}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:16px 36px;border:none;cursor:pointer;border-radius:2px;transition:transform .25s,box-shadow .25s}
+.btn:hover{background:var(--red-lt);transform:translateY(-2px);box-shadow:0 12px 30px rgba(196,30,36,.45)}
+.btn-ghost{display:inline-block;border:1px solid var(--line);color:var(--bone);font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:15px 34px;border-radius:2px;transition:.25s}
+.btn-ghost:hover{border-color:var(--red);color:var(--red-lt)}
+/* hero */
+.hero{margin-top:70px;min-height:92vh;display:flex;align-items:center;position:relative;background:url('images/tattoo-1.jpg') center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,10,11,.96) 30%,rgba(10,10,11,.55) 60%,rgba(10,10,11,.25) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding:80px 0}
+.hero h1{font-size:clamp(72px,13vw,190px);color:var(--bone)}
+.hero h1 .r{color:var(--red-lt)}
+.hero .tag{font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin:14px 0 22px}
+.rating{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.stars{color:var(--red-lt);font-size:19px;letter-spacing:4px}
+.rating small{color:var(--muted);font-size:13.5px}
+.hero p.sub{color:var(--muted);max-width:520px;font-size:16px;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+/* strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink2)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:34px 24px;gap:16px;text-align:center}
+.strip b{font-family:var(--disp);font-size:40px;color:var(--red-lt);display:block;letter-spacing:.04em}
+.strip span{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+/* sections */
+section{padding:100px 0}
+.sec-head{margin-bottom:52px}
+.sec-head h2{font-size:clamp(44px,7vw,84px);color:var(--bone)}
+.sec-head h2 .r{color:var(--red-lt)}
+.sec-head p{color:var(--muted);max-width:600px;margin-top:12px}
+/* price poster */
+.poster{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.poster .col{padding:46px 40px}
+.poster .col:first-child{border-right:1px solid var(--line)}
+.poster h3{font-size:38px;color:var(--bone);margin-bottom:6px}
+.poster h3 .r{color:var(--red-lt)}
+.poster .note{font-size:13px;color:var(--muted);margin-bottom:24px;font-style:italic}
+.prow{display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px dashed rgba(196,30,36,.25)}
+.prow .nm{font-size:15.5px;font-weight:500}
+.prow .nm small{display:block;font-size:12.5px;color:var(--muted);font-weight:400;margin-top:2px}
+.prow .pr{margin-left:auto;font-family:var(--disp);font-size:26px;color:var(--red-lt);white-space:nowrap;letter-spacing:.04em}
+.prow .pr small{font-size:12px;color:var(--muted);font-family:var(--sans);letter-spacing:0}
+/* portfolio */
+.port{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.port figure{position:relative;overflow:hidden;border:1px solid rgba(196,30,36,.2);background:var(--ink2)}
+.port img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(.25) contrast(1.08);transition:transform .7s,filter .5s}
+.port figure:hover img{transform:scale(1.05);filter:grayscale(0) contrast(1.05)}
+.port figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.92));font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--bone)}
+.port figcaption small{display:block;color:var(--red-lt);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-top:4px}
+/* piercing band */
+.pierce{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pierce-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.pierce img{border:1px solid var(--line);aspect-ratio:4/5;object-fit:cover;width:100%}
+.plist{list-style:none;margin:22px 0 30px}
+.plist li{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px dashed rgba(196,30,36,.25);font-size:15.5px}
+.plist .pr{font-family:var(--disp);font-size:22px;color:var(--red-lt)}
+/* aftercare accordion */
+.acc{border-top:1px solid var(--line);max-width:860px}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-head{width:100%;background:none;border:none;color:var(--bone);display:flex;justify-content:space-between;align-items:center;padding:24px 4px;cursor:pointer;font-size:17px;font-weight:600;text-align:left}
+.acc-head .plus{color:var(--red-lt);font-size:26px}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.acc-item.open .acc-body{max-height:400px}
+.acc-body p{padding:0 4px 26px;color:var(--muted);font-size:15px}
+/* faq hygiene badges */
+.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px}
+.badge{border:1px solid var(--line);padding:26px 20px;text-align:center;background:var(--panel)}
+.badge .ic{font-size:30px;display:block;margin-bottom:12px}
+.badge h4{font-family:var(--disp);font-size:22px;letter-spacing:.06em;color:var(--bone)}
+.badge p{font-size:12.5px;color:var(--muted);margin-top:8px}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev-card{background:var(--panel);border:1px solid var(--line);padding:32px 28px}
+.rev-card .stars{font-size:14px;margin-bottom:14px;color:var(--red-lt);letter-spacing:3px}
+.rev-card p{font-size:15px;color:var(--bone);font-weight:300}
+.rev-card .who{margin-top:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt);font-weight:700}
+.gbadge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);padding:12px 24px;border-radius:40px;margin-top:34px;font-size:14px;color:var(--muted)}
+.gbadge b{color:var(--red-lt);font-size:18px}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.c-item{display:flex;gap:18px;margin-bottom:26px}
+.c-item .ic{width:48px;height:48px;flex:0 0 48px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--red-lt)}
+.c-item h4{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--red-lt);margin-bottom:6px;font-weight:700}
+.c-item p,.c-item a{font-size:16px}
+.c-item small{color:var(--muted);font-size:13px}
+.map{border:1px solid var(--line)}
+.map iframe{width:100%;height:420px;border:0;display:block;filter:grayscale(1) contrast(1.1)}
+/* footer */
+footer{border-top:1px solid var(--line);padding:50px 0 120px;background:#060606}
+.f-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+footer p{color:var(--muted);font-size:14px;margin-top:10px;max-width:400px}
+.credit{margin-top:40px;padding-top:22px;border-top:1px solid rgba(196,30,36,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#5f5c56}
+/* mobile bar */
+.mbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(10,10,11,.97);border-top:1px solid var(--line)}
+.mbar a{flex:1;text-align:center;padding:15px 0;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mbar a.call{color:var(--bone)}
+.mbar a.wa{color:#fff;background:var(--red)}
+.mbar a.book{color:var(--red-lt)}
+.rise{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.rise.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{min-height:78vh}
+  .strip .wrap{grid-template-columns:repeat(2,1fr)}
+  .poster{grid-template-columns:1fr}
+  .poster .col:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  .port{grid-template-columns:1fr 1fr}
+  .pierce-grid,.contact-grid{grid-template-columns:1fr}
+  .badges{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .mbar{display:flex}
+  footer{padding-bottom:150px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">ETERNO <em>TATTOOZ</em></a>
+    <div class="nav-links">
+      <a href="#ink">Ink</a><a href="#work">Work</a><a href="#piercing">Piercing</a><a href="#care">Aftercare</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/919915592344?text=Hi%20Eterno!%20I%20want%20a%20FREE%20tattoo%20design%20consultation." target="_blank" rel="noopener">Free Consult</a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div class="wrap">
+      <span class="eyebrow">Oxford Street · Zirakpur · Est. Ink</span>
+      <h1>INK<br><span class="r">ETERNAL.</span></h1>
+      <div class="tag">Custom Tattoos · Professional Piercings</div>
+      <div class="rating"><span class="stars">★★★★★</span><small>5.0 rated · 644 reviews · Zirakpur's highest-rated ink studio</small></div>
+      <p class="sub">Realistic custom tattoos — god portraits, florals, faces — and precision piercings, done under strict hygiene. Free design consultation, always.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/919915592344?text=Hi%20Eterno!%20I%20want%20a%20FREE%20tattoo%20design%20consultation." target="_blank" rel="noopener">Book Free Consultation</a>
+        <a class="btn-ghost" href="#work">See the Work ↓</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>5.0★</b><span>644 JustDial Reviews</span></div>
+    <div><b>100%</b><span>Custom Designs</span></div>
+    <div><b>0₹</b><span>Design Consultation</span></div>
+    <div><b>1×</b><span>Use Needles Only</span></div>
+  </div>
+</div>
+
+<section id="ink">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <span class="eyebrow">The Rate Poster</span>
+      <h2>INK <span class="r">RATES</span></h2>
+      <p>Indicative pricing — final quote depends on size, detail, placement and colour. Free consultation before every piece.</p>
+    </div>
+    <div class="poster rise">
+      <div class="col">
+        <h3>TATTOOS <span class="r">/</span></h3>
+        <div class="note">All styles — realism, linework, god portraits, florals</div>
+        <div class="prow"><div class="nm">Small tattoo (2–3 inch)<small>Minimal, symbols, names</small></div><div class="pr">₹1,000 <small>onwards*</small></div></div>
+        <div class="prow"><div class="nm">Medium tattoo (4–6 inch)<small>Detailed single-element work</small></div><div class="pr">₹3,500 <small>onwards*</small></div></div>
+        <div class="prow"><div class="nm">Large tattoo (7+ inch)<small>Half-sleeve scale, realism</small></div><div class="pr">₹8,000 <small>onwards*</small></div></div>
+        <div class="prow"><div class="nm">Full sleeve / back piece<small>Multi-session custom project</small></div><div class="pr">Quote <small>on consult*</small></div></div>
+        <div class="prow"><div class="nm">Cover-up tattoo<small>Rework old / faded ink</small></div><div class="pr">₹4,000 <small>onwards*</small></div></div>
+        <div class="prow"><div class="nm">Tattoo touch-up<small>Within 6 months of our work</small></div><div class="pr">FREE</div></div>
+      </div>
+      <div class="col">
+        <h3>AFTERCARE <span class="r">/</span></h3>
+        <div class="note">Every tattoo leaves with a care kit + guidance</div>
+        <div class="prow"><div class="nm">Aftercare kit<small>Wrap, balm &amp; instruction card</small></div><div class="pr">FREE</div></div>
+        <div class="prow"><div class="nm">Healing check (2 weeks)<small>In-studio inspection</small></div><div class="pr">FREE</div></div>
+        <div class="prow"><div class="nm">Design consultation<small>Sketch + placement mapping</small></div><div class="pr">FREE</div></div>
+        <div class="prow"><div class="nm">Numbing guidance<small>For low pain tolerance</small></div><div class="pr">On request</div></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:22px">*Indicative prices based on tricity market rates — final quote fixed in your free consultation, before we start.</p>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <span class="eyebrow">Real Skin, Real Ink</span>
+      <h2>THE <span class="r">PORTFOLIO</span></h2>
+      <p>Actual work from our Zirakpur studio. More daily on <a href="https://www.instagram.com/eternotattooz" target="_blank" rel="noopener" style="color:var(--red-lt)">@eternotattooz</a></p>
+    </div>
+    <div class="port">
+      <figure class="rise"><img src="images/real-1.webp" alt="Trishul and damru tattoo by Eterno Tattooz" loading="lazy"><figcaption>Trishul + Damru<small>Black &amp; grey realism</small></figcaption></figure>
+      <figure class="rise"><img src="images/real-2.webp" alt="Custom tattoo work by Eterno Tattooz" loading="lazy"><figcaption>Studio Piece<small>Custom design</small></figcaption></figure>
+      <figure class="rise"><img src="images/real-3.webp" alt="Tattoo portfolio piece by Eterno Tattooz" loading="lazy"><figcaption>Fresh Ink<small>Detail work</small></figcaption></figure>
+      <figure class="rise"><img src="images/tattoo-1.jpg" alt="Tattoo artist at work" loading="lazy"><figcaption>In Session<small>The studio floor</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pierce" id="piercing">
+  <div class="wrap pierce-grid">
+    <div class="rise"><img src="images/piercing-1.jpg" alt="Professional body piercing" loading="lazy"></div>
+    <div class="rise">
+      <span class="eyebrow">Piercing Studio</span>
+      <h2 style="font-size:clamp(40px,5.5vw,68px)">PRECISION <span style="color:var(--red-lt)">PIERCING</span></h2>
+      <p style="color:var(--muted);margin-top:10px">Sterile, single-use needles · implant-grade jewellery · aftercare included.</p>
+      <ul class="plist">
+        <li>Ear / helix / lobe <span class="pr">₹500*</span></li>
+        <li>Nose / nostril <span class="pr">₹800*</span></li>
+        <li>Lip / labret <span class="pr">₹1,000*</span></li>
+        <li>Belly button <span class="pr">₹1,200*</span></li>
+        <li>Eyebrow <span class="pr">₹1,000*</span></li>
+      </ul>
+      <a class="btn" href="https://wa.me/919915592344?text=Hi%20Eterno!%20I%20want%20to%20book%20a%20piercing." target="_blank" rel="noopener">Book Piercing</a>
+    </div>
+  </div>
+</section>
+
+<section id="care">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <span class="eyebrow">Hygiene &amp; Aftercare</span>
+      <h2>STRICT <span class="r">STANDARDS</span></h2>
+    </div>
+    <div class="badges rise">
+      <div class="badge"><span class="ic">🧤</span><h4>STERILE</h4><p>Single-use needles, opened in front of you</p></div>
+      <div class="badge"><span class="ic">🛡️</span><h4>SAFE INK</h4><p>Professional-grade, skin-safe pigments</p></div>
+      <div class="badge"><span class="ic">📋</span><h4>GUIDED</h4><p>Written aftercare + free healing check</p></div>
+      <div class="badge"><span class="ic">💬</span><h4>HONEST</h4><p>Free consult — we say no to bad ideas</p></div>
+    </div>
+    <div class="acc rise" style="margin-top:50px">
+      <div class="acc-item open">
+        <button class="acc-head">How do I take care of a fresh tattoo? <span class="plus">+</span></button>
+        <div class="acc-body"><p>Keep the wrap on for the recommended hours, wash gently with mild soap, apply the balm we give you 2–3 times a day, and keep it out of direct sun and swimming pools for 2 weeks. Come back for your free healing check.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">Does it hurt? <span class="plus">+</span></button>
+        <div class="acc-body"><p>Honest answer: yes, somewhat — it varies by placement. Bony areas hurt more, fleshy areas less. Most clients describe it as very manageable. We work at your pace and can discuss numbing options in your free consultation.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">Can I bring my own design? <span class="plus">+</span></button>
+        <div class="acc-body"><p>Absolutely — bring references and we'll adapt them to your body and style, or design something fully custom from scratch. The consultation and sketch are free.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">Is piercing safe here? <span class="plus">+</span></button>
+        <div class="acc-body"><p>Yes — we use sterile single-use needles (never guns), implant-grade jewellery, and every piercing includes aftercare guidance. 18+ for most piercings; ID may be requested.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <span class="eyebrow">Word of Mouth</span>
+      <h2>644 REVIEWS. <span class="r">5.0 STARS.</span></h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card rise"><div class="stars">★★★★★</div><p>"Got a Mahadev portrait done. The detailing is unreal — people stop me to ask about it. Worth every rupee."</p><div class="who">Arjun · Custom Portrait</div></div>
+      <div class="rev-card rise"><div class="stars">★★★★★</div><p>"Super hygienic — they opened everything sealed in front of me. The free consultation actually helped me pick a better placement."</p><div class="who">Riya · First Tattoo</div></div>
+      <div class="rev-card rise"><div class="stars">★★★★★</div><p>"Belly piercing done here, healed perfectly with zero issues. Professional from start to finish."</p><div class="who">Tanya · Piercing</div></div>
+    </div>
+    <center><span class="gbadge"><b>5.0 ★</b> from 644 reviews on JustDial</span></center>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <span class="eyebrow">Get Inked</span>
+      <h2>BOOK YOUR <span class="r">SESSION</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="rise">
+        <div class="c-item"><div class="ic">✆</div><div><h4>Call / WhatsApp</h4><a href="tel:+919915592344"><b>99155 92344</b></a> · <a href="tel:+917973997674"><b>79739 97674</b></a><br><small>Tap to call · WhatsApp for free consultation</small></div></div>
+        <div class="c-item"><div class="ic">⌖</div><div><h4>Address</h4><p>Cabin No. 202-203, 2nd Floor, Block 2,<br>Oxford Street, Ambala–Chandigarh Road,<br>Utrathiya, Zirakpur 140603</p><br><small><a href="https://www.google.com/maps/search/?api=1&query=Eterno+Tattooz+Oxford+Street+Zirakpur" target="_blank" rel="noopener" style="color:var(--red-lt)">Open in Google Maps →</a></small></div></div>
+        <div class="c-item"><div class="ic">◷</div><div><h4>Hours</h4><p>Open all days</p><br><small>Confirm current hours on our Google listing or WhatsApp</small></div></div>
+        <div class="c-item"><div class="ic">◈</div><div><h4>Instagram</h4><a href="https://www.instagram.com/eternotattooz" target="_blank" rel="noopener"><b>@eternotattooz</b></a><br><small>Fresh work daily · DM to book</small></div></div>
+        <div class="cta-row" style="margin-top:8px">
+          <a class="btn" href="https://wa.me/919915592344?text=Hi%20Eterno!%20I%20want%20a%20FREE%20tattoo%20design%20consultation." target="_blank" rel="noopener">Free Consultation</a>
+          <a class="btn-ghost" href="tel:+919915592344">Call Now</a>
+        </div>
+      </div>
+      <div class="map rise">
+        <iframe title="Eterno Tattooz map" src="https://www.google.com/maps?q=Oxford+Street+Zirakpur+Punjab&output=embed" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo">ETERNO <em>TATTOOZ</em></div>
+        <p>Oxford Street, Zirakpur · 99155 92344 / 79739 97674<br>Custom Tattoos · Professional Piercings · 18+ studio</p>
+      </div>
+      <div><p>Instagram<br><a href="https://www.instagram.com/eternotattooz" target="_blank" rel="noopener" style="color:var(--red-lt)">@eternotattooz</a></p></div>
+    </div>
+    <div class="credit"><span>© 2026 Eterno Tattooz. All rights reserved.</span><span>Demo by StyleFrame Co.</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="call" href="tel:+919915592344">Call</a>
+  <a class="wa" href="https://wa.me/919915592344?text=Hi%20Eterno!%20I%20want%20a%20FREE%20tattoo%20design%20consultation." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="book" href="#ink">Rates</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+document.querySelectorAll('.acc-head').forEach(h=>h.addEventListener('click',()=>{
+  const it=h.parentElement, open=it.classList.contains('open');
+  it.parentElement.querySelectorAll('.acc-item').forEach(x=>x.classList.remove('open'));
+  if(!open)it.classList.add('open');
+}));
+</script>
+</body>
+</html>
